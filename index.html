@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckf9ubdbf0002sgdl3w3ravxi" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckfahcyd80006l0dlex979wbe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +153,112 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%86%E5%8F%B2%E9%80%89%E6%8B%A9%E4%BA%86%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4/" data-id="ckf9ubdbh0004sgdl9wdgdr0z" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%86%E5%8F%B2%E9%80%89%E6%8B%A9%E4%BA%86%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4/" data-id="ckfahcydb0009l0dle0anhfrx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/Git%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-04-05T14:56:00.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/05/Git%E4%BD%BF%E7%94%A8/">Git使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<p>一路回车</p>
+<p>（通过ls查看～/.ssh下面的所有内容查看）</p>
+<p>将刚刚创建的ssh keys添加到github中<br>（1）利用gedit/cat命令，查看id_rsa.pub的内容<br>（2）在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id_rsa.pub文件中的字符串复制进去，注意字符串中没有换行和空格。</p>
+<p>再次检查SSH连接情况（在～/.ssh目录下）：<br>输入如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>如果看到如下所示，则表示添加成功：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>即利用自己的用户名和email地址配置git</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的github邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>为什么配置好了提交代码到远程分之还是要输入密码?<br>clone的时候选择http</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/05/Git%E4%BD%BF%E7%94%A8/" data-id="ckfahcyd70005l0dl3x4h8ek6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Faiss" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/04/Faiss/" class="article-date">
+  <time datetime="2020-04-04T12:11:00.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/Faiss/">Faiss</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>A library for efficient similarity search and clustering of dense vectors.Faiss：高效稠密向量相似Top检索库;</li>
+<li>Faiss contains several methods for similarity search. It assumes that the instances are represented as vectors and are identified by an integer, and that the vectors can be compared with L2 (Euclidean) distances or dot products. Vectors that are similar to a query vector are those that have the lowest L2 distance or the highest dot product with the query vector. It also supports cosine similarity, since this is a dot product on normalized vectors. Faiss支持多种相似度检索度量：L2距离，点积和余弦相似度。</li>
+</ul>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 更新conda</span></span><br><span class="line">conda update conda</span><br><span class="line"><span class="meta">#</span><span class="bash"> 先安装mkl</span></span><br><span class="line">conda install mkl</span><br><span class="line"><span class="meta">#</span><span class="bash"> gpu版本 -- 记得根据自己安装的cuda版本安装对应的faiss版本，不然会出异常</span></span><br><span class="line">conda install faiss-gpu cudatoolkit=10.0 -c pytorch # For CUDA10</span><br></pre></td></tr></table></figure>
+
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> faiss</span><br><span class="line">d = <span class="number">64</span>                           <span class="comment"># dimension</span></span><br><span class="line">nb = <span class="number">100000</span>                      <span class="comment"># database size</span></span><br><span class="line">nq = <span class="number">10000</span>                       <span class="comment"># nb of queries</span></span><br><span class="line">np.random.seed(<span class="number">1234</span>)             <span class="comment"># make reproducible</span></span><br><span class="line">xb = np.random.random((nb, d)).astype(<span class="string">&#x27;float32&#x27;</span>)</span><br><span class="line">xq = np.random.random((nq, d)).astype(<span class="string">&#x27;float32&#x27;</span>)</span><br><span class="line">xb[:, <span class="number">0</span>] += np.arange(nb) / <span class="number">1000.</span></span><br><span class="line">xq[:, <span class="number">0</span>] += np.arange(nq) / <span class="number">1000.</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Faiss is built around the Index object.</span></span><br><span class="line"><span class="string">It encapsulates the set of database vectors, and optionally preprocesses them to make searching efficient.</span></span><br><span class="line"><span class="string">There are many types of indexes,</span></span><br><span class="line"><span class="string">we are going to use the simplest version that just performs brute-force L2 distance search on them: IndexFlatL2.</span></span><br><span class="line"><span class="string">All indexes need to know when they are built which is the dimensionality of the vectors they operate on, d in our case.</span></span><br><span class="line"><span class="string">Then, most of the indexes also require a training phase, to analyze the distribution of the vectors. For IndexFlatL2, we can skip this operation.</span></span><br><span class="line"><span class="string">When the index is built and trained, two operations can be performed on the index: add and search.</span></span><br><span class="line"><span class="string">To add elements to the index, we call add on xb.</span></span><br><span class="line"><span class="string">We can also display the two state variables of the index: is_trained, a boolean that indicates whether training is required and ntotal, the number of indexed vectors.</span></span><br><span class="line"><span class="string">Some indexes can also store integer IDs corresponding to each of the vectors (but not IndexFlatL2).</span></span><br><span class="line"><span class="string">If no IDs are provided, add just uses the vector ordinal as the id, ie. the first vector gets 0, the second 1, etc.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">index = faiss.IndexFlatL2(d)     <span class="comment"># build the index</span></span><br><span class="line">print(index.is_trained)          <span class="comment"># log: True</span></span><br><span class="line">index.add(xb)                    <span class="comment"># add vectors to the index</span></span><br><span class="line">print(index.ntotal)              <span class="comment"># log: 100000</span></span><br><span class="line">​</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">The basic search operation that can be performed on an index is the k-nearest-neighbor search,</span></span><br><span class="line"><span class="string">ie. for each query vector, find its k nearest neighbors in the database.</span></span><br><span class="line"><span class="string">The result of this operation can be conveniently stored in an integer matrix of size nq-by-k,</span></span><br><span class="line"><span class="string">where row i contains the IDs of the neighbors of query vector i, sorted by increasing distance.</span></span><br><span class="line"><span class="string">In addition to this matrix, the search operation returns a nq-by-k floating-point matrix with the corresponding squared distances.</span></span><br><span class="line"><span class="string">As a sanity check, we can first search a few database vectors, to make sure the nearest neighbor is indeed the vector itself.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">k = <span class="number">4</span>                          <span class="comment"># we want to see 4 nearest neighbors</span></span><br><span class="line">D, I = index.search(xb[:<span class="number">5</span>], k) <span class="comment"># sanity check</span></span><br><span class="line">print(I)</span><br><span class="line">print(D)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[  0 393 363  78]</span></span><br><span class="line"><span class="string"> [  1 555 277 364]</span></span><br><span class="line"><span class="string"> [  2 304 101  13]</span></span><br><span class="line"><span class="string"> [  3 173  18 182]</span></span><br><span class="line"><span class="string"> [  4 288 370 531]]</span></span><br><span class="line"><span class="string">[[0.        7.1751738 7.20763   7.2511625]</span></span><br><span class="line"><span class="string"> [0.        6.3235645 6.684581  6.799946 ]</span></span><br><span class="line"><span class="string"> [0.        5.7964087 6.391736  7.2815123]</span></span><br><span class="line"><span class="string"> [0.        7.2779055 7.527987  7.6628466]</span></span><br><span class="line"><span class="string"> [0.        6.7638035 7.2951202 7.3688145]]</span></span><br><span class="line"><span class="string">the nearest neighbor of each query is indeed the index of the vector,</span></span><br><span class="line"><span class="string">and the corresponding distance is 0. And within a row, distances are increasing.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">D, I = index.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                   <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 381  207  210  477]</span></span><br><span class="line"><span class="string"> [ 526  911  142   72]</span></span><br><span class="line"><span class="string"> [ 838  527 1290  425]</span></span><br><span class="line"><span class="string"> [ 196  184  164  359]</span></span><br><span class="line"><span class="string"> [ 526  377  120  425]]</span></span><br><span class="line"><span class="string">[[ 9900 10500  9309  9831]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 11103 10164  9787]</span></span><br><span class="line"><span class="string"> [10571 10664 10632  9638]</span></span><br><span class="line"><span class="string"> [ 9628  9554 10036  9582]]</span></span><br><span class="line"><span class="string">Because of the value added to the first component of the vectors,</span></span><br><span class="line"><span class="string">the dataset is smeared along the first axis in d-dim space. </span></span><br><span class="line"><span class="string">So the neighbors of the first few vectors are around the beginning of the dataset,</span></span><br><span class="line"><span class="string">and the ones of the vectors around ~10000 are also around index 10000 in the dataset.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">To speed up the search, it is possible to segment the dataset into pieces.</span></span><br><span class="line"><span class="string">We define Voronoi cells in the d-dimensional space, and each database vector falls in one of the cells.</span></span><br><span class="line"><span class="string">At search time, only the database vectors y contained in the cell the query x falls in and a few neighboring ones are compared against the query vector.</span></span><br><span class="line"><span class="string">This is done via the IndexIVFFlat index.</span></span><br><span class="line"><span class="string">This type of index requires a training stage, that can be performed on any collection of vectors that has the same distribution as the database vectors.</span></span><br><span class="line"><span class="string">In this case we just use the database vectors themselves.</span></span><br><span class="line"><span class="string">The IndexIVFFlat also requires another index, the quantizer, that assigns vectors to Voronoi cells.</span></span><br><span class="line"><span class="string">Each cell is defined by a centroid, and finding the Voronoi cell a vector falls in consists in finding the nearest neighbor of the vector in the set of centroids.</span></span><br><span class="line"><span class="string">This is the task of the other index, which is typically an IndexFlatL2.</span></span><br><span class="line"><span class="string">There are two parameters to the search method: nlist, the number of cells, and nprobe, the number of cells (out of nlist) that are visited to perform a search.</span></span><br><span class="line"><span class="string">The search time roughly increases linearly with the number of probes plus some constant due to the quantization.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">nlist = <span class="number">100</span>                       <span class="comment"># 聚类中心个数</span></span><br><span class="line">k = <span class="number">4</span></span><br><span class="line">quantizer = faiss.IndexFlatL2(d)  <span class="comment"># the other index</span></span><br><span class="line">index = faiss.IndexIVFFlat(quantizer, d, nlist)</span><br><span class="line"><span class="keyword">assert</span> <span class="keyword">not</span> index.is_trained</span><br><span class="line">index.train(xb)</span><br><span class="line"><span class="keyword">assert</span> index.is_trained</span><br><span class="line"></span><br><span class="line">index.add(xb)                  <span class="comment"># add may be a bit slower as well</span></span><br><span class="line">D, I = index.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 9900  9309  9810 10048]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 10164  9787 10719]</span></span><br><span class="line"><span class="string"> [10571 10664 10632 10203]</span></span><br><span class="line"><span class="string"> [ 9628  9554  9582 10304]]</span></span><br><span class="line"><span class="string">The values are similar, but not exactly the same as for the brute-force search (see above).</span></span><br><span class="line"><span class="string">This is because some of the results were not in the exact same Voronoi cell.</span></span><br><span class="line"><span class="string">Therefore, visiting a few more cells may prove useful. &#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">index.nprobe = <span class="number">10</span>              <span class="comment"># default nprobe is 1, try a few more 默认聚类中心个数1, 尝试调大中心数10</span></span><br><span class="line">D, I = index.search(xq, k)</span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 9900 10500  9309  9831]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 11103 10164  9787]</span></span><br><span class="line"><span class="string"> [10571 10664 10632  9638]</span></span><br><span class="line"><span class="string"> [ 9628  9554 10036  9582]]</span></span><br><span class="line"><span class="string">which is the correct result.</span></span><br><span class="line"><span class="string">Note that getting a perfect result in this case is merely an artifact of the data distribution,</span></span><br><span class="line"><span class="string">as it is has a strong component on the x-axis which makes it easier to handle.</span></span><br><span class="line"><span class="string">The nprobe parameter is always a way of adjusting the tradeoff between speed and accuracy of the result.</span></span><br><span class="line"><span class="string">Setting nprobe = nlist gives the same result as the brute-force search (but slower).</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">ngpus = faiss.get_num_gpus()</span><br><span class="line">print(<span class="string">&#x27;number of GPUS:&#x27;</span>, ngpus)</span><br><span class="line">res = faiss.StandardGpuResources()</span><br><span class="line"><span class="comment"># build a flat (CPU) index</span></span><br><span class="line">index_flat = faiss.IndexFlatL2(d)</span><br><span class="line"><span class="comment"># make it into a gpu index</span></span><br><span class="line">gpu_index_flat = faiss.index_cpu_to_gpu(res, <span class="number">0</span>, index_flat)</span><br><span class="line">gpu_index_flat.add(xb)</span><br><span class="line">print(gpu_index_flat.ntotal)</span><br><span class="line">D, I = gpu_index_flat.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                            <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                           <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># add self defined index</span></span><br><span class="line">index = faiss.IndexFlatL2(xb.shape[<span class="number">1</span>])</span><br><span class="line">ids = np.arange(xb.shape[<span class="number">0</span>]) + <span class="number">231</span></span><br><span class="line">index2 = faiss.IndexIDMap(index)</span><br><span class="line">index2.add_with_ids(xb, ids)</span><br><span class="line">k = <span class="number">4</span>                                   <span class="comment"># we want to see 4 nearest neighbors</span></span><br><span class="line">D, I = index2.search(xq, k)             <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                            <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                           <span class="comment"># neighbors of the 5 last queries</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckfahcyd60004l0dl8mde7s00" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,7 +385,154 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckf9ubdbi0006sgdldehmblos" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckfahcydg000gl0dl8gnz5imt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/18/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/18/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Linux常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du (disk usage) : 查看磁盘使用空间；</span><br><span class="line">du -sh filename/dirname</span><br></pre></td></tr></table></figure>
+
+<h2 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h2><ul>
+<li>When you execute a Unix job in the background ( using &amp;, bg command), and logout from the session, your process will get killed. You can avoid this using several methods — executing the job with nohup, or making it as batch job using at, batch or cron command. Nohup stands for no hang up, which can be executed as shown below. nohup syntax:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure></li>
+<li>Nohup is very helpful when you have to execute a shell-script or command that take a long time to finish. In that case, you don’t want to be connected to the shell and waiting for the command to complete. Instead, execute it with nohup, exit the shell and continue with your other work.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux | grep charm</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/18/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckfahcydf000dl0dlehp73ngk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Tensorflow API" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/13/Tensorflow%20API/" class="article-date">
+  <time datetime="2020-02-13T14:56:00.000Z" itemprop="datePublished">2020-02-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/13/Tensorflow%20API/">Tensorflow API</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="tf-nn-embedding-lookup"><a href="#tf-nn-embedding-lookup" class="headerlink" title="tf.nn.embedding_lookup()"></a>tf.nn.embedding_lookup()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tf.nn.embedding_lookup(</span><br><span class="line">    params,</span><br><span class="line">    ids,</span><br><span class="line">    partition_strategy=<span class="string">&#x27;mod&#x27;</span>,</span><br><span class="line">    name=<span class="literal">None</span>,</span><br><span class="line">    validate_indices=<span class="literal">True</span>,</span><br><span class="line">    max_norm=<span class="literal">None</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>Looks up ids in a list of embedding tensors. This function is used to perform parallel lookups on the list of tensors in params. It is a generalization of tf.gather, where params is interpreted as a partitioning of a large embedding tensor. params may be a PartitionedVariable as returned by using tf.get_variable() with a partitioner. 按照ids顺序返回params中的第ids行。</p>
+<ul>
+<li>If len(params) &gt; 1, each element id of ids is partitioned between the elements of params according to the partition_strategy. In all strategies, if the id space does not evenly divide the number of partitions, each of the first (max_id + 1) % len(params) partitions will be assigned one more id.</li>
+<li>If partition_strategy is “mod”, we assign each id to partition p = id % len(params). For instance, 13 ids are split across 5 partitions as: [[0, 5, 10], [1, 6, 11], [2, 7, 12], [3, 8], [4, 9]]</li>
+<li>If partition_strategy is “div”, we assign ids to partitions in a contiguous manner. In this case, 13 ids are split across 5 partitions as: [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10], [11, 12]]</li>
+</ul>
+<p>The results of the lookup are concatenated into a dense tensor. The returned tensor has shape shape(ids) + shape(params)[1:].</p>
+<p>demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">a = np.array(</span><br><span class="line">    [[<span class="number">0.1</span>, <span class="number">0.2</span>, <span class="number">0.3</span>],</span><br><span class="line">     [<span class="number">1.1</span>, <span class="number">1.2</span>, <span class="number">1.3</span>],</span><br><span class="line">     [<span class="number">2.1</span>, <span class="number">2.2</span>, <span class="number">2.3</span>],</span><br><span class="line">     [<span class="number">3.1</span>, <span class="number">3.2</span>, <span class="number">3.3</span>],</span><br><span class="line">     [<span class="number">4.1</span>, <span class="number">4.2</span>, <span class="number">4.3</span>]])</span><br><span class="line">idx1 = tf.Variable([<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>], tf.int32)</span><br><span class="line">idx2 = tf.Variable([[<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>], [<span class="number">4</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>]], tf.int32)</span><br><span class="line">out1 = tf.nn.embedding_lookup(a, idx1)</span><br><span class="line">out2 = tf.nn.embedding_lookup(a, idx2)</span><br><span class="line">init = tf.global_variables_initializer()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line">    print(a)</span><br><span class="line">    print(<span class="string">&#x27;=========&#x27;</span>)</span><br><span class="line">    print(sess.run(out1))</span><br><span class="line">    print(<span class="string">&#x27;=========&#x27;</span>)</span><br><span class="line">    print(sess.run(out2))</span><br></pre></td></tr></table></figure>
+<p>result</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0.1</span> <span class="number">0.2</span> <span class="number">0.3</span>]</span><br><span class="line"> [<span class="number">1.1</span> <span class="number">1.2</span> <span class="number">1.3</span>]</span><br><span class="line"> [<span class="number">2.1</span> <span class="number">2.2</span> <span class="number">2.3</span>]</span><br><span class="line"> [<span class="number">3.1</span> <span class="number">3.2</span> <span class="number">3.3</span>]</span><br><span class="line"> [<span class="number">4.1</span> <span class="number">4.2</span> <span class="number">4.3</span>]]</span><br><span class="line">=========</span><br><span class="line">[[<span class="number">0.1</span> <span class="number">0.2</span> <span class="number">0.3</span>]</span><br><span class="line"> [<span class="number">2.1</span> <span class="number">2.2</span> <span class="number">2.3</span>]</span><br><span class="line"> [<span class="number">3.1</span> <span class="number">3.2</span> <span class="number">3.3</span>]</span><br><span class="line"> [<span class="number">1.1</span> <span class="number">1.2</span> <span class="number">1.3</span>]]</span><br><span class="line">=========</span><br><span class="line">[[[<span class="number">0.1</span> <span class="number">0.2</span> <span class="number">0.3</span>]</span><br><span class="line">  [<span class="number">2.1</span> <span class="number">2.2</span> <span class="number">2.3</span>]</span><br><span class="line">  [<span class="number">3.1</span> <span class="number">3.2</span> <span class="number">3.3</span>]</span><br><span class="line">  [<span class="number">1.1</span> <span class="number">1.2</span> <span class="number">1.3</span>]]</span><br><span class="line"> [[<span class="number">4.1</span> <span class="number">4.2</span> <span class="number">4.3</span>]</span><br><span class="line">  [<span class="number">0.1</span> <span class="number">0.2</span> <span class="number">0.3</span>]</span><br><span class="line">  [<span class="number">2.1</span> <span class="number">2.2</span> <span class="number">2.3</span>]</span><br><span class="line">  [<span class="number">2.1</span> <span class="number">2.2</span> <span class="number">2.3</span>]]]</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="tf-sequence-mask"><a href="#tf-sequence-mask" class="headerlink" title="tf.sequence_mask"></a>tf.sequence_mask</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tf.sequence_mask(</span><br><span class="line">    lengths,</span><br><span class="line">    maxlen=<span class="literal">None</span>,</span><br><span class="line">    dtype=tf.bool,</span><br><span class="line">    name=<span class="literal">None</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Returns a mask tensor representing the first N positions of each cell. If lengths has shape [d_1, d_2, …, d_n] the resulting tensor mask has dtype dtype and shape [d_1, d_2, …, d_n, maxlen], with<br>mask[i_1, i_2, …, i_n, j] = (j &lt; lengths[i_1, i_2, …, i_n])</p>
+<p>Examples:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tf.sequence_mask([<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>], <span class="number">5</span>) </span><br><span class="line"><span class="comment"># [[True, False, False, False, False], </span></span><br><span class="line"><span class="comment"># [True, True, True, False, False], </span></span><br><span class="line"><span class="comment"># [True, True, False, False, False]] </span></span><br></pre></td></tr></table></figure>
+<p>另外</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.sequence_mask([[<span class="number">1</span>, <span class="number">3</span>],[<span class="number">2</span>,<span class="number">0</span>]]) </span><br><span class="line"><span class="comment"># [[[True, False, False], </span></span><br><span class="line"><span class="comment"># [True, True, True]], </span></span><br><span class="line"><span class="comment"># [[True, True, False], </span></span><br><span class="line"><span class="comment"># [False, False, False]]]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="tf-expand-dims"><a href="#tf-expand-dims" class="headerlink" title="tf.expand_dims"></a>tf.expand_dims</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tf.expand_dims( </span><br><span class="line">    input, </span><br><span class="line">    axis=<span class="literal">None</span>, </span><br><span class="line">    name=<span class="literal">None</span>, </span><br><span class="line">    dim=<span class="literal">None</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>See the guide: Tensor Transformations &gt; Shapes and Shaping</p>
+<p>Inserts a dimension of 1 into a tensor’s shape.</p>
+<p>Given a tensor input, this operation inserts a dimension of 1 at the dimension index axis of input’s shape. The dimension index axis starts at zero; if you specify a negative number for axis it is counted backward from the end.</p>
+<p>This operation is useful if you want to add a batch dimension to a single element. For example, if you have a single image of shape [height, width, channels], you can make it a batch of 1 image with expand_dims(image, 0), which will make the shape [1, height, width, channels].</p>
+<p>Other examples:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &#x27;t&#x27; is a tensor of shape [2]</span></span><br><span class="line">tf.shape(tf.expand_dims(t, <span class="number">0</span>))  <span class="comment"># [1, 2]</span></span><br><span class="line">tf.shape(tf.expand_dims(t, <span class="number">1</span>))  <span class="comment"># [2, 1]</span></span><br><span class="line">tf.shape(tf.expand_dims(t, <span class="number">-1</span>))  <span class="comment"># [2, 1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#x27;t2&#x27; is a tensor of shape [2, 3, 5]</span></span><br><span class="line">tf.shape(tf.expand_dims(t2, <span class="number">0</span>))  <span class="comment"># [1, 2, 3, 5]</span></span><br><span class="line">tf.shape(tf.expand_dims(t2, <span class="number">2</span>))  <span class="comment"># [2, 3, 1, 5]</span></span><br><span class="line">tf.shape(tf.expand_dims(t2, <span class="number">3</span>))  <span class="comment"># [2, 3, 5, 1]</span></span><br></pre></td></tr></table></figure>
+<p>This operation requires that:</p>
+<p>-1-input.dims() &lt;= dim &lt;= input.dims()</p>
+<p>This operation is related to squeeze(), which removes dimensions of size 1.</p>
+<h2 id="tf-gather"><a href="#tf-gather" class="headerlink" title="tf.gather()"></a>tf.gather()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tf.gather( </span><br><span class="line">    params, </span><br><span class="line">    indices, </span><br><span class="line">    validate_indices=<span class="literal">None</span>,</span><br><span class="line">    name=<span class="literal">None</span>, </span><br><span class="line">    axis=<span class="number">0</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>indices must be an integer tensor of any dimension (usually 0-D or 1-D). Produces an output tensor with shape params.shape[:axis] + indices.shape + params.shape[axis + 1:] where:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">x = tf.range(<span class="number">0</span>, <span class="number">10</span>)*<span class="number">10</span> + tf.constant(<span class="number">1</span>, shape=[<span class="number">10</span>])</span><br><span class="line">y = tf.gather(x, [<span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>])</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    print(sess.run(x))</span><br><span class="line">    print(sess.run(y))</span><br></pre></td></tr></table></figure>
+
+<p>result</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">1</span> <span class="number">11</span> <span class="number">21</span> <span class="number">31</span> <span class="number">41</span> <span class="number">51</span> <span class="number">61</span> <span class="number">71</span> <span class="number">81</span> <span class="number">91</span>]</span><br><span class="line">[<span class="number">11</span> <span class="number">51</span> <span class="number">91</span>]</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="tf-reshape"><a href="#tf-reshape" class="headerlink" title="tf.reshape()"></a>tf.reshape()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tf.reshape(</span><br><span class="line">    tensor,</span><br><span class="line">    shape,</span><br><span class="line">    name=<span class="literal">None</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>Given tensor, this operation returns a tensor that has the same values as tensor with shape shape.</p>
+<p>If one component of shape is the special value -1, the size of that dimension is computed so that the total size remains constant. In particular, a shape of [-1] flattens into 1-D. At most one component of shape can be -1.　If shape is 1-D or higher, then the operation returns a tensor with shape shape filled with the values of tensor. In this case, the number of elements implied by shape must be the same as the number of elements in tensor.</p>
+<p>demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">a = tf.constant(np.array(list(range(<span class="number">1</span>, <span class="number">9</span>+<span class="number">1</span>, <span class="number">1</span>))))</span><br><span class="line">b = tf.reshape(a, [<span class="number">3</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment"># t: a (3 x 2 x 3) tensor</span></span><br><span class="line">t = tf.constant(</span><br><span class="line">    [[[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">      [<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>]],</span><br><span class="line">     [[<span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>],</span><br><span class="line">      [<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>]],</span><br><span class="line">     [[<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>],</span><br><span class="line">      [<span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>]]]</span><br><span class="line">)</span><br><span class="line">c = tf.reshape(t, [<span class="number">2</span>, <span class="number">-1</span>])</span><br><span class="line">d = tf.reshape(t, [<span class="number">-1</span>, <span class="number">9</span>])</span><br><span class="line">e = tf.reshape(t, [<span class="number">2</span>, <span class="number">-1</span>, <span class="number">3</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    print(sess.run(a), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(b), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(b.get_shape().as_list())</span><br><span class="line">    print(sess.run(t), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(t.get_shape().as_list())</span><br><span class="line">    print(sess.run(c), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(c.get_shape().as_list())</span><br><span class="line">    print(sess.run(d), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(d.get_shape().as_list())</span><br><span class="line">    print(sess.run(e), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(e.get_shape().as_list())</span><br></pre></td></tr></table></figure>
+<p>result</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">2</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">2</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[[ <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line">  [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line"> [[ <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span>]</span><br><span class="line">  [<span class="number">10</span> <span class="number">11</span> <span class="number">12</span>]]]</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">[[[ <span class="number">1</span>  <span class="number">4</span>]</span><br><span class="line">  [ <span class="number">2</span>  <span class="number">5</span>]</span><br><span class="line">  [ <span class="number">3</span>  <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line"> [[ <span class="number">7</span> <span class="number">10</span>]</span><br><span class="line">  [ <span class="number">8</span> <span class="number">11</span>]</span><br><span class="line">  [ <span class="number">9</span> <span class="number">12</span>]]]</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="tf-split"><a href="#tf-split" class="headerlink" title="tf.split()"></a>tf.split()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tf.split(</span><br><span class="line">    value,</span><br><span class="line">    num_or_size_splits,</span><br><span class="line">    axis=<span class="number">0</span>,</span><br><span class="line">    num=<span class="literal">None</span>,</span><br><span class="line">    name=<span class="string">&#x27;split&#x27;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>Splits a tensor into sub tensors.</p>
+<p>If num_or_size_splits is an integer type, num_split, then splits value along dimension axis into num_split smaller tensors. Requires that num_split evenly divides value.shape[axis]. If num_or_size_splits is not an integer type, it is presumed to be a Tensor size_splits, then splits value into len(size_splits) pieces. The shape of the i-th piece has the same size as the value except along dimension axis where the size is size_splits[i].</p>
+<p>demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">a = tf.constant(np.reshape(list(range(<span class="number">1</span>, <span class="number">6</span>+<span class="number">1</span>, <span class="number">1</span>)), (<span class="number">2</span>, <span class="number">3</span>)))</span><br><span class="line">b1, b2, b3 = tf.split(a, <span class="number">3</span>, axis=<span class="number">1</span>)</span><br><span class="line">d1, d2, d3 = tf.split(a, [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], axis=<span class="number">1</span>)</span><br><span class="line">c1, c2 = tf.split(a, [<span class="number">1</span>, <span class="number">2</span>], axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    print(sess.run(a), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(b1), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(b2), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(b3), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(d1), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(d2), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(d3), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(c1), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(c2), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">result</span><br><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span>]</span><br><span class="line"> [<span class="number">4</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">2</span>]</span><br><span class="line"> [<span class="number">5</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">3</span>]</span><br><span class="line"> [<span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span>]</span><br><span class="line"> [<span class="number">4</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">2</span>]</span><br><span class="line"> [<span class="number">5</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">3</span>]</span><br><span class="line"> [<span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span>]</span><br><span class="line"> [<span class="number">4</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">5</span> <span class="number">6</span>]]</span><br></pre></td></tr></table></figure>
+
+<h2 id="tf-transpose"><a href="#tf-transpose" class="headerlink" title="tf.transpose()"></a>tf.transpose()</h2><p>demo</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">a = tf.constant(</span><br><span class="line">    [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">     [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]]</span><br><span class="line">)</span><br><span class="line">b = tf.transpose(a)</span><br><span class="line"><span class="comment"># equivaltently</span></span><br><span class="line">c = tf.transpose(a, [<span class="number">1</span>, <span class="number">0</span>])</span><br><span class="line"><span class="comment"># x : 2 x 2 x 3</span></span><br><span class="line">x = tf.constant(</span><br><span class="line">    [[[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">      [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]],</span><br><span class="line">     [[<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>],</span><br><span class="line">      [<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]]]</span><br><span class="line">)</span><br><span class="line"><span class="comment"># perm is more useful for n-dimensional tersors, for n &gt; 2</span></span><br><span class="line"><span class="comment"># y : 2 x 3 x 2</span></span><br><span class="line">y = tf.transpose(x, perm=[<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    print(sess.run(a), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(b), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(c), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    print(sess.run(x), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(x.get_shape().as_list(), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(sess.run(y), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br><span class="line">    print(y.get_shape().as_list(), end=<span class="string">&#x27;\n\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>result</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">2</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[<span class="number">1</span> <span class="number">4</span>]</span><br><span class="line"> [<span class="number">2</span> <span class="number">5</span>]</span><br><span class="line"> [<span class="number">3</span> <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line">[[[ <span class="number">1</span>  <span class="number">2</span>  <span class="number">3</span>]</span><br><span class="line">  [ <span class="number">4</span>  <span class="number">5</span>  <span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line"> [[ <span class="number">7</span>  <span class="number">8</span>  <span class="number">9</span>]</span><br><span class="line">  [<span class="number">10</span> <span class="number">11</span> <span class="number">12</span>]]]</span><br><span class="line"></span><br><span class="line">[<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckfahcyda0008l0dl277ggwml" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +587,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckf9ubdbi0005sgdlgpb226p4" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckfahcydd000cl0dl9btkf8zw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,20 +625,19 @@
       
       	<!-- Table of Contents -->
 		
-        <p>##年度关键词</p>
-<ul>
+        <h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><ul>
 <li>今年给自己的年度关键词是： 入局</li>
 </ul>
 <h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="拉萨"><a href="#拉萨" class="headerlink" title="拉萨"></a>拉萨</h5><p>西藏整体印象是圣洁、无污染、纯净。布达拉宫内有乾坤，里面有佛教文化中一切元素，能唤起藏区统治者那种具备强信仰，却又因为是王室的诸多无奈之情，宫殿里面巨大的陵墓让人震撼，感觉还是无论是生是死，都是在追求内心中的一种平静。藏区民众就像他们的牦牛一样，性格温顺，虔诚，丝毫没有感受到少数冲突分子的暴乱、动荡。高原反应：所谓高原反应，好比长期不运动跑了1000米之后，自然喘气会大口大口喘气，但是过一会就会恢复，类似这样一种感觉。在持续向上爬坡或者快速前进的时候会很快有这种感觉。</p>
-<p>#####林芝<br>塞上江南，海拔比拉萨低不少高反弱很多，能较好地适应大多数人的需求。景色的美在于结合了远方的雪山和近处的绿水，绿水和桂林遇龙河有点类似，但是远方的雪山加持上感觉美的更立体。最美的地方在于南迦巴瓦峰，中国最美山峰Top1感觉应该是实至名归（区分清楚是“山峰”，不是“山”），海拔不到8000，号称羞女峰，那个峰尖长期是云雾缭绕，基本上不能完全看到全貌，我这算是足够幸运，拍到了完整的山尖，并且拍照时真好是太阳金光一渡，美好瞬间来的突然去的更快，也就持续几分钟。到了晚上之后，南迦巴瓦依然云雾缭绕，远远望去仔细看了十多分钟，感觉那个山峰上面绝对是阴森恐怖，云雾缭绕，假如晚上爬在上面心里恐惧肯定是一个巨大问题。后来回了北京再看南迦巴瓦的照片，那种怀念的感觉迟迟散不了，做梦也梦见过好几次，但用“美”这种字眼描述不出来那种难忘的感觉，梦里面的南迦巴瓦，感觉已经称为一种心结，这种感觉在目前为止所有去过的地方里面都基本没有。</p>
+<h5 id="林芝"><a href="#林芝" class="headerlink" title="林芝"></a>林芝</h5><p>塞上江南，海拔比拉萨低不少高反弱很多，能较好地适应大多数人的需求。景色的美在于结合了远方的雪山和近处的绿水，绿水和桂林遇龙河有点类似，但是远方的雪山加持上感觉美的更立体。最美的地方在于南迦巴瓦峰，中国最美山峰Top1感觉应该是实至名归（区分清楚是“山峰”，不是“山”），海拔不到8000，号称羞女峰，那个峰尖长期是云雾缭绕，基本上不能完全看到全貌，我这算是足够幸运，拍到了完整的山尖，并且拍照时真好是太阳金光一渡，美好瞬间来的突然去的更快，也就持续几分钟。到了晚上之后，南迦巴瓦依然云雾缭绕，远远望去仔细看了十多分钟，感觉那个山峰上面绝对是阴森恐怖，云雾缭绕，假如晚上爬在上面心里恐惧肯定是一个巨大问题。后来回了北京再看南迦巴瓦的照片，那种怀念的感觉迟迟散不了，做梦也梦见过好几次，但用“美”这种字眼描述不出来那种难忘的感觉，梦里面的南迦巴瓦，感觉已经称为一种心结，这种感觉在目前为止所有去过的地方里面都基本没有。</p>
 <h5 id="纳木措-amp-羊卓雍措"><a href="#纳木措-amp-羊卓雍措" class="headerlink" title="纳木措 &amp; 羊卓雍措"></a>纳木措 &amp; 羊卓雍措</h5><p>这两个是三大圣湖的其中两个，去的路上都是4-5个小时车程，来回9-10个小时成本可以说极高，而且中间有断路仔细想想那根本不是路，颠簸2个小时都快要起飞了，中间游览也就2小时，但整体感觉还是挺值的，和抱有期待和兴趣有关，同时这两个湖确实是平静的让人不知道该说什么好，手上快速的拍下一个个的照片，但是说实话没几张满意的，可能是设备不行吧好多感觉相片上完全不出来。两大圣湖美的原因还是距离生活区非常元，距离人住的地方实在是有距离，这样也保证了超强的抗污染。印象比较深的是和藏獒合影，藏獒在人们心目中是非常凶的动物，我当时因为拍了和2只藏獒的合影心里面秀的一逼，但仔细想想藏獒的雄伟早就被人的驯化所磨灭，可以说没有一丝雄气，动物内在个性还不如一只家养的猫来的傲娇。当地人喊一句蹲下马上蹲下，从来没有见过一种动物能被驯化的那么没脾气。人类最强的地方就是“驯化”，有一百种方法让有个性的生灵变成机器般的产物，这么一想这张看似牛逼的藏獒合影照片，真的是没多大意思。另外就是抱着小羊拍照片的那个，拍出来效果很不错，藏家小女孩拍的很开心，我非常满意。有个细节当时小女孩子因为多拍了一个动作想多问我收10快钱，但是她妈妈之前收了我的钱就马上拒绝了，可见这些藏民还是虽然是赚钱还是很有原则的。</p>
 <h5 id="飞机回家的路上"><a href="#飞机回家的路上" class="headerlink" title="飞机回家的路上"></a>飞机回家的路上</h5><p>旁边坐了一个藏民老爷爷，皮肤黝黑，目光顺着窗口望出去，不知道是不是第一次坐飞机。空姐发餐食和饮料的时候没有说话摆手不要，一下让我想起了我姥爷在的时候。瞬间眼泪刷刷的实在是难以控制，我在吃完米饭的时候藏民老爷爷还主动帮我把餐盒递给了空姐。下了飞机在银川候机换乘，心情久久难以平静，一个人吃了那个很酸的宁夏酸奶缓了好一会儿。</p>
-<p>#####同行的人<br>认识的人有好几个，印象深刻的有一个西安的大厨，三个温州的女生，一个飞韩国的导游，一个住在美国小姐姐，一个也是太原做旅游的女生，还有几个其他人。来西藏旅游的基本上是两类，一类是刚辞职有时间出来玩的，另一类是真有点钱且为了n年前的一个目标过来的（没错我是第二种），这部分人有个共性：真的是有想法、能执行的一批人，这点毋庸置疑，认识几个这种人加了微信，感觉自己心态开阔了许多。来西藏多多少少也是一次克服恐惧的过程，因为能让人恐惧的东西，就是具有未知性的东西，你不知道来了不会不会有高原反应、藏独分子这些，当你真的来了，才是真正体会这些rumors是真rumors还是reality。总之，独自一人去一次西藏，对自我产生更强烈的认同，也会想的更清楚自己到底是怎样的一类人：简单来说就是那种有自己的想法，有执行，十分十分注重自我体验的那种人。</p>
-<p>#####东极岛<br>大陆最东的岛屿，太平洋的光最先照耀到这里。前面这句话是韩寒写的很有感觉，但是实地去感受相当一般，垃圾很多，开发也不完善，相应的娱乐设施也乏善可陈。梭子蟹卖的很贵，感觉也不怎么好吃。酒吧老板娘始终不让我们在里面吃饭，让人极其讨厌；岛上一碗面基本上是拉面+半个梭子蟹壳，可以说是高价且毫无亮点。除了和算法团队小伙伴留下比较不错的合影留念，景点强烈不推荐。旅游业的发展不是一件简单的东西，提升管理质量本身的意义可能比本来具备的资源更加重要。如果让我做的话，我可能先从调整这些商家的态度入手，真正做到客户第一，再考虑调优盈利结构。</p>
-<p>#####上海<br>真·故地重游，这次针对性的吃了不少上海的特色美食，和几个小伙伴在外滩照了照片，秀的那是十分的开心。我始终感觉外滩美景的大气没有重庆那种三江汇聚来的大气。不过上海确实是现代感非常强，不是国内任意一个城市可以比拟的。</p>
+<h5 id="同行的人"><a href="#同行的人" class="headerlink" title="同行的人"></a>同行的人</h5><p>认识的人有好几个，印象深刻的有一个西安的大厨，三个温州的女生，一个飞韩国的导游，一个住在美国小姐姐，一个也是太原做旅游的女生，还有几个其他人。来西藏旅游的基本上是两类，一类是刚辞职有时间出来玩的，另一类是真有点钱且为了n年前的一个目标过来的（没错我是第二种），这部分人有个共性：真的是有想法、能执行的一批人，这点毋庸置疑，认识几个这种人加了微信，感觉自己心态开阔了许多。来西藏多多少少也是一次克服恐惧的过程，因为能让人恐惧的东西，就是具有未知性的东西，你不知道来了不会不会有高原反应、藏独分子这些，当你真的来了，才是真正体会这些rumors是真rumors还是reality。总之，独自一人去一次西藏，对自我产生更强烈的认同，也会想的更清楚自己到底是怎样的一类人：简单来说就是那种有自己的想法，有执行，十分十分注重自我体验的那种人。</p>
+<h5 id="东极岛"><a href="#东极岛" class="headerlink" title="东极岛"></a>东极岛</h5><p>大陆最东的岛屿，太平洋的光最先照耀到这里。前面这句话是韩寒写的很有感觉，但是实地去感受相当一般，垃圾很多，开发也不完善，相应的娱乐设施也乏善可陈。梭子蟹卖的很贵，感觉也不怎么好吃。酒吧老板娘始终不让我们在里面吃饭，让人极其讨厌；岛上一碗面基本上是拉面+半个梭子蟹壳，可以说是高价且毫无亮点。除了和算法团队小伙伴留下比较不错的合影留念，景点强烈不推荐。旅游业的发展不是一件简单的东西，提升管理质量本身的意义可能比本来具备的资源更加重要。如果让我做的话，我可能先从调整这些商家的态度入手，真正做到客户第一，再考虑调优盈利结构。</p>
+<h5 id="上海"><a href="#上海" class="headerlink" title="上海"></a>上海</h5><p>真·故地重游，这次针对性的吃了不少上海的特色美食，和几个小伙伴在外滩照了照片，秀的那是十分的开心。我始终感觉外滩美景的大气没有重庆那种三江汇聚来的大气。不过上海确实是现代感非常强，不是国内任意一个城市可以比拟的。</p>
 <h2 id="工作总结（算法工程师的第一个半年）"><a href="#工作总结（算法工程师的第一个半年）" class="headerlink" title="工作总结（算法工程师的第一个半年）"></a>工作总结（算法工程师的第一个半年）</h2><p>从两条线进行总结，一条线是以时间线，梳理每个项目做的点；另一条是经验线，总结的是工作方法论上可以提升的点。</p>
 <h5 id="落地一淘猜你喜欢迁移学习项目"><a href="#落地一淘猜你喜欢迁移学习项目" class="headerlink" title="落地一淘猜你喜欢迁移学习项目"></a>落地一淘猜你喜欢迁移学习项目</h5><p>年初实习项目，主要把迁移学习模型在猜你喜欢场景落地，效果上相比Local模型取得提升。核心点是利用Global信息更好地刻画C端用户全局兴趣；这个项目本来在2018年年末完成，相比预期有一定的delay，主要原因是2018年末对tensorflow的一些API使用还是不够熟悉踩了一些坑，不过最终还是拿到了比较稳定的收益。项目结束后也同时抛出一个潜在优化点，能否设计更优雅的结构容纳Global信息，或者蒸馏已有Global网络萃取出Global兴趣分布，充分降低模型的复杂度的同事达到类似的精度，后续因为完成毕业论文的原因没有再继续深究。</p>
-<p>#####完成硕士毕业论文 &amp; 答辩<br>将自己硕士期间的很多工作和探索总结在了论文里面，基本上每一部分内容都把自己想要体现的内容，包括四个部分（室内定位理论+机器学习方法在Wi-Fi定位任务的应用+数据分布探索+对比实验的设计思想和论证过程）并且尽可能清楚地体现到论文内容当中，可以说是对自己硕士三年的一个沉淀。</p>
+<h5 id="完成硕士毕业论文-amp-答辩"><a href="#完成硕士毕业论文-amp-答辩" class="headerlink" title="完成硕士毕业论文 &amp; 答辩"></a>完成硕士毕业论文 &amp; 答辩</h5><p>将自己硕士期间的很多工作和探索总结在了论文里面，基本上每一部分内容都把自己想要体现的内容，包括四个部分（室内定位理论+机器学习方法在Wi-Fi定位任务的应用+数据分布探索+对比实验的设计思想和论证过程）并且尽可能清楚地体现到论文内容当中，可以说是对自己硕士三年的一个沉淀。</p>
 <h5 id="落地ToB端推荐项目"><a href="#落地ToB端推荐项目" class="headerlink" title="落地ToB端推荐项目"></a>落地ToB端推荐项目</h5><p>一期二期探索ToB推荐的方法论，不同于常规的ToC推荐，B端推荐需要刻画的B背后的人群结构信息，并且需要去从模拟推广者选品视角，需要引入领域知识作为辅助。需要拆分B下人群结构以及背后的需求。做的过程中有很多地方进行了比较反复的讨论和尝试，重点在三个问题上上有所停滞，<br>     1.如何定义抽象的媒体推广意愿<br>     2.如何离线验证模型起到的效果。<br>     3.如何保证数据产生的效率。（排序阶段特征提取和模型训练过程和召回结果对接的时产生过性能问题）。工作方法论总结放在下面的部分。</p>
 <h5 id="参加试用期转正答辩"><a href="#参加试用期转正答辩" class="headerlink" title="参加试用期转正答辩"></a>参加试用期转正答辩</h5><ul>
 <li>目前主要存在的问题：遇到问题处于太过纠结的状态，需要高效地走到解决问题的途径上，不要把一个问题的细节梳理的清清楚楚再解决（事实上你也不可能一下就梳理清楚）；简单来说对我目前的情况而言：只抓核心要素即可、直白地问问题、聚焦当前的问题；</li>
@@ -396,12 +647,11 @@
 <li>答辩的时候不要过多铺开讲技术细节（比如表叔过多重复xx特征、xx训练等细节），受众有时候没法马上明白，他们不是算法研究员，因此千万不要学术化、不要全盘算法化、业务表述业务化、细节表述通俗化效果好很多；</li>
 <li>答辩过程来看：整体多视角里面缺少整体GMV这个对我们平台来说最宏观的目标；另外就是“自购行为过滤”这个表述引起老大的误解，本质上是说带有目的性的转化这个含义更接近一些；另外老大鼓励对外技术分享活动中将我们的技术进行分享，但是要注意脱敏；</li>
 </ul>
-<h5 id="下行工具侧品牌团商品项目"><a href="#下行工具侧品牌团商品项目" class="headerlink" title="下行工具侧品牌团商品项目"></a>下行工具侧品牌团商品项目</h5><p>ppt项目由于客观因素，导致接入mt数量较小，影响面较小。这个项目总结2个点。<br>1.如何构建离线验证集是保证效果的关键环节，之前的方法论只集中在机器学习模型的效果验证上，其实明确一点，任何算法策略决定的效果保证，都是需要建立相应的验证集和验证指标，有时候需要建立多个验证集和验证指标。同时需要考虑在日常和大促两个截然不同的时间节点，大促期间人的潜在需求会得到充分的释放，可以说类似双11规模的大促期间的成交基本界定了算法效果的上限。同时对于商家来说，对于同样一件商品，都会有和日常截然不同的活动加持。<br>2.货品空间和需求空间的释放。由于项目早期是以品牌为核心因素做优化，因此早期对于品牌限制是略微过分严格，导致货品对应的需求空间没有得到充分地释放。水大鱼大，有时候不加限制带来的自然的结果往往更能适应人群需求的分布。</p>
-<p>##足球</p>
-<h5 id="最强不过利物浦"><a href="#最强不过利物浦" class="headerlink" title="最强不过利物浦"></a>最强不过利物浦</h5><p>本赛季欧冠留下最深印象的是克洛普领先的利物浦，从三个方面来看。1.攻击线上的化学反应（互补性）。萨拉赫-马内-菲尔米诺三人有着非常良好的化学反应，萨拉赫盘带出色能够把控进攻节奏，马内跑位精准+强力终结+强力斗志当之无愧大腿，菲尔米诺在进攻中具有很强的创造性，再加上奥里吉也意识俱佳，能在此三人的基础上有效的出奇制胜，进攻中以上几人有很强的互补性，具备了欧洲一流的攻击水准。同时两个边后卫跑动能力极强，为进攻增添很多张力，是令人羡慕的进攻体系；2.防线，范戴克一枝独秀，对阵热刺上演1防2的局面，脑子里设想好了西索科是右脚球员，逼西索科用左脚起脚；决赛防孙兴慜，孙速度不弱，范也是快速贴身为主，处理相当冷静，对于箭头人物的进攻特点做足了功课。阿诺德作为年轻小将，对于压力处理的非常好，主场对阵巴萨鸡贼的一个假跑突然传中，必须拍案叫绝，确实在战略层面碾压了巴萨。3.渣叔克洛普，最有激情的德国教练，激情之下是具备极强的表达能力，能将自己的思想渗透到球员在攻防当中的每一次触球选择，在13年不敌拜仁，17不敌皇马之后，19的欧冠中，除了决赛都展现了强大的集体作战能力，坚持疾风暴雨般的团队进攻打法，但是决赛却一反常态踢得非常稳健保守，领先之后进攻线上基本上只把萨拉赫安排在前面，全部队员都集中在体系防守里面。这种级别的赛事，到了最后战略上的保守带来胜利的概率会非常大。</p>
+<h5 id="下行ppt商品项目"><a href="#下行ppt商品项目" class="headerlink" title="下行ppt商品项目"></a>下行ppt商品项目</h5><p>ppt项目由于客观因素，导致接入mt数量较小，影响面较小。这个项目总结2个点。<br>1.如何构建离线验证集是保证效果的关键环节，之前的方法论只集中在机器学习模型的效果验证上，其实明确一点，任何算法策略决定的效果保证，都是需要建立相应的验证集和验证指标，有时候需要建立多个验证集和验证指标。同时需要考虑在日常和大促两个截然不同的时间节点，大促期间人的潜在需求会得到充分的释放，可以说类似双11规模的大促期间的成交基本界定了算法效果的上限。同时对于商家来说，对于同样一件商品，都会有和日常截然不同的活动加持。<br>2.货品空间和需求空间的释放。由于项目早期是以品牌为核心因素做优化，因此早期对于品牌限制是略微过分严格，导致货品对应的需求空间没有得到充分地释放。水大鱼大，有时候不加限制带来的自然的结果往往更能适应人群需求的分布。</p>
+<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="最强不过利物浦"><a href="#最强不过利物浦" class="headerlink" title="最强不过利物浦"></a>最强不过利物浦</h5><p>本赛季欧冠留下最深印象的是克洛普领先的利物浦，从三个方面来看。1.攻击线上的化学反应（互补性）。萨拉赫-马内-菲尔米诺三人有着非常良好的化学反应，萨拉赫盘带出色能够把控进攻节奏，马内跑位精准+强力终结+强力斗志当之无愧大腿，菲尔米诺在进攻中具有很强的创造性，再加上奥里吉也意识俱佳，能在此三人的基础上有效的出奇制胜，进攻中以上几人有很强的互补性，具备了欧洲一流的攻击水准。同时两个边后卫跑动能力极强，为进攻增添很多张力，是令人羡慕的进攻体系；2.防线，范戴克一枝独秀，对阵热刺上演1防2的局面，脑子里设想好了西索科是右脚球员，逼西索科用左脚起脚；决赛防孙兴慜，孙速度不弱，范也是快速贴身为主，处理相当冷静，对于箭头人物的进攻特点做足了功课。阿诺德作为年轻小将，对于压力处理的非常好，主场对阵巴萨鸡贼的一个假跑突然传中，必须拍案叫绝，确实在战略层面碾压了巴萨。3.渣叔克洛普，最有激情的德国教练，激情之下是具备极强的表达能力，能将自己的思想渗透到球员在攻防当中的每一次触球选择，在13年不敌拜仁，17不敌皇马之后，19的欧冠中，除了决赛都展现了强大的集体作战能力，坚持疾风暴雨般的团队进攻打法，但是决赛却一反常态踢得非常稳健保守，领先之后进攻线上基本上只把萨拉赫安排在前面，全部队员都集中在体系防守里面。这种级别的赛事，到了最后战略上的保守带来胜利的概率会非常大。</p>
 <h5 id="孙兴慜闪耀亚洲之光"><a href="#孙兴慜闪耀亚洲之光" class="headerlink" title="孙兴慜闪耀亚洲之光"></a>孙兴慜闪耀亚洲之光</h5><p>本赛季孙完成了大爆发，正式跻身为英超顶级攻击手，具有很快速的反击推进能力和终结能力。成功背后，他父亲可以说是第一功劳，父亲将培养一名职业运动员当做一个“十年以上的任务”，其决心和执行力都堪称恐怖（抛开足球放眼所有行业、所有角色，这种父亲、这种人都堪称罕见），同时长期提醒孙，你所获得的荣誉都是别人对你的认可，不是你的骄傲的资本。灌输谦虚睿智的态度同时十多年完成一个目标的决心并行，两种品质的并行造就了可能是未来亚洲最成功的球员；</p>
 <h5 id="国足四十强赛的停滞"><a href="#国足四十强赛的停滞" class="headerlink" title="国足四十强赛的停滞"></a>国足四十强赛的停滞</h5><p>7-0那场大胜我看出来不少问题，看出了国足攻防两端过于明显的短板，尤其是进攻缺少配合，因此在后面买彩票的时候真的是出奇的稳。四十强赛国足是没有人才。遗憾的是进攻中武磊和艾克森没有配合，中场太缺创造力，后防线更是人才荒漠，再加上里皮用人固执不用冯潇霆等也是同样败笔，固执的用人能够带来冠军，但是在不利的条件下，个人感觉还是得放下以前的一些成见面对当下的问题，冯潇霆之前的比赛确实有个很低级的失误被阿兹蒙，那个丢球确实该骂、该重罚，但是有时候今时不同往日，防线用两个没有经验的小将客观来说真的没法撑起大局（虽然小将联赛表现算不错），个人感觉当时还是暂时重启一下老将效果来的更好。</p>
-<p>#####国安争冠失败<br>半程取得最好开局，一度看到希望，但是最终输给上港那场太伤，中途换下施密特始终还是不妥，直接把进攻体系有所瓦解。国家队四十强比赛影响了李可、池忠国两个核心对决上港没上，直接导致被上港中场完全压制，影响太大。有时候机会真的是转瞬消失，本赛季国安阵容感觉是足够拿冠军的，感觉缺少核心战术上稳定性对结果还是有太多不利影响。</p>
+<h5 id="国安争冠失败"><a href="#国安争冠失败" class="headerlink" title="国安争冠失败"></a>国安争冠失败</h5><p>半程取得最好开局，一度看到希望，但是最终输给上港那场太伤，中途换下施密特始终还是不妥，直接把进攻体系有所瓦解。国家队四十强比赛影响了李可、池忠国两个核心对决上港没上，直接导致被上港中场完全压制，影响太大。有时候机会真的是转瞬消失，本赛季国安阵容感觉是足够拿冠军的，感觉缺少核心战术上稳定性对结果还是有太多不利影响。</p>
 <h2 id="锻炼与健康"><a href="#锻炼与健康" class="headerlink" title="锻炼与健康"></a>锻炼与健康</h2><ul>
 <li>下半年6-8月份坚持一段时间跑步，后来没能坚持下来；主要原因是项目中间有一段讨论和停滞，同时心里急着出一些成果，然后搁置了锻炼的节奏，仔细回想起来其实推进项目的最好方法就是聚焦核心问题、简化一些处理、放开一些限制，不要被局部的一些细节所缠绕跳不出来，按照项目最根本的目标选择比较简单有效的做法去快速迭代，这样基本上能够比较自然地、有序地进行推进。</li>
 <li>今年打了很长时间桌上足球，技术有了明显的进步，开发出来前场防守反击的能力，进球率非常高且让对手心理非常难受，后场进攻右手拉射也偶然有进球，但是力道还是比左手小很多；最重要的一点是无论进攻还是防守，认可“控球的”真正价值，且控球都更加自信了，横向控球能为进攻提供随机性，给防守方带来更多的难度，虽然频繁来回控球有一定的丢球率，但是会增加进攻中的不确定性，长久来看对于进攻效果提升大有好处，有时候必须大胆一些采取更灵活的策略，哪怕失误，但是一旦练成这种手法，进攻的质量会高出一个层次。</li>
@@ -427,7 +677,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" data-id="ckfag21c700041cdl1bcvfwsp" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/02/2019%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" data-id="ckfahcydm000sl0dl83pqaru1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -444,7 +694,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/">经验总结</a>
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
   </div>
 
   </div>
@@ -529,474 +779,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/" data-id="ckfag21c500011cdlcxrw97k4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019互联网公司实习生面试总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/01/2019%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/" class="article-date">
-  <time datetime="2019-10-01T04:12:57.000Z" itemprop="datePublished">2019-10-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/">经验总结</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/01/2019%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/">2019互联网公司实习生面试总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>面试是一次<strong>梳理知识体系</strong>的机会；</li>
-<li>面试是一次提升表达能力，<strong>锻炼推销自己的能力</strong>的机会；</li>
-<li>面试是了解工业界、了解市场需求的绝好机会，面试官至少是一线工程师，大多数还是带团队的大佬，能体会到他们更care什么，<strong>将市场需求和自身能力对齐</strong>；</li>
-</ul>
-<hr>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h3 id="作业帮"><a href="#作业帮" class="headerlink" title="作业帮"></a>作业帮</h3><ul>
-<li>持续时间：一面40min</li>
-</ul>
-<h5 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>讲一下京东比赛的项目。你的模型为什么用了xgb?不用别的模型?</li>
-<li>[手写代码]二叉树层序遍历</li>
-<li>[手写代码]1到M+1这么多个数, 中间缺了一个数，如何最快的找到缺少的数字.</li>
-<li>[手写代码]一副扑克，包含大小王，随机抽五张，返回这五张是否是依次连续的，大小王可以替代任意一张扑克.</li>
-<li>[手写代码]给一个非常大的文件, 内存放不下，用你熟悉的语言读取它的最后10行内容。</li>
-<li>xgb的特征重要性怎么给出的？</li>
-</ol>
-<h5 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h5><p>1.写代码不要着急下手，一定要思考几秒钟(不管是很简单还是难) 如果感觉太简单还是要想想坑(注意的点)在哪？需要考虑的特殊情况是啥, 多嘴先问一句要输出什么还是只返回一个数组？<br>2.面试官说话声音太小，多确认几次要做什么？<br>3.写代码字体不要写的太大。太大很容易乱。给人一种思路不清楚的感觉。</p>
-<hr>
-<h2 id="链家"><a href="#链家" class="headerlink" title="链家"></a>链家</h2><ul>
-<li>岗位：算法实习生(策略方向)</li>
-<li>持续时间：总共3面+hr面, 持续到下午2:10面完，中间有15min吃完饭。</li>
-</ul>
-<h5 id="问题总结-1"><a href="#问题总结-1" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>决策树分裂规则有哪些？相比信息增益，信息增益比的优势在哪里？</li>
-<li>learning-to-rank了解吗？</li>
-<li>[手写代码]输出一个十进制数的二进制表达1的个数？如果是负数怎么办？如果是浮点数怎么办？</li>
-<li>二分查找找不到了怎么返回？</li>
-<li>[手写代码]现在有一个字符串数组，每个字符串由[a-j]组成, 分别代表[0-9]这10个数字，返回一个0-9的映射使得这几个字符串代表的数字之和最大。</li>
-<li>linux微内核了解吗？</li>
-<li>svm的原理？写出支持向量到分离超平面之间的距离公式。核函数是什么？有哪些？你用过哪些？</li>
-<li>[手写代码]一个数组中第k大的数字，你能想到最好的时间复杂度是多少？</li>
-<li>gbdt的原理？</li>
-<li>c++中指针和引用有什么区别？</li>
-<li>操作系统内存管理的方式？</li>
-<li>pca的数学原理</li>
-<li>SQL中where和having语句的区别？</li>
-<li>SQL有哪几种连接的方式？给了一个例子，让写出来left join的结果</li>
-<li>讲蚂蚁金服定位比赛？多分类和二分类的方案如何抉择？各有哪些优势？</li>
-<li>机器学习无所不能?机器学习是吹出来的？</li>
-<li>xgb一般调哪几个参数？怎么调？</li>
-</ol>
-<h5 id="经验总结-1"><a href="#经验总结-1" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>面试官说数据分析和挖掘里面最重要的是理解特征和思考背后的含义。其次才是数据质量和数据清洗、再是模型和调参。机器学习在合适的场景才能发挥自身的作用。这句话可以和下一个面试官聊。</li>
-<li>实习时间必须说[6个月以上]。能全职实习。对大公司平台没要求。对你们公司的业务特别特别有兴趣。</li>
-<li>遇到不太清楚的，满脸微笑的先问问面试官能不能提示一下?^_^</li>
-<li>讲项目嘴巴快一点效果更好，前因后果往下滔滔不绝坐等面试官打断。打断以后回答问题时刻意放慢节奏，慢慢说为什么这么做或者XX原理是什么。</li>
-<li>链家面试官比较温和，面试官风格各异，前两面的比较谦和不停引导一个问题逐渐深入。第三免面试官语速很快思维特别清晰。跟着面试官思路比较重要。</li>
-<li>hr面也不要大意, 也得小心回答。技术面试表现好也不见的是好事, 她会怕你不来。hr如果问题你还有什么问题？问薪资加班意义不大。<br>目前感觉比较合适的是</li>
-</ol>
-<ul>
-<li>咱们公司对于实习生培养方案是怎样的？</li>
-<li>咱们公司对于转正是如何考评的？实习生是否由优先转正的机会。</li>
-<li>咱们公司是否会有定期的专家讲座或者培训提升自己的能力。</li>
-</ul>
-<hr>
-<h2 id="字节跳动"><a href="#字节跳动" class="headerlink" title="字节跳动"></a>字节跳动</h2><ul>
-<li>岗位：算法实习生 (商业化 DATA)</li>
-<li>持续时间：总共3技术面, 持续到下午1:36面完，中间有15min吃完饭; 第2天hr电话面</li>
-</ul>
-<ol>
-<li>看到你的简历是保研？学习秘诀是什么？</li>
-<li>你本科做过比较厉害的事情/令你兴奋的事情是什么？</li>
-<li>估计目前头条广告一天的收入。我估计1亿，hr说差不多，是1.2亿。</li>
-</ol>
-<h5 id="问题总结-2"><a href="#问题总结-2" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]任意一种排序(本能写了快排，面试官说大家写的基本都是冒泡)</li>
-<li>[手写代码]实现LRUcache, 实现LFUcache</li>
-<li>xgb为什么叫xgb？xgb的原理？</li>
-<li>介绍一下lr，lr为何用sigmoid？sigmoid改一下加一个系数或者加一个缩放行不行？为什么行？行为什么没有原始sigmoid好？</li>
-<li>c++ splice()函数的原理</li>
-<li>tfidf了解过吗？idf为什么用log？</li>
-<li>word2vec了解过吗？原理是什么？训练为什么快？</li>
-<li>SVM如何实现非线性的？核函数有哪些？核函数有什么问题？高斯核函数有什么问题？</li>
-<li>[手写代码]快排如何优化？如果存在大量重复元素，快排如何优化？</li>
-<li>xgb和gbdt的区别？xgb如何分裂？</li>
-<li>各种激活函数的比较，一般用哪个？relu优势在哪</li>
-<li>stacking的原理？</li>
-<li>你比赛和第一名的差距在哪里？</li>
-<li>你比赛里面突出的工作？</li>
-<li>AC自动机原理？时间复杂度？</li>
-<li>依存句法分析？</li>
-</ol>
-<h5 id="经验总结-2"><a href="#经验总结-2" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>核函数了解不够深入</li>
-<li>word2vec了解的不够深入</li>
-<li>快排优化考虑不够全面</li>
-<li>面试官：以spice为例，了解原理才能进行优化</li>
-<li>整体原理答的还可以，但有以上硬伤(虽然项目里面没有写svm和word2vec)</li>
-</ol>
-<hr>
-<h2 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h2><ul>
-<li>岗位：算法实习生（WXG事业群 微信看一看）</li>
-<li>持续时间：总共3技术面，面试官迟到20min分钟，12点多一面结束，下午2:30开始, 持续到下午3:10面完，</li>
-</ul>
-<h5 id="问题总结-3"><a href="#问题总结-3" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]最长上升子序列</li>
-<li>[手写代码]链表排序（面试官想听到链表快排, 我说的插入排序，其实归并写起来最简单）</li>
-<li>[手写代码]二叉树中序非递归</li>
-<li>xgb并行化是指什么？怎么实现的？</li>
-<li>gbdt推导一下？从损失函数到优化变量</li>
-<li>卡方是如何定义的？</li>
-<li>比赛和前几名差距在哪？</li>
-<li>lr和gbdt谁更容易过拟合？</li>
-<li>FFM了解吗？PNN了解吗？</li>
-<li>聊一下地磁定位项目？(我没写这个项目但面试官问了实验室研究方向) 和wifi定位的关系？如何融合？如何实现地磁指纹库检索？</li>
-<li>各种介绍项目。(极少反馈做的好还是不好)</li>
-</ol>
-<h5 id="经验总结-3"><a href="#经验总结-3" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>腾讯面试官感觉没有明显的好坏反馈。各种嗯嗯嗯。可能是项目不够亮眼。</li>
-<li>gbdt从损失函数推导答的还可以更熟练一些。</li>
-</ol>
-<hr>
-<h2 id="滴滴"><a href="#滴滴" class="headerlink" title="滴滴"></a>滴滴</h2><ul>
-<li>岗位：算法实习生 (地图算法)</li>
-<li>持续时间：总共2面技术面</li>
-</ul>
-<h5 id="问题总结-4"><a href="#问题总结-4" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]生成全排列，我写了一个动态插入的方法，面试官一直想听递归方法，一直说我还是没讲清楚。</li>
-<li>[手写代码]如何计算一个大的指数，其实可能是考快速指数幂，我写了一个前n项的泰勒展开，也算写对了。</li>
-<li>lgb直方图是什么？</li>
-<li>bagging和boosting区别？我感觉说的很清楚，但面试官一直感觉不满意</li>
-<li>kdtree是怎么生成的？</li>
-<li>条件随机场了解吗？</li>
-<li>优化算法了解吗？拟牛顿牛顿区别？adam？rmsprop？momentum?</li>
-<li>DeepFM? Deep &amp; wide?看过哪些数据挖掘书？论文？</li>
-<li>GBDT+LR有用吗？叶子节点编号有用吗？cvr弱特征要one-hot编码吗？</li>
-<li>比赛名次为何这么低？这几个特征提升了多少？</li>
-<li>FFM?FM?了解吗？</li>
-</ol>
-<h5 id="经验总结-4"><a href="#经验总结-4" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>从一开始到最后，一直对比赛名次一顿怼，各种抓着某个弱一点的特征说没用，我讲算法思路面试官一直说我没说清楚。</li>
-<li>回答各种都不太满意，数学原理感觉都不了解？前沿论文没看看？</li>
-<li>两个面试官声音一直很低，交流我都凑着耳朵反复问。</li>
-<li>然而很痛快的给了offer。</li>
-<li>(很久以后的一个总结)虽然当时面试官对我一顿怼，面试体验很不好，但是这次面试可能对我提出建议最中肯最有用的一次面试，引导我多看weinan zhang的研究还有最新的一些研究进展，长远来看对我影响很深远。而且一面面试官follow我之前leader的博客这个让我很惊讶，应该是很深入的在做一些机器学习的应用。</li>
-</ol>
-<hr>
-<h2 id="360"><a href="#360" class="headerlink" title="360"></a>360</h2><p>岗位：算法实习生 （点睛 广告部门）<br>持续时间：3面技术面+第一个技术面面试官意向面</p>
-<ol>
-<li>[手写代码]堆排序</li>
-<li>[手写代码]快排</li>
-<li>[手写代码]编辑距离</li>
-<li>比较svm和lr，两个的损失函数？为啥是hinge loss</li>
-<li>[手写代码]链表倒数k个节点 时间O(n) 空间O(1)</li>
-<li>svm防止过拟合方法？</li>
-<li>one-hot维度太长如何维度截断？</li>
-<li>ac自动机？正则表达式是通过什么实现的？</li>
-<li>有10W个数据，数据服从一定分布，如何采样100个（要求无偏采样）</li>
-<li>[手写代码]给定一个数组，刚开始位于0，数组下标志为i代表在最多可以跳nums[i]步, 问能否到终点？到终点最少需要几步？</li>
-<li>c++ 内存模型了解吗？</li>
-<li>PCA数学原理？</li>
-</ol>
-<h5 id="经验总结-5"><a href="#经验总结-5" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>整体比较常规，一面面试官语速很快。二面面试官问的都不是机器学习相关。</li>
-<li>面试官说 搜索和广告路宽，推荐路子很窄</li>
-</ol>
-<hr>
-<h2 id="助理来也"><a href="#助理来也" class="headerlink" title="助理来也"></a>助理来也</h2><p>岗位：NLP算法实习生<br>持续时间: 2面技术面，6:10左右结束</p>
-<h5 id="问题总结-5"><a href="#问题总结-5" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>lr原理？lr要不要归一化？不归一化得到的w有没有意义？什么模型需要归一化？</li>
-<li>[手写代码]现在有一堆ip地址,对应一些城市，ip地址都有对应范围，但是中间都有缺失,如何最快的查询某个ip地址对应城市</li>
-<li>lr和svm区别</li>
-<li>对话机器人中意图识别的意图是怎么定义的？意图和slot的关系是什么？slot是无限生成的？有没有优化slot的方法？知识图谱能帮助扩展slot吗？</li>
-<li>项目数据量？衡量指标？</li>
-</ol>
-<h5 id="经验总结-6"><a href="#经验总结-6" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>聊的最开心的一次，面试官很有诚意, 后期基本上就是憧憬对话机器人的未来. </li>
-</ol>
-<hr>
-<h2 id="新浪"><a href="#新浪" class="headerlink" title="新浪"></a>新浪</h2><p>岗位：数据挖掘实习生<br>持续时间：1面技术面 持续1h左右</p>
-<h5 id="问题总结-6"><a href="#问题总结-6" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>hadoop了解吗？mapreduce?</li>
-<li>什么场景适合lr？lr原理？</li>
-<li>后面基本上在介绍项目，没有明显的原理提问</li>
-</ol>
-<h5 id="经验总结-7"><a href="#经验总结-7" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>感觉面试官技术不是很强，没提出比较专业的问题, 不太像是做机器学习或者数据挖掘的。对方的业务做的貌似也只是在公司内。</li>
-</ol>
-<hr>
-<h2 id="Blued"><a href="#Blued" class="headerlink" title="Blued"></a>Blued</h2><p>岗位：算法实习生 （推荐算法）<br>持续时间：1面技术面 1面hr 持续1h左右</p>
-<h5 id="问题总结-7"><a href="#问题总结-7" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>介绍一下lr</li>
-<li>ctr预估和cvr有什么区别</li>
-<li>ctr预估常见做法</li>
-<li>京东比赛用了哪些特征？为什么要用这些特征？</li>
-<li>数据清洗怎么进行</li>
-</ol>
-<h5 id="经验总结-8"><a href="#经验总结-8" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>面试官北邮phd，感觉实力也很水，hr诚意很足</li>
-<li>待遇很有诚意。</li>
-</ol>
-<hr>
-<h2 id="阿里巴巴"><a href="#阿里巴巴" class="headerlink" title="阿里巴巴"></a>阿里巴巴</h2><p>岗位：算法实习生（阿里妈妈)<br>持续时间：<br>1面电话面 持续1h7min加上写二分查找<br>2面现场面持续到11:18<br>3面现场面11:40左右开始, 1:10左右面试完<br>4面电话面 持续38min26s<br>5面电话面 持续1h47s<br>hr电话面持续 持续36min17s</p>
-<h5 id="1面问题总结"><a href="#1面问题总结" class="headerlink" title="1面问题总结"></a>1面问题总结</h5><ol>
-<li>C++面向对象机制</li>
-<li>C++和Java的区别</li>
-<li>Python迭代器?</li>
-<li>Python xrange和range有什么区别</li>
-<li>Python tuple和list有什么区别</li>
-<li>python为什么不推荐for循环</li>
-<li>无序数组中的中位数？最优复杂度？我说了大顶+小顶，面试官还要继续优化</li>
-<li>l1和l2norm区别</li>
-<li>GDBT原理? xgb原理？</li>
-<li>京东比赛转化率有没有平滑？要不要平滑？</li>
-<li>京东比赛为什么要user模型，只是用user-item模型不行吗？这样会损失很多信息不是吗？</li>
-<li>xgb如何对离散特征处理？如何对连续特征处理？</li>
-<li>lr损失函数？能不能是均方误差？</li>
-<li>[手写代码]直接打开链接,写二分查找</li>
-<li>快排时间复杂度，堆排序时间复杂度，所以快排和堆排哪个好?</li>
-</ol>
-<h5 id="1面经验总结"><a href="#1面经验总结" class="headerlink" title="1面经验总结"></a>1面经验总结</h5><ol>
-<li>面试官电话面试中对项目问的特别深入。一直在纠结京东项目里面的ui模型和user模型的细节。反复问为什么一定要有个user模型。</li>
-<li>手写二分的时候，一紧张忘了判断数组为空了。后面加上了。</li>
-<li>对编程语言实现原理不够熟悉。尤其是三个一起问。</li>
-</ol>
-<h5 id="2-3面问题总结"><a href="#2-3面问题总结" class="headerlink" title="2. 3面问题总结"></a>2. 3面问题总结</h5><ol>
-<li>lstm了解吗？lstm门控了解吗？每个门干什么的？</li>
-<li>lr为什么要对连续特征离散化并进行交叉？回答了一些。但是面试官希望听到：引入非线性。</li>
-<li>模型融合常见的方法有哪些？你用过哪些？提升了多少？</li>
-<li>开放问题。做一个商品对商品的推荐，不能基于任何历史记录，现在淘宝商品数据量超大，请问怎么做？</li>
-<li>开放问题。我现在有个新的模块上线，要求做商品推荐，也是不能任何历史记录，怎么做？我问是处理冷启动问题吗？她说不是。感觉没太理解这种场景是什么。。</li>
-<li>模型融合方法，有没有参数化的模型融合？（说我说的都是非参数化的）后来我说了GBDT+LR这种，面试官嗯了一下不确定对不对。</li>
-<li>近期机器学习论文了解过吗？</li>
-<li>lr归一化怎么做？</li>
-<li>蚂蚁项目为什么要二分类？</li>
-<li>本科做过学生干部或者社团干部吗？主要的收获是啥？</li>
-<li>喜欢什么运动？我回答足球？他说只有足球？我说羽毛球每周一次然后又选修学了网球。</li>
-<li>给定一个4G内存的笔记本，2T硬盘，求一个淘宝Topk词问题</li>
-<li>上一个面试表现如何？</li>
-<li>深度学习和机器学习比较？深度学习从本质上和传统的机器学习有什么区别？</li>
-<li>算法工程师的工作方式的改变你怎么看？传统算法需要提取特征，现在似乎偏向于调整模型结构？如何看待？</li>
-<li>神经网络如何防止过拟合？深度神经网络如何防止过拟合?</li>
-<li>CNN的结构？pooling层作用？不用这个能行吗？</li>
-<li>拿了几个offer？</li>
-<li>腾讯微信和阿里妈妈怎么选？</li>
-<li>城市怎么选？</li>
-<li>对薪资待遇怎么看？</li>
-<li>简历里面为何不写你发表的论文？</li>
-</ol>
-<h5 id="2-3面经验总结"><a href="#2-3面经验总结" class="headerlink" title="2-3面经验总结"></a>2-3面经验总结</h5><ol>
-<li>二面完全没问算法，但是广度和深度都有，开放性问题没思路。</li>
-<li>三面考察特别全面，从海量数据处理 -&gt; 深度学习的理解 -&gt; 工作性质的理解 -&gt; 做人的思考和收获 -&gt; 生活爱好。</li>
-<li>总体来讲阿里的面试官感觉水平较高，对人的考察全面。</li>
-<li>阿里办公环境整洁。可能是最整洁的面试环境。</li>
-<li>在阿里吃外卖似乎很多，临走之前一堆送外卖的在楼下。</li>
-<li>阿里妈妈似乎很看中写论文经验。</li>
-</ol>
-<h5 id="4面问题总结"><a href="#4面问题总结" class="headerlink" title="4面问题总结"></a>4面问题总结</h5><ol>
-<li>lr和ffm的比较? fm的优势在那？lr相对于ffm的特点在哪？</li>
-<li>链表排序的思路？</li>
-<li>快排相对于归并排序的优点？</li>
-<li>优化算法了解吗？牛顿法和梯度下降的区别？牛顿法的缺点？针对这个缺点有什么改进？</li>
-<li>lr的优点是什么？为什么能处理海量稀疏特征？</li>
-<li>蚂蚁金服项目中多分类和二分类的比较，二分类为什么优于多分类？</li>
-<li>实验室做过什么项目？聊一下实验室项目？</li>
-<li>为什么要做广告相关算法？</li>
-</ol>
-<h5 id="4面经验总结"><a href="#4面经验总结" class="headerlink" title="4面经验总结"></a>4面经验总结</h5><ol>
-<li>问题比较常规，对项目的细节反复询问为什么这么做。模型原理回答的还算流畅，快排相对于归并的优点需要深入看一下。</li>
-</ol>
-<h5 id="5面问题总结"><a href="#5面问题总结" class="headerlink" title="5面问题总结"></a>5面问题总结</h5><ol>
-<li>讲一下蚂蚁项目</li>
-<li>使用KNN模型，如何评价特征的重要性排序？</li>
-<li>xgb和lgb的区别？</li>
-<li>xgb的损失函数?</li>
-<li>实验室做过什么项目？</li>
-<li>实验室写过哪些论文？发表在哪？创新点？实验做了哪些？</li>
-<li>比赛为什么用集成树模型不用SVM？</li>
-</ol>
-<h5 id="5面经验总结"><a href="#5面经验总结" class="headerlink" title="5面经验总结"></a>5面经验总结</h5><ol>
-<li>问题依然常规。面试官一直在听，好像一直在思考。中间插话不太多。面试官感觉很好说话。</li>
-</ol>
-<p>hr面</p>
-<h5 id="问题总结-8"><a href="#问题总结-8" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>自我介绍一下？实验室的研究方向是什么？和机器学习有什么关系？</li>
-<li>个人职业规划？</li>
-<li>对城市有没有选择？有没有逃离北上广的想法？</li>
-<li>为什么想做广告业务？</li>
-<li>拿到了哪里的offer?</li>
-<li>个人爱好？你是看球还是踢球？最喜欢哪个球队？为什么喜好这个球队？踢球踢的什么位置？踢这个位置你的优势是什么？(解释了很长时间)</li>
-<li>前几面发挥的怎么样？哪个面试官没发挥好？</li>
-<li>你的优点？你的缺点？缺点如何改进？</li>
-<li>你来了这边想做哪块工作？</li>
-</ol>
-<h5 id="hr面经验总结"><a href="#hr面经验总结" class="headerlink" title="hr面经验总结"></a>hr面经验总结</h5><ol>
-<li>问题开放性强，看中综合素质。</li>
-</ol>
-<hr>
-<h2 id="腾讯-1"><a href="#腾讯-1" class="headerlink" title="腾讯"></a>腾讯</h2><p>岗位：算法实习生（OMG事业群, 天天快报)<br>持续时间：1面现场面 持续1h; 2面现场面找面试间用了很长时间才开始正式面试，到4:50结束</p>
-<h5 id="1面问题总结-1"><a href="#1面问题总结-1" class="headerlink" title="1面问题总结"></a>1面问题总结</h5><ol>
-<li>[手写代码]翻转链表</li>
-<li>[手写代码]逆序对，不让用暴力, 时间复杂度？</li>
-<li>[手写代码]矩阵从左上到右下最小路径和, 一个是只能往右往下，一个是四个方向都可以。</li>
-<li>[手写代码]二维矩阵中查找，行和列都是天然有序, 时间复杂度？</li>
-<li>lr的损失函数？损失函数怎么来的？怎么求解lr？推导怎么用梯度下降求解lr？</li>
-<li>贝叶斯平滑是什么？怎么做？</li>
-<li>写一下贝叶斯公式？</li>
-<li>项目中bagging提升了多少?stacking提升了多少？</li>
-<li>GDBT是什么？GBDT损失函数是什么？</li>
-<li>如何评价数据平滑的效果</li>
-</ol>
-<h5 id="1面经验总结-1"><a href="#1面经验总结-1" class="headerlink" title="1面经验总结"></a>1面经验总结</h5><ol>
-<li>面试官说把广告都作成美女的图片ctr就上去了，但是没有意义。(得好好思考一下这句话的意思)</li>
-<li>面试官对我写的翻转链表很疑惑（我的代码异常清晰正确的情况下）反复纠结递归写法中的head-&gt;next-&gt;next = head;这句代码</li>
-<li>感觉面试官没有对算法的热情，做算法都是为了产品，实习都要为产品打杂。如果作算法不是为了产品还不如去研究院。</li>
-<li>银科大厦腾讯工位不错的类似计算所，但是电梯是没有用, 都在爬楼梯。</li>
-</ol>
-<h5 id="2面问题总结"><a href="#2面问题总结" class="headerlink" title="2面问题总结"></a>2面问题总结</h5><ol>
-<li>[手写代码]估计pi的值，提示用生成随机数的方式</li>
-<li>[手写代码]翻转链表</li>
-<li>介绍对话机器人项目？带来了什么效果？</li>
-<li>介绍蚂金服项目？</li>
-</ol>
-<h5 id="2面经验总结"><a href="#2面经验总结" class="headerlink" title="2面经验总结"></a>2面经验总结</h5><ol>
-<li>面试官没有提出来常规机器学习问题，讲项目过程中也没什么反馈和知识点提问。</li>
-<li>最后问面试官我去了做什么？他说做模型。我问做什么模型？推荐？用户兴趣预测？他说推荐。我问上次不是说ctr吗？他又改口ctr。</li>
-<li>领航的工位感觉十分拥挤。比银科差了不少。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/2019%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/" data-id="ckf9ubdbl000esgdleheh32d5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2018年度总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/2018%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" class="article-date">
-  <time datetime="2019-01-02T12:11:00.000Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/">经验总结</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/2018%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">2018年度总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><p>今年给自己的年度关键词是：体验</p>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="桂林"><a href="#桂林" class="headerlink" title="桂林"></a>桂林</h5><p>城市比想象中小，从和司机聊天感觉民风淳朴；象鼻山实际样子很小（当时和小学课本给的感觉反差较大）建筑和山相连比较奇特，植物很多很绿；桂林米粉原本的做法是干拌的吃没汤，干拌相对味重比较喜欢；两江四湖主要将不同的景点进行串联，算是一种商业开发，好多景观单独放在一起不起眼，全部连成一片然后打上各种聚光灯，整体效果上升一个档次。</p>
-<h5 id="阳朔"><a href="#阳朔" class="headerlink" title="阳朔"></a>阳朔</h5><p>商业开发严重，啤酒鱼味道一般价格不便宜，椿记烧鹅味道可以；遇龙河漂流感觉很恬静，没有电动船的那种嘈杂，整个人生都安静下来了，师傅连续划船一个多小时感觉确实辛苦；</p>
-<h5 id="庐山"><a href="#庐山" class="headerlink" title="庐山"></a>庐山</h5><p>分AB两条线；五老峰顶峰俯瞰江西鄱阳湖风景净收眼底，观景体验很棒，爬山不累；毛主席在庐山曾经休息，避暑胜地，沁人心脾的凉爽；芦林湖风景好于如琴湖；三叠泉第一眼看有点意思，后面看其实国内还有很多类似的结构；</p>
-<h5 id="长沙"><a href="#长沙" class="headerlink" title="长沙"></a>长沙</h5><p>火宫殿小吃种类很多，经济实惠；臭豆腐做的比较有特色的主要原因是体积较大，豆腐块扎开很多小口将汤料渗入故味道是全方位的；湘江有种历史感，环顾橘子洲能想象毛主席的情怀；岳麓山名气大，但是整体感觉比较普通；</p>
-<h5 id="成都"><a href="#成都" class="headerlink" title="成都"></a>成都</h5><p>商业化气氛浓，小龙坎火锅主要吃油，吃的是一种厚重感，并没有太辣；降龙爪爪卖鸡爪子的店铺挺有特色；青城山后山风景属于意外惊喜，山泉清凉刺激，心旷神怡，正巧碰上大雾天回程坐索道非常刺激；</p>
-<h5 id="长江三峡"><a href="#长江三峡" class="headerlink" title="长江三峡"></a>长江三峡</h5><p>山水相连，两岸连山，长江给人一种包容感和胸怀感养育了南方风水；小三峡和小小三峡是黄金风景，多花30上甲板拍照很值，拍照视野很棒；三峡人家景区拍照效果很好，水面巨绿；三峡大坝没想象中壮观；游船上卡牌游戏套路深不能玩，船长酒会看起来很有仪式感，船上灯光炫目，营造一种觥筹交错氛围，实质可能是像是把你弄得有点晕然后赚一笔，基本都是变着法骗钱；</p>
-<h5 id="重庆"><a href="#重庆" class="headerlink" title="重庆"></a>重庆</h5><p>当地人地方归属感感强，不屑于说普通话；重庆江湖菜很有特色；城市以江景（长江/嘉陵江/乌江三江一体）为主打特色，洪崖洞小吃巨多，晚上观景需要去洪崖洞对面然后过桥观景位置最佳，城市面积巨大，核心景点住宿感觉不便宜；</p>
-<h5 id="杭州"><a href="#杭州" class="headerlink" title="杭州"></a>杭州</h5><p>别墅多高楼很少，空气质量还是那么舒服；</p>
-<h5 id="香山"><a href="#香山" class="headerlink" title="香山"></a>香山</h5><p>在最合适的季节里面发现松树本身比例很高，并不是漫山遍野都是红叶，是在北京生活的人的好去处；</p>
-<h2 id="工作总结-实习和面试经历"><a href="#工作总结-实习和面试经历" class="headerlink" title="工作总结-实习和面试经历"></a>工作总结-实习和面试经历</h2><ul>
-<li>累计面试20场+，滴滴面试官给了比较干货的建议，直接推荐follow具体的大牛研究，感觉算法研究工作感觉是靠谱；苹果电话面试没有太多准备英文交流中口语获得认可；</li>
-<li>要学会给面试官自圆其说，以讲算法比赛项目经历来看：毕竟面试官没有参加过比赛，背景和数据要刻意交代清楚，一时回答不满意的答案可以放慢节奏，一边回忆一边猜一遍沟通，猜面试官想听到什么答案，猜对方想听到哪个关键词；</li>
-<li>不同面试官面试风格迥异：有的正常流程不温不火，有的喜欢怼，有的轻描淡写就给过，有的会特别欣赏你，有的感觉根本不是干这个岗位的（提不出像样的问题/在全程被科普知识），不论Handle哪一种都应该不骄不躁；HR面被刷也有可能，要表达对于企业平台/业务/加班的认可甚至是热爱；大公司更看中基础，小公司相对更看中项目经历且给的钱多，发offer随意；</li>
-<li>面试是一种很好的全面的锻炼，能帮助认清自己的实际水平(我甚至有点喜欢这个活动)：认清知识上的短板、认清对知识的理解深度，直接提升表达能力和抗压能力；</li>
-<li>B家实习：管理风格扁平化，leader年轻，员工工作踏实努力，成员很多来自清北中科院但是很多感觉实力一般；boss 洞悉人性，洞悉算法应用的痛点，除加班风格外偏学习Google和FB，互联网风格很强；</li>
-<li>A家实习：员工整体感觉稳重中带智慧，各得其乐。（甚至桌上足球和台球都很强）相对创业公司流程规范化，技术文档积累沉淀比我想象中做的好，形成了很好的沉淀技术的氛围，公司整体看中综合素质；技术平台化能力很强，运营和产品员工商业sense很强；工作风格偏重思考，能站在高度思考全局，技术/PM运营表达力都相当强</li>
-<li>新人培训在十个队伍里面大多数985 技术 市场形态 表达能力 痛点挖掘 场景拆解，享受氛围；成功带领小组获得第一名 把握头脑风暴节奏 表达多一份准备和真诚</li>
-<li>实习转正：关于转正slides制作，重要一点是有拆解场景能力，总结归纳场景特点；我当时slides上有文字比过大的问题后期进行了基本的修复；slides制作能力进步明显，但还需要加强；数据可视化时三维图效果优于二维图；</li>
-</ul>
-<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="俄罗斯世界杯法国夺冠"><a href="#俄罗斯世界杯法国夺冠" class="headerlink" title="俄罗斯世界杯法国夺冠"></a>俄罗斯世界杯法国夺冠</h5><p>法国实至名归，整体阵容最强，球员动心忍性（尤其是博格巴和在曼联的表现不是一个画风），战术执行简介而到位：吉鲁纯支点（7场主力都没射正过充分说明战术作用在足球比赛获胜中的至高作用），姆巴佩边路高速启动制造威胁，坎特兢兢业业拦截盯防，乌姆蒂蒂和帕瓦尔两个后卫进攻给力，博格巴不浪不乱带，投入在中长调度和积极回防协防；克罗地亚杀入决赛比较惊艳，魔笛刚奥塔门迪一瞬间领袖气质凸显，全队很拼，双方献上了精彩的决赛；C罗对西班牙帽子戏法表现抢眼；</p>
-<h5 id="足协杯决赛北京国安vs山东鲁能"><a href="#足协杯决赛北京国安vs山东鲁能" class="headerlink" title="足协杯决赛北京国安vs山东鲁能"></a>足协杯决赛北京国安vs山东鲁能</h5><p>京鲁大战第一回合TIFO震撼，施密特布局国安传控进攻套路，但是配合过细太复杂没出来效果，边后卫助攻不上来，如果替补出场韦世豪可能会有奇效，鲁能战术抓反击质量效果不错，后卫防守稳健，边后卫发挥可圈可点；第二回合鲁能下半场开局失势有点梦游，国安求胜欲望更强，张稀哲还是靠头球打入关键进球；</p>
-<h2 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h2><ul>
-<li>上半年集中时间投简历/刷题/找实习锻炼被搁置；</li>
-<li>7月到8月之间偶尔跑步机跑步，每次跑30min；</li>
-<li>9月登庐山；11月登香山；</li>
-<li>10月恢复每周和实验室小伙伴在北邮打羽毛球坚持到年底，每次根据人数不同打1.0~2.0小时；</li>
-<li>桌上足球也是一种锻炼，每次打完都能出汗，考验反应速度和手腕灵活性，支持4个人一起玩挺有乐趣，目前水平太菜还需练习；</li>
-</ul>
-<h2 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h2><ul>
-<li>体重增加10斤；</li>
-<li>病史：6月感冒一次，10月份严重腹泻一次，11月着凉感冒一次，12月着凉感冒一次；6月感冒持续3天，11月感冒持续五天，11月感冒持续10天；拳击体验课后请假休息一天；</li>
-<li>饮食：吃水果频率比去年增加，但总体还是比较少，期间有考虑记录吃水果的日志，但是没有坚持下来；六月到九月份吃了很多炸鸡外卖，T家实习期间下午茶吃的多，零食吃得多；A家实习期间每天吃食堂，营养还算均衡；</li>
-<li>三次因为晚上喝咖啡，茶叶，兰芳园奶茶睡不着，以后坚决杜绝；</li>
-</ul>
-<h2 id="社交与活动"><a href="#社交与活动" class="headerlink" title="社交与活动"></a>社交与活动</h2><ul>
-<li>婚礼参加。参加李，贾，吴，杨四场婚礼，担任一次伴郎还坐了宾利头车，整体过程中十分感动真心替新人高兴，经常让人眼泪刷刷刷，同时发现结婚也是老友聚会的好机会，考虑减少主动少约人聚会（成本高/难聚齐），多参加婚礼抓住叙旧的机会；中国人对于结婚的意义比我想象中还要更深远，过程中当事人家庭非常累；</li>
-<li>团建。T家实习团建，A家杭州团建，A家庆功团建：多人聚餐喝酒场合前期不能多喝要收住；</li>
-<li>银行从业者聚餐。组织者分享人生经历，感觉他的成功很重要一点源自于中在关键节点做对了很多关键选择，另外在聚餐场合放得开，很健谈；国企从业人员擅长在很哲学或者很抽象很文科的视角谈论问题，聊天时不聊工程/业务细节（略微高谈阔论）他们更容易接受，切勿全程以工程师的风格聊天对方不太有兴趣/不会觉得你牛逼；</li>
-<li>数据挖掘爱好者聚餐。见到国内众多比赛Top大佬；Kaggle大佬比我想象中更腼腆，没有太多套路，很谦虚，直观感受没有很犀利比较平易近人；</li>
-</ul>
-<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><ul>
-<li>Leetcode：算上大四和研一刷题累计350道，数量不是关键，如果能做一道融会贯通一道，感觉可能只需要150道medium以上就已经可以了，理解代码质量的三重境界clean code -&gt; concise code-&gt; elegant code，什么代码是好代码？我理解一个粗浅的标准是：在保证正确性的前提下，让另一个人看完他理解的很清晰（或者理解的尽量清楚）</li>
-<li>基础技术：阅读python书一本，基本熟练python OOP开发还有部分语言特性，整体比较enjoy 写python语言代码；Vim基本上手，提升了edit效率，enjoy纯键盘输入；积累NLP在文本分类上的经验；Linux的一些命令遇到了有所总结；配置环境流程化，将常用工具的配置流程进行了整理；</li>
-<li>阅读TensorFlow源码，熟悉官方API文档和经典模型搭建；SQL比之前用的熟练了一些，但是还需要强化，加强复用性；</li>
-<li>梳理CTR预估任务/图学习/推荐系统的技术演变；</li>
-<li>对于流量的思考：更加关注思考互联网中流量和商业模式的关系，更加关注业务的流量结构，更加关注优化目标（比如机器学习任务中的Loss，排序任务中排序公式的设计以及不同的权重因子对业务的影响）；更加关注思考中心化流量和去中心化流量的关系；</li>
-<li>优化机器学习任务整体分为样本层面和模型层面，两个都很重要要注意平衡；更关注embedding的质量；</li>
-<li>对话公司算法研究员：需要学习的是一种算法工程师没有技巧的匠心，晋升首先是看产出，同事也会注重你做出的工作和业界水平的比较；</li>
-<li>复盘过程中的一些感受，以制作slides为例推广到一般公众演讲，主要要确认以下问题：受众是谁？他们有啥本质目的？他们（教育/专业）水平如何？形式是科普大众还是解释专业细节？偏扯淡还是上干货？更关系细节还是更高度概括的内容？适合引经据典带例子还是干货内容一顿铺？形式是偏公式化？还是多图表化？全英文是否可以？还是可以混杂？哪（几）种图最适合表述关键问题？哪（几）个指标才是衡量业务的关键？</li>
-<li>看论文和写论文是两件事，学术论文写作课告诉我们正确的表述清楚，能看得懂是最重要的写论文锻炼了整理思维的意识更多练习一种表达；面对专家评审要从不同角度解释；</li>
-</ul>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>今年找工作主要将精力放在专业书上，其他行业数据阅读较少，2019考虑阅读关于历史和经济学的书；</p>
-<ul>
-<li>论持久战：始终贯穿用哲学视角解释问题；结构化的问题描述；毛主席具有极其丰富的历史修养和地理积累，分析局势层次清晰，对于敌我态势真正做到了运筹帷幄，自始至终透露着一种谨慎中带着乐观处理问题的态度；感叹于毛主席强悍的预测能力；</li>
-<li>长尾理论：梳理长尾的关键性质，总结如何利用长尾性质发函，思考电商业务/短视频/信息分发长尾这三类在2018年互联网业务高速发展的主要业务，完美印证了长尾对业务发展的核心作用；</li>
-</ul>
-<h2 id="2019改进点"><a href="#2019改进点" class="headerlink" title="2019改进点"></a>2019改进点</h2><ul>
-<li>冬天锻炼懈怠。北京冬天气比较冷，经常懒得锻炼，有时候雾霾更不想出去，本质还是惰性；</li>
-<li>饮食消费结构优化。相比上半年，下半年在吃饭上节省了一些，一方面注意避免浪费，一方面注意聚餐计划性还是要强，另一方面注意点餐时刻意提升蔬菜或粗粮在营养结构中的比重。</li>
-<li>技术提升要更关注工程落地。年轻人主要存在一个问题是想的多做的还是少，实习期间为了转正通过看了很多推荐系统和计算广告的论文意图扩大视野，其实后来想想不如多去关注实际工作中的技术细节重要的多。 </li>
-<li>消费意识。今年同时换了手机/键盘，体验极佳，关于消费结构的优化上，发现在某些必要工具上“不舍得买”往往可能是是得不偿失，“一步到位”是一种很聪明的做法，以后注意评估买的商品对自己的影响。有舍才有得。</li>
-<li>日常工作效率的优化。关于提升日常工作的效率，见思考总结。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/01/02/2018%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" data-id="ckfag21c200001cdlhn1l1cjg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/" data-id="ckfahcyd30002l0dl9x2u1i6q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1007,6 +790,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -1016,7 +804,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/">经验总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A1%8C%E4%B8%9A%E6%80%9D%E8%80%83/">行业思考</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/">经验总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%A1%8C%E4%B8%9A%E6%80%9D%E8%80%83/">行业思考</a></li></ul>
     </div>
   </div>
 
@@ -1031,7 +819,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -1052,15 +840,15 @@
           </li>
         
           <li>
+            <a href="/2020/04/05/Git%E4%BD%BF%E7%94%A8/">Git使用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/04/Faiss/">Faiss</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/">狼人杀如何致胜</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/02/2019%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">2019年度总结</a>
           </li>
         
       </ul>
