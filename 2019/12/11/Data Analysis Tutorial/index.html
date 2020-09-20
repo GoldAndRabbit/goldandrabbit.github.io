@@ -5,17 +5,17 @@
   
 
   
-  <title>Data Analysis Tutorial 数据分析指南 | Gold and Rabbit&#39;s Blog</title>
+  <title>Data Analysis Tutorial | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Why data matters? 显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。 严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。 需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Data Analysis Tutorial 数据分析指南">
-<meta property="og:url" content="http://example.com/2019/12/11/Data%20Analysis%20Tutorial%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:title" content="Data Analysis Tutorial">
+<meta property="og:url" content="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
 <meta property="og:description" content="Why data matters? 显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。 严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。 需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-11T12:11:00.000Z">
-<meta property="article:modified_time" content="2020-09-19T15:16:06.612Z">
+<meta property="article:modified_time" content="2020-09-20T01:50:42.600Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Data Analysis Tutorial 数据分析指南" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Data Analysis Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8C%87%E5%8D%97/" class="article-date">
+    <a href="/2019/12/11/Data%20Analysis%20Tutorial/" class="article-date">
   <time datetime="2019-12-11T12:11:00.000Z" itemprop="datePublished">2019-12-11</time>
 </a>
     
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Data Analysis Tutorial 数据分析指南
+      Data Analysis Tutorial
     </h1>
   
 
@@ -118,35 +118,48 @@
 <p>乍看上述代码执行无明显问题，但是计算资源紧张时子查询取日志量级太大会跑不完，Job大概率被无情kill；<br>优化方法：将子查询写入一个表，天级增量中间表，代码如下所示</p>
 <p>采用CTE模块化统计逻辑</p>
 <p>Common Table Expression, CTE</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 场景人群基础特征</span></span><br><span class="line"><span class="keyword">WITH</span> s_basic <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , mele_pay_ratio</span><br><span class="line">        , female_pay_ratio</span><br><span class="line">        , purchase_pay_ratio</span><br><span class="line">        , zhuanke_pay_ratio</span><br><span class="line">        , chugaozhong_pay_ratio</span><br><span class="line">        , phd_pay_ratio</span><br><span class="line">        , bachelor_pay_ratio</span><br><span class="line">        , master_pay_ratio</span><br><span class="line">        , f1t17_pay_ratio</span><br><span class="line">        , f18t24_pay_ratio</span><br><span class="line">        , f25t29_pay_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景点击成交uv特征</span></span><br><span class="line">s_clk_pay_uv_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        s_id</span><br><span class="line">        , clk_uv_1d</span><br><span class="line">        , clk_uv_3d</span><br><span class="line">        , clk_uv_7d</span><br><span class="line">        , pay_uv_1d</span><br><span class="line">        , pay_uv_3d</span><br><span class="line">        , pay_uv_7d</span><br><span class="line">    <span class="keyword">FROM</span> table_name_b</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景人群属性特征</span></span><br><span class="line">s_city_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , city_l1_ratio</span><br><span class="line">        , city_l2_ratio</span><br><span class="line">        , city_l3_ratio</span><br><span class="line">        , vip_ratio,</span><br><span class="line">        , normal_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_c</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">INSERT</span> OVERWRITE <span class="keyword">TABLE</span> table_name_d <span class="keyword">PARTITION</span> (ds=$&#123;bizdate&#125;)</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    s_basic.*</span><br><span class="line">    , s_clk_pay_uv_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_city_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_avg_price_info.<span class="string">`(s_id|ds)?+.+`</span></span><br><span class="line"><span class="keyword">FROM</span> s_basic</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_clk_pay_uv_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_clk_pay_uv_info.s_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_city_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_city_info.s_id</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 人群特征</span></span><br><span class="line"><span class="keyword">WITH</span> s_basic <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , mele_pay_ratio</span><br><span class="line">        , female_pay_ratio</span><br><span class="line">        , purchase_pay_ratio</span><br><span class="line">        , phd_pay_ratio</span><br><span class="line">        , bachelor_pay_ratio</span><br><span class="line">        , master_pay_ratio</span><br><span class="line">        , f1t17_pay_ratio</span><br><span class="line">        , f18t24_pay_ratio</span><br><span class="line">        , f25t29_pay_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景点击成交uv特征</span></span><br><span class="line">s_clk_pay_uv_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        s_id</span><br><span class="line">        , clk_uv_1d</span><br><span class="line">        , clk_uv_3d</span><br><span class="line">        , pay_uv_1d</span><br><span class="line">        , pay_uv_3d</span><br><span class="line">    <span class="keyword">FROM</span> table_name_b</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景人群属性特征</span></span><br><span class="line">s_city_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , city_l1_ratio</span><br><span class="line">        , city_l2_ratio</span><br><span class="line">        , city_l3_ratio</span><br><span class="line">        , vip_ratio,</span><br><span class="line">        , normal_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_c</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">INSERT</span> OVERWRITE <span class="keyword">TABLE</span> table_name_d <span class="keyword">PARTITION</span> (ds=$&#123;bizdate&#125;)</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    s_basic.*</span><br><span class="line">    , s_clk_pay_uv_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_city_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_avg_price_info.<span class="string">`(s_id|ds)?+.+`</span></span><br><span class="line"><span class="keyword">FROM</span> s_basic</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_clk_pay_uv_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_clk_pay_uv_info.s_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_city_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_city_info.s_id</span><br></pre></td></tr></table></figure>
 
-<h4 id="Always-Visualising"><a href="#Always-Visualising" class="headerlink" title="Always Visualising"></a>Always Visualising</h4><p>Why Visualising? </p>
+<h2 id="Always-Visualising"><a href="#Always-Visualising" class="headerlink" title="Always Visualising"></a>Always Visualising</h2><p>Why Visualising? </p>
 <ul>
-<li>人对数字敏感度极低，远远比不上人对图像敏感度；</li>
-<li>在日常分析、汇报、答辩时”一图胜千言”；</li>
-<li>可视化方法众多，勿过多关注于形式（工作不是发论文，最快速度出结论最重要），复用脚本跑数据。<br>武器库</li>
+<li><p>人对数字敏感度极低，远远比不上人对图像敏感度；</p>
+</li>
+<li><p>在日常分析、汇报、答辩时”一图胜千言”；</p>
+</li>
+<li><p>可视化方法众多，勿过多关注于形式（工作不是发论文，最快速度出结论最重要），复用脚本跑数据。<br>武器库</p>
+</li>
+<li><p>直方图：刻画分布，例如考察拼多多、淘宝、京东不同类目商品的成交分布，京东3C数码最多、淘宝服饰最多、拼多多食品最多；</p>
+</li>
 </ul>
-<p>直方图：刻画分布，例如考察拼多多、淘宝、京东不同类目商品的成交分布，京东3C数码最多、淘宝服饰最多、拼多多食品最多；</p>
-<p>折线图：关注指标趋势变化，较优做法是增加辅助文字进行隐含条件解释，如下图所示对比算法圈成交和商业圈成交额的变化，辅助说明他们之间的交集规模；实际应用中灵活就曲线背后的含义或者引申条件加以说明；</p>
+<ul>
+<li>折线图：关注指标趋势变化，较优做法是增加辅助文字进行隐含条件解释，如下图所示对比算法圈成交和商业圈成交额的变化，辅助说明他们之间的交集规模；实际应用中灵活就曲线背后的含义或者引申条件加以说明；</li>
+</ul>
 <p>想要更精确关注数据的分布：拟合概率密度，如图所示少量样本即可拟合出接近于高斯分布这一事实；</p>
-<p>热图：刻画多变量关系；</p>
-<p>特征工程可视化<br>在数据挖掘竞赛中，为拟合测试集真实的label分布，特征工程原则是”穷举且互斥“；在线上工程中由于性能要求等因素，特征工程原则是”基础且针对“；采用Xmind思维导图进行特征工程组织是更为条理的方式；</p>
+<ul>
+<li>热图：刻画多变量关系；</li>
+</ul>
+<h5 id="特征工程可视化"><a href="#特征工程可视化" class="headerlink" title="特征工程可视化"></a>特征工程可视化</h5><p>在数据挖掘竞赛中，为拟合测试集真实的label分布，特征工程原则是”穷举且互斥“；在线上工程中由于性能要求等因素，特征工程原则是”基础且针对“；采用Xmind思维导图进行特征工程组织是更为条理的方式；</p>
 <p>地理信息：QGIS is all you need；使用方法：导入csv文件=&gt;叠加图层=&gt;修改颜色</p>
-<p>Optimization<br>大数据性能优化在日常产出的必备能力；</p>
-<p>MapReduce原理</p>
-<p>数据处理过程分成2个阶段：Map（映射）阶段和Reduce（规约）阶段。</p>
-<p>在正式执行Map前，需要将输入数据进行”分片”。分片：将输入数据切分为大小相等的数据块，每一块作为单个Map Worker的输入被处理，以便于多个Map Worker同时工作。<br>分片完毕后，多个Map Worker就可以同时工作。每个Map Worker在读入各自的数据后，进行计算处理，最终输出给Reduce。Map Worker在输出数据时，需要为每一条输出数据指定一个Key。这个Key值决定了这条数据将会被发送给哪一个Reduce Worker。Key值和Reduce Worker是多对一的关系，具有相同Key的数据会被发送给同一个Reduce Worker，单个Reduce Worker有可能会接收到多个Key值的数据。<br>在进入Reduce阶段之前，MapReduce框架会对数据按照Key值排序，使得具有相同Key的数据彼此相邻。如果用户指定了”合并操作”(Combiner)，框架会调用Combiner，将具有相同Key的数据进行聚合。Combiner的逻辑可以由用户自定义实现。与经典的MapReduce框架协议不同，在ODPS中，Combiner的输入、输出的参数必须与Reduce保持一致。这部分的处理通常也叫做”洗牌”(Shuffle)。<br>Reduce阶段。相同的Key的数据会到达同一个Reduce Worker。同一个Reduce Worker会接收来自多个Map Worker的数据。每个Reduce Worker会对Key相同的多个数据进行Reduce操作。最后一个Key的多条数据经过Reduce的作用后，将变成了一个值。</p>
-<h2 id="Join长尾优化"><a href="#Join长尾优化" class="headerlink" title="Join长尾优化"></a>Join长尾优化</h2><p>问题表现：Join任务上SQL运行时间超长，某个woker上的任务进度一直在99%卡着不动；Join时间过长有很多原因，本质上是数据中参与Join的Key存在存在一定的分布特点（分布不均衡或者长尾）；<br>Mapjoin: 将Join操作提前到Map端执行，避免因为分发Key不均匀导致数据倾斜。但是Mapjoin的使用有限制，必须是Join中的从表比较小才可用。所谓从表，即Left Outer Join中的右表，或者Right Outer Join中的左表。Mapjoin的使用方法非常简单，在代码中select后加上 /*+ mapjoin(a) */ 即可，其中b代表小表(或者是子查询)的别名。如：</p>
+<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>大数据性能优化在日常产出的必备能力；</p>
+<h5 id="MapReduce原理"><a href="#MapReduce原理" class="headerlink" title="MapReduce原理"></a>MapReduce原理</h5><p>数据处理过程分成2个阶段：Map（映射）阶段和Reduce（规约）阶段。</p>
+<p>Map前，需要将输入数据进行”分片”。</p>
+<ul>
+<li>分片：将输入数据切分为大小相等的数据块，每一块作为单个Map Worker的输入被处理，以便于多个Map Worker同时工作。</li>
+<li>分片完毕后，多个Map Worker同时工作。每个Map Worker在读入各自的数据后，进行计算处理，最终输出给Reduce。</li>
+<li>Map Worker在输出数据时，需要为每一条输出数据指定一个Key。这个Key值决定了这条数据将会被发送给哪一个Reduce Worker。Key值和Reduce Worker是多对一的关系，具有相同Key的数据会被发送给同一个Reduce Worker，单个Reduce Worker有可能会接收到多个Key值的数据。</li>
+<li>进入Reduce之前，MapReduce框架会对数据按照Key值排序，使得具有相同Key的数据彼此相邻。如果用户指定了”合并操作”(Combiner)，框架会调用Combiner，将具有相同Key的数据进行聚合。Combiner的逻辑可以由用户自定义实现。与经典的MapReduce框架协议不同，在ODPS中，Combiner的输入、输出的参数必须与Reduce保持一致。这部分的处理通常也叫做”洗牌”(Shuffle)。</li>
+<li>Reduce阶段。相同的Key的数据会到达同一个Reduce Worker。同一个Reduce Worker会接收来自多个Map Worker的数据。每个Reduce Worker会对Key相同的多个数据进行Reduce操作。最后一个Key的多条数据经过Reduce的作用后，将变成了一个值。</li>
+</ul>
+<h5 id="Join长尾优化"><a href="#Join长尾优化" class="headerlink" title="Join长尾优化"></a>Join长尾优化</h5><p>问题表现：Join任务上SQL运行时间超长，某个woker上的任务进度一直在99%卡着不动；Join时间过长有很多原因，本质上是数据中参与Join的Key存在存在一定的分布特点（分布不均衡或者长尾）；<br>Mapjoin: 将Join操作提前到Map端执行，避免因为分发Key不均匀导致数据倾斜。但是Mapjoin的使用有限制，必须是Join中的从表比较小才可用。所谓从表，即Left Outer Join中的右表，或者Right Outer Join中的左表。Mapjoin的使用方法非常简单，在代码中select后加上 /*+ mapjoin(a) */ 即可，其中b代表小表(或者是子查询)的别名。如：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    <span class="comment">/*+MAPJOIN(b)*/</span></span><br><span class="line">    a.c2</span><br><span class="line">    , b.c3</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c2</span><br><span class="line">    <span class="keyword">FROM</span> t1</span><br><span class="line">) a</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c3</span><br><span class="line">    <span class="keyword">FROM</span> t2</span><br><span class="line">) b</span><br><span class="line"><span class="keyword">ON</span> a.c1=b.c1;</span><br></pre></td></tr></table></figure>
-<p>调小mapper.split.size<br>作用：设定一个Map的最大数据输入量，可以通过设置这个变量达到对Map端输入的控制，单位M，默认256M，在[1, Integer.MAX_VALUE]之间调整。set odps.sql.mapper.split.size=256</p>
-<p>场景：当每个Map Instance处理的数据量比较大，时间比较长，并且没有发生长尾时，可以适当调小这个参数。如果有发生长尾，则结合odps.sql.mapper.merge.limit.size这个参数设置每个Map的输入数量。</p>
-<p>Reduce端长尾优化</p>
-<p>问题表现：Reduce端任务99%进度卡着不动，由Multi COUNT(DISTINCT xx字段) 引起；</p>
+<p>调小mapper.split.size<br>作用：设定一个Map的最大数据输入量，通过设置这个变量达到对Map端输入的控制，单位M，默认256M，在[1, Integer.MAX_VALUE]之间调整。set odps.sql.mapper.split.size=256<br>场景：当每个Map Instance处理的数据量比较大，时间比较长，并且没有发生长尾时，可以适当调小这个参数。如果有发生长尾，则结合odps.sql.mapper.merge.limit.size这个参数设置每个Map的输入数量。</p>
+<h5 id="Reduce端长尾优化"><a href="#Reduce端长尾优化" class="headerlink" title="Reduce端长尾优化"></a>Reduce端长尾优化</h5><p>问题表现：Reduce端任务99%进度卡着不动，由Multi COUNT(DISTINCT xx字段) 引起；</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> table_name_a</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene</span><br><span class="line">解决方法：将<span class="keyword">Group</span> <span class="keyword">BY</span>的<span class="keyword">Key</span>分散开（增加一个层次的<span class="keyword">Key</span>），以下代码增加了场景的小时统计，最后再累加统计；</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">SUM</span>(pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">SUM</span>(click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        scene</span><br><span class="line">        , hh</span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> scene, hh</span><br><span class="line">) tmp0</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8C%87%E5%8D%97/" data-id="ckf9ubdbd0001sgdleu0u2w5o" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/" data-id="ckfag21c500011cdlcxrw97k4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -155,11 +168,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/01/02/2019%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Yoshua Bengio对ML研究者的建议
+          2019年度总结
         
       </div>
     </a>
@@ -198,7 +211,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -227,7 +240,7 @@
           </li>
         
           <li>
-            <a href="/2019/12/11/Data%20Analysis%20Tutorial%20%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8C%87%E5%8D%97/">Data Analysis Tutorial 数据分析指南</a>
+            <a href="/2020/01/02/2019%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">2019年度总结</a>
           </li>
         
       </ul>
