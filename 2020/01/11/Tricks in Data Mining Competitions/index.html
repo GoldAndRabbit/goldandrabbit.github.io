@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Tricks in Data Mining Competitions | Gold and Rabbit&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Feature Engineering BasicDiscretizer, Bin continuous data into intervals Uniform – All bins in each feature have identical widths. Quantitle – All bins in each feature have the same number of points.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tricks in Data Mining Competitions">
+<meta property="og:url" content="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/index.html">
+<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
+<meta property="og:description" content="Feature Engineering BasicDiscretizer, Bin continuous data into intervals Uniform – All bins in each feature have identical widths. Quantitle – All bins in each feature have the same number of points.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-11T12:11:00.000Z">
+<meta property="article:modified_time" content="2020-09-20T03:07:50.417Z">
+<meta property="article:author" content="Gold and Rabbit">
+<meta property="article:tag" content="Recommending System">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Tricks in Data Mining Competitions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tricks in Data Mining Competitions
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="Feature-Engineering-Basic"><a href="#Feature-Engineering-Basic" class="headerlink" title="Feature Engineering Basic"></a>Feature Engineering Basic</h2><h3 id="Discretizer-Bin-continuous-data-into-intervals"><a href="#Discretizer-Bin-continuous-data-into-intervals" class="headerlink" title="Discretizer, Bin continuous data into intervals"></a>Discretizer, Bin continuous data into intervals</h3><ul>
+<li>Uniform – All bins in each feature have identical widths.</li>
+<li>Quantitle – All bins in each feature have the same number of points.</li>
+<li>Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.</li>
+</ul>
+<h3 id="Binazier-Encode-categorical-features"><a href="#Binazier-Encode-categorical-features" class="headerlink" title="Binazier, Encode categorical features"></a>Binazier, Encode categorical features</h3><ul>
+<li>OneHotEncoder, OrdinalEncoder, HashMap, etc.</li>
+</ul>
+<h3 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h3><h5 id="Linear-Scaler"><a href="#Linear-Scaler" class="headerlink" title="Linear Scaler"></a>Linear Scaler</h5><ul>
+<li>Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）</li>
+</ul>
+<h5 id="Non-Linear-Scaler"><a href="#Non-Linear-Scaler" class="headerlink" title="Non-Linear Scaler"></a>Non-Linear Scaler</h5><ul>
+<li><p>Gaussian-like Scaler.<br>  Box-Cox/Yeo-Johnson<br>  RankGauss.</p>
+</li>
+<li><p>XX-like Scaler<br>  Use icdf of target distribution to transform (cdfX)</p>
+</li>
+<li><p>Non-linear transforms such as Box-Cox may be userful to transform y. Diversity for ensemble, sometimes with better performance.</p>
+</li>
+<li><p>Yeo-Johnson transform</p>
+</li>
+<li><p>Linear transform. Like standard normalized work better for X.</p>
+</li>
+</ul>
+<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><p>Learn lookup table as category representation<br>Category Embedding/ Entity Embedding</p>
+<h5 id="Numerical-Embedding"><a href="#Numerical-Embedding" class="headerlink" title="Numerical Embedding"></a>Numerical Embedding</h5><ul>
+<li>Bin numerical data into intervals.</li>
+<li>as category embedding</li>
+<li>add vicinal info</li>
+</ul>
+<h2 id="Key-–-Value-Based"><a href="#Key-–-Value-Based" class="headerlink" title="Key – Value Based"></a>Key – Value Based</h2><ul>
+<li>df[A].groupby(B).aggregate(func) Func can be anything, F(subgroupby(A)) -&gt; x</li>
+<li>Common aggregate func: mean, std, skew, kurt, entropy, min, max, median, frequency, size etc.</li>
+<li>Residues and weights of Least-squares fitting works well in sequential value.</li>
+<li>High order interaction, groupby().groupby()</li>
+</ul>
+<h2 id="Latent-Representation"><a href="#Latent-Representation" class="headerlink" title="Latent Representation"></a>Latent Representation</h2><p>Use decomposition algorithm to extract latent features.  Works better in neural network than GBDT.  Just fit all handcrafted feature with different decomposition algorithm.</p>
+<ul>
+<li>Topic Models (LDA, SVD, NMF etc).</li>
+<li>Manifold Learning (T-SNE)</li>
+</ul>
+<h2 id="Symbolic-Learning"><a href="#Symbolic-Learning" class="headerlink" title="Symbolic Learning"></a>Symbolic Learning</h2><p>Using symbolics ( + - * / cos sin tan ^ log min max neg…) as functions set to represent a relationship.</p>
+<ul>
+<li>Total different interaction feature.</li>
+<li>Automated feature learning.</li>
+<li>Works in many natural scene, such as astronomical, geological, biological tasks.</li>
+</ul>
+<h2 id="Auto-Encoders"><a href="#Auto-Encoders" class="headerlink" title="Auto Encoders"></a>Auto Encoders</h2><ul>
+<li>Learn to construct clean samples from corrupted ones. (denoise)</li>
+<li>Regularization of the latent space to match a prior. (Always multivariate normal distribution)</li>
+</ul>
+<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><ul>
+<li>FeatureA – FeatureB – aggregate. Everything can construct graph.</li>
+<li>Maximize the likelihood of preserving newwork neighborhoods of nodes.</li>
+<li>Unsupervised learning methods: Deepwalk, node2vec.</li>
+<li>Semi or supervised learning: GCN.</li>
+<li>Deepwalk, node2vec work in many tasks, like CTR, Fraud detection</li>
+</ul>
+<h2 id="End2End-model"><a href="#End2End-model" class="headerlink" title="End2End model"></a>End2End model</h2><ul>
+<li>Online  learning models, FTRL, mini-batch fm, etc.</li>
+<li>DeepFM, DeepFFM,xDeepFM etc.</li>
+<li>Attention based interaction model.</li>
+</ul>
+<h2 id="Target-mean-Encoding"><a href="#Target-mean-Encoding" class="headerlink" title="Target mean Encoding"></a>Target mean Encoding</h2><ul>
+<li>Leave-one-out /K-Folds / history slide window schema to avoid overfitting</li>
+<li>Post-prior schema</li>
+</ul>
+<h2 id="Model-based-target-encoding"><a href="#Model-based-target-encoding" class="headerlink" title="Model based target encoding"></a>Model based target encoding</h2><ul>
+<li>Base model to predict target, with k–folds, user prob as features.</li>
+<li>Base model to predict residuals (target - probs)</li>
+<li>Sometimes, user level-N stacking probs works better.</li>
+</ul>
+<h2 id="Training-amp-Optimization-Tricks"><a href="#Training-amp-Optimization-Tricks" class="headerlink" title="Training &amp; Optimization Tricks"></a>Training &amp; Optimization Tricks</h2><h5 id="Common-Tricks"><a href="#Common-Tricks" class="headerlink" title="Common Tricks"></a>Common Tricks</h5><ul>
+<li>Learning rate schedule. SGD lr=0.1, BS=256, lr * bs / 256= 0.1 * 256</li>
+<li>Label smoothing.</li>
+<li>No bias decay.</li>
+<li>Bias initial with prior distribution.</li>
+<li>Focal loss is a good metric for estimating models’capabilities.</li>
+<li>Combine multi loss let the model converge rapidly towards better performance.</li>
+<li>User standart scaler transform First.</li>
+<li>Sometimes userful, but all depends on data.</li>
+</ul>
+<h5 id="NLP-task-traning-Tricks"><a href="#NLP-task-traning-Tricks" class="headerlink" title="NLP task traning Tricks"></a>NLP task traning Tricks</h5><ul>
+<li>Diverse pre-trained embeddings</li>
+<li>more than 90% of a model’s complexity resides the embedding layer.</li>
+<li>Contextual level embedding always helps.</li>
+<li>But now we have BERT.</li>
+<li>Dynamic Padding boosts training speed and model performance.</li>
+<li>Add test oov vocabs to embedding matrix.</li>
+<li>OOV replaced with“something”</li>
+<li>Adamw really works in many NLP tasks.</li>
+<li>Spatial Droupout, shuflle noise in classification task.</li>
+<li>Translation Aumentation. En-Fr, En-Fr-En.</li>
+</ul>
+<h5 id="CV-task-training-Tricks"><a href="#CV-task-training-Tricks" class="headerlink" title="CV task training Tricks"></a>CV task training Tricks</h5><ul>
+<li>ResNet is always a good baseline model to do experiments.</li>
+<li>Warm-up learning rate + cos learnging rate decay.</li>
+<li>Manual Learning rate schedule.</li>
+<li>Batch with different loss accumulate.</li>
+<li>User more shape relevance augmentation.</li>
+<li>CNN tend to learn texture information but not shape info.</li>
+<li>Auto augmentation.</li>
+</ul>
+<h5 id="Pseudo-Learning"><a href="#Pseudo-Learning" class="headerlink" title="Pseudo Learning"></a>Pseudo Learning</h5><ul>
+<li>Filtering hard examples in training dataset use OOF prediction.</li>
+<li>Global variance info leakage.</li>
+<li>Add the most confident test predictions to the training dataset.<br>Test distribution leakage, data extend<br>Simple in Batch Traning Models.<br>User single model to label test dataset.<br>Retrain model with each batch add 10~30% test pseudo labeled data.</li>
+</ul>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
+<li>逻辑性（代码架构清晰、自动化框架、特征工程MECE）</li>
+<li>代码可复用（不重复造轮子）</li>
+<li>基于业务的分析（bad case 分析、Kernels、Discussion、相似比赛）</li>
+<li>反思总结</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckgz0m97l000su6dl05on8ezq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/03/pickle%20dump%20OverflowError/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          pickle dump OverflowError
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/11/Word2Vec/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Word2Vec</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/programming/">programming</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/15/Deep%20CTR%20Model/">Deep CTR Model</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/05/Why%20Alibaba%20/">Why Alibaba</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/Git%20Tutorial/">Git Tutorial</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Gold and Rabbit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
