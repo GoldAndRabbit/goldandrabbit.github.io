@@ -174,7 +174,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8mwv1b0013b9dl3xs5do5m" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8nw1mk0012eudl9kfc27ku" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckh8mwv12000db9dleuhn0qpw" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckh8nw1ma000ceudl1254611q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckh8mwv13000gb9dl0f1f5u5m" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckh8nw1mb000deudl109z72qo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -329,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckh8mwv0x0005b9dl38am5zhs" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckh8nw1m70005eudl16oxc81z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -374,7 +374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckh8mwv17000sb9dlcqpceemj" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckh8nw1mh000seudl3pm409r9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -412,68 +412,46 @@
       
       	<!-- Table of Contents -->
 		
-        <p>执行</p>
+        <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>执行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
-<p>一路回车</p>
-<p>（通过ls查看～/.ssh下面的所有内容查看）</p>
-<p>将刚刚创建的ssh keys添加到github中<br>（1）利用gedit/cat命令，查看id_rsa.pub的内容<br>（2）在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id_rsa.pub文件中的字符串复制进去，注意字符串中没有换行和空格。</p>
-<p>再次检查SSH连接情况（在～/.ssh目录下）：<br>输入如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>一路回车<br>（通过ls查看～/.ssh下面的所有内容查看）</p>
+<p>将刚刚创建的ssh keys添加到github中</p>
+<ol>
+<li>利用gedit/cat命令，查看id_rsa.pub的内容</li>
+<li>在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id_rsa.pub文件中的字符串复制进去，注意字符串中没有换行和空格。</li>
+</ol>
+<p>再次检查SSH连接情况(在～/.ssh目录下):<br>输入如下命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<p>如果看到如下所示，则表示添加成功：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名! You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<p>看到如下所示，则表示添加成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名! You’ve successfully authenticated, but GitHub does <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
 
 <p>即利用自己的用户名和email地址配置git</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的github用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的github邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;你的github用户名&quot;</span></span><br><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;你的github邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>为什么配置好了提交代码到远程分之还是要输入密码?<br>clone的时候选择http</p>
+<p>ps: 为什么配置好了提交代码到远程分之还是要输入密码? clone的时候选择http</p>
+<h2 id="clone-pull-push"><a href="#clone-pull-push" class="headerlink" title="clone, pull, push"></a>clone, pull, push</h2><ul>
+<li><p>clone: 克隆远程分支到本地</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b my_branch &lt;远程仓库地址&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pull: 将远程代码pull[拉取]到本地 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branch_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push: 将本地代码push[推送]到远程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add yourfilename</span><br><span class="line">git ci -m <span class="string">&quot;说明修改内容: 解决xx问题/增加xx逻辑/修复xxBug&quot;</span></span><br><span class="line">git push origin branch_name</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="merge-v-s-rebase"><a href="#merge-v-s-rebase" class="headerlink" title="merge v.s. rebase"></a>merge v.s. rebase</h2><ul>
+<li>将分支my_branch合并到master分支<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge my_branch</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckh8mwv0z0009b9dl50lf4clg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-DeepFM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/04/DeepFM/" class="article-date">
-  <time datetime="2020-04-04T12:11:00.000Z" itemprop="datePublished">2020-04-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/DeepFM/">DeepFM</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/DeepFM/" data-id="ckh8mwv0x0006b9dlbu4qdn5o" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckh8nw1m80008eudl2yr67rcw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -521,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckh8mwv0y0008b9dlb7mo22vj" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckh8nw1m70006eudl0yy2crhs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -648,7 +626,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckh8mwv1b0015b9dl7q7e4mdc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckh8nw1ml0015eudl7lb9cp5e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -690,7 +668,55 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckh8mwv11000cb9dl8zypgtjv" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckh8nw1m90009eudl0mn012b5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux Commands" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/18/Linux%20Commands/" class="article-date">
+  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/18/Linux%20Commands/">Linux Commands</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du (disk usage) : 查看磁盘使用空间；</span><br><span class="line">du -sh filename/dirname</span><br></pre></td></tr></table></figure>
+
+<h2 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h2><ul>
+<li>When you execute a Unix job in the background ( using &amp;, bg command), and logout from the session, your process will get killed. You can avoid this using several methods — executing the job with nohup, or making it as batch job using at, batch or cron command. Nohup stands for no hang up, which can be executed as shown below. nohup syntax:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure></li>
+<li>Nohup is very helpful when you have to execute a shell-script or command that take a long time to finish. In that case, you don’t want to be connected to the shell and waiting for the command to complete. Instead, execute it with nohup, exit the shell and continue with your other work.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux | grep charm</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckh8nw1mc000geudl2jxo6zlj" class="article-share-link">Share</a>
       
       
     </footer>
