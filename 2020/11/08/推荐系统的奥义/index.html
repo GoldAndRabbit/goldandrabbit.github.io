@@ -5,20 +5,25 @@
   
 
   
-  <title>Recurrent Neural Network | Gold and Rabbit&#39;s Blog</title>
+  <title>推荐系统的奥义 | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="having fun coding">
+  <meta name="description" content="推荐系统价值 推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制； 基于设计好的分发机制，相依地设计体验平衡机制；   理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Recurrent Neural Network">
-<meta property="og:url" content="http://example.com/2020/02/13/Recurrent%20Neural%20Network/index.html">
+<meta property="og:title" content="推荐系统的奥义">
+<meta property="og:url" content="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="having fun coding">
+<meta property="og:description" content="推荐系统价值 推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制； 基于设计好的分发机制，相依地设计体验平衡机制；   理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-13T14:56:00.000Z">
-<meta property="article:modified_time" content="2020-11-01T11:15:43.252Z">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Bprice%5E%7B%5Cgamma%7D%7D%5Ctimes%7BcommiRate%5E%7B%5Cdelta%7D%7D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D">
+<meta property="article:published_time" content="2020-11-08T03:56:00.000Z">
+<meta property="article:modified_time" content="2020-11-08T04:08:53.126Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D">
   
     <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
   
@@ -67,14 +72,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Recurrent Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-推荐系统的奥义" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/02/13/Recurrent%20Neural%20Network/" class="article-date">
-  <time datetime="2020-02-13T14:56:00.000Z" itemprop="datePublished">2020-02-13</time>
+    <a href="/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" class="article-date">
+  <time datetime="2020-11-08T03:56:00.000Z" itemprop="datePublished">2020-11-08</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+    <a class="article-category-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a>
   </div>
 
   </div>
@@ -85,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Recurrent Neural Network
+      推荐系统的奥义
     </h1>
   
 
@@ -95,11 +100,49 @@
       
       	<!-- Table of Contents -->
 		
-        
+        <h2 id="推荐系统价值"><a href="#推荐系统价值" class="headerlink" title="推荐系统价值"></a>推荐系统价值</h2><ul>
+<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情</p>
+<ol>
+<li>确立一种分发的机制；</li>
+<li>基于设计好的分发机制，相依地设计体验平衡机制；</li>
+</ol>
+</li>
+<li><p>理解工业推荐系统，需要依次理解到如下三个层次</p>
+<ol>
+<li>解放人力</li>
+<li>聚焦目标 </li>
+<li>平衡体验</li>
+</ol>
+</li>
+</ul>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。</li>
+<li>排序公式设计原则: <ol>
+<li>对其业务目标。</li>
+<li>足够简单。</li>
+<li>权值化。</li>
+</ol>
+</li>
+</ul>
+<h4 id="猜你喜欢场景"><a href="#猜你喜欢场景" class="headerlink" title="猜你喜欢场景"></a>猜你喜欢场景</h4><p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D" alt="gul"></p>
+<h4 id="商业化场景"><a href="#商业化场景" class="headerlink" title="商业化场景"></a>商业化场景</h4><ul>
+<li>cps</li>
+</ul>
+<p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Bprice%5E%7B%5Cgamma%7D%7D%5Ctimes%7BcommiRate%5E%7B%5Cdelta%7D%7D" alt="commercial"></p>
+<h4 id="权益场景"><a href="#权益场景" class="headerlink" title="权益场景"></a>权益场景</h4><p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D" alt="rights"></p>
+<p>其中 <img src="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D" alt="rights"> 为各类优惠券的折扣公式 </p>
+<h2 id="质量保证"><a href="#质量保证" class="headerlink" title="质量保证"></a>质量保证</h2><h4 id="上线前CheckList"><a href="#上线前CheckList" class="headerlink" title="上线前CheckList"></a>上线前CheckList</h4><ul>
+<li>为什么CheckList? 质量保证的作用在于，去除软件系统对于“工程师对于质量的细心程度和对于系统的熟悉程度”依赖</li>
+<li>CheckList样例模板</li>
+</ul>
+<h4 id="足够及时的Review"><a href="#足够及时的Review" class="headerlink" title="足够及时的Review"></a>足够及时的Review</h4><ul>
+<li>Review的进行间不能超过3天内，一般为线上问题发生当天之后第二天最合适。</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckh8lp98y000laydl9cr3di0e" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8lp9950013aydlge6e2i54" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +151,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/02/18/Linux%20Commands/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Linux Commands
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/13/Tensorflow%20API/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Tensorflow API</div>
+      <div class="article-nav-title">Hexo搭建</div>
     </a>
   
 </nav>

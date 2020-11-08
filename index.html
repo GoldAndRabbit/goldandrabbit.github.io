@@ -67,6 +67,86 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-推荐系统的奥义" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" class="article-date">
+  <time datetime="2020-11-08T03:56:00.000Z" itemprop="datePublished">2020-11-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/">推荐系统的奥义</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="推荐系统价值"><a href="#推荐系统价值" class="headerlink" title="推荐系统价值"></a>推荐系统价值</h2><ul>
+<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情</p>
+<ol>
+<li>确立一种分发的机制；</li>
+<li>基于设计好的分发机制，相依地设计体验平衡机制；</li>
+</ol>
+</li>
+<li><p>理解工业推荐系统，需要依次理解到如下三个层次</p>
+<ol>
+<li>解放人力</li>
+<li>聚焦目标 </li>
+<li>平衡体验</li>
+</ol>
+</li>
+</ul>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。</li>
+<li>排序公式设计原则: <ol>
+<li>对其业务目标。</li>
+<li>足够简单。</li>
+<li>权值化。</li>
+</ol>
+</li>
+</ul>
+<h4 id="猜你喜欢场景"><a href="#猜你喜欢场景" class="headerlink" title="猜你喜欢场景"></a>猜你喜欢场景</h4><p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D" alt="gul"></p>
+<h4 id="商业化场景"><a href="#商业化场景" class="headerlink" title="商业化场景"></a>商业化场景</h4><ul>
+<li>cps</li>
+</ul>
+<p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Bprice%5E%7B%5Cgamma%7D%7D%5Ctimes%7BcommiRate%5E%7B%5Cdelta%7D%7D" alt="commercial"></p>
+<h4 id="权益场景"><a href="#权益场景" class="headerlink" title="权益场景"></a>权益场景</h4><p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D" alt="rights"></p>
+<p>其中 <img src="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D" alt="rights"> 为各类优惠券的折扣公式 </p>
+<h2 id="质量保证"><a href="#质量保证" class="headerlink" title="质量保证"></a>质量保证</h2><h4 id="上线前CheckList"><a href="#上线前CheckList" class="headerlink" title="上线前CheckList"></a>上线前CheckList</h4><ul>
+<li>为什么CheckList? 质量保证的作用在于，去除软件系统对于“工程师对于质量的细心程度和对于系统的熟悉程度”依赖</li>
+<li>CheckList样例模板</li>
+</ul>
+<h4 id="足够及时的Review"><a href="#足够及时的Review" class="headerlink" title="足够及时的Review"></a>足够及时的Review</h4><ul>
+<li>Review的进行间不能超过3天内，一般为线上问题发生当天之后第二天最合适。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8lp9950013aydlge6e2i54" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Hexo搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" class="article-date">
@@ -95,7 +175,7 @@
       
       	<!-- Table of Contents -->
 		
-        <h2 id="安装-Node-js和npm"><a href="#安装-Node-js和npm" class="headerlink" title="安装 Node.js和npm"></a>安装 Node.js和npm</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install nodejs -y</span><br><span class="line">sudo apt install npm -y</span><br><span class="line"><span class="comment"># 升级npm为最新版</span></span><br><span class="line">sudo npm install npm@latest -g</span><br><span class="line"><span class="comment"># 安装用于管理node的模块n</span></span><br><span class="line">sudo npm install -g n</span><br><span class="line"><span class="comment"># 使用n模块来安装node版本</span></span><br><span class="line">sudo n latest <span class="comment"># 最新版本</span></span><br><span class="line">sudo n stable <span class="comment"># 最新稳定版本</span></span><br><span class="line"><span class="comment"># 选择安装最新版，再次查看安装好的版本</span></span><br><span class="line">node -v</span><br><span class="line">v12<span class="number">.4</span><span class="number">.0</span></span><br><span class="line">npm -v</span><br><span class="line"><span class="number">6.9</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+        <h2 id="安装-Node-js和npm"><a href="#安装-Node-js和npm" class="headerlink" title="安装 Node.js和npm"></a>安装 Node.js和npm</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt install nodejs -y</span><br><span class="line">sudo apt install npm -y</span><br><span class="line"><span class="comment"># 升级npm为最新版</span></span><br><span class="line">sudo npm install npm@latest -g</span><br><span class="line"><span class="comment"># 安装用于管理node的模块n</span></span><br><span class="line">sudo npm install -g n</span><br><span class="line"><span class="comment"># 使用n模块来安装node版本</span></span><br><span class="line">sudo n latest <span class="comment"># 最新版本</span></span><br><span class="line">sudo n stable <span class="comment"># 最新稳定版本</span></span><br><span class="line"><span class="comment"># 查看安装好的版本</span></span><br><span class="line">node -v</span><br><span class="line">v12<span class="number">.4</span><span class="number">.0</span></span><br><span class="line">npm -v</span><br><span class="line"><span class="number">6.9</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexo &amp; cd hexo</span><br><span class="line">sudo npm install -g hexo-cli</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 <p>若报错执行代码,不报错忽略</p>
@@ -119,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckgz0rgmb000civdl6u1mefug" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckh8lp98w000daydl0qxkb7bm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,7 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckgz0rgmc000divdl8g4z6ynn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckh8lp98x000gaydl3581402r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckgz0rgm70004ivdlaj3sed78" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckh8lp98r0005aydl5vege8oo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckgz0rgmi000uivdl8sydbwas" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckh8lp991000uaydl1hvmh4uv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckgz0rgm90008ivdlcdeu7abg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckh8lp98t0009aydlczzv7x1d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/DeepFM/" data-id="ckgz0rgm80005ivdl2e6u22it" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/DeepFM/" data-id="ckh8lp98r0006aydlclfo2b8b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -404,7 +484,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckgz0rgm80006ivdl22wh8tzr" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckh8lp98s0008aydl39wjfg46" class="article-share-link">Share</a>
       
       
     </footer>
@@ -531,7 +611,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckgz0rgml0013ivdlf2v51qq6" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckh8lp9950015aydl14fw02cz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -573,55 +653,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckgz0rgma0009ivdlehldgret" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux Commands" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/18/Linux%20Commands/" class="article-date">
-  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/Linux%20Commands/">Linux Commands</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du (disk usage) : 查看磁盘使用空间；</span><br><span class="line">du -sh filename/dirname</span><br></pre></td></tr></table></figure>
-
-<h2 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h2><ul>
-<li>When you execute a Unix job in the background ( using &amp;, bg command), and logout from the session, your process will get killed. You can avoid this using several methods — executing the job with nohup, or making it as batch job using at, batch or cron command. Nohup stands for no hang up, which can be executed as shown below. nohup syntax:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure></li>
-<li>Nohup is very helpful when you have to execute a shell-script or command that take a long time to finish. In that case, you don’t want to be connected to the shell and waiting for the command to complete. Instead, execute it with nohup, exit the shell and continue with your other work.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux | grep charm</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckgz0rgmd000givdla2ij1ptx" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckh8lp98v000caydlggzw0n89" class="article-share-link">Share</a>
       
       
     </footer>
@@ -661,7 +693,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -672,6 +704,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/">推荐系统的奥义</a>
+          </li>
         
           <li>
             <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
@@ -687,10 +723,6 @@
         
           <li>
             <a href="/2020/06/05/Why%20Alibaba%20/">Why Alibaba</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/05/Git%20Tutorial/">Git Tutorial</a>
           </li>
         
       </ul>

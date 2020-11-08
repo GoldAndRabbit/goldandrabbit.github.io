@@ -5,17 +5,17 @@
   
 
   
-  <title>Data Analysis Tutorial | Gold and Rabbit&#39;s Blog</title>
+  <title>Data Analysis Tutorial:(Part I) | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Why data matters? 显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。 严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。 需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Data Analysis Tutorial">
-<meta property="og:url" content="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/index.html">
+<meta property="og:title" content="Data Analysis Tutorial:(Part I)">
+<meta property="og:url" content="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
 <meta property="og:description" content="Why data matters? 显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。 严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。 需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-11T12:11:00.000Z">
-<meta property="article:modified_time" content="2020-09-20T02:01:19.671Z">
+<meta property="article:modified_time" content="2020-11-08T04:12:37.886Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -67,9 +67,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Data Analysis Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Data Analysis Tutorial:(Part I)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial/" class="article-date">
+    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" class="article-date">
   <time datetime="2019-12-11T12:11:00.000Z" itemprop="datePublished">2019-12-11</time>
 </a>
     
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Data Analysis Tutorial
+      Data Analysis Tutorial:(Part I)
     </h1>
   
 
@@ -120,26 +120,9 @@
 <p>Common Table Expression, CTE</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 人群特征</span></span><br><span class="line"><span class="keyword">WITH</span> s_basic <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , mele_pay_ratio</span><br><span class="line">        , female_pay_ratio</span><br><span class="line">        , purchase_pay_ratio</span><br><span class="line">        , phd_pay_ratio</span><br><span class="line">        , bachelor_pay_ratio</span><br><span class="line">        , master_pay_ratio</span><br><span class="line">        , f1t17_pay_ratio</span><br><span class="line">        , f18t24_pay_ratio</span><br><span class="line">        , f25t29_pay_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景点击成交uv特征</span></span><br><span class="line">s_clk_pay_uv_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        s_id</span><br><span class="line">        , clk_uv_1d</span><br><span class="line">        , clk_uv_3d</span><br><span class="line">        , pay_uv_1d</span><br><span class="line">        , pay_uv_3d</span><br><span class="line">    <span class="keyword">FROM</span> table_name_b</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景人群属性特征</span></span><br><span class="line">s_city_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , city_l1_ratio</span><br><span class="line">        , city_l2_ratio</span><br><span class="line">        , city_l3_ratio</span><br><span class="line">        , vip_ratio,</span><br><span class="line">        , normal_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_c</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">INSERT</span> OVERWRITE <span class="keyword">TABLE</span> table_name_d <span class="keyword">PARTITION</span> (ds=$&#123;bizdate&#125;)</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    s_basic.*</span><br><span class="line">    , s_clk_pay_uv_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_city_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_avg_price_info.<span class="string">`(s_id|ds)?+.+`</span></span><br><span class="line"><span class="keyword">FROM</span> s_basic</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_clk_pay_uv_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_clk_pay_uv_info.s_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_city_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_city_info.s_id</span><br></pre></td></tr></table></figure>
 
-<h2 id="Always-Visualising"><a href="#Always-Visualising" class="headerlink" title="Always Visualising"></a>Always Visualising</h2><p>Why Visualising? </p>
-<ul>
-<li><p>人对数字敏感度极低，远远比不上人对图像敏感度；</p>
-</li>
-<li><p>在日常分析、汇报、答辩时”一图胜千言”；</p>
-</li>
-<li><p>可视化方法众多，勿过多关注于形式（工作不是发论文，最快速度出结论最重要），复用脚本跑数据。<br>武器库</p>
-</li>
-<li><p>直方图：刻画分布，例如考察拼多多、淘宝、京东不同类目商品的成交分布，京东3C数码最多、淘宝服饰最多、拼多多食品最多；</p>
-</li>
-</ul>
-<ul>
-<li>折线图：关注指标趋势变化，较优做法是增加辅助文字进行隐含条件解释，如下图所示对比算法圈成交和商业圈成交额的变化，辅助说明他们之间的交集规模；实际应用中灵活就曲线背后的含义或者引申条件加以说明；</li>
-</ul>
-<p>想要更精确关注数据的分布：拟合概率密度，如图所示少量样本即可拟合出接近于高斯分布这一事实；</p>
-<ul>
-<li>热图：刻画多变量关系；</li>
-</ul>
-<h5 id="特征工程可视化"><a href="#特征工程可视化" class="headerlink" title="特征工程可视化"></a>特征工程可视化</h5><p>在数据挖掘竞赛中，为拟合测试集真实的label分布，特征工程原则是”穷举且互斥“；在线上工程中由于性能要求等因素，特征工程原则是”基础且针对“；采用Xmind思维导图进行特征工程组织是更为条理的方式；</p>
-<p>地理信息：QGIS is all you need；使用方法：导入csv文件=&gt;叠加图层=&gt;修改颜色</p>
+
+
+
 <h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>大数据性能优化在日常产出的必备能力；</p>
 <h5 id="MapReduce原理"><a href="#MapReduce原理" class="headerlink" title="MapReduce原理"></a>MapReduce原理</h5><p>数据处理过程分成2个阶段：Map（映射）阶段和Reduce（规约）阶段。</p>
 <p>Map前，需要将输入数据进行”分片”。</p>
@@ -159,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial/" data-id="ckgz0rgm50002ivdl61d99jnk" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckh8lp98o0002aydl6l4332xc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,11 +151,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/02/2019%20Annual%20Summary/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          2019 Annual Summary
+          Data Analysis Tutorial:(Part II)
         
       </div>
     </a>
@@ -211,7 +194,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -222,6 +205,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/">推荐系统的奥义</a>
+          </li>
         
           <li>
             <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
@@ -237,10 +224,6 @@
         
           <li>
             <a href="/2020/06/05/Why%20Alibaba%20/">Why Alibaba</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/05/Git%20Tutorial/">Git Tutorial</a>
           </li>
         
       </ul>
