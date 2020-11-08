@@ -96,17 +96,17 @@
       	<!-- Table of Contents -->
 		
         <h2 id="推荐系统价值"><a href="#推荐系统价值" class="headerlink" title="推荐系统价值"></a>推荐系统价值</h2><ul>
-<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情</p>
-<ol>
-<li>确立一种分发的机制；</li>
-<li>基于设计好的分发机制，相依地设计体验平衡机制；</li>
-</ol>
-</li>
 <li><p>理解工业推荐系统，需要依次理解到如下三个层次</p>
 <ol>
 <li>解放人力</li>
 <li>聚焦目标 </li>
 <li>平衡体验</li>
+</ol>
+</li>
+<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情</p>
+<ol>
+<li>确立一种分发的机制</li>
+<li>基于设计好的分发机制，相依地调整体验平衡机制</li>
 </ol>
 </li>
 </ul>
@@ -126,18 +126,55 @@
 <p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Bprice%5E%7B%5Cgamma%7D%7D%5Ctimes%7BcommiRate%5E%7B%5Cdelta%7D%7D" alt="commercial"></p>
 <h4 id="权益场景"><a href="#权益场景" class="headerlink" title="权益场景"></a>权益场景</h4><p><img src="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D" alt="rights"></p>
 <p>其中 <img src="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D" alt="rights"> 为各类优惠券的折扣公式 </p>
-<h2 id="质量保证"><a href="#质量保证" class="headerlink" title="质量保证"></a>质量保证</h2><h4 id="上线前CheckList"><a href="#上线前CheckList" class="headerlink" title="上线前CheckList"></a>上线前CheckList</h4><ul>
-<li>为什么CheckList? 质量保证的作用在于，去除软件系统对于“工程师对于质量的细心程度和对于系统的熟悉程度”依赖</li>
-<li>CheckList样例模板</li>
+<h2 id="质量保证"><a href="#质量保证" class="headerlink" title="质量保证"></a>质量保证</h2><h4 id="核心项目必须指定唯一PM"><a href="#核心项目必须指定唯一PM" class="headerlink" title="核心项目必须指定唯一PM"></a>核心项目必须指定唯一PM</h4><ul>
+<li>唯一PM对所有线上问题负责，必须熟悉项目背景和方案实现细节, 时刻把控项目迭代过程中的维护CheckList;</li>
 </ul>
+<h4 id="CheckList维护"><a href="#CheckList维护" class="headerlink" title="CheckList维护"></a>CheckList维护</h4><ul>
+<li>为什么CheckList? 质量保证的作用在于，去除软件系统对于“工程师对于质量的细心程度和对于系统的熟悉程度”依赖, 换句话说，通过检查机制实现项目质量，永远不依赖工程师的意识检查问题；</li>
+<li>CheckList的迭代过程: 从需求文档开始构建v1.0版本CheckList, 测试开始之前进行更新，直到上线前持续更新</li>
+<li>CheckList样例模板(持续更新中…)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>内容</th>
+<th>负责人</th>
+<th>实现原理</th>
+<th>latest检查时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>过滤虚拟类目商品</td>
+<td>张三</td>
+<td>1.投放配置id:9527  2.实时召回过滤逻辑</td>
+<td>2020-10-10-15:30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>过滤预售商品</td>
+<td>李四</td>
+<td>1.投放配置id:9528  2.实时召回过滤逻辑</td>
+<td>2020-10-10-16:30</td>
+</tr>
+<tr>
+<td>3</td>
+<td>过滤黑名单商品</td>
+<td>李四</td>
+<td>1.投放配置id:9529  2.实时召回过滤逻辑</td>
+<td>2020-10-10-16:50</td>
+</tr>
+</tbody></table>
 <h4 id="足够及时的Review"><a href="#足够及时的Review" class="headerlink" title="足够及时的Review"></a>足够及时的Review</h4><ul>
-<li>Review的进行间不能超过3天内，一般为线上问题发生当天之后第二天最合适。</li>
+<li>Review的进行间不能超过3天，一般为线上问题发生当天之后第二天最合适。当天或当天后一天需要专注于处理线上问题保证问题第一时间得到解决，及时当天问题得到解决，也需要给工程师一个缓冲的时间冷静下来思考为什么会产生这样的原因。</li>
+<li>Review先要对问题进行分类，是在哪个环节出了问题？在测试过程中哪个环节没有测试到？</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8lp9950013aydlge6e2i54" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckh8mqelq001355dl390b7a8k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckh8lp98w000daydl0qxkb7bm" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckh8mqelh000d55dletzyf30k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckh8lp98x000gaydl3581402r" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckh8mqeli000g55dl6c72aja8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -292,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckh8lp98r0005aydl5vege8oo" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckh8mqelc000555dlffk69red" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckh8lp991000uaydl1hvmh4uv" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckh8mqeln000u55dlb5sl845f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckh8lp98t0009aydlczzv7x1d" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckh8mqelf000955dlbvbxhipj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -436,7 +473,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/DeepFM/" data-id="ckh8lp98r0006aydlclfo2b8b" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/DeepFM/" data-id="ckh8mqeld000655dlf63fbs77" class="article-share-link">Share</a>
       
       
     </footer>
@@ -484,7 +521,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckh8lp98s0008aydl39wjfg46" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckh8mqele000855dl1mtnhax9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -611,7 +648,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckh8lp9950015aydl14fw02cz" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckh8mqelt001c55dl092q1b4f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -653,7 +690,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckh8lp98v000caydlggzw0n89" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Graph%20Embedding/" data-id="ckh8mqelg000c55dl1nxxathw" class="article-share-link">Share</a>
       
       
     </footer>
