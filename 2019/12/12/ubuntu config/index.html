@@ -7,15 +7,15 @@
   
   <title>ubuntu config | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: https:&#x2F;&#x2F;gitee.com&#x2F;mirrors&#x2F;oh-my-zsh以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee) 通过 curl 1sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;shmh">
+  <meta name="description" content="git配置解决git status中文乱码问题将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令： 1git config --global core.quotepath false  ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu config">
 <meta property="og:url" content="http://example.com/2019/12/12/ubuntu%20config/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: https:&#x2F;&#x2F;gitee.com&#x2F;mirrors&#x2F;oh-my-zsh以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee) 通过 curl 1sh -c &quot;$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;shmh">
+<meta property="og:description" content="git配置解决git status中文乱码问题将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令： 1git config --global core.quotepath false  ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: http">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-12T12:11:00.000Z">
-<meta property="article:modified_time" content="2020-11-14T13:16:06.048Z">
+<meta property="article:modified_time" content="2020-11-21T15:05:22.318Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,10 @@
       
       	<!-- Table of Contents -->
 		
-        <h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
+        <h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h4 id="解决git-status中文乱码问题"><a href="#解决git-status中文乱码问题" class="headerlink" title="解决git status中文乱码问题"></a>解决git status中文乱码问题</h4><p>将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.quotepath false</span><br></pre></td></tr></table></figure>
+
+<h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
 <p>通过 curl</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
 <p>或 wget</p>
@@ -110,7 +113,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckhhptzug0010qddlhmzm3114" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckhrtqqnm000vxwdl7gghclez" class="article-share-link">Share</a>
       
       
     </footer>
