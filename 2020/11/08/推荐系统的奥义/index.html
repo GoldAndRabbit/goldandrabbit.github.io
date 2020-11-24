@@ -7,23 +7,24 @@
   
   <title>推荐系统的奥义 | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段">
+  <meta name="description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="推荐系统的奥义">
 <meta property="og:url" content="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段">
+<meta property="og:description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/24/DU98pQ.png">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Bprice%5E%7B%5Cgamma%7D%7D%5Ctimes%7BcommiRate%5E%7B%5Cdelta%7D%7D">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D">
 <meta property="article:published_time" content="2020-11-08T03:56:00.000Z">
-<meta property="article:modified_time" content="2020-11-08T05:16:14.487Z">
+<meta property="article:modified_time" content="2020-11-24T14:19:13.882Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/11/24/DU98pQ.png">
   
     <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
   
@@ -115,6 +116,10 @@
 </ol>
 </li>
 </ul>
+<h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><div style="text-align: center;">
+<img src="https://s3.ax1x.com/2020/11/24/DU98pQ.png" style="display: inline-block;" width="666"/>
+</div>
+
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
 <li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。</li>
 <li>排序公式设计原则: <ol>
@@ -179,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckhrtqqno0012xwdlhczg2m8c" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="ckhw2fujo0014qodl5fbt1yrp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +212,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/need2know/">need2know</a></li></ul>
     </div>
   </div>
 
