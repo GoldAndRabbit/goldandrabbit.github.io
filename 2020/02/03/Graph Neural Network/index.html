@@ -7,33 +7,18 @@
   
   <title>Graph Neural Network | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    titleGCN: learn a function of signals&#x2F;features on a graph &amp;nbsp;  &amp;nbsp; which takes as input:    A feature de">
+  <meta name="description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph G &#x3D; (V, E) which takes as input:    A feature description">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Graph Neural Network">
 <meta property="og:url" content="http://example.com/2020/02/03/Graph%20Neural%20Network/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    titleGCN: learn a function of signals&#x2F;features on a graph &amp;nbsp;  &amp;nbsp; which takes as input:    A feature de">
+<meta property="og:description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph G &#x3D; (V, E) which takes as input:    A feature description">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s3.ax1x.com/2020/11/15/DFYfqe.png">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?x_i">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?i">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?X">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?N">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?D">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?A">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?Z">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?F">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?z">
-<meta property="og:image" content="http://latex.codecogs.com/png.latex?L">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)">
 <meta property="article:published_time" content="2020-02-03T03:56:00.000Z">
-<meta property="article:modified_time" content="2020-11-28T03:31:37.478Z">
+<meta property="article:modified_time" content="2020-11-28T04:41:35.740Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -123,14 +108,15 @@
 <img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
 </div>
 
-<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>GCN: learn a function of signals/features on a graph &nbsp;<img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph">  &nbsp; which takes as input:  </p>
+<p>GCN: learn a function of signals/features on a graph <em>G = (V, E)</em> which takes as input:  </p>
 <ul>
-<li>A feature description<img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
-<li>A representative description of the graph structure in matrix form; typically in the form of an adjacency matrix <img src="http://latex.codecogs.com/png.latex?A" alt="A"> and produces a node-level output <img src="http://latex.codecogs.com/png.latex?Z" alt="Z"> (an <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D" alt="N×F"> feature matrix, where <img src="http://latex.codecogs.com/png.latex?F" alt="F"> is the number of output features per node). </li>
+<li>A feature description <em>x<sub>i</sub></em> for every node i summarized in a <em>N x D</em> feature matrix <em>X</em>. (<em>N</em> : number of nodes, <em>D</em> : number of input features)</li>
+<li>A representative description of the graph structure in matrix form, eg: adjacency matrix <em>A</em>.</li>
 </ul>
+<p>and produces a node-level output <em>Z</em> (an <em>N x F</em> feature matrix, where <em>F</em> is the number of output features per node). Graph-level outputs can be modeled by producing some form of pooling operation.</p>
 <p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
 <p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
-<p>with &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X" alt="H(0)=X"> &nbsp; and &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z" alt="H(L)=Z"> &nbsp; (or <img src="http://latex.codecogs.com/png.latex?z" alt="z"> for graph-level outputs), <img src="http://latex.codecogs.com/png.latex?L" alt="L"> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
+<p>with <em>H<sup>(0)</sup>=X</em> and <em>H<sup>(L)</sup>=Z</em> (<em>z</em> for graph-level outputs), <em>L</em> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
 <h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>The original version of this code base was originally forked from   </p>
 <p><strong>Semi-Supervised Classification with Graph Convolutional Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
 <p><strong>Inductive Representation Learning on Large Graphs</strong><br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
@@ -139,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki159mlp00087hdl64mnbzvn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki17kwxm0008i6dl5j7yaau2" class="article-share-link">Share</a>
       
       
     </footer>
