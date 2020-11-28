@@ -7,12 +7,12 @@
   
   <title>推荐系统的奥义 | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的">
+  <meta name="description" content="推荐系统的真正价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情    确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构大图    召回item-based cf的四宗罪和永远不能放弃它的理由 聚集性: 哈利波特天天见!  无向">
 <meta property="og:type" content="article">
 <meta property="og:title" content="推荐系统的奥义">
 <meta property="og:url" content="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="推荐系统价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构    排序 排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的">
+<meta property="og:description" content="推荐系统的真正价值 理解工业推荐系统，需要依次理解到如下三个层次  解放人力 聚焦目标  平衡体验   推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情    确立一种分发的机制 基于设计好的分发机制，相依地调整体验平衡机制    架构大图    召回item-based cf的四宗罪和永远不能放弃它的理由 聚集性: 哈利波特天天见!  无向">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s3.ax1x.com/2020/11/24/DU98pQ.png">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rank%5C_score=%7Bctr%5E%7B%5Calpha%7D%7D%5Ctimes%7Bcvr%5E%7B%5Cbeta%7D%7D%5Ctimes%7Brights%5E%7B%5Cgamma%7D%7D">
 <meta property="og:image" content="http://latex.codecogs.com/png.latex?rights%5E%7B%5Cgamma%7D">
 <meta property="article:published_time" content="2020-11-08T03:56:00.000Z">
-<meta property="article:modified_time" content="2020-11-24T14:19:13.882Z">
+<meta property="article:modified_time" content="2020-11-28T05:05:47.714Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -101,7 +101,7 @@
       
       	<!-- Table of Contents -->
 		
-        <h2 id="推荐系统价值"><a href="#推荐系统价值" class="headerlink" title="推荐系统价值"></a>推荐系统价值</h2><ul>
+        <h2 id="推荐系统的真正价值"><a href="#推荐系统的真正价值" class="headerlink" title="推荐系统的真正价值"></a>推荐系统的真正价值</h2><ul>
 <li><p>理解工业推荐系统，需要依次理解到如下三个层次</p>
 <ol>
 <li>解放人力</li>
@@ -109,17 +109,31 @@
 <li>平衡体验</li>
 </ol>
 </li>
-<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情</p>
+<li><p>推荐系统是一种流量的遥控器，平衡着平台方的业务目标和用户的用户体验; 因此看来推荐系统可被拆分为两件事情  </p>
 <ol>
 <li>确立一种分发的机制</li>
 <li>基于设计好的分发机制，相依地调整体验平衡机制</li>
 </ol>
 </li>
 </ul>
-<h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><div style="text-align: center;">
+<h2 id="架构大图"><a href="#架构大图" class="headerlink" title="架构大图"></a>架构大图</h2><div style="text-align: center;">
 <img src="https://s3.ax1x.com/2020/11/24/DU98pQ.png" style="display: inline-block;" width="666"/>
 </div>
 
+<h2 id="召回"><a href="#召回" class="headerlink" title="召回"></a>召回</h2><h3 id="item-based-cf的四宗罪和永远不能放弃它的理由"><a href="#item-based-cf的四宗罪和永远不能放弃它的理由" class="headerlink" title="item-based cf的四宗罪和永远不能放弃它的理由"></a>item-based cf的四宗罪和永远不能放弃它的理由</h3><ul>
+<li><p>聚集性: 哈利波特天天见!</p>
+</li>
+<li><p>无向性: 从你到我 != 从我到你. </p>
+</li>
+<li><p>有偏性: 存在即合理，不存在就不合理?</p>
+</li>
+<li><p>失准性: 请别让我开脑洞，我看不懂!</p>
+</li>
+<li><p>永远work的一种关系建模方法: co-currence 任其风雨，我自岿然不动<br>实验证明, 召回1vs1中门对狙, 尝试很多方法之后会发现战胜swingBaselie也并非容易的事情</p>
+</li>
+<li><p>实现简单，离线建好索引==打完收工</p>
+</li>
+</ul>
 <h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
 <li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。</li>
 <li>排序公式设计原则: <ol>
@@ -184,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="cki17mcco0016pzdl8chn6kd1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%A5%A5%E4%B9%89/" data-id="cki18f3n4001bbwdl49bcbbbz" class="article-share-link">Share</a>
       
       
     </footer>
