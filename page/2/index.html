@@ -99,7 +99,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="cki14wsif000izodlhrktah3k" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="cki159mlu000i7hdl0ji21ik2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -198,7 +198,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="cki14wsig000lzodlcr8b6iax" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="cki159mlx000q7hdlar388gt7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,9 +245,9 @@
 <img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
 </div>
 
-<p>GCN: learn a function of signals/features on a graph &nbsp; <img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph">  &nbsp; which takes as input:  </p>
+<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>GCN: learn a function of signals/features on a graph &nbsp;<img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph">  &nbsp; which takes as input:  </p>
 <ul>
-<li>A feature description <img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
+<li>A feature description<img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
 <li>A representative description of the graph structure in matrix form; typically in the form of an adjacency matrix <img src="http://latex.codecogs.com/png.latex?A" alt="A"> and produces a node-level output <img src="http://latex.codecogs.com/png.latex?Z" alt="Z"> (an <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D" alt="N×F"> feature matrix, where <img src="http://latex.codecogs.com/png.latex?F" alt="F"> is the number of output features per node). </li>
 </ul>
 <p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
@@ -261,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki14wsia0008zodl2fjahtzr" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki159mlp00087hdl64mnbzvn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +335,70 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="cki14wsih000nzodl4ys30rea" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="cki159mlv000l7hdl78ep3agg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-gnn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/03/gnn/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/03/gnn/">gnn</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h2><p>Graph neural network/Graph embedding code.  </p>
+<ul>
+<li>GNN: gcn, grageSAGE</li>
+<li>GE: node2vec</li>
+</ul>
+<h2 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;"/>
+</div>
+
+<p>GCN: learn a function of signals/features on a graph<br><img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph"><br>which takes as input:  </p>
+<ul>
+<li>A feature description <img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
+<li>A representative description of the graph structure in matrix form; typically in the form of an adjacency matrix <img src="http://latex.codecogs.com/png.latex?A" alt="A"> and produces a node-level output <img src="http://latex.codecogs.com/png.latex?Z" alt="Z"> (an <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D" alt="N×F"> feature matrix, where <img src="http://latex.codecogs.com/png.latex?F" alt="F"> is the number of output features per node). </li>
+</ul>
+<p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
+<p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
+<p>with &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X" alt="H(0)=X"> &nbsp; and &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z" alt="H(L)=Z"> &nbsp; (or <img src="http://latex.codecogs.com/png.latex?z" alt="z"> for graph-level outputs), <img src="http://latex.codecogs.com/png.latex?L" alt="L"> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
+<h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>The original version of this code base was originally forked from   </p>
+<p><strong>Semi-Supervised Classification with Graph Convolutional Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
+<p><strong>Inductive Representation Learning on Large Graphs</strong><br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
+<p><strong>node2vec: Scalable Feature Learning for Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/aditya-grover/node2vec">https://github.com/aditya-grover/node2vec</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/03/gnn/" data-id="cki159mm100117hdl5jao90ry" class="article-share-link">Share</a>
       
       
     </footer>
@@ -382,76 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="cki14wsim0012zodlgdrr62h2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg" style="display: inline-block;"/>
-</div>
-
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg" style="display: inline-block;"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div style="text-align: center;">
-<img alt="" src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg" style="display: inline-block;"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="cki14wsij000szodl4eatdzvf" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="cki159mm200147hdlgstm162t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -606,7 +600,76 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="cki14wsik000vzodl0l2vf76b" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="cki159mlw000n7hdl3ez0esc1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Word2Vec/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
+<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
+
+<p>One of the most successful ideas of modern statistical NLP!</p>
+<div style="text-align: center;">
+<img alt="" src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg" style="display: inline-block;"/>
+</div>
+
+
+<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div style="text-align: center;">
+<img alt="" src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg" style="display: inline-block;"/>
+</div>
+
+<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div style="text-align: center;">
+<img alt="" src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg" style="display: inline-block;"/>
+</div>
+
+<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
+<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
+<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
+<p>即相当于以如下概率保留样本；</p>
+<p>上述函数具有以下性质</p>
+<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
+<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
+<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
+<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
+<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="cki159mly000v7hdlgeprf2b1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -663,7 +726,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="cki14wsil000xzodldglc046w" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="cki159mm0000z7hdl1v2j4gpp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -753,63 +816,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="cki14wsis001jzodl778u18ee" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ubuntu config" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/12/ubuntu%20config/" class="article-date">
-  <time datetime="2019-12-12T12:11:00.000Z" itemprop="datePublished">2019-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/ubuntu%20config/">ubuntu config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h4 id="解决git-status中文乱码问题"><a href="#解决git-status中文乱码问题" class="headerlink" title="解决git status中文乱码问题"></a>解决git status中文乱码问题</h4><p>将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.quotepath false</span><br></pre></td></tr></table></figure>
-
-<h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
-<p>通过 curl</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>或 wget</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="配置vim"><a href="#配置vim" class="headerlink" title="配置vim"></a>配置vim</h5><p>参考<a target="_blank" rel="noopener" href="https://maxim-danilov.github.io/make-linux-terminal-great-again/">ohmyzsh增强配置</a></p>
-<h2 id="解决github图片挂问题"><a href="#解决github图片挂问题" class="headerlink" title="解决github图片挂问题"></a>解决github图片挂问题</h2><p>修改hosts, 编辑 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo subl /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p>增加如下内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GitHub Start </span></span><br><span class="line"><span class="number">140.82</span><span class="number">.113</span><span class="number">.3</span>      github.com</span><br><span class="line"><span class="number">140.82</span><span class="number">.114</span><span class="number">.20</span>     gist.github.com</span><br><span class="line"></span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    assets-cdn.github.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    raw.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    gist.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    cloud.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    camo.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars2.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars3.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars4.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars5.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars6.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars7.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars8.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars8.githubusercontent.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub End</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="cki14wsio0017zodl5txje3xi" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="cki159mm9001m7hdlc4zmeacd" class="article-share-link">Share</a>
       
       
     </footer>
