@@ -67,54 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Linux Commands" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/18/Linux%20Commands/" class="article-date">
-  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/18/Linux%20Commands/">Linux Commands</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du (disk usage) : 查看磁盘使用空间；</span><br><span class="line">du -sh filename/dirname</span><br></pre></td></tr></table></figure>
-
-<h2 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h2><ul>
-<li>When you execute a Unix job in the background ( using &amp;, bg command), and logout from the session, your process will get killed. You can avoid this using several methods — executing the job with nohup, or making it as batch job using at, batch or cron command. Nohup stands for no hang up, which can be executed as shown below. nohup syntax:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure></li>
-<li>Nohup is very helpful when you have to execute a shell-script or command that take a long time to finish. In that case, you don’t want to be connected to the shell and waiting for the command to complete. Instead, execute it with nohup, exit the shell and continue with your other work.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux | grep charm</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckhw2fuje000dqodl9d6z3lyh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Recurrent Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/13/Recurrent%20Neural%20Network/" class="article-date">
@@ -147,7 +99,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckhw2fujg000iqodlef7uh45v" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="cki14uh9v000iltdlh6cv6oxo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,7 +198,70 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckhw2fuji000lqodl932jf5af" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="cki14uh9w000lltdldqsrgiq6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Graph Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/03/Graph%20Neural%20Network/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/03/Graph%20Neural%20Network/">Graph neural network</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <h2 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h2><p>Graph neural network/Graph embedding code.  </p>
+<ul>
+<li>GNN: gcn, graphSAGE</li>
+<li>GE: node2vec</li>
+</ul>
+<h2 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
+</div>
+
+<p>GCN: learn a function of signals/features on a graph &nbsp; <img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph">  &nbsp; which takes as input:  </p>
+<ul>
+<li>A feature description <img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
+<li>A representative description of the graph structure in matrix form; typically in the form of an adjacency matrix <img src="http://latex.codecogs.com/png.latex?A" alt="A"> and produces a node-level output <img src="http://latex.codecogs.com/png.latex?Z" alt="Z"> (an <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D" alt="N×F"> feature matrix, where <img src="http://latex.codecogs.com/png.latex?F" alt="F"> is the number of output features per node). </li>
+</ul>
+<p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
+<p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
+<p>with &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X" alt="H(0)=X"> &nbsp; and &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z" alt="H(L)=Z"> &nbsp; (or <img src="http://latex.codecogs.com/png.latex?z" alt="z"> for graph-level outputs), <img src="http://latex.codecogs.com/png.latex?L" alt="L"> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
+<h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>The original version of this code base was originally forked from   </p>
+<p><strong>Semi-Supervised Classification with Graph Convolutional Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
+<p><strong>Inductive Representation Learning on Large Graphs</strong><br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
+<p><strong>node2vec: Scalable Feature Learning for Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/aditya-grover/node2vec">https://github.com/aditya-grover/node2vec</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki14uh9r0009ltdl3pfcd2z3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckhw2fujj000qqodlf4fc6lwm" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="cki14uh9z000vltdla1r4g98w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -367,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckhw2fujl000vqodla6jmbt85" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="cki14uha0000xltdl71mc3mgp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -522,7 +537,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckhw2fuji000nqodlbsopekcg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="cki14uh9x000nltdl7x2j44po" class="article-share-link">Share</a>
       
       
     </footer>
@@ -591,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckhw2fujm000xqodl6lbo0tgb" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="cki14uha10010ltdl9ju437vt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -648,7 +663,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckhw2fujn0011qodlh6ts920x" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="cki14uha40017ltdlapvw2g3f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -738,7 +753,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckhw2fujs001hqodl8yghb4dy" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="cki14uha8001jltdl4lntg1xx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -794,7 +809,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckhw2fujp0016qodl0pqga8jp" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="cki14uha20012ltdlfpe4119y" class="article-share-link">Share</a>
       
       
     </footer>

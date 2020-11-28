@@ -5,24 +5,39 @@
   
 
   
-  <title>Word2Vec | Gold and Rabbit&#39;s Blog</title>
+  <title>Graph neural network | Gold and Rabbit&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Core ideaHow to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by. “You shall know a word by the company it keeps” (J. R. Firth 1957: 11).">
+  <meta name="description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph &amp;nbsp;   &amp;nbsp; which takes as input:    A feature descri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Word2Vec">
-<meta property="og:url" content="http://example.com/2020/01/11/Word2Vec/index.html">
+<meta property="og:title" content="Graph neural network">
+<meta property="og:url" content="http://example.com/2020/02/03/Graph%20Neural%20Network/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="Core ideaHow to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by. “You shall know a word by the company it keeps” (J. R. Firth 1957: 11).">
+<meta property="og:description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph &amp;nbsp;   &amp;nbsp; which takes as input:    A feature descri">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg">
-<meta property="og:image" content="https://s1.ax1x.com/2020/09/20/wo7n76.jpg">
-<meta property="article:published_time" content="2020-01-11T12:11:00.000Z">
-<meta property="article:modified_time" content="2020-11-01T11:15:43.280Z">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/15/DFYfqe.png">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?x_i">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?i">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?X">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?N">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?A">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?Z">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?F">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?z">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?L">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)">
+<meta property="article:published_time" content="2020-02-03T03:56:00.000Z">
+<meta property="article:modified_time" content="2020-11-28T03:24:38.583Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/11/15/DFYfqe.png">
   
     <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
   
@@ -71,10 +86,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Graph Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+    <a href="/2020/02/03/Graph%20Neural%20Network/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
 </a>
     
   <div class="article-category">
@@ -89,7 +104,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Word2Vec
+      Graph neural network
     </h1>
   
 
@@ -99,38 +114,32 @@
       
       	<!-- Table of Contents -->
 		
-        <h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg" style="display: inline-block;"/>
+        <h2 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h2><p>Graph neural network/Graph embedding code.  </p>
+<ul>
+<li>GNN: gcn, graphSAGE</li>
+<li>GE: node2vec</li>
+</ul>
+<h2 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
 </div>
 
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg" style="display: inline-block;"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div style="text-align: center;">
-<img alt="" src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg" style="display: inline-block;"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
+<p>GCN: learn a function of signals/features on a graph &nbsp; <img src="http://latex.codecogs.com/png.latex?G=%5Cleft(V,E%5Cright)" alt="graph">  &nbsp; which takes as input:  </p>
+<ul>
+<li>A feature description <img src="http://latex.codecogs.com/png.latex?x_i" alt="x_i">  for every node <img src="http://latex.codecogs.com/png.latex?i" alt="i"> summarized in a <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BD%7D" alt="N×D"> feature matrix <img src="http://latex.codecogs.com/png.latex?X" alt="X"> (<img src="http://latex.codecogs.com/png.latex?N" alt="N"> : number of nodes, <img src="http://latex.codecogs.com/png.latex?D" alt="D">: number of input features)</li>
+<li>A representative description of the graph structure in matrix form; typically in the form of an adjacency matrix <img src="http://latex.codecogs.com/png.latex?A" alt="A"> and produces a node-level output <img src="http://latex.codecogs.com/png.latex?Z" alt="Z"> (an <img src="http://latex.codecogs.com/png.latex?N%5Ctimes%7BF%7D" alt="N×F"> feature matrix, where <img src="http://latex.codecogs.com/png.latex?F" alt="F"> is the number of output features per node). </li>
+</ul>
+<p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
+<p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
+<p>with &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(0%5Cright)=X" alt="H(0)=X"> &nbsp; and &nbsp; <img src="http://latex.codecogs.com/png.latex?H%5Cleft(L%5Cright)=Z" alt="H(L)=Z"> &nbsp; (or <img src="http://latex.codecogs.com/png.latex?z" alt="z"> for graph-level outputs), <img src="http://latex.codecogs.com/png.latex?L" alt="L"> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
+<h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>The original version of this code base was originally forked from   </p>
+<p><strong>Semi-Supervised Classification with Graph Convolutional Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
+<p><strong>Inductive Representation Learning on Large Graphs</strong><br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
+<p><strong>node2vec: Scalable Feature Learning for Networks</strong><br><a target="_blank" rel="noopener" href="https://github.com/aditya-grover/node2vec">https://github.com/aditya-grover/node2vec</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="cki14uha10010ltdl9ju437vt" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="cki14uh9r0009ltdl3pfcd2z3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,19 +148,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/13/Tensorflow%20API/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Tricks in Data Mining Competitions
+          Tensorflow API
         
       </div>
     </a>
   
   
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/02/03/The%20Illustrated%20Transformer/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Yoshua Bengio对ML研究者的建议</div>
+      <div class="article-nav-title">The Illustrated Transformer</div>
     </a>
   
 </nav>
