@@ -123,12 +123,12 @@
 </li>
 <li><p>失准性: 脑洞</p>
 </li>
-<li><p>永远work的一种关系建模方法: co-currence 任其风雨，我自岿然不动<br>实验证明, 召回方法1vs1对比, 尝试之后会发现战胜swingBaselie也并非容易的事情</p>
+<li><p>永远work的一种关系建模方法: co-currence, 实验证明召回方法1vs1对比发现战胜swing是一个较好的Baseline</p>
 </li>
-<li><p>实现简单，离线建好索引==打完收工</p>
+<li><p>实现简单，离线建好索引</p>
 </li>
 </ul>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<h2 id="排序-Rank"><a href="#排序-Rank" class="headerlink" title="排序 Rank"></a>排序 Rank</h2><ul>
 <li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。</li>
 <li>排序公式设计原则: <ol>
 <li>对齐业务目标</li>
@@ -147,14 +147,14 @@
 <li>营销/权益场景: <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x rights<sup>γ</sup></em> , 其中 <em>rights<sup>γ</sup></em> 为各类优惠券的折扣公式<br>其中, <em>bid_show</em>: 曝光出价, <em>bid_click</em>: 点击出价, <em>bid_convert</em>: 转化出价</li>
 </ul>
 <h4 id="CTR预估的核心问题"><a href="#CTR预估的核心问题" class="headerlink" title="CTR预估的核心问题"></a>CTR预估的核心问题</h4><ul>
-<li>Feature Interaction.</li>
+<li>Feature Interaction.特征交互（特征交叉）是提升CTR预估准度的关键问题.</li>
 <li>Data Sparsity (Optional).</li>
 <li>Sequence Modeling.</li>
 </ul>
 <h4 id="CVR预估的三大挑战"><a href="#CVR预估的三大挑战" class="headerlink" title="CVR预估的三大挑战"></a>CVR预估的三大挑战</h4><ul>
-<li>Data Sparsity.</li>
-<li>Sample Selection Bias.</li>
-<li>Delay FeedBack Calibration.</li>
+<li>Positive Sample Sparsity. 正样本稀疏</li>
+<li>Sample Selection Bias. 样本选择偏差</li>
+<li>Delay FeedBack Calibration. 延迟反馈校准</li>
 </ul>
 <h4 id="Multi-Task-Multi-Objective"><a href="#Multi-Task-Multi-Objective" class="headerlink" title="Multi-Task/Multi-Objective"></a>Multi-Task/Multi-Objective</h4><ul>
 <li>相关性</li>
@@ -207,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckin2gbpi000v9udlf20r1mal" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckin2q84b000mi2dlcbz75w9e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -269,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckin2gbp900099udla5ume5e1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckin2q847000di2dl9bt86l0h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckin2gbpb000d9udl9ufi3ov7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckin2q846000ci2dlboti795l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -362,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckin2gbp600059udlebw8eeoc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckin2q83z0002i2dlavay39c3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -407,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckin2gbpg000q9udlb3ryem1t" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckin2q84c000pi2dl87z5hraf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -484,7 +484,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckin2gbp800089udl91hw36uh" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckin2q8430006i2dle57rg7r3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -532,7 +532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckin2gbpa000c9udl60tibzxf" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckin2q8440008i2dl2r0u1dca" class="article-share-link">Share</a>
       
       
     </footer>
@@ -574,7 +574,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckin2gbpk00119udle4sie1yi" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckin2q84i0014i2dlejou7edt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -701,7 +701,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckin2gbpn00189udl4k9d4y5a" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckin2q84p001hi2dldtc0bb0c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -749,7 +749,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckin2gbpd000g9udleowd4n9m" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckin2q849000hi2dl8gfj456t" class="article-share-link">Share</a>
       
       
     </footer>
