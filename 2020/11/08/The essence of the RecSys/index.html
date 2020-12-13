@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s3.ax1x.com/2020/11/24/DU98pQ.png">
 <meta property="article:published_time" content="2020-11-08T03:56:00.000Z">
-<meta property="article:modified_time" content="2020-12-13T12:01:41.563Z">
+<meta property="article:modified_time" content="2020-12-13T12:08:39.557Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
@@ -139,14 +139,16 @@
 </ol>
 </li>
 </ul>
-<h3 id="排序公式"><a href="#排序公式" class="headerlink" title="排序公式"></a>排序公式</h3><ul>
+<h3 id="排序公式"><a href="#排序公式" class="headerlink" title="排序公式"></a>排序公式</h3><h4 id="商业化场景"><a href="#商业化场景" class="headerlink" title="商业化场景"></a>商业化场景</h4><ul>
 <li>商业化(CPM):<em>ecpm=bid_show</em> </li>
 <li>商业化(CPC): <em>ecpm = pctr<sup>α</sup> x bid_click</em>  </li>
 <li>商业化(oCPM): <em>ecpm = pctr<sup>α</sup> x pcvr<sup>β</sup> x bid_convert</em></li>
 <li>商业化(oCPC):<em>ecpm = pctr<sup>α</sup> x pcvr<sup>β</sup> x bid_convert</em></li>
-<li>商业化(CPS):<em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x price<sup>γ</sup> x commiRate<sup>δ</sup></em>   </li>
+<li>商业化(CPS):<em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x price<sup>γ</sup> x commiRate<sup>δ</sup></em><br>其中, <em>bid_show</em>: 曝光出价, <em>bid_click</em>: 点击出价, <em>bid_convert</em>: 转化出价</li>
+</ul>
+<h4 id="推荐场景"><a href="#推荐场景" class="headerlink" title="推荐场景"></a>推荐场景</h4><ul>
 <li>猜你喜欢: <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup></em></li>
-<li>营销/权益场景: <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x rights<sup>γ</sup></em> , 其中 <em>rights<sup>γ</sup></em> 为各类优惠券的折扣公式<br>其中, <em>bid_show</em>: 曝光出价, <em>bid_click</em>: 点击出价, <em>bid_convert</em>: 转化出价</li>
+<li>营销/权益场景: <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x rights<sup>γ</sup></em><br>其中, <em>rights<sup>γ</sup></em> 为各类优惠券的折扣公式   </li>
 </ul>
 <h4 id="CTR预估的核心问题"><a href="#CTR预估的核心问题" class="headerlink" title="CTR预估的核心问题"></a>CTR预估的核心问题</h4><ul>
 <li>Feature Interaction.特征交互（特征交叉）是提升CTR预估准度的关键问题.</li>
@@ -209,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckin323yi000spedlhm98aykg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckin34rru000su6dl904c3kqb" class="article-share-link">Share</a>
       
       
     </footer>
