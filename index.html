@@ -236,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckin7mfmv000tm1dl4buf3mj7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckiq02sa2000q4hdlcg0ygmm6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -299,7 +299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckin7mfmm0009m1dlbku0c2nw" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" data-id="ckiq02s9x000c4hdldc5l8a8t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -351,7 +351,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckin7mfmq000hm1dlbhvk5bgn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/Item-Based%20CF/" data-id="ckiq02s9y000d4hdlbog5ervd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -390,11 +390,59 @@
       	<!-- Table of Contents -->
 		
         <hr>
+<h2 id="Why-Deep-CTR-model"><a href="#Why-Deep-CTR-model" class="headerlink" title="Why Deep CTR model?"></a>Why Deep CTR model?</h2><ul>
+<li>Auto Feature Interaction. 深度学习用于CTR预估问题, 主要优势是通过网络设计达到自动学习特征交互Feature Interaction的目的. 本文中涉及到的模型均是解决feature interaction的不同网络设计.</li>
+<li>Better Sparse ids presentation Support. 相比GBDT模型, DNN对稀疏id类特征有更好的表示学习能力. 业务需求中往往存在海量且稀疏id类特征, 通过embedding支持对海量id类特征具备较强的表示学习能力.</li>
+<li>Memorization &amp; Generalization. 记忆性和泛化性是推荐系统重要的两类能力, 这两类目标通过Wide &amp; Deep Learning结构同时学得, wide part采用FTRL实现, 目的是使得对id类特征具有memorization(记忆性); DNN结构具有generalization的特性(泛化性); </li>
+</ul>
+<hr>
+<h2 id="Wide-amp-Deep-Learning"><a href="#Wide-amp-Deep-Learning" class="headerlink" title="Wide &amp; Deep Learning"></a>Wide &amp; Deep Learning</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMbxQU.png" style="display: inline-block;"/>
+</div>
+
+
+<hr>
+<h2 id="DeepFM"><a href="#DeepFM" class="headerlink" title="DeepFM"></a>DeepFM</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMqKwd.png" style="display: inline-block;" width="400"/>
+</div>
+
+
+<hr>
+<h2 id="PNN-Inner-Outer-product"><a href="#PNN-Inner-Outer-product" class="headerlink" title="PNN: Inner/Outer product"></a>PNN: Inner/Outer product</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMqJl8.png" style="display: inline-block;" width="400"/>
+</div>
+
+
+<hr>
+<h2 id="DCN-Cross-Network"><a href="#DCN-Cross-Network" class="headerlink" title="DCN: Cross Network"></a>DCN: Cross Network</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMbzyF.png" style="display: inline-block;" width="400"/>
+</div>
+
+<hr>
+<h2 id="xDeepFM-CIN"><a href="#xDeepFM-CIN" class="headerlink" title="xDeepFM: CIN"></a>xDeepFM: CIN</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMqFF1.png" style="display: inline-block;"/>
+</div>
+
+<hr>
+<h2 id="AFM-FM-based-attention"><a href="#AFM-FM-based-attention" class="headerlink" title="AFM: FM based attention"></a>AFM: FM based attention</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMqPoR.png" style="display: inline-block;" width="666"/>
+</div>
+
+<hr>
+<h2 id="AutoInt-Multi-head-attention"><a href="#AutoInt-Multi-head-attention" class="headerlink" title="AutoInt: Multi-head attention"></a>AutoInt: Multi-head attention</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMxVSI.png" style="display: inline-block;" width="400"/>
+</div>
+
+
+<hr>
+<h2 id="FiBiNet-SENET-amp-Bi-linear-interaction"><a href="#FiBiNet-SENET-amp-Bi-linear-interaction" class="headerlink" title="FiBiNet: SENET &amp; Bi-linear interaction"></a>FiBiNet: SENET &amp; Bi-linear interaction</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/12/15/rMqY6S.png" style="display: inline-block;" width="666"/>
+</div>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckin7mfmk0005m1dl9qn8boxj" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/08/15/Deep%20CTR%20Model/" data-id="ckiq02s9t00054hdla5igh9v5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -440,7 +488,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckin7mfmx000zm1dlb0crd57d" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/06/05/Why%20Alibaba%20/" data-id="ckiq02sa4000v4hdldzzmg0pj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -518,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckin7mfmk0006m1dleasjabcs" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckiq02s9u00084hdl7mwi4at7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -567,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckin7mfmo000cm1dlamzf6py1" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckiq02s9t00064hdl4l6mff1i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -610,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckin7mfmz0013m1dlcm2z8rnb" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckiq02sa700154hdl6g4xeraq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -738,7 +786,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckin7mfn00018m1dl6jix000h" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckiq02sa600124hdlg94i1f0j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -787,7 +835,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckin7mfmp000em1dlbm7p31s2" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckiq02s9z000i4hdl0xe9dogm" class="article-share-link">Share</a>
       
       
     </footer>
