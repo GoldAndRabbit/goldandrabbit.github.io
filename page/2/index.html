@@ -67,6 +67,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux Commands" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/18/Linux%20Commands/" class="article-date">
+  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/18/Linux%20Commands/">Linux Commands</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="du"><a href="#du" class="headerlink" title="du"></a>du</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">du (disk usage) : 查看磁盘使用空间；</span><br><span class="line">du -sh filename/dirname</span><br></pre></td></tr></table></figure>
+
+<h2 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h2><ul>
+<li>When you execute a Unix job in the background ( using &amp;, bg command), and logout from the session, your process will get killed. You can avoid this using several methods — executing the job with nohup, or making it as batch job using at, batch or cron command. Nohup stands for no hang up, which can be executed as shown below. nohup syntax:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &amp;</span><br></pre></td></tr></table></figure></li>
+<li>Nohup is very helpful when you have to execute a shell-script or command that take a long time to finish. In that case, you don’t want to be connected to the shell and waiting for the command to complete. Instead, execute it with nohup, exit the shell and continue with your other work.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux | grep charm</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckirftv4q000hwndlgndmbbvv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Recurrent Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/13/Recurrent%20Neural%20Network/" class="article-date">
@@ -100,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckiq02s9z000g4hdl2e3d1r9c" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckirftv4r000kwndlann7c55w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckiq02sa0000l4hdlau7o9chg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckirftv4t000pwndl56p7dpt2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,8 +306,7 @@
 <p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
 <p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
 <p>with <em>H<sup>(0)</sup>=X</em> and <em>H<sup>(L)</sup>=Z</em> (<em>z</em> for graph-level outputs), <em>L</em> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
-<h2 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h2><p>The original version of this code base was originally forked from   </p>
-<ul>
+<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
 <li><p>Semi-Supervised Classification with Graph Convolutional Networks<br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
 </li>
 <li><p>Inductive Representation Learning on Large Graphs<br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
@@ -270,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckiq02s9v00094hdlb9t9azia" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckirftv4n000cwndl1ji64old" class="article-share-link">Share</a>
       
       
     </footer>
@@ -345,7 +393,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckiq02sa1000n4hdlabge0etn" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckirftv4s000mwndlhibs45yn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -393,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckiq02sa500104hdl1d129she" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckirftv4y0013wndl0ten7vhz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -549,7 +597,65 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckiq02sa3000s4hdl9ltham7x" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckirftv4u000uwndl2qb28t5j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
+<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
+<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
+<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
+<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
+<p>四个核心能力</p>
+<ul>
+<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
+<li>阅读书籍和很多论文</li>
+<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
+<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
+</ul>
+<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckirftv4v000wwndlc6iab2cp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -619,65 +725,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckiq02sa800174hdlg4vofw31" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
-<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
-<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
-<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
-<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
-<p>四个核心能力</p>
-<ul>
-<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
-<li>阅读书籍和很多论文</li>
-<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
-<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
-</ul>
-<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckiq02sa9001a4hdlfqx04ks7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckirftv4w000zwndl9vmpc9if" class="article-share-link">Share</a>
       
       
     </footer>
@@ -768,64 +816,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckiq02sab001j4hdlb0u76ye3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ubuntu config" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/12/ubuntu%20config/" class="article-date">
-  <time datetime="2019-12-12T12:11:00.000Z" itemprop="datePublished">2019-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/ubuntu%20config/">ubuntu config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h4 id="解决git-status中文乱码问题"><a href="#解决git-status中文乱码问题" class="headerlink" title="解决git status中文乱码问题"></a>解决git status中文乱码问题</h4><p>将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.quotepath false</span><br></pre></td></tr></table></figure>
-
-<h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
-<p>通过 curl</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>或 wget</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="配置vim"><a href="#配置vim" class="headerlink" title="配置vim"></a>配置vim</h5><p>参考<a target="_blank" rel="noopener" href="https://maxim-danilov.github.io/make-linux-terminal-great-again/">ohmyzsh增强配置</a></p>
-<h2 id="解决github图片挂问题"><a href="#解决github图片挂问题" class="headerlink" title="解决github图片挂问题"></a>解决github图片挂问题</h2><p>修改hosts, 编辑 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo subl /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p>增加如下内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GitHub Start </span></span><br><span class="line"><span class="number">140.82</span><span class="number">.113</span><span class="number">.3</span>      github.com</span><br><span class="line"><span class="number">140.82</span><span class="number">.114</span><span class="number">.20</span>     gist.github.com</span><br><span class="line"></span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    assets-cdn.github.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    raw.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    gist.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    cloud.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    camo.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars2.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars3.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars4.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars5.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars6.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars7.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars8.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars8.githubusercontent.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub End</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckiq02sa4000x4hdlc9oofhrw" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckirftv53001kwndl5z5vbkx9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -865,7 +856,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
     </div>
   </div>
 
@@ -876,6 +867,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/12/16/Bert/">Bert</a>
+          </li>
         
           <li>
             <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
@@ -891,10 +886,6 @@
         
           <li>
             <a href="/2020/08/15/Deep%20CTR%20Model/">Deep CTR Model</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/05/Why%20Alibaba%20/">Why Alibaba</a>
           </li>
         
       </ul>
