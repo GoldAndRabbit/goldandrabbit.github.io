@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>The Illustrated Transformer | Gold and Rabbit&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概述 介绍博客链接关于Transformer以及论文《Attention is all you need》以加深对于transformer框架的理解； Transformer在时序建模上效果在很多nlp任务上优于RNN，且不同于CNN卷积进行特征提取过程；  Transformer用于机器翻译任务 Transformer的提出用于机器翻译任务；翻译句子时输入输出是两个句子，中间黑盒包括一个Enc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Illustrated Transformer">
+<meta property="og:url" content="http://example.com/2020/02/03/The%20Illustrated%20Transformer/index.html">
+<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
+<meta property="og:description" content="概述 介绍博客链接关于Transformer以及论文《Attention is all you need》以加深对于transformer框架的理解； Transformer在时序建模上效果在很多nlp任务上优于RNN，且不同于CNN卷积进行特征提取过程；  Transformer用于机器翻译任务 Transformer的提出用于机器翻译任务；翻译句子时输入输出是两个句子，中间黑盒包括一个Enc">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-03T03:56:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T12:15:24.177Z">
+<meta property="article:author" content="Gold and Rabbit">
+<meta property="article:tag" content="Recommending System">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-The Illustrated Transformer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/03/The%20Illustrated%20Transformer/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      The Illustrated Transformer
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>介绍博客链接关于Transformer以及论文《Attention is all you need》以加深对于transformer框架的理解；</li>
+<li>Transformer在时序建模上效果在很多nlp任务上优于RNN，且不同于CNN卷积进行特征提取过程；</li>
+</ul>
+<h2 id="Transformer用于机器翻译任务"><a href="#Transformer用于机器翻译任务" class="headerlink" title="Transformer用于机器翻译任务"></a>Transformer用于机器翻译任务</h2><ul>
+<li><p>Transformer的提出用于机器翻译任务；翻译句子时输入输出是两个句子，中间黑盒包括一个Encoder和一个Decoder，更一般的情况是多个Encoder和多个Decoder进行堆叠；</p>
+</li>
+<li><p>拆解开单个Encoder，其中是一个Self-Attention和一个Feed Forward层；拆解开单个Decoder，其中是一个Self-Attention、一个Enconder-Decoder Attention层和一个Feed Forward层；</p>
+</li>
+</ul>
+<h2 id="Self-Attention-Layer-拆解"><a href="#Self-Attention-Layer-拆解" class="headerlink" title="Self-Attention Layer 拆解"></a>Self-Attention Layer 拆解</h2><ul>
+<li><p>和常见NLP任务一样输入为单词的embedding，分别表示为；经过Self-Attention层后，分别输出为，再分别过各自的FFNN’</p>
+</li>
+<li><p>Attention过程首先对每个单词的embedding构造三个向量分别为Key、Query和Value；这三个向量是通过输入单词embedding分别乘以三个矩阵所得分别表示为，这三个矩阵在训练过程中得到；</p>
+</li>
+</ul>
+<ul>
+<li><p>Self-Attention过程如何实现？分解来看就是理解weight怎么得到，得到weight以后乘上去即可（Transformer里面是乘在value上），即理解如下过程；<br>  输入单词的embedding的query根据key点乘进行打分（维度归一化）</p>
+<p>  =&gt; softmax之后得到一个weight</p>
+<p>  =&gt; 对value乘以weight进行加权求和得到z</p>
+</li>
+</ul>
+<ul>
+<li>Self-Attention的计算过程可以用如下式子表示，其中理解Softmax(x)=weight</li>
+</ul>
+<p>上述过程描述了单个输入单词embedding生成self-attention后的表示的过程，在实际运算时通过矩阵运算来并行实现所有单词的self-attention过程；同时，上述实现了一个head的self-attention的过程，实际上可以设置多个head进行self-attention，再将多个head学习到的表示z进行concatenate，最后将这个宽表示乘以一个weight矩阵；</p>
+<ul>
+<li><p>截止目前Transformer模型并没有捕捉顺序序列的能力，也就是说无论句子中词的顺序怎么打乱Transformer都会得到类似的结果，换句话说此时的Transformer只是一个功能更强大的词袋模型而已。为解决这个问题，Transformer编码词向量时引入了位置编码（Position Embedding）特征。那么如何编码位置信息呢？常见模式有：a. 根据数据学习；b. 自己设计编码规则。</p>
+</li>
+<li><p>另外Transformer在每个Encoder-Block里面，同时采用ResBlock的结构，另外采用了Layer Nomalization的方法进行配合使用；</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckix721hp000nuddlhq3526et" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/03/Graph%20Neural%20Network/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Graph Neural Network
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/03/pickle%20dump%20OverflowError/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">pickle dump OverflowError</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/16/Bert/">Bert</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Gold and Rabbit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

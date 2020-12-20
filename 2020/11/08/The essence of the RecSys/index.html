@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>The essence of the RecSys | Gold and Rabbit&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="推荐系统的真正价值理解推荐的三个层次理解工业界推荐系统，需要依次理解到如下三个层次  解放人力.   聚焦目标.   平衡体验. 推荐系统不仅是一种流量的遥控器，从产品角度来看, 平衡平台方的业务目标和用户的用户体验十分重要.   综上, 推荐系统可被拆分为两件事情:    确立一种分发的机制   基于设计好的分发机制，相依地调整体验平衡机制  搜索 v.s. 推荐 v.s. 广告三者在业务目标">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The essence of the RecSys">
+<meta property="og:url" content="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/index.html">
+<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
+<meta property="og:description" content="推荐系统的真正价值理解推荐的三个层次理解工业界推荐系统，需要依次理解到如下三个层次  解放人力.   聚焦目标.   平衡体验. 推荐系统不仅是一种流量的遥控器，从产品角度来看, 平衡平台方的业务目标和用户的用户体验十分重要.   综上, 推荐系统可被拆分为两件事情:    确立一种分发的机制   基于设计好的分发机制，相依地调整体验平衡机制  搜索 v.s. 推荐 v.s. 广告三者在业务目标">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/rm3V9x.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/24/DU98pQ.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/rme34S.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/rm3aDg.png">
+<meta property="article:published_time" content="2020-11-08T03:56:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T14:14:36.807Z">
+<meta property="article:author" content="Gold and Rabbit">
+<meta property="article:tag" content="Recommending System">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/12/13/rm3V9x.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-The essence of the RecSys" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/" class="article-date">
+  <time datetime="2020-11-08T03:56:00.000Z" itemprop="datePublished">2020-11-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      The essence of the RecSys
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="推荐系统的真正价值"><a href="#推荐系统的真正价值" class="headerlink" title="推荐系统的真正价值"></a>推荐系统的真正价值</h2><h4 id="理解推荐的三个层次"><a href="#理解推荐的三个层次" class="headerlink" title="理解推荐的三个层次"></a>理解推荐的三个层次</h4><p>理解工业界推荐系统，需要依次理解到如下三个层次</p>
+<ol>
+<li>解放人力.  </li>
+<li>聚焦目标.  </li>
+<li>平衡体验. 推荐系统不仅是一种流量的遥控器，从产品角度来看, 平衡平台方的业务目标和用户的用户体验十分重要. </li>
+</ol>
+<p>综上, 推荐系统可被拆分为两件事情:  </p>
+<ol>
+<li>确立一种分发的机制  </li>
+<li>基于设计好的分发机制，相依地调整体验平衡机制</li>
+</ol>
+<h4 id="搜索-v-s-推荐-v-s-广告"><a href="#搜索-v-s-推荐-v-s-广告" class="headerlink" title="搜索 v.s. 推荐 v.s. 广告"></a>搜索 v.s. 推荐 v.s. 广告</h4><p>三者在业务目标、技术实现上有如下差异</p>
+<div style="text-align: center;">
+<img src="https://s3.ax1x.com/2020/12/13/rm3V9x.png" style="display: inline-block;" width="450"/>
+</div>
+
+<hr>
+<h2 id="架构大图v1-0"><a href="#架构大图v1-0" class="headerlink" title="架构大图v1.0"></a>架构大图v1.0</h2><div style="text-align: center;">
+<img src="https://s3.ax1x.com/2020/11/24/DU98pQ.png" style="display: inline-block;" width="666"/>
+</div>
+
+<hr>
+<h2 id="召回-Match"><a href="#召回-Match" class="headerlink" title="召回 Match"></a>召回 Match</h2><h4 id="召回的目标"><a href="#召回的目标" class="headerlink" title="召回的目标"></a>召回的目标</h4><p>召回决定了推荐系统效果的天花板, 召回的目标是丰富且有效, 召回环节质量过低则排序无从谈起; 值得注意的是, 召回的结果是丰富和有效之间的一种trade off.</p>
+<ul>
+<li>丰富: 丰富有两个层面的目标 <ol>
+<li>召回宽度, 算法”见世面”的能力.</li>
+<li>召回深度, 算法”以点带面”的能力.</li>
+</ol>
+</li>
+<li>有效: 在保证丰富性的情况下, 相关性不能太低  </li>
+</ul>
+<h4 id="召回的层次与融合"><a href="#召回的层次与融合" class="headerlink" title="召回的层次与融合"></a>召回的层次与融合</h4><p>召回结果的相关性和发现性是另一对需要被平衡的trade off.</p>
+<ul>
+<li>相关性：      U2I         &gt;= U2I2I &gt;= U2X2I/other  </li>
+<li>新颖性/发现性: U2X2I/other &gt;= U2I2I &gt;= U2I</li>
+</ul>
+<h4 id="item-based-CF的四宗罪和不放弃它的原因"><a href="#item-based-CF的四宗罪和不放弃它的原因" class="headerlink" title="item-based CF的四宗罪和不放弃它的原因"></a>item-based CF的四宗罪和不放弃它的原因</h4><p>原始的item-based CF存在以下问题</p>
+<ol>
+<li>聚集性: 哈利波特天天见<br>建模物品相关关系时, 向热门商品或者具有高频行为的用户聚集, 故需要显示地进行热门物品或者热门用户的打压.</li>
+<li>无向性: 从你到我 != 从我到你.<br>co-currence建模不具备方向性, 因此对任意关系统计, 两个item之间的作用相等，但在实际业务中往往物品体系之间存在一定逻辑结构.<br>例如存在推荐结果: trigger: “iphone12” =&gt; rec_result: “iphone12手机壳”</li>
+<li>有偏性: 存在即合理，不存在就不合理? 实际业务中存在较多的</li>
+<li>失准性: 脑洞</li>
+</ol>
+<p>不放弃item-CF的原因  </p>
+<ul>
+<li>co-currence始终是一种朴素而有效关系建模方式, 具备实现简单服务效率高的特点(离线索引), 众多实验证明swing等改进版item-CF是一个不错的Baseline.</li>
+<li>item-CF优化最佳实践: 其公式如下</li>
+</ul>
+<hr>
+<h2 id="排序-Rank"><a href="#排序-Rank" class="headerlink" title="排序 Rank"></a>排序 Rank</h2><ul>
+<li>排序战略地位: 排序在整个推荐链路处于倒数第二个阶段，在召回侧足够丰富且有效的情况下，排序侧是直面用户的最重要的阶段。  </li>
+<li>排序公式设计原则:   <ol>
+<li>对齐业务目标</li>
+<li>足够简单</li>
+<li>权值化</li>
+</ol>
+</li>
+</ul>
+<h3 id="排序公式"><a href="#排序公式" class="headerlink" title="排序公式"></a>排序公式</h3><h4 id="推荐场景"><a href="#推荐场景" class="headerlink" title="推荐场景"></a>推荐场景</h4><ul>
+<li>猜你喜欢 : <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup></em></li>
+<li>营销/权益场景 : <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x rights<sup>γ</sup></em><br>其中, <em>rights<sup>γ</sup></em> 为各类优惠券的折扣公式   </li>
+</ul>
+<h4 id="商业化场景"><a href="#商业化场景" class="headerlink" title="商业化场景"></a>商业化场景</h4><ul>
+<li>商业化 (CPM) : <em>ecpm = bid_show</em> </li>
+<li>商业化 (CPC) :  <em>ecpm = pctr<sup>α</sup> x bid_click</em>  </li>
+<li>商业化 (oCPM) : <em>ecpm = pctr<sup>α</sup> x pcvr<sup>β</sup> x bid_convert</em></li>
+<li>商业化 (oCPC) : <em>ecpm = pctr<sup>α</sup> x pcvr<sup>β</sup> x bid_convert</em></li>
+<li>商业化 (CPS) : <em>rank_score = pctr<sup>α</sup> x pcvr<sup>β</sup> x price<sup>γ</sup> x commiRate<sup>δ</sup></em><br>其中, <em>bid_show</em>: 曝光出价, <em>bid_click</em>: 点击出价, <em>bid_convert</em>: 转化出价</li>
+</ul>
+<h4 id="CTR预估的核心问题"><a href="#CTR预估的核心问题" class="headerlink" title="CTR预估的核心问题"></a>CTR预估的核心问题</h4><h5 id="Feature-Interaction"><a href="#Feature-Interaction" class="headerlink" title="Feature Interaction"></a>Feature Interaction</h5><p>  特征交互（特征交叉）是提升CTR预估准度的关键问题. 从建模方式上常见分两种: GBDT和DNN(详情对比见), 简言之<br>  GBDT: 依赖人工特征抽取, 但在数据量不过大, id类dim不太高的Tabular Data场景具备很强的Fit能力和一定的解释性<br>  DNN: 通过NN自动捕捉Feature Interaction, 且具备generalization能力. 对于Feature Interaction的优化主要是通过不同的网络设计实现(FM, Attention), 研究见下图</p>
+<div style="text-align: center;">
+<img src="https://s3.ax1x.com/2020/12/13/rme34S.png" style="display: inline-block;" width="666"/>
+</div>
+
+<h5 id="Sparsity"><a href="#Sparsity" class="headerlink" title="Sparsity."></a>Sparsity.</h5><p>  稀疏性和场景紧密相关。</p>
+<h5 id="Sequence-Modeling"><a href="#Sequence-Modeling" class="headerlink" title="Sequence Modeling."></a>Sequence Modeling.</h5><p>  序列建模主要对时序信息进行单独建模, 但个人认为序列建模适用场景有限，偏向于Session Based推荐场景, 即具备显著如下特点<br>  Local Activation (局部激活): 在预估时，Sequence item和Target item之间具备较强的相关性. 因此对于用户相对独立的、离散的或者跨时间较长的范围甚至有负向作用.</p>
+<h4 id="CVR预估的三大挑战"><a href="#CVR预估的三大挑战" class="headerlink" title="CVR预估的三大挑战"></a>CVR预估的三大挑战</h4><ol>
+<li><p>Sample Sparsity 样本稀疏性</p>
+</li>
+<li><p>Sample Selection Bias 样本选择偏差</p>
+<div style="text-align: center;">
+<img src="https://s3.ax1x.com/2020/12/13/rm3aDg.png" style="display: inline-block;" width="400"/>
+</div>
+</li>
+<li><p>Delay FeedBack 延迟反馈</p>
+</li>
+</ol>
+<h4 id="多任务-多目标学习-Multi-Task-Multi-Objective"><a href="#多任务-多目标学习-Multi-Task-Multi-Objective" class="headerlink" title="多任务/多目标学习 Multi-Task/Multi-Objective"></a>多任务/多目标学习 Multi-Task/Multi-Objective</h4><ul>
+<li>相关性</li>
+</ul>
+<hr>
+<h2 id="冷启动-Cold-Start"><a href="#冷启动-Cold-Start" class="headerlink" title="冷启动 Cold Start"></a>冷启动 Cold Start</h2><hr>
+<h2 id="质量保证-Quality"><a href="#质量保证-Quality" class="headerlink" title="质量保证 Quality"></a>质量保证 Quality</h2><h4 id="核心项目必须指定唯一PM"><a href="#核心项目必须指定唯一PM" class="headerlink" title="核心项目必须指定唯一PM"></a>核心项目必须指定唯一PM</h4><ul>
+<li>唯一PM对所有线上问题负责，必须熟悉项目背景和方案实现细节, 时刻把控项目迭代过程中的维护CheckList;</li>
+</ul>
+<h4 id="CheckList维护"><a href="#CheckList维护" class="headerlink" title="CheckList维护"></a>CheckList维护</h4><ul>
+<li>为什么CheckList? 质量保证的作用在于: 去除软件系统对于“工程师对于质量的细心程度和对于系统的熟悉程度”依赖, 换句话说: 通过检查机制实现项目质量, 永远不依赖工程师的”意识”、”责任感”、”经验”或者”细心习惯”检查问题；</li>
+<li>CheckList的迭代过程: 从需求文档开始构建v1.0版本CheckList, 测试开始之前进行更新，直到上线前持续更新;</li>
+<li>CheckList样例模板(更新中…)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>Check项</th>
+<th>负责人</th>
+<th>实现方法</th>
+<th>latest check time</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>过滤虚拟类目商品</td>
+<td>张三</td>
+<td>1.投放禁用虚拟类目配置id:9527  2.实时召回过滤逻辑,code:<a target="_blank" rel="noopener" href="http://git@gitlab.com/">http://git@gitlab.com</a></td>
+<td>2020-10-10-15:30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>过滤预售商品</td>
+<td>李四</td>
+<td>1.投放禁用预售配置id:9528  2.实时召回过滤逻辑,code:<a target="_blank" rel="noopener" href="http://git@gitlab.com/">http://git@gitlab.com</a></td>
+<td>2020-10-10-16:30</td>
+</tr>
+<tr>
+<td>3</td>
+<td>过滤黑名单商品</td>
+<td>李四</td>
+<td>1.投放禁用黑名单配置id:9529  2.实时召回过滤逻辑,code:<a target="_blank" rel="noopener" href="http://git@gitlab.com/">http://git@gitlab.com</a></td>
+<td>2020-10-10-16:50</td>
+</tr>
+</tbody></table>
+<h4 id="足够及时的Review"><a href="#足够及时的Review" class="headerlink" title="足够及时的Review"></a>足够及时的Review</h4><ul>
+<li>Review的进行间不能超过3天，一般为线上问题发生当天之后第二天最合适。当天或当天后一天需要专注于处理线上问题保证问题第一时间得到解决，及时当天问题得到解决，也需要给工程师一个缓冲的时间冷静下来思考为什么会产生这样的原因。</li>
+<li>Review先要对问题进行分类，是在哪个环节出了问题？在测试过程中哪个环节没有测试到？</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/08/The%20essence%20of%20the%20RecSys/" data-id="ckix721hq000suddl945d86oq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/16/Bert/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Bert
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo搭建</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/16/Bert/">Bert</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Gold and Rabbit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

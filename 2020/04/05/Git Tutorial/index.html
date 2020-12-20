@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Git Tutorial | Gold and Rabbit&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="配置执行 1ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot; 一路回车（通过ls查看～&#x2F;.ssh下面的所有内容查看） 将刚刚创建的ssh keys添加到github中  利用gedit&#x2F;cat命令，查看id_rsa.pub的内容 在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git Tutorial">
+<meta property="og:url" content="http://example.com/2020/04/05/Git%20Tutorial/index.html">
+<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
+<meta property="og:description" content="配置执行 1ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot; 一路回车（通过ls查看～&#x2F;.ssh下面的所有内容查看） 将刚刚创建的ssh keys添加到github中  利用gedit&#x2F;cat命令，查看id_rsa.pub的内容 在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-05T14:56:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T12:15:24.197Z">
+<meta property="article:author" content="Gold and Rabbit">
+<meta property="article:tag" content="Recommending System">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Git Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/Git%20Tutorial/" class="article-date">
+  <time datetime="2020-04-05T14:56:00.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git Tutorial
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<p>一路回车<br>（通过ls查看～/.ssh下面的所有内容查看）</p>
+<p>将刚刚创建的ssh keys添加到github中</p>
+<ol>
+<li>利用gedit/cat命令，查看id_rsa.pub的内容</li>
+<li>在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id_rsa.pub文件中的字符串复制进去，注意字符串中没有换行和空格。</li>
+</ol>
+<p>再次检查SSH连接情况(在～/.ssh目录下):<br>输入如下命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>看到如下所示，则表示添加成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名! You’ve successfully authenticated, but GitHub does <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>即利用自己的用户名和email地址配置git</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;你的github用户名&quot;</span></span><br><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;你的github邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>ps: 为什么配置好了提交代码到远程分之还是要输入密码? clone的时候选择http</p>
+<h2 id="clone-pull-push"><a href="#clone-pull-push" class="headerlink" title="clone, pull, push"></a>clone, pull, push</h2><ul>
+<li><p>clone: 克隆远程分支到本地</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b my_branch &lt;远程仓库地址&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pull: 将远程代码pull[拉取]到本地 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branch_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push: 将本地代码push[推送]到远程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add yourfilename</span><br><span class="line">git ci -m <span class="string">&quot;说明修改内容: 解决xx问题/增加xx逻辑/修复xxBug&quot;</span></span><br><span class="line">git push origin branch_name</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="merge-v-s-rebase"><a href="#merge-v-s-rebase" class="headerlink" title="merge v.s. rebase"></a>merge v.s. rebase</h2><ul>
+<li>将分支my_branch合并到master分支<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge my_branch</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckix721hg0006uddlf7ad2wkt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/06/05/Why%20Alibaba%20/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Why Alibaba
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/04/Faiss/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Faiss</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/16/Bert/">Bert</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Gold and Rabbit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

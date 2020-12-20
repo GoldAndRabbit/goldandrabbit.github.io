@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Graph Neural Network | Gold and Rabbit&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph G &#x3D; (V, E) which takes as input:    A feature descriptio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Graph Neural Network">
+<meta property="og:url" content="http://example.com/2020/02/03/Graph%20Neural%20Network/index.html">
+<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
+<meta property="og:description" content="GNNGraph neural network&#x2F;Graph embedding code.    GNN: gcn, graphSAGE GE: node2vec  GCN    GCN: learn a function of signals&#x2F;features on a graph G &#x3D; (V, E) which takes as input:    A feature descriptio">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2020/11/15/DFYfqe.png">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)">
+<meta property="og:image" content="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)">
+<meta property="article:published_time" content="2020-02-03T03:56:00.000Z">
+<meta property="article:modified_time" content="2020-12-16T12:53:01.637Z">
+<meta property="article:author" content="Gold and Rabbit">
+<meta property="article:tag" content="Recommending System">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/11/15/DFYfqe.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Graph Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/03/Graph%20Neural%20Network/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Graph Neural Network
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h2><p>Graph neural network/Graph embedding code.  </p>
+<ul>
+<li>GNN: gcn, graphSAGE</li>
+<li>GE: node2vec</li>
+</ul>
+<h2 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h2><div style="text-align: center;">
+<img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
+</div>
+
+<p>GCN: learn a function of signals/features on a graph <em>G = (V, E)</em> which takes as input:  </p>
+<ul>
+<li>A feature description <em>x<sub>i</sub></em> for every node i summarized in a <em>N x D</em> feature matrix <em>X</em>. (<em>N</em> : number of nodes, <em>D</em> : number of input features)</li>
+<li>A representative description of the graph structure in matrix form, eg: adjacency matrix <em>A</em>.</li>
+</ul>
+<p>and produces a node-level output <em>Z</em> (an <em>N x F</em> feature matrix, where <em>F</em> is the number of output features per node). Graph-level outputs can be modeled by producing some form of pooling operation.</p>
+<p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
+<p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
+<p>with <em>H<sup>(0)</sup>=X</em> and <em>H<sup>(L)</sup>=Z</em> (<em>z</em> for graph-level outputs), <em>L</em> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
+<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
+<li><p>Semi-Supervised Classification with Graph Convolutional Networks<br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
+</li>
+<li><p>Inductive Representation Learning on Large Graphs<br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
+</li>
+<li><p>node2vec: Scalable Feature Learning for Networks<br><a target="_blank" rel="noopener" href="https://github.com/aditya-grover/node2vec">https://github.com/aditya-grover/node2vec</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckix721hh0008uddlbcvybzk8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/13/Tensorflow%20API/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Tensorflow API
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/03/The%20Illustrated%20Transformer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">The Illustrated Transformer</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/16/Bert/">Bert</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Gold and Rabbit<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
