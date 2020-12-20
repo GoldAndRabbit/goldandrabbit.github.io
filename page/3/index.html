@@ -1,932 +1,531 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="having fun coding">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
 
-  
-  <title>Gold and Rabbit&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="having fun coding">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:url" content="http://example.com/page/3/index.html">
-<meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
-<meta property="og:description" content="having fun coding">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Gold and Rabbit">
-<meta property="article:tag" content="Recommending System">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    <title>
+        
+          
+        
+    </title>
 
+    <link rel="canonical" href="http://example.com/page/3/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/hux-blog.min.css">
+
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 <meta name="generator" content="Hexo 5.1.1"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
-      </h1>
-      
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Gold and Rabbit&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">categories</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-2019 Annual Summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/02/2019%20Annual%20Summary/" class="article-date">
-  <time datetime="2020-01-02T07:11:00.000Z" itemprop="datePublished">2020-01-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/02/2019%20Annual%20Summary/">2019 Annual Summary</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><ul>
-<li>今年给自己的年度关键词是： 入局</li>
-</ul>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="拉萨"><a href="#拉萨" class="headerlink" title="拉萨"></a>拉萨</h5><p>西藏整体印象是圣洁、无污染、纯净。布达拉宫内有乾坤，里面有佛教文化中一切元素，能唤起藏区统治者那种具备强信仰，却又因为是王室的诸多无奈之情，宫殿里面巨大的陵墓让人震撼，感觉还是无论是生是死，都是在追求内心中的一种平静。藏区民众就像他们的牦牛一样，性格温顺，虔诚，丝毫没有感受到少数冲突分子的暴乱、动荡。高原反应：所谓高原反应，好比长期不运动跑了1000米之后，自然喘气会大口大口喘气，但是过一会就会恢复，类似这样一种感觉。在持续向上爬坡或者快速前进的时候会很快有这种感觉。</p>
-<h5 id="林芝"><a href="#林芝" class="headerlink" title="林芝"></a>林芝</h5><p>塞上江南，海拔比拉萨低不少高反弱很多，能较好地适应大多数人的需求。景色的美在于结合了远方的雪山和近处的绿水，绿水和桂林遇龙河有点类似，但是远方的雪山加持上感觉美的更立体。最美的地方在于南迦巴瓦峰，中国最美山峰Top1感觉应该是实至名归（区分清楚是“山峰”，不是“山”），海拔不到8000，号称羞女峰，那个峰尖长期是云雾缭绕，基本上不能完全看到全貌，我这算是足够幸运，拍到了完整的山尖，并且拍照时真好是太阳金光一渡，美好瞬间来的突然去的更快，也就持续几分钟。到了晚上之后，南迦巴瓦依然云雾缭绕，远远望去仔细看了十多分钟，感觉那个山峰上面绝对是阴森恐怖，云雾缭绕，假如晚上爬在上面心里恐惧肯定是一个巨大问题。后来回了北京再看南迦巴瓦的照片，那种怀念的感觉迟迟散不了，做梦也梦见过好几次，但用“美”这种字眼描述不出来那种难忘的感觉，梦里面的南迦巴瓦，感觉已经称为一种心结，这种感觉在目前为止所有去过的地方里面都基本没有。</p>
-<h5 id="纳木措-amp-羊卓雍措"><a href="#纳木措-amp-羊卓雍措" class="headerlink" title="纳木措 &amp; 羊卓雍措"></a>纳木措 &amp; 羊卓雍措</h5><p>这两个是三大圣湖的其中两个，去的路上都是4-5个小时车程，来回9-10个小时成本可以说极高，而且中间有断路仔细想想那根本不是路，颠簸2个小时都快要起飞了，中间游览也就2小时，但整体感觉还是挺值的，和抱有期待和兴趣有关，同时这两个湖确实是平静的让人不知道该说什么好，手上快速的拍下一个个的照片，但是说实话没几张满意的，可能是设备不行吧好多感觉相片上完全不出来。两大圣湖美的原因还是距离生活区非常元，距离人住的地方实在是有距离，这样也保证了超强的抗污染。印象比较深的是和藏獒合影，藏獒在人们心目中是非常凶的动物，我当时因为拍了和2只藏獒的合影心里面秀的一逼，但仔细想想藏獒的雄伟早就被人的驯化所磨灭，可以说没有一丝雄气，动物内在个性还不如一只家养的猫来的傲娇。当地人喊一句蹲下马上蹲下，从来没有见过一种动物能被驯化的那么没脾气。人类最强的地方就是“驯化”，有一百种方法让有个性的生灵变成机器般的产物，这么一想这张看似牛逼的藏獒合影照片，真的是没多大意思。另外就是抱着小羊拍照片的那个，拍出来效果很不错，藏家小女孩拍的很开心，我非常满意。有个细节当时小女孩子因为多拍了一个动作想多问我收10快钱，但是她妈妈之前收了我的钱就马上拒绝了，可见这些藏民还是虽然是赚钱还是很有原则的。</p>
-<h5 id="飞机回家的路上"><a href="#飞机回家的路上" class="headerlink" title="飞机回家的路上"></a>飞机回家的路上</h5><p>旁边坐了一个藏民老爷爷，皮肤黝黑，目光顺着窗口望出去，不知道是不是第一次坐飞机。空姐发餐食和饮料的时候没有说话摆手不要，一下让我想起了我姥爷在的时候。瞬间眼泪刷刷的实在是难以控制，我在吃完米饭的时候藏民老爷爷还主动帮我把餐盒递给了空姐。下了飞机在银川候机换乘，心情久久难以平静，一个人吃了那个很酸的宁夏酸奶缓了好一会儿。</p>
-<h5 id="同行的人"><a href="#同行的人" class="headerlink" title="同行的人"></a>同行的人</h5><p>认识的人有好几个，印象深刻的有一个西安的大厨，三个温州的女生，一个飞韩国的导游，一个住在美国小姐姐，一个也是太原做旅游的女生，还有几个其他人。来西藏旅游的基本上是两类，一类是刚辞职有时间出来玩的，另一类是真有点钱且为了n年前的一个目标过来的（没错我是第二种），这部分人有个共性：真的是有想法、能执行的一批人，这点毋庸置疑，认识几个这种人加了微信，感觉自己心态开阔了许多。来西藏多多少少也是一次克服恐惧的过程，因为能让人恐惧的东西，就是具有未知性的东西，你不知道来了不会不会有高原反应、藏独分子这些，当你真的来了，才是真正体会这些rumors是真rumors还是reality。总之，独自一人去一次西藏，对自我产生更强烈的认同，也会想的更清楚自己到底是怎样的一类人：简单来说就是那种有自己的想法，有执行，十分十分注重自我体验的那种人。</p>
-<h5 id="东极岛"><a href="#东极岛" class="headerlink" title="东极岛"></a>东极岛</h5><p>大陆最东的岛屿，太平洋的光最先照耀到这里。前面这句话是韩寒写的很有感觉，但是实地去感受相当一般，垃圾很多，开发也不完善，相应的娱乐设施也乏善可陈。梭子蟹卖的很贵，感觉也不怎么好吃。酒吧老板娘始终不让我们在里面吃饭，让人极其讨厌；岛上一碗面基本上是拉面+半个梭子蟹壳，可以说是高价且毫无亮点。除了和算法团队小伙伴留下比较不错的合影留念，景点强烈不推荐。旅游业的发展不是一件简单的东西，提升管理质量本身的意义可能比本来具备的资源更加重要。如果让我做的话，我可能先从调整这些商家的态度入手，真正做到客户第一，再考虑调优盈利结构。</p>
-<h5 id="上海"><a href="#上海" class="headerlink" title="上海"></a>上海</h5><p>真·故地重游，这次针对性的吃了不少上海的特色美食，和几个小伙伴在外滩照了照片，秀的那是十分的开心。我始终感觉外滩美景的大气没有重庆那种三江汇聚来的大气。不过上海确实是现代感非常强，不是国内任意一个城市可以比拟的。</p>
-<h2 id="工作总结（算法工程师的第一个半年）"><a href="#工作总结（算法工程师的第一个半年）" class="headerlink" title="工作总结（算法工程师的第一个半年）"></a>工作总结（算法工程师的第一个半年）</h2><p>从两条线进行总结，一条线是以时间线，梳理每个项目做的点；另一条是经验线，总结的是工作方法论上可以提升的点。</p>
-<h5 id="落地一淘猜你喜欢迁移学习项目"><a href="#落地一淘猜你喜欢迁移学习项目" class="headerlink" title="落地一淘猜你喜欢迁移学习项目"></a>落地一淘猜你喜欢迁移学习项目</h5><p>年初实习项目，主要把迁移学习模型在猜你喜欢场景落地，效果上相比Local模型取得提升。核心点是利用Global信息更好地刻画C端用户全局兴趣；这个项目本来在2018年年末完成，相比预期有一定的delay，主要原因是2018年末对tensorflow的一些API使用还是不够熟悉踩了一些坑，不过最终还是拿到了比较稳定的收益。项目结束后也同时抛出一个潜在优化点，能否设计更优雅的结构容纳Global信息，或者蒸馏已有Global网络萃取出Global兴趣分布，充分降低模型的复杂度的同事达到类似的精度，后续因为完成毕业论文的原因没有再继续深究。</p>
-<h5 id="完成硕士毕业论文-amp-答辩"><a href="#完成硕士毕业论文-amp-答辩" class="headerlink" title="完成硕士毕业论文 &amp; 答辩"></a>完成硕士毕业论文 &amp; 答辩</h5><p>将自己硕士期间的很多工作和探索总结在了论文里面，基本上每一部分内容都把自己想要体现的内容，包括四个部分（室内定位理论+机器学习方法在Wi-Fi定位任务的应用+数据分布探索+对比实验的设计思想和论证过程）并且尽可能清楚地体现到论文内容当中，可以说是对自己硕士三年的一个沉淀。</p>
-<h5 id="落地ToB端推荐项目"><a href="#落地ToB端推荐项目" class="headerlink" title="落地ToB端推荐项目"></a>落地ToB端推荐项目</h5><p>一期二期探索ToB推荐的方法论，不同于常规的ToC推荐，B端推荐需要刻画的B背后的人群结构信息，并且需要去从模拟推广者选品视角，需要引入领域知识作为辅助。需要拆分B下人群结构以及背后的需求。做的过程中有很多地方进行了比较反复的讨论和尝试，重点在三个问题上上有所停滞，<br>     1.如何定义抽象的媒体推广意愿<br>     2.如何离线验证模型起到的效果。<br>     3.如何保证数据产生的效率。（排序阶段特征提取和模型训练过程和召回结果对接的时产生过性能问题）。工作方法论总结放在下面的部分。</p>
-<h5 id="参加试用期转正答辩"><a href="#参加试用期转正答辩" class="headerlink" title="参加试用期转正答辩"></a>参加试用期转正答辩</h5><ul>
-<li>目前主要存在的问题：遇到问题处于太过纠结的状态，需要高效地走到解决问题的途径上，不要把一个问题的细节梳理的清清楚楚再解决（事实上你也不可能一下就梳理清楚）；简单来说对我目前的情况而言：只抓核心要素即可、直白地问问题、聚焦当前的问题；</li>
-<li>转变一种态度：承认人都是需要帮助的（这是正常不过的、再牛的人也是这样的），永远不要承认自己总能独立解决问题这个事实（事实上也不是正确的），再多和领导多沟通益处很大（我是有这样做，但还能做的更好，这里对我的收益空间非常大）；</li>
-<li>乐观、轻松、尽情展示的状态是魅力的完美体现和高认可度的源泉；高度谨慎、严谨、犹豫、纠结让人瞬间丧失强能力感；以后尽量维持一种前一种状态进行讲解，不要给人以拘谨的状态感觉。</li>
-<li>本次答辩细节有余、抽象大图能力欠缺；解决业务问题的角度而言：抽象能力&gt;&gt;细节能力，更体现一个人的水平；仍然存在ppt文字太多的问题，本质上是抽象能力太差导致的；</li>
-<li>答辩的时候不要过多铺开讲技术细节（比如表叔过多重复xx特征、xx训练等细节），受众有时候没法马上明白，他们不是算法研究员，因此千万不要学术化、不要全盘算法化、业务表述业务化、细节表述通俗化效果好很多；</li>
-<li>答辩过程来看：整体多视角里面缺少整体GMV这个对我们平台来说最宏观的目标；另外就是“自购行为过滤”这个表述引起老大的误解，本质上是说带有目的性的转化这个含义更接近一些；另外老大鼓励对外技术分享活动中将我们的技术进行分享，但是要注意脱敏；</li>
-</ul>
-<h5 id="下行ppt商品项目"><a href="#下行ppt商品项目" class="headerlink" title="下行ppt商品项目"></a>下行ppt商品项目</h5><p>ppt项目由于客观因素，导致接入mt数量较小，影响面较小。这个项目总结2个点。<br>1.如何构建离线验证集是保证效果的关键环节，之前的方法论只集中在机器学习模型的效果验证上，其实明确一点，任何算法策略决定的效果保证，都是需要建立相应的验证集和验证指标，有时候需要建立多个验证集和验证指标。同时需要考虑在日常和大促两个截然不同的时间节点，大促期间人的潜在需求会得到充分的释放，可以说类似双11规模的大促期间的成交基本界定了算法效果的上限。同时对于商家来说，对于同样一件商品，都会有和日常截然不同的活动加持。<br>2.货品空间和需求空间的释放。由于项目早期是以品牌为核心因素做优化，因此早期对于品牌限制是略微过分严格，导致货品对应的需求空间没有得到充分地释放。水大鱼大，有时候不加限制带来的自然的结果往往更能适应人群需求的分布。</p>
-<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="最强不过利物浦"><a href="#最强不过利物浦" class="headerlink" title="最强不过利物浦"></a>最强不过利物浦</h5><p>本赛季欧冠留下最深印象的是克洛普领先的利物浦，从三个方面来看。1.攻击线上的化学反应（互补性）。萨拉赫-马内-菲尔米诺三人有着非常良好的化学反应，萨拉赫盘带出色能够把控进攻节奏，马内跑位精准+强力终结+强力斗志当之无愧大腿，菲尔米诺在进攻中具有很强的创造性，再加上奥里吉也意识俱佳，能在此三人的基础上有效的出奇制胜，进攻中以上几人有很强的互补性，具备了欧洲一流的攻击水准。同时两个边后卫跑动能力极强，为进攻增添很多张力，是令人羡慕的进攻体系；2.防线，范戴克一枝独秀，对阵热刺上演1防2的局面，脑子里设想好了西索科是右脚球员，逼西索科用左脚起脚；决赛防孙兴慜，孙速度不弱，范也是快速贴身为主，处理相当冷静，对于箭头人物的进攻特点做足了功课。阿诺德作为年轻小将，对于压力处理的非常好，主场对阵巴萨鸡贼的一个假跑突然传中，必须拍案叫绝，确实在战略层面碾压了巴萨。3.渣叔克洛普，最有激情的德国教练，激情之下是具备极强的表达能力，能将自己的思想渗透到球员在攻防当中的每一次触球选择，在13年不敌拜仁，17不敌皇马之后，19的欧冠中，除了决赛都展现了强大的集体作战能力，坚持疾风暴雨般的团队进攻打法，但是决赛却一反常态踢得非常稳健保守，领先之后进攻线上基本上只把萨拉赫安排在前面，全部队员都集中在体系防守里面。这种级别的赛事，到了最后战略上的保守带来胜利的概率会非常大。</p>
-<h5 id="孙兴慜闪耀亚洲之光"><a href="#孙兴慜闪耀亚洲之光" class="headerlink" title="孙兴慜闪耀亚洲之光"></a>孙兴慜闪耀亚洲之光</h5><p>本赛季孙完成了大爆发，正式跻身为英超顶级攻击手，具有很快速的反击推进能力和终结能力。成功背后，他父亲可以说是第一功劳，父亲将培养一名职业运动员当做一个“十年以上的任务”，其决心和执行力都堪称恐怖（抛开足球放眼所有行业、所有角色，这种父亲、这种人都堪称罕见），同时长期提醒孙，你所获得的荣誉都是别人对你的认可，不是你的骄傲的资本。灌输谦虚睿智的态度同时十多年完成一个目标的决心并行，两种品质的并行造就了可能是未来亚洲最成功的球员；</p>
-<h5 id="国足四十强赛的停滞"><a href="#国足四十强赛的停滞" class="headerlink" title="国足四十强赛的停滞"></a>国足四十强赛的停滞</h5><p>7-0那场大胜我看出来不少问题，看出了国足攻防两端过于明显的短板，尤其是进攻缺少配合，因此在后面买彩票的时候真的是出奇的稳。四十强赛国足是没有人才。遗憾的是进攻中武磊和艾克森没有配合，中场太缺创造力，后防线更是人才荒漠，再加上里皮用人固执不用冯潇霆等也是同样败笔，固执的用人能够带来冠军，但是在不利的条件下，个人感觉还是得放下以前的一些成见面对当下的问题，冯潇霆之前的比赛确实有个很低级的失误被阿兹蒙，那个丢球确实该骂、该重罚，但是有时候今时不同往日，防线用两个没有经验的小将客观来说真的没法撑起大局（虽然小将联赛表现算不错），个人感觉当时还是暂时重启一下老将效果来的更好。</p>
-<h5 id="国安争冠失败"><a href="#国安争冠失败" class="headerlink" title="国安争冠失败"></a>国安争冠失败</h5><p>半程取得最好开局，一度看到希望，但是最终输给上港那场太伤，中途换下施密特始终还是不妥，直接把进攻体系有所瓦解。国家队四十强比赛影响了李可、池忠国两个核心对决上港没上，直接导致被上港中场完全压制，影响太大。有时候机会真的是转瞬消失，本赛季国安阵容感觉是足够拿冠军的，感觉缺少核心战术上稳定性对结果还是有太多不利影响。</p>
-<h2 id="锻炼与健康"><a href="#锻炼与健康" class="headerlink" title="锻炼与健康"></a>锻炼与健康</h2><ul>
-<li>下半年6-8月份坚持一段时间跑步，后来没能坚持下来；主要原因是项目中间有一段讨论和停滞，同时心里急着出一些成果，然后搁置了锻炼的节奏，仔细回想起来其实推进项目的最好方法就是聚焦核心问题、简化一些处理、放开一些限制，不要被局部的一些细节所缠绕跳不出来，按照项目最根本的目标选择比较简单有效的做法去快速迭代，这样基本上能够比较自然地、有序地进行推进。</li>
-<li>今年打了很长时间桌上足球，技术有了明显的进步，开发出来前场防守反击的能力，进球率非常高且让对手心理非常难受，后场进攻右手拉射也偶然有进球，但是力道还是比左手小很多；最重要的一点是无论进攻还是防守，认可“控球的”真正价值，且控球都更加自信了，横向控球能为进攻提供随机性，给防守方带来更多的难度，虽然频繁来回控球有一定的丢球率，但是会增加进攻中的不确定性，长久来看对于进攻效果提升大有好处，有时候必须大胆一些采取更灵活的策略，哪怕失误，但是一旦练成这种手法，进攻的质量会高出一个层次。</li>
-<li>病史：8月份突然发烧一次，居然身体都在颤抖，瞬间从37度干到39度高烧不退，连输2天液才好，当时确实是难受吓一跳，特别感谢女朋友陪我去2个医院看病才治好，并且做了比较全面的检查没有什么大碍，医保卡没办下来累计花费1000+RMB，感觉真的挺多；12月份风寒感冒，症状就是鼻塞打喷嚏流鼻涕，身体没有不适，不过周末睡了历史最长的两天，在两天早睡的情况下，第一天睡到了上午11点，第二天睡到下午2点也是破了记录，可能和累计疲劳有关。有几次晚上腹泻，多数原因是快速的吃了太冰的东西，不能急促地吃太冰的东西。</li>
-</ul>
-<h2 id="社交与活动"><a href="#社交与活动" class="headerlink" title="社交与活动"></a>社交与活动</h2><ul>
-<li>技术沙龙。参加技术类的同行交流3次，两次数据挖掘小伙伴聚会，一次听广告专场分享，认识了微博的同行，拓宽很多视野；有收益的是MSRA高的特征工程分享，整体上梳理了所有做特征工程的方法，非常系统，有些Feature Engineering真的非常Trick，slides不对外开放已经总结成相关文档；王博和奥古对于Fintech的分享打开了科技金融的应用的思考；KDD两届Top选手蔡/钟对于数据挖掘中不重复造轮子、以及结构化组织代码的做法也对我深受启发；浪教授对于AutoML的分享对于这项技术的局限性阐述比较清晰具体，不过其存在的一个潜在意义就是对机器学习本身的过程的认知会深化，不再孤立的聚焦在业务本身或者某个模型本身，而是以一种上帝视角理解特征工程-模型学习-部署应用着其中的各个过程我们真正care什么。</li>
-<li>家庭聚会。</li>
-<li>克莱德曼音乐会。</li>
-<li>本科实验室小伙伴聚会。</li>
-</ul>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>读书杂多，单独总结，不再赘述。<br>《薛兆丰经济学讲义》《香帅的北大金融学课》《经济学原理》《张居正大传》《英格兰足球为什么总是输》《足球经济学》《电商运营方法论》《营销管理》《美国经济的增长与起落》《菊与刀》《富甲美国：山姆沃尔顿自传》《智能商业》</p>
-<h2 id="工作（技术）执行层面方法论总结"><a href="#工作（技术）执行层面方法论总结" class="headerlink" title="工作（技术）执行层面方法论总结"></a>工作（技术）执行层面方法论总结</h2><ul>
-<li>高频代码复用。2019年工作中有一个影响效率低的问题是重复写了相似的代码，其实围绕不同的主题做的内容，在核心数据处理逻辑上存在相似性，比如排序阶段统计特征提取同时也能作为选品策略里面的验证集因子；再如在不同算法任务上，用户的静态属性特征和商品的静态属性特征基本上保持非常一致，因此复用已有代码模块，例如特征表或者某个离线指标统计表，并且设计好可复用schema提升工作效率，力争在2020不再多花时间在重复代码开发上。</li>
-<li>快速迭代。尽快的上线迭代是推进优化的正确节奏。</li>
-<li>固定化特征工程+稀疏特征处理。特征工程决定模型上限，在特征层面基本上是分user、item、context三个大类层面（事实上不管特征有多trick总能够关联到着三个大类上面）；推荐系统或者广告系统任何数据中都存在一定的稀疏的特点，但是解决稀疏性或者冷启动问题无外乎从两个角度去尝试优化：空间+时间。比如空间上引入更丰富的信息刻画用户的全局兴趣（比如引入Global &amp; Local信息迁移学习，再如利用建图的角度汇聚人群需求，或者将单个商品泛化到类目/品牌/店铺这种side_info的embedding学习，再或者根据i2i的结果进行特征层面的泛化），时间上拉长周期维度去完整刻画用户长期兴趣。</li>
-<li>离线验证方法沉淀。无论是确定性的算法任务（例如CTR预估），还是对抽象的算法目标（优化某个选品策略），都要无一例外的建立离线验证集。有时候需要从不同角度出发建立多个验证集。培养从数据层面抽象业务目标的能力：对于比较抽象的优化目标，必要时需要使用强相关性数据指标进行模拟和逼近，这种时候需要大胆的进行尝试和验证，哪怕是从来没有人这么干过的方法；常规电商算法命题，离线覆盖率是一种比较保守而有效的做法。例如TopGMV覆盖率/nextDay覆盖率/Top seller覆盖率/市场占有率等。</li>
-<li>人肉case级检查。除离线验证和线上切流两类方法。人肉case检查也是非常重要的一类方法，主要是从直觉上验证当前的算法效果是不是符合我的感官上的预期，有没有奇奇怪怪的case，有没有处理不够优雅的case。人肉case级检查最好是有师兄或者其他同事一起来看。</li>
-<li>留心处处皆学问。感觉最好的学习方式就是把工作和生活中每个环节都以学习的方式多多参与思考、讨论和笔记总结。记下来每个人care的目标，为了达到目标采取的做法。可以是某个大牛，也可以是周围的同事。可以是某个产品/运营，可以是某个文字稿，甚至可以是某个app上的老铁/主播。</li>
-<li>Face to Face。当面沟通，与他对话，问他问题，问入骨髓。无论是什么学习场合，当面说清楚还是最好的理解方法，当然沟通完最好是以笔记的形式整理思维。但是能当面一定不要拐弯抹角。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckix64kpe001my6dl42ppfzix" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ubuntu config" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/12/ubuntu%20config/" class="article-date">
-  <time datetime="2019-12-12T12:11:00.000Z" itemprop="datePublished">2019-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/ubuntu%20config/">ubuntu config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h4 id="解决git-status中文乱码问题"><a href="#解决git-status中文乱码问题" class="headerlink" title="解决git status中文乱码问题"></a>解决git status中文乱码问题</h4><p>将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.quotepath false</span><br></pre></td></tr></table></figure>
-
-<h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
-<p>通过 curl</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>或 wget</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="配置vim"><a href="#配置vim" class="headerlink" title="配置vim"></a>配置vim</h5><p>参考<a target="_blank" rel="noopener" href="https://maxim-danilov.github.io/make-linux-terminal-great-again/">ohmyzsh增强配置</a></p>
-<h2 id="解决github图片挂问题"><a href="#解决github图片挂问题" class="headerlink" title="解决github图片挂问题"></a>解决github图片挂问题</h2><p>修改hosts, 编辑 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo subl /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p>增加如下内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GitHub Start </span></span><br><span class="line"><span class="number">140.82</span><span class="number">.113</span><span class="number">.3</span>      github.com</span><br><span class="line"><span class="number">140.82</span><span class="number">.114</span><span class="number">.20</span>     gist.github.com</span><br><span class="line"></span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    assets-cdn.github.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    raw.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    gist.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    cloud.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    camo.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars2.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars3.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars4.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars5.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars6.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars7.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars8.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars8.githubusercontent.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub End</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckix64kpb001ay6dlhoy1a5xn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Data Analysis Tutorial:(Part II)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" class="article-date">
-  <time datetime="2019-12-11T14:11:00.000Z" itemprop="datePublished">2019-12-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/">Data Analysis Tutorial:(Part II)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Reusabal-Scripts"><a href="#Reusabal-Scripts" class="headerlink" title="Reusabal Scripts"></a>Reusabal Scripts</h2><ul>
-<li><p>funnel chart</p>
-</li>
-<li><p>Two-axis trend chart</p>
-</li>
-<li><p>heat map </p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckix64koo0002y6dl14x9e61l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Data Analysis Tutorial:(Part I)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" class="article-date">
-  <time datetime="2019-12-11T12:11:00.000Z" itemprop="datePublished">2019-12-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/">Data Analysis Tutorial:(Part I)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Why-data-matters"><a href="#Why-data-matters" class="headerlink" title="Why data matters?"></a>Why data matters?</h2><ul>
-<li>显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。</li>
-<li>严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。</li>
-<li>需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据是两个完全不同的过程，二者不互通。</li>
-<li><strong>SQL is all you need</strong>。到2019年SQL仍然是最通用、最标准、最普适的数据处理语言，故本文以SQL为例进行展开。</li>
-</ul>
-<hr>
-<h2 id="Core-Idea"><a href="#Core-Idea" class="headerlink" title="Core Idea"></a>Core Idea</h2><ul>
-<li>结论导向：永远不做没有目的的数据分析，必须<strong>提前想清楚通过数据要验证什么事实</strong>；具体做法，先假设你预期结论成立，心里想象数据画出来图是什么样子，然后统计下来对比画出来的图和前期假设图是否相似，若相似那么很快就能验证一些效果；若不相似，再考虑当前统计层次是否有问题，能否做更细的拆解或者能否精简一下统计层面；</li>
-<li>逻辑自恰：数据是流体，总是呈现起伏不定的规律，我们既要抓住一般规律，同时也要尽可能完美解释细节变化产生原因，即<strong>在给出业务结论时一定要有自洽的逻辑</strong>，对于图中出现的一切现象都要给出非常明确的解释（哪怕解释是片面的、缺乏依据的），为什么上涨，为什么下跌，为什么突然有峰值；</li>
-</ul>
-<h2 id="Check-amp-Recheck"><a href="#Check-amp-Recheck" class="headerlink" title="Check &amp; Recheck"></a>Check &amp; Recheck</h2><center>Scale >= Empty >= Repeatment >= Outlier</center>
-
-<ul>
-<li>Scale: 关注数据规模（量级），不同量级数据切入方式不同（好比菜刀用来切菜/水果刀用于切水果), 海量数据要考虑简化处理<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">COALESCE(expr1, expr2, ...)</span><br><span class="line">CASE value</span><br><span class="line">    WHEN value1 THEN result1</span><br><span class="line">    WHEN value2 THEN result2</span><br><span class="line">    ...</span><br><span class="line">    ELSE result</span><br><span class="line"><span class="keyword">END</span> </span><br><span class="line"><span class="comment">-- 日期处理: datetime类型和字符串的灵活转化; datetime类型时间滚动;</span></span><br><span class="line">ds=TO_CHAR(<span class="keyword">DATEADD</span>(<span class="keyword">TO_DATE</span>(<span class="string">&#x27;$&#123;bizdate&#125;&#x27;</span>, <span class="string">&#x27;yyyymmdd&#x27;</span>), <span class="number">-1</span>, <span class="string">&#x27;dd&#x27;</span>), <span class="string">&#x27;yyyymmdd&#x27;</span>)</span><br><span class="line">SPLIT_PART(<span class="keyword">string</span> <span class="keyword">str</span>, <span class="keyword">string</span> separator, <span class="built_in">bigint</span> <span class="keyword">start</span>[, <span class="built_in">bigint</span> <span class="keyword">end</span>])</span><br><span class="line"><span class="keyword">SUBSTR</span>(<span class="keyword">string</span> <span class="keyword">str</span>, <span class="built_in">bigint</span> start_position[, <span class="built_in">bigint</span> <span class="keyword">length</span>])</span><br><span class="line"><span class="keyword">CONCAT</span>(<span class="keyword">string</span> a, <span class="keyword">string</span> b...)</span><br><span class="line">WM_CONCAT(<span class="keyword">string</span> separator, <span class="keyword">string</span> <span class="keyword">str</span>)</span><br><span class="line"><span class="keyword">INSTR</span>(<span class="keyword">string</span> str1, <span class="keyword">string</span> str2[, <span class="built_in">bigint</span> start_position[, <span class="built_in">bigint</span> nth_appearance]])</span><br><span class="line">ROW_NUMBER() <span class="keyword">OVER</span>(<span class="keyword">partition</span> <span class="keyword">by</span> col1[, col2…] <span class="keyword">order</span> <span class="keyword">by</span> col1 [<span class="keyword">asc</span>|<span class="keyword">desc</span>][, col2[<span class="keyword">asc</span>|<span class="keyword">desc</span>]…])</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="采用增量统计减少暴力扫描"><a href="#采用增量统计减少暴力扫描" class="headerlink" title="采用增量统计减少暴力扫描"></a>采用增量统计减少暴力扫描</h4><p>例如，如下代码统计19年6月到10月的所有场景点击率；</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">SUM</span>(pv)/<span class="keyword">SUM</span>(click) <span class="keyword">AS</span> ctr</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        scene</span><br><span class="line">        , pv</span><br><span class="line">        , click</span><br><span class="line">    <span class="keyword">FROM</span> table_name</span><br><span class="line">    <span class="keyword">WHERE</span> ds&lt;=<span class="number">20191001</span></span><br><span class="line">        <span class="keyword">AND</span> ds&gt;=<span class="number">20191101</span></span><br><span class="line">        <span class="keyword">AND</span> someflag1=<span class="number">1</span></span><br><span class="line">) tmp0</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene</span><br></pre></td></tr></table></figure>
-<p>乍看上述代码执行无明显问题，但是计算资源紧张时子查询取日志量级太大会跑不完，Job大概率被无情kill；<br>优化方法：将子查询写入一个表，天级增量中间表，代码如下所示</p>
-<p>采用CTE模块化统计逻辑</p>
-<p>Common Table Expression, CTE</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 人群特征</span></span><br><span class="line"><span class="keyword">WITH</span> s_basic <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , mele_pay_ratio</span><br><span class="line">        , female_pay_ratio</span><br><span class="line">        , purchase_pay_ratio</span><br><span class="line">        , phd_pay_ratio</span><br><span class="line">        , bachelor_pay_ratio</span><br><span class="line">        , master_pay_ratio</span><br><span class="line">        , f1t17_pay_ratio</span><br><span class="line">        , f18t24_pay_ratio</span><br><span class="line">        , f25t29_pay_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景点击成交uv特征</span></span><br><span class="line">s_clk_pay_uv_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        s_id</span><br><span class="line">        , clk_uv_1d</span><br><span class="line">        , clk_uv_3d</span><br><span class="line">        , pay_uv_1d</span><br><span class="line">        , pay_uv_3d</span><br><span class="line">    <span class="keyword">FROM</span> table_name_b</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景人群属性特征</span></span><br><span class="line">s_city_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , city_l1_ratio</span><br><span class="line">        , city_l2_ratio</span><br><span class="line">        , city_l3_ratio</span><br><span class="line">        , vip_ratio,</span><br><span class="line">        , normal_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_c</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">INSERT</span> OVERWRITE <span class="keyword">TABLE</span> table_name_d <span class="keyword">PARTITION</span> (ds=$&#123;bizdate&#125;)</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    s_basic.*</span><br><span class="line">    , s_clk_pay_uv_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_city_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_avg_price_info.<span class="string">`(s_id|ds)?+.+`</span></span><br><span class="line"><span class="keyword">FROM</span> s_basic</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_clk_pay_uv_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_clk_pay_uv_info.s_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_city_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_city_info.s_id</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>大数据性能优化在日常产出的必备能力；</p>
-<h5 id="MapReduce原理"><a href="#MapReduce原理" class="headerlink" title="MapReduce原理"></a>MapReduce原理</h5><p>数据处理过程分成2个阶段：Map（映射）阶段和Reduce（规约）阶段。</p>
-<p>Map前，需要将输入数据进行”分片”。</p>
-<ul>
-<li>分片：将输入数据切分为大小相等的数据块，每一块作为单个Map Worker的输入被处理，以便于多个Map Worker同时工作。</li>
-<li>分片完毕后，多个Map Worker同时工作。每个Map Worker在读入各自的数据后，进行计算处理，最终输出给Reduce。</li>
-<li>Map Worker在输出数据时，需要为每一条输出数据指定一个Key。这个Key值决定了这条数据将会被发送给哪一个Reduce Worker。Key值和Reduce Worker是多对一的关系，具有相同Key的数据会被发送给同一个Reduce Worker，单个Reduce Worker有可能会接收到多个Key值的数据。</li>
-<li>进入Reduce之前，MapReduce框架会对数据按照Key值排序，使得具有相同Key的数据彼此相邻。如果用户指定了”合并操作”(Combiner)，框架会调用Combiner，将具有相同Key的数据进行聚合。Combiner的逻辑可以由用户自定义实现。与经典的MapReduce框架协议不同，在ODPS中，Combiner的输入、输出的参数必须与Reduce保持一致。这部分的处理通常也叫做”洗牌”(Shuffle)。</li>
-<li>Reduce阶段。相同的Key的数据会到达同一个Reduce Worker。同一个Reduce Worker会接收来自多个Map Worker的数据。每个Reduce Worker会对Key相同的多个数据进行Reduce操作。最后一个Key的多条数据经过Reduce的作用后，将变成了一个值。</li>
-</ul>
-<h5 id="Join长尾优化"><a href="#Join长尾优化" class="headerlink" title="Join长尾优化"></a>Join长尾优化</h5><p>问题表现：Join任务上SQL运行时间超长，某个woker上的任务进度一直在99%卡着不动；Join时间过长有很多原因，本质上是数据中参与Join的Key存在存在一定的分布特点（分布不均衡或者长尾）；<br>Mapjoin: 将Join操作提前到Map端执行，避免因为分发Key不均匀导致数据倾斜。但是Mapjoin的使用有限制，必须是Join中的从表比较小才可用。所谓从表，即Left Outer Join中的右表，或者Right Outer Join中的左表。Mapjoin的使用方法非常简单，在代码中select后加上 /*+ mapjoin(a) */ 即可，其中b代表小表(或者是子查询)的别名。如：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    <span class="comment">/*+MAPJOIN(b)*/</span></span><br><span class="line">    a.c2</span><br><span class="line">    , b.c3</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c2</span><br><span class="line">    <span class="keyword">FROM</span> t1</span><br><span class="line">) a</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c3</span><br><span class="line">    <span class="keyword">FROM</span> t2</span><br><span class="line">) b</span><br><span class="line"><span class="keyword">ON</span> a.c1=b.c1;</span><br></pre></td></tr></table></figure>
-<p>调小mapper.split.size<br>作用：设定一个Map的最大数据输入量，通过设置这个变量达到对Map端输入的控制，单位M，默认256M，在[1, Integer.MAX_VALUE]之间调整。set odps.sql.mapper.split.size=256<br>场景：当每个Map Instance处理的数据量比较大，时间比较长，并且没有发生长尾时，可以适当调小这个参数。如果有发生长尾，则结合odps.sql.mapper.merge.limit.size这个参数设置每个Map的输入数量。</p>
-<h5 id="Reduce端长尾优化"><a href="#Reduce端长尾优化" class="headerlink" title="Reduce端长尾优化"></a>Reduce端长尾优化</h5><p>问题表现：Reduce端任务99%进度卡着不动，由Multi COUNT(DISTINCT xx字段) 引起；</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> table_name_a</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene</span><br><span class="line">解决方法：将<span class="keyword">Group</span> <span class="keyword">BY</span>的<span class="keyword">Key</span>分散开（增加一个层次的<span class="keyword">Key</span>），以下代码增加了场景的小时统计，最后再累加统计；</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">SUM</span>(pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">SUM</span>(click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        scene</span><br><span class="line">        , hh</span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> scene, hh</span><br><span class="line">) tmp0</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckix64kot0005y6dl6cz6egsp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Interview record of ML intern in 2019" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" class="article-date">
-  <time datetime="2019-10-01T04:12:57.000Z" itemprop="datePublished">2019-10-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/">Interview record of ML intern in 2019</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>面试是一次<strong>梳理知识体系</strong>的机会；</li>
-<li>面试是一次提升表达能力，<strong>锻炼推销自己的能力</strong>的机会；</li>
-<li>面试是了解工业界、了解市场需求的绝好机会，面试官至少是一线工程师，大多数还是带团队的大佬，能体会到他们更care什么，<strong>将市场需求和自身能力对齐</strong>；</li>
-</ul>
-<hr>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><h3 id="作业帮"><a href="#作业帮" class="headerlink" title="作业帮"></a>作业帮</h3><ul>
-<li>持续时间：一面40min</li>
-</ul>
-<h5 id="问题总结"><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>讲一下京东比赛的项目。你的模型为什么用了xgb?不用别的模型?</li>
-<li>[手写代码]二叉树层序遍历</li>
-<li>[手写代码]1到M+1这么多个数, 中间缺了一个数，如何最快的找到缺少的数字.</li>
-<li>[手写代码]一副扑克，包含大小王，随机抽五张，返回这五张是否是依次连续的，大小王可以替代任意一张扑克.</li>
-<li>[手写代码]给一个非常大的文件, 内存放不下，用你熟悉的语言读取它的最后10行内容。</li>
-<li>xgb的特征重要性怎么给出的？</li>
-</ol>
-<h5 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h5><p>1.写代码不要着急下手，一定要思考几秒钟(不管是很简单还是难) 如果感觉太简单还是要想想坑(注意的点)在哪？需要考虑的特殊情况是啥, 多嘴先问一句要输出什么还是只返回一个数组？<br>2.面试官说话声音太小，多确认几次要做什么？<br>3.写代码字体不要写的太大, 太大很容易乱, 给人一种思路不清楚的感觉。</p>
-<hr>
-<h2 id="链家"><a href="#链家" class="headerlink" title="链家"></a>链家</h2><ul>
-<li>岗位：算法实习生(策略方向)</li>
-<li>持续时间：总共3面+hr面, 持续到下午2:10面完，中间有15min吃完饭。</li>
-</ul>
-<h5 id="问题总结-1"><a href="#问题总结-1" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>决策树分裂规则有哪些？相比信息增益，信息增益比的优势在哪里？</li>
-<li>learning-to-rank了解吗？</li>
-<li>[手写代码]输出一个十进制数的二进制表达1的个数？如果是负数怎么办？如果是浮点数怎么办？</li>
-<li>二分查找找不到了怎么返回？</li>
-<li>[手写代码]现在有一个字符串数组，每个字符串由[a-j]组成, 分别代表[0-9]这10个数字，返回一个0-9的映射使得这几个字符串代表的数字之和最大。</li>
-<li>linux微内核了解吗？</li>
-<li>svm的原理？写出支持向量到分离超平面之间的距离公式。核函数是什么？有哪些？你用过哪些？</li>
-<li>[手写代码]一个数组中第k大的数字，你能想到最好的时间复杂度是多少？</li>
-<li>gbdt的原理？</li>
-<li>c++中指针和引用有什么区别？</li>
-<li>操作系统内存管理的方式？</li>
-<li>pca的数学原理</li>
-<li>SQL中where和having语句的区别？</li>
-<li>SQL有哪几种连接的方式？给了一个例子，让写出来left join的结果</li>
-<li>讲蚂蚁金服定位比赛？多分类和二分类的方案如何抉择？各有哪些优势？</li>
-<li>机器学习无所不能?机器学习是吹出来的？</li>
-<li>xgb一般调哪几个参数？怎么调？</li>
-</ol>
-<h5 id="经验总结-1"><a href="#经验总结-1" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>面试官说数据分析和挖掘里面最重要的是理解特征和思考背后的含义。其次才是数据质量和数据清洗、再是模型和调参。机器学习在合适的场景才能发挥自身的作用。这句话可以和下一个面试官聊。</li>
-<li>实习时间必须说[6个月以上]。能全职实习。对大公司平台没要求。对你们公司的业务特别特别有兴趣。</li>
-<li>遇到不太清楚的，满脸微笑的先问问面试官能不能提示一下?^_^</li>
-<li>讲项目嘴巴快一点效果更好，前因后果往下滔滔不绝坐等面试官打断。打断以后回答问题时刻意放慢节奏，慢慢说为什么这么做或者XX原理是什么。</li>
-<li>链家面试官比较温和，面试官风格各异，前两面的比较谦和不停引导一个问题逐渐深入。第三免面试官语速很快思维特别清晰。跟着面试官思路比较重要。</li>
-<li>hr面也不要大意, 也得小心回答。技术面试表现好也不见的是好事, 她会怕你不来。hr如果问题你还有什么问题？问薪资加班意义不大。<br>目前比较合适的回答</li>
-</ol>
-<ul>
-<li>咱们公司对于实习生培养方案是怎样的？</li>
-<li>咱们公司对于转正是如何考评的？实习生是否由优先转正的机会。</li>
-<li>咱们公司是否会有定期的专家讲座或者培训提升自己的能力。</li>
-</ul>
-<hr>
-<h2 id="字节跳动"><a href="#字节跳动" class="headerlink" title="字节跳动"></a>字节跳动</h2><ul>
-<li>岗位：算法实习生 (商业化 DATA)</li>
-<li>持续时间：总共3技术面, 持续到下午1:36面完，中间有15min吃完饭; 第2天hr电话面</li>
-</ul>
-<ol>
-<li>看到你的简历是保研？学习秘诀是什么？</li>
-<li>你本科做过比较厉害的事情/令你兴奋的事情是什么？</li>
-<li>估计目前头条广告一天的收入。我估计1亿，hr说差不多，是1.2亿。</li>
-</ol>
-<h5 id="问题总结-2"><a href="#问题总结-2" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]任意一种排序(本能写了快排，面试官说大家写的基本都是冒泡)</li>
-<li>[手写代码]实现LRUcache, 实现LFUcache</li>
-<li>xgb为什么叫xgb？xgb的原理？</li>
-<li>介绍一下lr，lr为何用sigmoid？sigmoid改一下加一个系数或者加一个缩放行不行？为什么行？行为什么没有原始sigmoid好？</li>
-<li>c++ splice()函数的原理</li>
-<li>tfidf了解过吗？idf为什么用log？</li>
-<li>word2vec了解过吗？原理是什么？训练为什么快？</li>
-<li>SVM如何实现非线性的？核函数有哪些？核函数有什么问题？高斯核函数有什么问题？</li>
-<li>[手写代码]快排如何优化？如果存在大量重复元素，快排如何优化？</li>
-<li>xgb和gbdt的区别？xgb如何分裂？</li>
-<li>各种激活函数的比较，一般用哪个？relu优势在哪</li>
-<li>stacking的原理？</li>
-<li>你比赛和第一名的差距在哪里？</li>
-<li>你比赛里面突出的工作？</li>
-<li>AC自动机原理？时间复杂度？</li>
-<li>依存句法分析？</li>
-</ol>
-<h5 id="经验总结-2"><a href="#经验总结-2" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>核函数了解不够深入</li>
-<li>word2vec了解的不够深入</li>
-<li>快排优化考虑不够全面</li>
-<li>面试官：以spice为例，了解原理才能进行优化</li>
-<li>整体原理答的还可以，但有以上硬伤(虽然项目里面没有写svm和word2vec)</li>
-</ol>
-<hr>
-<h2 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h2><ul>
-<li>岗位：算法实习生（WXG事业群 微信看一看）</li>
-<li>持续时间：总共3技术面，面试官迟到20min分钟，12点多一面结束，下午2:30开始, 持续到下午3:10面完，</li>
-</ul>
-<h5 id="问题总结-3"><a href="#问题总结-3" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]最长上升子序列</li>
-<li>[手写代码]链表排序（面试官想听到链表快排, 我说的插入排序，其实归并写起来最简单）</li>
-<li>[手写代码]二叉树中序非递归</li>
-<li>xgb并行化是指什么？怎么实现的？</li>
-<li>gbdt推导一下？从损失函数到优化变量</li>
-<li>卡方是如何定义的？</li>
-<li>比赛和前几名差距在哪？</li>
-<li>lr和gbdt谁更容易过拟合？</li>
-<li>FFM了解吗？PNN了解吗？</li>
-<li>聊一下地磁定位项目？(我没写这个项目但面试官问了实验室研究方向) 和wifi定位的关系？如何融合？如何实现地磁指纹库检索？</li>
-<li>各种介绍项目。(极少反馈做的好还是不好)</li>
-</ol>
-<h5 id="经验总结-3"><a href="#经验总结-3" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>腾讯面试官感觉没有明显的好坏反馈。各种嗯嗯嗯。可能是项目不够亮眼。</li>
-<li>gbdt从损失函数推导答的还可以更熟练一些。</li>
-</ol>
-<hr>
-<h2 id="滴滴"><a href="#滴滴" class="headerlink" title="滴滴"></a>滴滴</h2><ul>
-<li>岗位：算法实习生 (地图算法)</li>
-<li>持续时间：总共2面技术面</li>
-</ul>
-<h5 id="问题总结-4"><a href="#问题总结-4" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>[手写代码]生成全排列，我写了一个动态插入的方法，面试官一直想听递归方法，一直说我还是没讲清楚。</li>
-<li>[手写代码]如何计算一个大的指数，其实可能是考快速指数幂，我写了一个前n项的泰勒展开，也算写对了。</li>
-<li>lgb直方图是什么？</li>
-<li>bagging和boosting区别？我感觉说的很清楚，但面试官一直感觉不满意</li>
-<li>kdtree是怎么生成的？</li>
-<li>条件随机场了解吗？</li>
-<li>优化算法了解吗？拟牛顿牛顿区别？adam？rmsprop？momentum?</li>
-<li>DeepFM? Deep &amp; wide?看过哪些数据挖掘书？论文？</li>
-<li>GBDT+LR有用吗？叶子节点编号有用吗？cvr弱特征要one-hot编码吗？</li>
-<li>比赛名次为何这么低？这几个特征提升了多少？</li>
-<li>FFM?FM?了解吗？</li>
-</ol>
-<h5 id="经验总结-4"><a href="#经验总结-4" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>从一开始到最后，一直对比赛名次一顿怼，各种抓着某个弱一点的特征说没用，我讲算法思路面试官一直说我没说清楚。</li>
-<li>回答各种都不太满意，数学原理感觉都不了解？前沿论文没看看？</li>
-<li>两个面试官声音一直很低，交流我都凑着耳朵反复问。</li>
-<li>然而很痛快的给了offer。</li>
-<li>(很久以后的一个总结)虽然当时面试官对我一顿怼，面试体验很不好，但是这次面试可能对我提出建议最中肯最有用的一次面试，引导我多看weinan zhang的研究还有最新的一些研究进展，长远来看对我影响很深远。而且一面面试官follow我之前leader的博客这个让我很惊讶，应该是很深入的在做一些机器学习的应用。</li>
-</ol>
-<hr>
-<h2 id="360"><a href="#360" class="headerlink" title="360"></a>360</h2><p>岗位：算法实习生 （点睛 广告部门）<br>持续时间：3面技术面+第一个技术面面试官意向面</p>
-<ol>
-<li>[手写代码]堆排序</li>
-<li>[手写代码]快排</li>
-<li>[手写代码]编辑距离</li>
-<li>比较svm和lr，两个的损失函数？为啥是hinge loss</li>
-<li>[手写代码]链表倒数k个节点 时间O(n) 空间O(1)</li>
-<li>svm防止过拟合方法？</li>
-<li>one-hot维度太长如何维度截断？</li>
-<li>ac自动机？正则表达式是通过什么实现的？</li>
-<li>有10W个数据，数据服从一定分布，如何采样100个（要求无偏采样）</li>
-<li>[手写代码]给定一个数组，刚开始位于0，数组下标志为i代表在最多可以跳nums[i]步, 问能否到终点？到终点最少需要几步？</li>
-<li>c++ 内存模型了解吗？</li>
-<li>PCA数学原理？</li>
-</ol>
-<h5 id="经验总结-5"><a href="#经验总结-5" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>整体比较常规，一面面试官语速很快。二面面试官问的都不是机器学习相关。</li>
-<li>面试官说 搜索和广告路宽，推荐路子很窄</li>
-</ol>
-<hr>
-<h2 id="助理来也"><a href="#助理来也" class="headerlink" title="助理来也"></a>助理来也</h2><p>岗位：NLP算法实习生<br>持续时间: 2面技术面，6:10左右结束</p>
-<h5 id="问题总结-5"><a href="#问题总结-5" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>lr原理？lr要不要归一化？不归一化得到的w有没有意义？什么模型需要归一化？</li>
-<li>[手写代码]现在有一堆ip地址,对应一些城市，ip地址都有对应范围，但是中间都有缺失,如何最快的查询某个ip地址对应城市</li>
-<li>lr和svm区别</li>
-<li>对话机器人中意图识别的意图是怎么定义的？意图和slot的关系是什么？slot是无限生成的？有没有优化slot的方法？知识图谱能帮助扩展slot吗？</li>
-<li>项目数据量？衡量指标？</li>
-</ol>
-<h5 id="经验总结-6"><a href="#经验总结-6" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>聊的最开心的一次，面试官很有诚意, 后期基本上就是憧憬对话机器人的未来. </li>
-</ol>
-<hr>
-<h2 id="新浪"><a href="#新浪" class="headerlink" title="新浪"></a>新浪</h2><p>岗位：数据挖掘实习生<br>持续时间：1面技术面 持续1h左右</p>
-<h5 id="问题总结-6"><a href="#问题总结-6" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>hadoop了解吗？mapreduce?</li>
-<li>什么场景适合lr？lr原理？</li>
-<li>后面基本上在介绍项目，没有明显的原理提问</li>
-</ol>
-<h5 id="经验总结-7"><a href="#经验总结-7" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>感觉面试官技术不是很强，没提出比较专业的问题, 不太像是做机器学习或者数据挖掘的。对方的业务做的貌似也只是在公司内。</li>
-</ol>
-<hr>
-<h2 id="Blued"><a href="#Blued" class="headerlink" title="Blued"></a>Blued</h2><p>岗位：算法实习生 （推荐算法）<br>持续时间：1面技术面 1面hr 持续1h左右</p>
-<h5 id="问题总结-7"><a href="#问题总结-7" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>介绍一下lr</li>
-<li>ctr预估和cvr有什么区别</li>
-<li>ctr预估常见做法</li>
-<li>京东比赛用了哪些特征？为什么要用这些特征？</li>
-<li>数据清洗怎么进行</li>
-</ol>
-<h5 id="经验总结-8"><a href="#经验总结-8" class="headerlink" title="经验总结"></a>经验总结</h5><ol>
-<li>面试官北邮phd，感觉实力也很水，hr诚意很足</li>
-<li>待遇很有诚意。</li>
-</ol>
-<hr>
-<h2 id="阿里巴巴"><a href="#阿里巴巴" class="headerlink" title="阿里巴巴"></a>阿里巴巴</h2><p>岗位：算法实习生（阿里妈妈)<br>持续时间：<br>1面电话面 持续1h7min加上写二分查找<br>2面现场面持续到11:18<br>3面现场面11:40左右开始, 1:10左右面试完<br>4面电话面 持续38min26s<br>5面电话面 持续1h47s<br>hr电话面持续 持续36min17s</p>
-<h5 id="1面问题总结"><a href="#1面问题总结" class="headerlink" title="1面问题总结"></a>1面问题总结</h5><ol>
-<li>C++面向对象机制</li>
-<li>C++和Java的区别</li>
-<li>Python迭代器?</li>
-<li>Python xrange和range有什么区别</li>
-<li>Python tuple和list有什么区别</li>
-<li>python为什么不推荐for循环</li>
-<li>无序数组中的中位数？最优复杂度？我说了大顶+小顶，面试官还要继续优化</li>
-<li>l1和l2norm区别</li>
-<li>GDBT原理? xgb原理？</li>
-<li>京东比赛转化率有没有平滑？要不要平滑？</li>
-<li>京东比赛为什么要user模型，只是用user-item模型不行吗？这样会损失很多信息不是吗？</li>
-<li>xgb如何对离散特征处理？如何对连续特征处理？</li>
-<li>lr损失函数？能不能是均方误差？</li>
-<li>[手写代码]直接打开链接,写二分查找</li>
-<li>快排时间复杂度，堆排序时间复杂度，所以快排和堆排哪个好?</li>
-</ol>
-<h5 id="1面经验总结"><a href="#1面经验总结" class="headerlink" title="1面经验总结"></a>1面经验总结</h5><ol>
-<li>面试官电话面试中对项目问的特别深入。一直在纠结京东项目里面的ui模型和user模型的细节。反复问为什么一定要有个user模型。</li>
-<li>手写二分的时候，一紧张忘了判断数组为空了。后面加上了。</li>
-<li>对编程语言实现原理不够熟悉。尤其是三个一起问。</li>
-</ol>
-<h5 id="2-3面问题总结"><a href="#2-3面问题总结" class="headerlink" title="2. 3面问题总结"></a>2. 3面问题总结</h5><ol>
-<li>lstm了解吗？lstm门控了解吗？每个门干什么的？</li>
-<li>lr为什么要对连续特征离散化并进行交叉？回答了一些。但是面试官希望听到：引入非线性。</li>
-<li>模型融合常见的方法有哪些？你用过哪些？提升了多少？</li>
-<li>开放问题。做一个商品对商品的推荐，不能基于任何历史记录，现在淘宝商品数据量超大，请问怎么做？</li>
-<li>开放问题。我现在有个新的模块上线，要求做商品推荐，也是不能任何历史记录，怎么做？我问是处理冷启动问题吗？她说不是。感觉没太理解这种场景是什么。。</li>
-<li>模型融合方法，有没有参数化的模型融合？（说我说的都是非参数化的）后来我说了GBDT+LR这种，面试官嗯了一下不确定对不对。</li>
-<li>近期机器学习论文了解过吗？</li>
-<li>lr归一化怎么做？</li>
-<li>蚂蚁项目为什么要二分类？</li>
-<li>本科做过学生干部或者社团干部吗？主要的收获是啥？</li>
-<li>喜欢什么运动？我回答足球？他说只有足球？我说羽毛球每周一次然后又选修学了网球。</li>
-<li>给定一个4G内存的笔记本，2T硬盘，求一个淘宝Topk词问题</li>
-<li>上一个面试表现如何？</li>
-<li>深度学习和机器学习比较？深度学习从本质上和传统的机器学习有什么区别？</li>
-<li>算法工程师的工作方式的改变你怎么看？传统算法需要提取特征，现在似乎偏向于调整模型结构？如何看待？</li>
-<li>神经网络如何防止过拟合？深度神经网络如何防止过拟合?</li>
-<li>CNN的结构？pooling层作用？不用这个能行吗？</li>
-<li>拿了几个offer？</li>
-<li>腾讯微信和阿里妈妈怎么选？</li>
-<li>城市怎么选？</li>
-<li>对薪资待遇怎么看？</li>
-<li>简历里面为何不写你发表的论文？</li>
-</ol>
-<h5 id="2-3面经验总结"><a href="#2-3面经验总结" class="headerlink" title="2-3面经验总结"></a>2-3面经验总结</h5><ol>
-<li>二面完全没问算法，但是广度和深度都有，开放性问题没思路。</li>
-<li>三面考察特别全面，从海量数据处理 -&gt; 深度学习的理解 -&gt; 工作性质的理解 -&gt; 做人的思考和收获 -&gt; 生活爱好。</li>
-<li>总体来讲阿里的面试官感觉水平较高，对人的考察全面。</li>
-<li>阿里办公环境整洁。可能是最整洁的面试环境。</li>
-<li>在阿里吃外卖似乎很多，临走之前一堆送外卖的在楼下。</li>
-<li>阿里妈妈似乎很看中写论文经验。</li>
-</ol>
-<h5 id="4面问题总结"><a href="#4面问题总结" class="headerlink" title="4面问题总结"></a>4面问题总结</h5><ol>
-<li>lr和ffm的比较? fm的优势在那？lr相对于ffm的特点在哪？</li>
-<li>链表排序的思路？</li>
-<li>快排相对于归并排序的优点？</li>
-<li>优化算法了解吗？牛顿法和梯度下降的区别？牛顿法的缺点？针对这个缺点有什么改进？</li>
-<li>lr的优点是什么？为什么能处理海量稀疏特征？</li>
-<li>蚂蚁金服项目中多分类和二分类的比较，二分类为什么优于多分类？</li>
-<li>实验室做过什么项目？聊一下实验室项目？</li>
-<li>为什么要做广告相关算法？</li>
-</ol>
-<h5 id="4面经验总结"><a href="#4面经验总结" class="headerlink" title="4面经验总结"></a>4面经验总结</h5><ol>
-<li>问题比较常规，对项目的细节反复询问为什么这么做。模型原理回答的还算流畅，快排相对于归并的优点需要深入看一下。</li>
-</ol>
-<h5 id="5面问题总结"><a href="#5面问题总结" class="headerlink" title="5面问题总结"></a>5面问题总结</h5><ol>
-<li>讲一下蚂蚁项目</li>
-<li>使用KNN模型，如何评价特征的重要性排序？</li>
-<li>xgb和lgb的区别？</li>
-<li>xgb的损失函数?</li>
-<li>实验室做过什么项目？</li>
-<li>实验室写过哪些论文？发表在哪？创新点？实验做了哪些？</li>
-<li>比赛为什么用集成树模型不用SVM？</li>
-</ol>
-<h5 id="5面经验总结"><a href="#5面经验总结" class="headerlink" title="5面经验总结"></a>5面经验总结</h5><ol>
-<li>问题依然常规。面试官一直在听，好像一直在思考。中间插话不太多。面试官感觉很好说话。</li>
-</ol>
-<p>hr面</p>
-<h5 id="问题总结-8"><a href="#问题总结-8" class="headerlink" title="问题总结"></a>问题总结</h5><ol>
-<li>自我介绍一下？实验室的研究方向是什么？和机器学习有什么关系？</li>
-<li>个人职业规划？</li>
-<li>对城市有没有选择？有没有逃离北上广的想法？</li>
-<li>为什么想做广告业务？</li>
-<li>拿到了哪里的offer?</li>
-<li>个人爱好？你是看球还是踢球？最喜欢哪个球队？为什么喜好这个球队？踢球踢的什么位置？踢这个位置你的优势是什么？(解释了很长时间)</li>
-<li>前几面发挥的怎么样？哪个面试官没发挥好？</li>
-<li>你的优点？你的缺点？缺点如何改进？</li>
-<li>你来了这边想做哪块工作？</li>
-</ol>
-<h5 id="hr面经验总结"><a href="#hr面经验总结" class="headerlink" title="hr面经验总结"></a>hr面经验总结</h5><ol>
-<li>问题开放性强，看中综合素质。</li>
-</ol>
-<hr>
-<h2 id="腾讯-1"><a href="#腾讯-1" class="headerlink" title="腾讯"></a>腾讯</h2><p>岗位：算法实习生（OMG事业群, 天天快报)<br>持续时间：1面现场面 持续1h; 2面现场面找面试间用了很长时间才开始正式面试，到4:50结束</p>
-<h5 id="1面问题总结-1"><a href="#1面问题总结-1" class="headerlink" title="1面问题总结"></a>1面问题总结</h5><ol>
-<li>[手写代码]翻转链表</li>
-<li>[手写代码]逆序对，不让用暴力, 时间复杂度？</li>
-<li>[手写代码]矩阵从左上到右下最小路径和, 一个是只能往右往下，一个是四个方向都可以。</li>
-<li>[手写代码]二维矩阵中查找，行和列都是天然有序, 时间复杂度？</li>
-<li>lr的损失函数？损失函数怎么来的？怎么求解lr？推导怎么用梯度下降求解lr？</li>
-<li>贝叶斯平滑是什么？怎么做？</li>
-<li>写一下贝叶斯公式？</li>
-<li>项目中bagging提升了多少?stacking提升了多少？</li>
-<li>GDBT是什么？GBDT损失函数是什么？</li>
-<li>如何评价数据平滑的效果</li>
-</ol>
-<h5 id="1面经验总结-1"><a href="#1面经验总结-1" class="headerlink" title="1面经验总结"></a>1面经验总结</h5><ol>
-<li>面试官说把广告都作成美女的图片ctr就上去了，但是没有意义。(得好好思考一下这句话的意思)</li>
-<li>面试官对我写的翻转链表很疑惑（我的代码异常清晰正确的情况下）反复纠结递归写法中的head-&gt;next-&gt;next = head;这句代码</li>
-<li>感觉面试官没有对算法的热情，做算法都是为了产品，实习都要为产品打杂。如果作算法不是为了产品还不如去研究院。</li>
-<li>银科大厦腾讯工位不错的类似计算所，但是电梯是没有用, 都在爬楼梯。</li>
-</ol>
-<h5 id="2面问题总结"><a href="#2面问题总结" class="headerlink" title="2面问题总结"></a>2面问题总结</h5><ol>
-<li>[手写代码]估计pi的值，提示用生成随机数的方式</li>
-<li>[手写代码]翻转链表</li>
-<li>介绍对话机器人项目？带来了什么效果？</li>
-<li>介绍蚂金服项目？</li>
-</ol>
-<h5 id="2面经验总结"><a href="#2面经验总结" class="headerlink" title="2面经验总结"></a>2面经验总结</h5><ol>
-<li>面试官没有提出来常规机器学习问题，讲项目过程中也没什么反馈和知识点提问。</li>
-<li>最后问面试官我去了做什么？他说做模型。我问做什么模型？推荐？用户兴趣预测？他说推荐。我问上次不是说ctr吗？他又改口ctr。</li>
-<li>领航的工位感觉十分拥挤。比银科差了不少。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckix64kpf001ny6dl2lus5sse" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2018 Annual Summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/02/2018%20Annual%20Summary/" class="article-date">
-  <time datetime="2019-01-02T12:11:00.000Z" itemprop="datePublished">2019-01-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/02/2018%20Annual%20Summary/">2018 Annual Summary</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><p>今年给自己的年度关键词是：体验</p>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="桂林"><a href="#桂林" class="headerlink" title="桂林"></a>桂林</h5><p>城市比想象中小，从和司机聊天感觉民风淳朴；象鼻山实际样子很小（当时和小学课本给的感觉反差较大）建筑和山相连比较奇特，植物很多很绿；桂林米粉原本的做法是干拌的吃没汤，干拌相对味重比较喜欢；两江四湖主要将不同的景点进行串联，算是一种商业开发，好多景观单独放在一起不起眼，全部连成一片然后打上各种聚光灯，整体效果上升一个档次。</p>
-<h5 id="阳朔"><a href="#阳朔" class="headerlink" title="阳朔"></a>阳朔</h5><p>商业开发严重，啤酒鱼味道一般价格不便宜，椿记烧鹅味道可以；遇龙河漂流感觉很恬静，没有电动船的那种嘈杂，整个人生都安静下来了，师傅连续划船一个多小时感觉确实辛苦；</p>
-<h5 id="庐山"><a href="#庐山" class="headerlink" title="庐山"></a>庐山</h5><p>分AB两条线；五老峰顶峰俯瞰江西鄱阳湖风景净收眼底，观景体验很棒，爬山不累；毛主席在庐山曾经休息，避暑胜地，沁人心脾的凉爽；芦林湖风景好于如琴湖；三叠泉第一眼看有点意思，后面看其实国内还有很多类似的结构；</p>
-<h5 id="长沙"><a href="#长沙" class="headerlink" title="长沙"></a>长沙</h5><p>火宫殿小吃种类很多，经济实惠；臭豆腐做的比较有特色的主要原因是体积较大，豆腐块扎开很多小口将汤料渗入故味道是全方位的；湘江有种历史感，环顾橘子洲能想象毛主席的情怀；岳麓山名气大，但是整体感觉比较普通；</p>
-<h5 id="成都"><a href="#成都" class="headerlink" title="成都"></a>成都</h5><p>商业化气氛浓，小龙坎火锅主要吃油，吃的是一种厚重感，并没有太辣；降龙爪爪卖鸡爪子的店铺挺有特色；青城山后山风景属于意外惊喜，山泉清凉刺激，心旷神怡，正巧碰上大雾天回程坐索道非常刺激；</p>
-<h5 id="长江三峡"><a href="#长江三峡" class="headerlink" title="长江三峡"></a>长江三峡</h5><p>山水相连，两岸连山，长江给人一种包容感和胸怀感养育了南方风水；小三峡和小小三峡是黄金风景，多花30上甲板拍照很值，拍照视野很棒；三峡人家景区拍照效果很好，水面巨绿；三峡大坝没想象中壮观；游船上卡牌游戏套路深不能玩，船长酒会看起来很有仪式感，船上灯光炫目，营造一种觥筹交错氛围，实质可能是像是把你弄得有点晕然后赚一笔，基本都是变着法骗钱；</p>
-<h5 id="重庆"><a href="#重庆" class="headerlink" title="重庆"></a>重庆</h5><p>当地人地方归属感感强，不屑于说普通话；重庆江湖菜很有特色；城市以江景（长江/嘉陵江/乌江三江一体）为主打特色，洪崖洞小吃巨多，晚上观景需要去洪崖洞对面然后过桥观景位置最佳，城市面积巨大，核心景点住宿感觉不便宜；</p>
-<h5 id="杭州"><a href="#杭州" class="headerlink" title="杭州"></a>杭州</h5><p>别墅多高楼很少，空气质量还是那么舒服；</p>
-<h5 id="香山"><a href="#香山" class="headerlink" title="香山"></a>香山</h5><p>在最合适的季节里面发现松树本身比例很高，并不是漫山遍野都是红叶，是在北京生活的人的好去处；</p>
-<h2 id="工作总结-实习和面试经历"><a href="#工作总结-实习和面试经历" class="headerlink" title="工作总结-实习和面试经历"></a>工作总结-实习和面试经历</h2><ul>
-<li>累计面试20场+，滴滴面试官给了比较干货的建议，直接推荐follow具体的大牛研究，算法研究工作solid；苹果电话面试没有太多准备英文交流中口语获得认可；</li>
-<li>要学会给面试官自圆其说，以讲算法比赛项目经历来看：毕竟面试官没有参加过比赛，背景和数据要刻意交代清楚，一时回答不满意的答案可以放慢节奏，一边回忆一边猜一遍沟通，猜面试官想听到什么答案，猜对方想听到哪个关键词；</li>
-<li>不同面试官面试风格迥异：有的正常流程不温不火，有的喜欢怼，有的轻描淡写就给过，有的会异常欣赏你，有的感觉根本不是干这个岗位的（提不出像样的问题/在全程被科普知识），不论Handle哪一种都应该不骄不躁；HR面被刷也有可能，要表达对于企业平台/业务/加班的认可甚至是热爱；大公司更看中基础，小公司相对更看中项目经历且给的钱多，发offer随意；</li>
-<li>面试是一种很好的全面的锻炼，能帮助认清自己的实际水平(我甚至有点喜欢这个活动)：认清知识上的短板、认清对知识的理解深度，直接提升表达能力和抗压能力；</li>
-<li>B家实习：管理风格扁平化，leader年轻，员工工作踏实努力，成员很多来自清北中科院但是很多感觉实力一般；boss 洞悉人性，洞悉算法应用的痛点，除加班风格外偏学习Google和FB，互联网风格很强；</li>
-<li>A家实习：员工整体感觉稳重中带智慧，各得其乐。（甚至桌上足球和台球都很强）相对创业公司流程规范化，技术文档积累沉淀比我想象中做的好，形成了很好的沉淀技术的氛围，公司整体看中综合素质；技术平台化能力很强，运营和产品员工商业sense很强；工作风格偏重思考，能站在高度思考全局，技术/PM运营表达力都相当强</li>
-<li>新人培训在十个队伍里面大多数985 技术 市场形态 表达能力 痛点挖掘 场景拆解，享受氛围；成功带领小组获得第一名 把握头脑风暴节奏 表达多一份准备和真诚</li>
-<li>实习转正：关于转正slides制作，重要一点是有拆解场景能力，总结归纳场景特点；我当时slides上有文字比过大的问题后期进行了基本的修复；slides制作能力进步明显，但还需要加强；数据可视化时三维图效果优于二维图；</li>
-</ul>
-<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="俄罗斯世界杯法国夺冠"><a href="#俄罗斯世界杯法国夺冠" class="headerlink" title="俄罗斯世界杯法国夺冠"></a>俄罗斯世界杯法国夺冠</h5><p>法国实至名归，整体阵容最强，球员动心忍性（尤其是博格巴和在曼联的表现不是一个画风），战术执行简介而到位：吉鲁纯支点（7场主力都没射正过充分说明战术作用在足球比赛获胜中的至高作用），姆巴佩边路高速启动制造威胁，坎特兢兢业业拦截盯防，乌姆蒂蒂和帕瓦尔两个后卫进攻给力，博格巴不浪不乱带，投入在中长调度和积极回防协防；克罗地亚杀入决赛比较惊艳，魔笛刚奥塔门迪一瞬间领袖气质凸显，全队很拼，双方献上了精彩的决赛；C罗对西班牙帽子戏法表现抢眼；</p>
-<h5 id="足协杯决赛北京国安vs山东鲁能"><a href="#足协杯决赛北京国安vs山东鲁能" class="headerlink" title="足协杯决赛北京国安vs山东鲁能"></a>足协杯决赛北京国安vs山东鲁能</h5><p>京鲁大战第一回合TIFO震撼，施密特布局国安传控进攻套路，但是配合过细太复杂没出来效果，边后卫助攻不上来，如果替补出场韦世豪可能会有奇效，鲁能战术抓反击质量效果不错，后卫防守稳健，边后卫发挥可圈可点；第二回合鲁能下半场开局失势有点梦游，国安求胜欲望更强，张稀哲还是靠头球打入关键进球；</p>
-<h2 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h2><ul>
-<li>上半年集中时间投简历/刷题/找实习锻炼被搁置；</li>
-<li>7月到8月之间偶尔跑步机跑步，每次跑30min；</li>
-<li>9月登庐山；11月登香山；</li>
-<li>10月恢复每周和实验室小伙伴在北邮打羽毛球坚持到年底，每次根据人数不同打1.0~2.0小时；</li>
-<li>桌上足球也是一种锻炼，每次打完都能出汗，考验反应速度和手腕灵活性，支持4个人一起玩挺有乐趣，目前水平太菜还需练习；</li>
-</ul>
-<h2 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h2><ul>
-<li>体重增加10斤；</li>
-<li>病史：6月感冒一次，10月份严重腹泻一次，11月着凉感冒一次，12月着凉感冒一次；6月感冒持续3天，11月感冒持续五天，11月感冒持续10天；拳击体验课后请假休息一天；</li>
-<li>饮食：吃水果频率比去年增加，但总体还是比较少，期间有考虑记录吃水果的日志，但是没有坚持下来；六月到九月份吃了很多炸鸡外卖，T家实习期间下午茶吃的多，零食吃得多；A家实习期间每天吃食堂，营养还算均衡；</li>
-<li>三次因为晚上喝咖啡，茶叶，兰芳园奶茶睡不着，以后坚决杜绝；</li>
-</ul>
-<h2 id="社交与活动"><a href="#社交与活动" class="headerlink" title="社交与活动"></a>社交与活动</h2><ul>
-<li>婚礼参加。参加李，贾，吴，杨四场婚礼，担任一次伴郎还坐了宾利头车，整体过程中十分感动真心替新人高兴，经常让人眼泪刷刷刷，同时发现结婚也是老友聚会的好机会，考虑减少主动少约人聚会（成本高/难聚齐），多参加婚礼抓住叙旧的机会；中国人对于结婚的意义比我想象中还要更深远，过程中当事人家庭非常累；</li>
-<li>团建。T家实习团建，A家杭州团建，A家庆功团建：多人聚餐喝酒场合前期不能多喝要收住；</li>
-<li>银行从业者聚餐。组织者分享人生经历，感觉他的成功很重要一点源自于中在关键节点做对了很多关键选择，另外在聚餐场合放得开，很健谈；国企从业人员擅长在很哲学或者很抽象很文科的视角谈论问题，聊天时不聊工程/业务细节（略微高谈阔论）他们更容易接受，切勿全程以工程师的风格聊天对方不太有兴趣/不会觉得你牛逼；</li>
-<li>数据挖掘爱好者聚餐。见到国内众多比赛Top大佬；Kaggle大佬比我想象中更腼腆，没有太多套路，很谦虚，直观感受没有很犀利比较平易近人；</li>
-</ul>
-<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><ul>
-<li>Leetcode：算上大四和研一刷题累计350道，数量不是关键，如果能做一道融会贯通一道，感觉可能只需要150道medium以上就已经可以了，理解代码质量的三重境界clean code -&gt; concise code-&gt; elegant code，什么代码是好代码？我理解一个粗浅的标准是：在保证正确性的前提下，让另一个人看完他理解的很清晰（或者理解的尽量清楚）</li>
-<li>基础技术：阅读python书一本，基本熟练python OOP开发还有部分语言特性，整体比较enjoy 写python语言代码；Vim基本上手，提升了edit效率，enjoy纯键盘输入；积累NLP在文本分类上的经验；Linux的一些命令遇到了有所总结；配置环境流程化，将常用工具的配置流程进行了整理；</li>
-<li>阅读TensorFlow源码，熟悉官方API文档和经典模型搭建；SQL比之前用的熟练了一些，但是还需要强化，加强复用性；</li>
-<li>梳理CTR预估任务/图学习/推荐系统的技术演变；</li>
-<li>对于流量的思考：更加关注思考互联网中流量和商业模式的关系，更加关注业务的流量结构，更加关注优化目标（比如机器学习任务中的Loss，排序任务中排序公式的设计以及不同的权重因子对业务的影响）；更加关注思考中心化流量和去中心化流量的关系；</li>
-<li>优化机器学习任务整体分为样本层面和模型层面，两个都很重要要注意平衡；更关注embedding的质量；</li>
-<li>对话公司算法研究员：需要学习的是一种算法工程师没有技巧的匠心，晋升首先是看产出，同事也会注重你做出的工作和业界水平的比较；</li>
-<li>复盘过程中的一些感受，以制作slides为例推广到一般公众演讲，主要要确认以下问题：受众是谁？他们有啥本质目的？他们（教育/专业）水平如何？形式是科普大众还是解释专业细节？偏扯淡还是上干货？更关系细节还是更高度概括的内容？适合引经据典带例子还是干货内容一顿铺？形式是偏公式化？还是多图表化？全英文是否可以？还是可以混杂？哪（几）种图最适合表述关键问题？哪（几）个指标才是衡量业务的关键？</li>
-<li>看论文和写论文是两件事，学术论文写作课告诉我们正确的表述清楚，能看得懂是最重要的写论文锻炼了整理思维的意识更多练习一种表达；面对专家评审要从不同角度解释；</li>
-</ul>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>今年找工作主要将精力放在专业书上，其他行业数据阅读较少，2019考虑阅读关于历史和经济学的书；</p>
-<ul>
-<li>论持久战：始终贯穿用哲学视角解释问题；结构化的问题描述；毛主席具有极其丰富的历史修养和地理积累，分析局势层次清晰，对于敌我态势真正做到了运筹帷幄，自始至终透露着一种谨慎中带着乐观处理问题的态度；感叹于毛主席强悍的预测能力；</li>
-<li>长尾理论：梳理长尾的关键性质，总结如何利用长尾性质发函，思考电商业务/短视频/信息分发长尾这三类在2018年互联网业务高速发展的主要业务，完美印证了长尾对业务发展的核心作用；</li>
-</ul>
-<h2 id="2019改进点"><a href="#2019改进点" class="headerlink" title="2019改进点"></a>2019改进点</h2><ul>
-<li>冬天锻炼懈怠。北京冬天气比较冷，经常懒得锻炼，有时候雾霾更不想出去，本质还是惰性；</li>
-<li>饮食消费结构优化。相比上半年，下半年在吃饭上节省了一些，一方面注意避免浪费，一方面注意聚餐计划性还是要强，另一方面注意点餐时刻意提升蔬菜或粗粮在营养结构中的比重。</li>
-<li>技术提升要更关注工程落地。年轻人主要存在一个问题是想的多做的还是少，实习期间为了转正通过看了很多推荐系统和计算广告的论文意图扩大视野，其实后来想想不如多去关注实际工作中的技术细节重要的多。 </li>
-<li>消费意识。今年同时换了手机/键盘，体验极佳，关于消费结构的优化上，发现在某些必要工具上“不舍得买”往往可能是是得不偿失，“一步到位”是一种很聪明的做法，以后注意评估买的商品对自己的影响。有舍才有得。</li>
-<li>日常工作效率的优化。关于提升日常工作的效率，见思考总结。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/01/02/2018%20Annual%20Summary/" data-id="ckix64kom0001y6dl8cxh0j3f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/16/Bert/">Bert</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/14/Item-Based%20CF/">Item-Based CF</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Gold and Rabbit<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+    <!-- /.container -->
 </nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>Gold and Rabbit&#39;s Blog</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading">Always ambitious</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2020/01/02/2019 Annual Summary/">
+        <h2 class="post-title">
+            2019 Annual Summary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+年度关键词
+今年给自己的年度关键词是： 入局
+
+旅游拉萨西藏整体印象是圣洁、无污染、纯净。布达拉宫内有乾坤，里面有佛教文化中一切元素，能唤起藏区统治者那种具备强信仰，却又因为是王室的诸多无奈之情，宫殿里面巨大的陵墓让人震撼，感觉还是无论是生是死，都是在追求内心中的一种平静。藏区民众就像他们的牦牛一样，性格温顺，虔诚，丝毫没有感受到少数冲突分子的暴乱、动荡。高原反应：所谓高原反应，好比长期不......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2020-01-02
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2019/12/12/ubuntu config/">
+        <h2 class="post-title">
+            ubuntu config
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+git配置解决git status中文乱码问题将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：
+1git config --global core.quotepath false
+
+ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: ......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2019-12-12
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2019/12/11/Data Analysis Tutorial:(Part II)/">
+        <h2 class="post-title">
+            Data Analysis Tutorial:(Part II)
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+Reusabal Scripts
+funnel chart
+
+Two-axis trend chart
+
+heat map 
+
+
+...
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2019-12-11
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2019/12/11/Data Analysis Tutorial:(Part I)/">
+        <h2 class="post-title">
+            Data Analysis Tutorial:(Part I)
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+Why data matters?
+显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。
+严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。
+需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2019-12-11
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2019/10/01/Interview record of ML intern in 2019/">
+        <h2 class="post-title">
+            Interview record of ML intern in 2019
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+概述
+面试是一次梳理知识体系的机会；
+面试是一次提升表达能力，锻炼推销自己的能力的机会；
+面试是了解工业界、了解市场需求的绝好机会，面试官至少是一线工程师，大多数还是带团队的大佬，能体会到他们更care什么，将市场需求和自身能力对齐；
+
+
+Review作业帮
+持续时间：一面40min
+
+问题总结
+讲一下京东比赛的项目。你的模型为什么用了xgb?不用别的模型?
+[手写代码]二叉树层序遍历
+[......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2019-10-01
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2019/01/02/2018 Annual Summary/">
+        <h2 class="post-title">
+            2018 Annual Summary
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+年度关键词今年给自己的年度关键词是：体验
+旅游桂林城市比想象中小，从和司机聊天感觉民风淳朴；象鼻山实际样子很小（当时和小学课本给的感觉反差较大）建筑和山相连比较奇特，植物很多很绿；桂林米粉原本的做法是干拌的吃没汤，干拌相对味重比较喜欢；两江四湖主要将不同的景点进行串联，算是一种商业开发，好多景观单独放在一起不起眼，全部连成一片然后打上各种聚光灯，整体效果上升一个档次。
+阳朔商业开发严重，啤......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by Gold and Rabbit on
+        2019-01-02
+    </p>
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+        <li class="previous">
+            <a href="/page/2/">&larr; Newer Posts</a>
+        </li>
+    
+    
+</ul>
 
 
 
+                <!-- 如果开启评论功能 -->
+                
 
-<script src="/js/script.js"></script>
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+
+                        
+
+                        
+
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            
+                            
+
+                            
+
+                            
+
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Friends Blog -->
+                
+            </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Gold and Rabbit&#39;s Blog 2020 
+                    <br>
+                    Theme by <a target="_blank" rel="noopener" href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a target="_blank" rel="noopener" href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://example.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
 
 
 
 
-  </div>
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://example.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
 </body>
+
 </html>
