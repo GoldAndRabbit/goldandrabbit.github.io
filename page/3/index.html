@@ -67,6 +67,162 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Tricks in Data Mining Competitions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/">Tricks in Data Mining Competitions</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Feature-Engineering-Basic"><a href="#Feature-Engineering-Basic" class="headerlink" title="Feature Engineering Basic"></a>Feature Engineering Basic</h2><h3 id="Discretizer-Bin-continuous-data-into-intervals"><a href="#Discretizer-Bin-continuous-data-into-intervals" class="headerlink" title="Discretizer, Bin continuous data into intervals"></a>Discretizer, Bin continuous data into intervals</h3><ul>
+<li>Uniform – All bins in each feature have identical widths.</li>
+<li>Quantitle – All bins in each feature have the same number of points.</li>
+<li>Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.</li>
+</ul>
+<h3 id="Binazier-Encode-categorical-features"><a href="#Binazier-Encode-categorical-features" class="headerlink" title="Binazier, Encode categorical features"></a>Binazier, Encode categorical features</h3><ul>
+<li>OneHotEncoder, OrdinalEncoder, HashMap, etc.</li>
+</ul>
+<h3 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h3><h5 id="Linear-Scaler"><a href="#Linear-Scaler" class="headerlink" title="Linear Scaler"></a>Linear Scaler</h5><ul>
+<li>Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）</li>
+</ul>
+<h5 id="Non-Linear-Scaler"><a href="#Non-Linear-Scaler" class="headerlink" title="Non-Linear Scaler"></a>Non-Linear Scaler</h5><ul>
+<li><p>Gaussian-like Scaler.<br>  Box-Cox/Yeo-Johnson<br>  RankGauss.</p>
+</li>
+<li><p>XX-like Scaler<br>  Use icdf of target distribution to transform (cdfX)</p>
+</li>
+<li><p>Non-linear transforms such as Box-Cox may be userful to transform y. Diversity for ensemble, sometimes with better performance.</p>
+</li>
+<li><p>Yeo-Johnson transform</p>
+</li>
+<li><p>Linear transform. Like standard normalized work better for X.</p>
+</li>
+</ul>
+<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><p>Learn lookup table as category representation<br>Category Embedding/ Entity Embedding</p>
+<h5 id="Numerical-Embedding"><a href="#Numerical-Embedding" class="headerlink" title="Numerical Embedding"></a>Numerical Embedding</h5><ul>
+<li>Bin numerical data into intervals.</li>
+<li>as category embedding</li>
+<li>add vicinal info</li>
+</ul>
+<h2 id="Key-–-Value-Based"><a href="#Key-–-Value-Based" class="headerlink" title="Key – Value Based"></a>Key – Value Based</h2><ul>
+<li>df[A].groupby(B).aggregate(func) Func can be anything, F(subgroupby(A)) -&gt; x</li>
+<li>Common aggregate func: mean, std, skew, kurt, entropy, min, max, median, frequency, size etc.</li>
+<li>Residues and weights of Least-squares fitting works well in sequential value.</li>
+<li>High order interaction, groupby().groupby()</li>
+</ul>
+<h2 id="Latent-Representation"><a href="#Latent-Representation" class="headerlink" title="Latent Representation"></a>Latent Representation</h2><p>Use decomposition algorithm to extract latent features.  Works better in neural network than GBDT.  Just fit all handcrafted feature with different decomposition algorithm.</p>
+<ul>
+<li>Topic Models (LDA, SVD, NMF etc).</li>
+<li>Manifold Learning (T-SNE)</li>
+</ul>
+<h2 id="Symbolic-Learning"><a href="#Symbolic-Learning" class="headerlink" title="Symbolic Learning"></a>Symbolic Learning</h2><p>Using symbolics ( + - * / cos sin tan ^ log min max neg…) as functions set to represent a relationship.</p>
+<ul>
+<li>Total different interaction feature.</li>
+<li>Automated feature learning.</li>
+<li>Works in many natural scene, such as astronomical, geological, biological tasks.</li>
+</ul>
+<h2 id="Auto-Encoders"><a href="#Auto-Encoders" class="headerlink" title="Auto Encoders"></a>Auto Encoders</h2><ul>
+<li>Learn to construct clean samples from corrupted ones. (denoise)</li>
+<li>Regularization of the latent space to match a prior. (Always multivariate normal distribution)</li>
+</ul>
+<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><ul>
+<li>FeatureA – FeatureB – aggregate. Everything can construct graph.</li>
+<li>Maximize the likelihood of preserving newwork neighborhoods of nodes.</li>
+<li>Unsupervised learning methods: Deepwalk, node2vec.</li>
+<li>Semi or supervised learning: GCN.</li>
+<li>Deepwalk, node2vec work in many tasks, like CTR, Fraud detection</li>
+</ul>
+<h2 id="End2End-model"><a href="#End2End-model" class="headerlink" title="End2End model"></a>End2End model</h2><ul>
+<li>Online  learning models, FTRL, mini-batch fm, etc.</li>
+<li>DeepFM, DeepFFM,xDeepFM etc.</li>
+<li>Attention based interaction model.</li>
+</ul>
+<h2 id="Target-mean-Encoding"><a href="#Target-mean-Encoding" class="headerlink" title="Target mean Encoding"></a>Target mean Encoding</h2><ul>
+<li>Leave-one-out /K-Folds / history slide window schema to avoid overfitting</li>
+<li>Post-prior schema</li>
+</ul>
+<h2 id="Model-based-target-encoding"><a href="#Model-based-target-encoding" class="headerlink" title="Model based target encoding"></a>Model based target encoding</h2><ul>
+<li>Base model to predict target, with k–folds, user prob as features.</li>
+<li>Base model to predict residuals (target - probs)</li>
+<li>Sometimes, user level-N stacking probs works better.</li>
+</ul>
+<h2 id="Training-amp-Optimization-Tricks"><a href="#Training-amp-Optimization-Tricks" class="headerlink" title="Training &amp; Optimization Tricks"></a>Training &amp; Optimization Tricks</h2><h5 id="Common-Tricks"><a href="#Common-Tricks" class="headerlink" title="Common Tricks"></a>Common Tricks</h5><ul>
+<li>Learning rate schedule. SGD lr=0.1, BS=256, lr * bs / 256= 0.1 * 256</li>
+<li>Label smoothing.</li>
+<li>No bias decay.</li>
+<li>Bias initial with prior distribution.</li>
+<li>Focal loss is a good metric for estimating models’capabilities.</li>
+<li>Combine multi loss let the model converge rapidly towards better performance.</li>
+<li>User standart scaler transform First.</li>
+<li>Sometimes userful, but all depends on data.</li>
+</ul>
+<h5 id="NLP-task-traning-Tricks"><a href="#NLP-task-traning-Tricks" class="headerlink" title="NLP task traning Tricks"></a>NLP task traning Tricks</h5><ul>
+<li>Diverse pre-trained embeddings</li>
+<li>more than 90% of a model’s complexity resides the embedding layer.</li>
+<li>Contextual level embedding always helps.</li>
+<li>But now we have BERT.</li>
+<li>Dynamic Padding boosts training speed and model performance.</li>
+<li>Add test oov vocabs to embedding matrix.</li>
+<li>OOV replaced with“something”</li>
+<li>Adamw really works in many NLP tasks.</li>
+<li>Spatial Droupout, shuflle noise in classification task.</li>
+<li>Translation Aumentation. En-Fr, En-Fr-En.</li>
+</ul>
+<h5 id="CV-task-training-Tricks"><a href="#CV-task-training-Tricks" class="headerlink" title="CV task training Tricks"></a>CV task training Tricks</h5><ul>
+<li>ResNet is always a good baseline model to do experiments.</li>
+<li>Warm-up learning rate + cos learnging rate decay.</li>
+<li>Manual Learning rate schedule.</li>
+<li>Batch with different loss accumulate.</li>
+<li>User more shape relevance augmentation.</li>
+<li>CNN tend to learn texture information but not shape info.</li>
+<li>Auto augmentation.</li>
+</ul>
+<h5 id="Pseudo-Learning"><a href="#Pseudo-Learning" class="headerlink" title="Pseudo Learning"></a>Pseudo Learning</h5><ul>
+<li>Filtering hard examples in training dataset use OOF prediction.</li>
+<li>Global variance info leakage.</li>
+<li>Add the most confident test predictions to the training dataset.<br>Test distribution leakage, data extend<br>Simple in Batch Traning Models.<br>User single model to label test dataset.<br>Retrain model with each batch add 10~30% test pseudo labeled data.</li>
+</ul>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
+<li>逻辑性（代码架构清晰、自动化框架、特征工程MECE）</li>
+<li>代码可复用（不重复造轮子）</li>
+<li>基于业务的分析（bad case 分析、Kernels、Discussion、相似比赛）</li>
+<li>反思总结</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckj8bjd6100127xdl87kv5cjc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/11/Word2Vec/" class="article-date">
@@ -127,65 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckj8bffzo0014v4dlcjiohmx6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
-<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
-<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
-<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
-<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
-<p>四个核心能力</p>
-<ul>
-<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
-<li>阅读书籍和很多论文</li>
-<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
-<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
-</ul>
-<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckj8bffzp0016v4dlc19m2t88" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckj8bjd65001e7xdl1g78g30g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -276,7 +374,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckj8bffzw001uv4dl2of85uh6" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/02/2019%20Annual%20Summary/" data-id="ckj8bjd6a001w7xdl9vvq5rq3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckj8bffzr001ev4dl6ixb2124" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckj8bjd6300197xdlba578du5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -384,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckj8bffzb0008v4dl1lwmg3ch" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckj8bjd5m00067xdl0fsc5uat" class="article-share-link">Share</a>
       
       
     </footer>
@@ -470,7 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckj8bffz90006v4dle8kg0fsg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckj8bjd5m00057xdlf48aeymk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -832,7 +930,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckj8bffzx001vv4dlaunsbi3g" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckj8bjd6a001x7xdldip82piv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -939,7 +1037,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/01/02/2018%20Annual%20Summary/" data-id="ckj8bffz40001v4dleo38254r" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/01/02/2018%20Annual%20Summary/" data-id="ckj8bjd5h00017xdl8we7b6ke" class="article-share-link">Share</a>
       
       
     </footer>
