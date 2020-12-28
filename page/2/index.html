@@ -67,6 +67,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Faiss" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/04/Faiss/" class="article-date">
+  <time datetime="2020-04-04T12:11:00.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/Faiss/">Faiss</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>A library for efficient similarity search and clustering of dense vectors.Faiss：高效稠密向量相似Top检索库;</li>
+<li>Faiss contains several methods for similarity search. It assumes that the instances are represented as vectors and are identified by an integer, and that the vectors can be compared with L2 (Euclidean) distances or dot products. Vectors that are similar to a query vector are those that have the lowest L2 distance or the highest dot product with the query vector. It also supports cosine similarity, since this is a dot product on normalized vectors. Faiss支持多种相似度检索度量：L2距离，点积和余弦相似度。</li>
+</ul>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 更新conda</span></span><br><span class="line">conda update conda</span><br><span class="line"><span class="meta">#</span><span class="bash"> 先安装mkl</span></span><br><span class="line">conda install mkl</span><br><span class="line"><span class="meta">#</span><span class="bash"> gpu版本 -- 记得根据自己安装的cuda版本安装对应的faiss版本，不然会出异常</span></span><br><span class="line">conda install faiss-gpu cudatoolkit=10.0 -c pytorch # For CUDA10</span><br></pre></td></tr></table></figure>
+
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> faiss</span><br><span class="line">d = <span class="number">64</span>                           <span class="comment"># dimension</span></span><br><span class="line">nb = <span class="number">100000</span>                      <span class="comment"># database size</span></span><br><span class="line">nq = <span class="number">10000</span>                       <span class="comment"># nb of queries</span></span><br><span class="line">np.random.seed(<span class="number">1234</span>)             <span class="comment"># make reproducible</span></span><br><span class="line">xb = np.random.random((nb, d)).astype(<span class="string">&#x27;float32&#x27;</span>)</span><br><span class="line">xq = np.random.random((nq, d)).astype(<span class="string">&#x27;float32&#x27;</span>)</span><br><span class="line">xb[:, <span class="number">0</span>] += np.arange(nb) / <span class="number">1000.</span></span><br><span class="line">xq[:, <span class="number">0</span>] += np.arange(nq) / <span class="number">1000.</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Faiss is built around the Index object.</span></span><br><span class="line"><span class="string">It encapsulates the set of database vectors, and optionally preprocesses them to make searching efficient.</span></span><br><span class="line"><span class="string">There are many types of indexes,</span></span><br><span class="line"><span class="string">we are going to use the simplest version that just performs brute-force L2 distance search on them: IndexFlatL2.</span></span><br><span class="line"><span class="string">All indexes need to know when they are built which is the dimensionality of the vectors they operate on, d in our case.</span></span><br><span class="line"><span class="string">Then, most of the indexes also require a training phase, to analyze the distribution of the vectors. For IndexFlatL2, we can skip this operation.</span></span><br><span class="line"><span class="string">When the index is built and trained, two operations can be performed on the index: add and search.</span></span><br><span class="line"><span class="string">To add elements to the index, we call add on xb.</span></span><br><span class="line"><span class="string">We can also display the two state variables of the index: is_trained, a boolean that indicates whether training is required and ntotal, the number of indexed vectors.</span></span><br><span class="line"><span class="string">Some indexes can also store integer IDs corresponding to each of the vectors (but not IndexFlatL2).</span></span><br><span class="line"><span class="string">If no IDs are provided, add just uses the vector ordinal as the id, ie. the first vector gets 0, the second 1, etc.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">index = faiss.IndexFlatL2(d)     <span class="comment"># build the index</span></span><br><span class="line">print(index.is_trained)          <span class="comment"># log: True</span></span><br><span class="line">index.add(xb)                    <span class="comment"># add vectors to the index</span></span><br><span class="line">print(index.ntotal)              <span class="comment"># log: 100000</span></span><br><span class="line">​</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">The basic search operation that can be performed on an index is the k-nearest-neighbor search,</span></span><br><span class="line"><span class="string">ie. for each query vector, find its k nearest neighbors in the database.</span></span><br><span class="line"><span class="string">The result of this operation can be conveniently stored in an integer matrix of size nq-by-k,</span></span><br><span class="line"><span class="string">where row i contains the IDs of the neighbors of query vector i, sorted by increasing distance.</span></span><br><span class="line"><span class="string">In addition to this matrix, the search operation returns a nq-by-k floating-point matrix with the corresponding squared distances.</span></span><br><span class="line"><span class="string">As a sanity check, we can first search a few database vectors, to make sure the nearest neighbor is indeed the vector itself.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">k = <span class="number">4</span>                          <span class="comment"># we want to see 4 nearest neighbors</span></span><br><span class="line">D, I = index.search(xb[:<span class="number">5</span>], k) <span class="comment"># sanity check</span></span><br><span class="line">print(I)</span><br><span class="line">print(D)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[  0 393 363  78]</span></span><br><span class="line"><span class="string"> [  1 555 277 364]</span></span><br><span class="line"><span class="string"> [  2 304 101  13]</span></span><br><span class="line"><span class="string"> [  3 173  18 182]</span></span><br><span class="line"><span class="string"> [  4 288 370 531]]</span></span><br><span class="line"><span class="string">[[0.        7.1751738 7.20763   7.2511625]</span></span><br><span class="line"><span class="string"> [0.        6.3235645 6.684581  6.799946 ]</span></span><br><span class="line"><span class="string"> [0.        5.7964087 6.391736  7.2815123]</span></span><br><span class="line"><span class="string"> [0.        7.2779055 7.527987  7.6628466]</span></span><br><span class="line"><span class="string"> [0.        6.7638035 7.2951202 7.3688145]]</span></span><br><span class="line"><span class="string">the nearest neighbor of each query is indeed the index of the vector,</span></span><br><span class="line"><span class="string">and the corresponding distance is 0. And within a row, distances are increasing.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">D, I = index.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                   <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 381  207  210  477]</span></span><br><span class="line"><span class="string"> [ 526  911  142   72]</span></span><br><span class="line"><span class="string"> [ 838  527 1290  425]</span></span><br><span class="line"><span class="string"> [ 196  184  164  359]</span></span><br><span class="line"><span class="string"> [ 526  377  120  425]]</span></span><br><span class="line"><span class="string">[[ 9900 10500  9309  9831]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 11103 10164  9787]</span></span><br><span class="line"><span class="string"> [10571 10664 10632  9638]</span></span><br><span class="line"><span class="string"> [ 9628  9554 10036  9582]]</span></span><br><span class="line"><span class="string">Because of the value added to the first component of the vectors,</span></span><br><span class="line"><span class="string">the dataset is smeared along the first axis in d-dim space. </span></span><br><span class="line"><span class="string">So the neighbors of the first few vectors are around the beginning of the dataset,</span></span><br><span class="line"><span class="string">and the ones of the vectors around ~10000 are also around index 10000 in the dataset.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">To speed up the search, it is possible to segment the dataset into pieces.</span></span><br><span class="line"><span class="string">We define Voronoi cells in the d-dimensional space, and each database vector falls in one of the cells.</span></span><br><span class="line"><span class="string">At search time, only the database vectors y contained in the cell the query x falls in and a few neighboring ones are compared against the query vector.</span></span><br><span class="line"><span class="string">This is done via the IndexIVFFlat index.</span></span><br><span class="line"><span class="string">This type of index requires a training stage, that can be performed on any collection of vectors that has the same distribution as the database vectors.</span></span><br><span class="line"><span class="string">In this case we just use the database vectors themselves.</span></span><br><span class="line"><span class="string">The IndexIVFFlat also requires another index, the quantizer, that assigns vectors to Voronoi cells.</span></span><br><span class="line"><span class="string">Each cell is defined by a centroid, and finding the Voronoi cell a vector falls in consists in finding the nearest neighbor of the vector in the set of centroids.</span></span><br><span class="line"><span class="string">This is the task of the other index, which is typically an IndexFlatL2.</span></span><br><span class="line"><span class="string">There are two parameters to the search method: nlist, the number of cells, and nprobe, the number of cells (out of nlist) that are visited to perform a search.</span></span><br><span class="line"><span class="string">The search time roughly increases linearly with the number of probes plus some constant due to the quantization.</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">nlist = <span class="number">100</span>                       <span class="comment"># 聚类中心个数</span></span><br><span class="line">k = <span class="number">4</span></span><br><span class="line">quantizer = faiss.IndexFlatL2(d)  <span class="comment"># the other index</span></span><br><span class="line">index = faiss.IndexIVFFlat(quantizer, d, nlist)</span><br><span class="line"><span class="keyword">assert</span> <span class="keyword">not</span> index.is_trained</span><br><span class="line">index.train(xb)</span><br><span class="line"><span class="keyword">assert</span> index.is_trained</span><br><span class="line"></span><br><span class="line">index.add(xb)                  <span class="comment"># add may be a bit slower as well</span></span><br><span class="line">D, I = index.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 9900  9309  9810 10048]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 10164  9787 10719]</span></span><br><span class="line"><span class="string"> [10571 10664 10632 10203]</span></span><br><span class="line"><span class="string"> [ 9628  9554  9582 10304]]</span></span><br><span class="line"><span class="string">The values are similar, but not exactly the same as for the brute-force search (see above).</span></span><br><span class="line"><span class="string">This is because some of the results were not in the exact same Voronoi cell.</span></span><br><span class="line"><span class="string">Therefore, visiting a few more cells may prove useful. &#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">index.nprobe = <span class="number">10</span>              <span class="comment"># default nprobe is 1, try a few more 默认聚类中心个数1, 尝试调大中心数10</span></span><br><span class="line">D, I = index.search(xq, k)</span><br><span class="line">print(I[<span class="number">-5</span>:])                  <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[[ 9900 10500  9309  9831]</span></span><br><span class="line"><span class="string"> [11055 10895 10812 11321]</span></span><br><span class="line"><span class="string"> [11353 11103 10164  9787]</span></span><br><span class="line"><span class="string"> [10571 10664 10632  9638]</span></span><br><span class="line"><span class="string"> [ 9628  9554 10036  9582]]</span></span><br><span class="line"><span class="string">which is the correct result.</span></span><br><span class="line"><span class="string">Note that getting a perfect result in this case is merely an artifact of the data distribution,</span></span><br><span class="line"><span class="string">as it is has a strong component on the x-axis which makes it easier to handle.</span></span><br><span class="line"><span class="string">The nprobe parameter is always a way of adjusting the tradeoff between speed and accuracy of the result.</span></span><br><span class="line"><span class="string">Setting nprobe = nlist gives the same result as the brute-force search (but slower).</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">ngpus = faiss.get_num_gpus()</span><br><span class="line">print(<span class="string">&#x27;number of GPUS:&#x27;</span>, ngpus)</span><br><span class="line">res = faiss.StandardGpuResources()</span><br><span class="line"><span class="comment"># build a flat (CPU) index</span></span><br><span class="line">index_flat = faiss.IndexFlatL2(d)</span><br><span class="line"><span class="comment"># make it into a gpu index</span></span><br><span class="line">gpu_index_flat = faiss.index_cpu_to_gpu(res, <span class="number">0</span>, index_flat)</span><br><span class="line">gpu_index_flat.add(xb)</span><br><span class="line">print(gpu_index_flat.ntotal)</span><br><span class="line">D, I = gpu_index_flat.search(xq, k)     <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                            <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                           <span class="comment"># neighbors of the 5 last queries</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># add self defined index</span></span><br><span class="line">index = faiss.IndexFlatL2(xb.shape[<span class="number">1</span>])</span><br><span class="line">ids = np.arange(xb.shape[<span class="number">0</span>]) + <span class="number">231</span></span><br><span class="line">index2 = faiss.IndexIDMap(index)</span><br><span class="line">index2.add_with_ids(xb, ids)</span><br><span class="line">k = <span class="number">4</span>                                   <span class="comment"># we want to see 4 nearest neighbors</span></span><br><span class="line">D, I = index2.search(xq, k)             <span class="comment"># actual search</span></span><br><span class="line">print(I[:<span class="number">5</span>])                            <span class="comment"># neighbors of the 5 first queries</span></span><br><span class="line">print(I[<span class="number">-5</span>:])                           <span class="comment"># neighbors of the 5 last queries</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckj8bffzf000hv4dl7qhmeoiu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-financial" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/04/financial/" class="article-date">
@@ -100,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckj8b4oaw001baidl44xg8ykw" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckj8bffzq0019v4dlgz788slh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -228,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckj8b4oax001faidl4335781n" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckj8bffzs001gv4dlcuurdrx2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -277,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckj8b4oam000kaidl18kpgf7g" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckj8bffzg000kv4dla8b1a6ao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -320,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckj8b4oan000maidlh91cems7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckj8bffzh000lv4dl3j0i1gz0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -420,7 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckj8b4oao000paidl982wei6s" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckj8bffzk000uv4dlckuj5wnh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -489,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckj8b4oaj000daidleshv5ijk" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckj8bffzi000ov4dl9xc0a32p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -564,7 +613,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckj8b4oar000waidlcipv3ju8" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckj8bffzj000sv4dlgqsy94lu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -612,7 +661,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckj8b4oav0018aidl8mbm8hrk" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckj8bffzq001bv4dlaykb9yte" class="article-share-link">Share</a>
       
       
     </footer>
@@ -768,77 +817,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckj8b4oar000yaidl9fvbczi3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg" style="display: inline-block;"/>
-</div>
-
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg" style="display: inline-block;"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div style="text-align: center;">
-<img alt="" src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg" style="display: inline-block;"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckj8b4oas0011aidl4g4o6vey" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckj8bffzl000wv4dlgf21fy8b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -895,6 +874,10 @@
           </li>
         
           <li>
+            <a href="/2020/12/31/2020%20Annual%20Summary/">2020 Annual Summary</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
           </li>
         
@@ -904,10 +887,6 @@
         
           <li>
             <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/">Hexo搭建</a>
           </li>
         
       </ul>
