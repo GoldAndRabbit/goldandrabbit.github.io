@@ -67,6 +67,221 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-pickle dump OverflowError" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/03/pickle%20dump%20OverflowError/" class="article-date">
+  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/03/pickle%20dump%20OverflowError/">pickle dump OverflowError</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<p>报错如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OverflowError: cannot serialize a bytes object larger than <span class="number">4</span> GiB</span><br><span class="line">解决方法</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pickle.dump(d, open(<span class="string">&quot;file&quot;</span>, <span class="string">&#x27;w&#x27;</span>), protocol=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>官方文档</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Protocol version <span class="number">0</span> <span class="keyword">is</span> the original “human-readable” protocol <span class="keyword">and</span> <span class="keyword">is</span> backwards compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">1</span> <span class="keyword">is</span> an old binary format which <span class="keyword">is</span> also compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">2</span> was introduced <span class="keyword">in</span> Python <span class="number">2.3</span>. It provides much more efficient pickling of new-style classes. Refer to PEP <span class="number">307</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">2.</span></span><br><span class="line">Protocol version <span class="number">3</span> was added <span class="keyword">in</span> Python <span class="number">3.0</span>. It has explicit support <span class="keyword">for</span> bytes objects <span class="keyword">and</span> cannot be unpickled by Python <span class="number">2.</span>x. This <span class="keyword">is</span> the default protocol, <span class="keyword">and</span> the recommended protocol when compatibility <span class="keyword">with</span> other Python <span class="number">3</span> versions <span class="keyword">is</span> required.</span><br><span class="line">Protocol version <span class="number">4</span> was added <span class="keyword">in</span> Python <span class="number">3.4</span>. It adds support <span class="keyword">for</span> very large objects, pickling more kinds of objects, <span class="keyword">and</span> some data format optimizations. Refer to PEP <span class="number">3154</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">4.</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjavh0zz001fg1dl7h94a34i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Tricks in Data Mining Competitions" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/">Tricks in Data Mining Competitions</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Feature-Engineering-Basic"><a href="#Feature-Engineering-Basic" class="headerlink" title="Feature Engineering Basic"></a>Feature Engineering Basic</h2><h3 id="Discretizer-Bin-continuous-data-into-intervals"><a href="#Discretizer-Bin-continuous-data-into-intervals" class="headerlink" title="Discretizer, Bin continuous data into intervals"></a>Discretizer, Bin continuous data into intervals</h3><ul>
+<li>Uniform – All bins in each feature have identical widths.</li>
+<li>Quantitle – All bins in each feature have the same number of points.</li>
+<li>Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.</li>
+</ul>
+<h3 id="Binazier-Encode-categorical-features"><a href="#Binazier-Encode-categorical-features" class="headerlink" title="Binazier, Encode categorical features"></a>Binazier, Encode categorical features</h3><ul>
+<li>OneHotEncoder, OrdinalEncoder, HashMap, etc.</li>
+</ul>
+<h3 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h3><h5 id="Linear-Scaler"><a href="#Linear-Scaler" class="headerlink" title="Linear Scaler"></a>Linear Scaler</h5><ul>
+<li>Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）</li>
+</ul>
+<h5 id="Non-Linear-Scaler"><a href="#Non-Linear-Scaler" class="headerlink" title="Non-Linear Scaler"></a>Non-Linear Scaler</h5><ul>
+<li><p>Gaussian-like Scaler.<br>  Box-Cox/Yeo-Johnson.<br>  RankGauss.</p>
+</li>
+<li><p>XX-like Scaler<br>  Use icdf of target distribution to transform (cdfX)</p>
+</li>
+<li><p>Non-linear transforms such as Box-Cox may be userful to transform y. Diversity for ensemble, sometimes with better performance.</p>
+</li>
+<li><p>Yeo-Johnson transform.</p>
+</li>
+<li><p>Linear transform. Like standard normalized work better for X.</p>
+</li>
+</ul>
+<hr>
+<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><p>Learn lookup table as category representation</p>
+<h5 id="Category-Embedding-Entity-Embedding"><a href="#Category-Embedding-Entity-Embedding" class="headerlink" title="Category Embedding/ Entity Embedding"></a>Category Embedding/ Entity Embedding</h5><h5 id="Numerical-Embedding"><a href="#Numerical-Embedding" class="headerlink" title="Numerical Embedding"></a>Numerical Embedding</h5><ul>
+<li>Bin numerical data into intervals.</li>
+<li>as category embedding</li>
+<li>add vicinal info</li>
+</ul>
+<hr>
+<h2 id="Key-–-Value-Based"><a href="#Key-–-Value-Based" class="headerlink" title="Key – Value Based"></a>Key – Value Based</h2><ul>
+<li>df[A].groupby(B).aggregate(func) Func can be anything, F(subgroupby(A)) -&gt; x</li>
+<li>Common aggregate func: mean, std, skew, kurt, entropy, min, max, median, frequency, size etc.</li>
+<li>Residues and weights of Least-squares fitting works well in sequential value.</li>
+<li>High order interaction, groupby().groupby()</li>
+</ul>
+<hr>
+<h2 id="Latent-Representation"><a href="#Latent-Representation" class="headerlink" title="Latent Representation"></a>Latent Representation</h2><p>Use decomposition algorithm to extract latent features.  Works better in neural network than GBDT.  Just fit all handcrafted feature with different decomposition algorithm.</p>
+<ul>
+<li>Topic Models (LDA, SVD, NMF etc).</li>
+<li>Manifold Learning (T-SNE)</li>
+</ul>
+<hr>
+<h2 id="Symbolic-Learning"><a href="#Symbolic-Learning" class="headerlink" title="Symbolic Learning"></a>Symbolic Learning</h2><p>Using symbolics ( + - * / cos sin tan ^ log min max neg…) as functions set to represent a relationship.</p>
+<ul>
+<li>Total different interaction feature.</li>
+<li>Automated feature learning.</li>
+<li>Works in many natural scene, such as astronomical, geological, biological tasks.</li>
+</ul>
+<hr>
+<h2 id="Auto-Encoders"><a href="#Auto-Encoders" class="headerlink" title="Auto Encoders"></a>Auto Encoders</h2><ul>
+<li>Learn to construct clean samples from corrupted ones. (denoise)</li>
+<li>Regularization of the latent space to match a prior. (Always multivariate normal distribution)</li>
+</ul>
+<hr>
+<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><ul>
+<li>FeatureA – FeatureB – aggregate. Everything can construct graph.</li>
+<li>Maximize the likelihood of preserving newwork neighborhoods of nodes.</li>
+<li>Unsupervised learning methods: Deepwalk, node2vec.</li>
+<li>Semi or supervised learning: GCN.</li>
+<li>Deepwalk, node2vec work in many tasks, like CTR, Fraud detection</li>
+</ul>
+<hr>
+<h2 id="End2End-model"><a href="#End2End-model" class="headerlink" title="End2End model"></a>End2End model</h2><ul>
+<li>Online  learning models, FTRL, mini-batch fm, etc.</li>
+<li>DeepFM, DeepFFM,xDeepFM etc.</li>
+<li>Attention based interaction model.</li>
+</ul>
+<hr>
+<h2 id="Target-mean-Encoding"><a href="#Target-mean-Encoding" class="headerlink" title="Target mean Encoding"></a>Target mean Encoding</h2><ul>
+<li>Leave-one-out /K-Folds / history slide window schema to avoid overfitting</li>
+<li>Post-prior schema</li>
+</ul>
+<hr>
+<h2 id="Model-based-target-encoding"><a href="#Model-based-target-encoding" class="headerlink" title="Model based target encoding"></a>Model based target encoding</h2><ul>
+<li>Base model to predict target, with k–folds, user prob as features.</li>
+<li>Base model to predict residuals (target - probs)</li>
+<li>Sometimes, user level-N stacking probs works better.</li>
+</ul>
+<hr>
+<h2 id="Training-amp-Optimization-Tricks"><a href="#Training-amp-Optimization-Tricks" class="headerlink" title="Training &amp; Optimization Tricks"></a>Training &amp; Optimization Tricks</h2><h5 id="Common-Tricks"><a href="#Common-Tricks" class="headerlink" title="Common Tricks"></a>Common Tricks</h5><ul>
+<li>Learning rate schedule. SGD lr=0.1, BS=256, lr * bs / 256= 0.1 * 256</li>
+<li>Label smoothing.</li>
+<li>No bias decay.</li>
+<li>Bias initial with prior distribution.</li>
+<li>Focal loss is a good metric for estimating models’capabilities.</li>
+<li>Combine multi loss let the model converge rapidly towards better performance.</li>
+<li>User standart scaler transform First.</li>
+<li>Sometimes userful, but all depends on data.</li>
+</ul>
+<h5 id="NLP-task-traning-Tricks"><a href="#NLP-task-traning-Tricks" class="headerlink" title="NLP task traning Tricks"></a>NLP task traning Tricks</h5><ul>
+<li>Diverse pre-trained embeddings</li>
+<li>more than 90% of a model’s complexity resides the embedding layer.</li>
+<li>Contextual level embedding always helps.</li>
+<li>But now we have BERT.</li>
+<li>Dynamic Padding boosts training speed and model performance.</li>
+<li>Add test oov vocabs to embedding matrix.</li>
+<li>OOV replaced with“something”</li>
+<li>Adamw really works in many NLP tasks.</li>
+<li>Spatial Droupout, shuflle noise in classification task.</li>
+<li>Translation Aumentation. En-Fr, En-Fr-En.</li>
+</ul>
+<h5 id="CV-task-training-Tricks"><a href="#CV-task-training-Tricks" class="headerlink" title="CV task training Tricks"></a>CV task training Tricks</h5><ul>
+<li>ResNet is always a good baseline model to do experiments.</li>
+<li>Warm-up learning rate + cos learnging rate decay.</li>
+<li>Manual Learning rate schedule.</li>
+<li>Batch with different loss accumulate.</li>
+<li>User more shape relevance augmentation.</li>
+<li>CNN tend to learn texture information but not shape info.</li>
+<li>Auto augmentation.</li>
+</ul>
+<h5 id="Pseudo-Learning"><a href="#Pseudo-Learning" class="headerlink" title="Pseudo Learning"></a>Pseudo Learning</h5><ul>
+<li>Filtering hard examples in training dataset use OOF prediction.</li>
+<li>Global variance info leakage.</li>
+<li>Add the most confident test predictions to the training dataset.<br>Test distribution leakage, data extend<br>Simple in Batch Traning Models.<br>User single model to label test dataset.<br>Retrain model with each batch add 10~30% test pseudo labeled data.</li>
+</ul>
+<hr>
+<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
+<li>逻辑性（代码架构清晰、自动化框架、特征工程MECE）</li>
+<li>代码可复用（不重复造轮子）</li>
+<li>基于业务的分析（bad case 分析、Kernels、Discussion、相似比赛）</li>
+<li>反思总结</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjavh0zw0017g1dl9kbl3u2f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/11/Word2Vec/" class="article-date">
@@ -100,17 +315,17 @@
 <center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
 
 <p>One of the most successful ideas of modern statistical NLP!</p>
-<div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg" style="display: inline-block;"/>
+<div align="center">
+<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
 </div>
 
 
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div style="text-align: center;">
-<img alt="" src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg" style="display: inline-block;"/>
+<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
+<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
 </div>
 
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div style="text-align: center;">
-<img alt="" src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg" style="display: inline-block;"/>
+<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
+<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
 </div>
 
 <p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
@@ -127,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckj8lukec0011didldogp5k3l" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjavh0zx001ag1dl2wmx42ae" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckj8lukeg0016didl8ba5665a" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjavh0zy001cg1dl5p2yhl9w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckj8lukem001sdidl055p6kro" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjavh106001xg1dlg4vlela4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -348,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckj8lukei001ddidl678yark3" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjavh101001kg1dlbeclflxr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -399,7 +614,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckj8luke00008didlgjf99aq0" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjavh0zf0006g1dl8ciqano7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -485,7 +700,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckj8luke00006didlds1q9e08" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjavh0zg0008g1dldl905x2z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -847,7 +1062,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckj8luken001tdidl89nig533" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckjavh106001yg1dl3papbgkm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -857,14 +1072,14 @@
 
 
   
-    <article id="post-2018 Annual Summary" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mkl Cannot load libmkl_avx2.so or libmkl_def.so" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/12/31/2018%20Annual%20Summary/" class="article-date">
-  <time datetime="2018-12-31T12:17:00.000Z" itemprop="datePublished">2018-12-31</time>
+    <a href="/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/" class="article-date">
+  <time datetime="2019-05-01T05:03:00.000Z" itemprop="datePublished">2019-05-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
   </div>
 
   </div>
@@ -875,7 +1090,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/31/2018%20Annual%20Summary/">2018 Annual Summary</a>
+      <a class="article-title" href="/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/">mkl Cannot load libmkl_avx2.so or libmkl_def.so</a>
     </h1>
   
 
@@ -885,85 +1100,20 @@
       
       	<!-- Table of Contents -->
 		
-        <hr>
-<h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><ul>
-<li>今年给自己的年度关键词是:体验</li>
-</ul>
-<hr>
-<h2 id="工作总结-实习和面试经历"><a href="#工作总结-实习和面试经历" class="headerlink" title="工作总结-实习和面试经历"></a>工作总结-实习和面试经历</h2><ul>
-<li>累计面试20+场，其中滴滴面试官给了比较干货的建议，直接推荐follow具体researcher研究，算法研究工作solid；苹果电话面试没有太多准备, 英文交流中口语获得认可；</li>
-<li>要学会给面试官自圆其说，以讲算法比赛项目经历来看:毕竟面试官没有参加过比赛，背景和数据要刻意交代清楚，一时回答不满意的答案可以放慢节奏，一边回忆一边猜一遍沟通，猜面试官想听到什么答案，猜对方想听到哪个关键词；</li>
-<li>不同面试官面试风格迥异:有的正常流程不温不火，有的喜欢怼，有的轻描淡写就给过，有的会异常欣赏你，有的感觉根本不是干这个岗位的（提不出像样的问题/在全程被科普知识），不论Handle哪一种都应该不骄不躁；HR面被刷也有可能，要表达对于企业平台/业务/加班的认可甚至是热爱；大公司更看中基础，小公司相对更看中项目经历且给的钱多，发offer随意；</li>
-<li>面试是一种很好的全面的锻炼，能帮助认清自己的实际水平(我甚至有点喜欢这个活动):认清知识上的短板、认清对知识的理解深度，直接提升表达能力和抗压能力；</li>
-<li>B家实习: 管理风格扁平化，leader年轻，员工工作踏实努力，成员很多来自清北中科院但是很多感觉实力一般；boss 洞悉人性，洞悉算法应用的痛点，除加班风格外偏学习Google和FB，互联网风格很强；</li>
-<li>A家实习: 员工整体感觉稳重中带智慧，各得其乐. （甚至桌上足球和台球都很强）相对创业公司流程规范化，技术文档积累沉淀比我想象中做的好，形成了很好的沉淀技术的氛围，公司整体看中综合素质；技术平台化能力很强，运营和产品员工商业sense很强；工作风格偏重思考，能站在高度思考全局，技术/PM运营表达力都相当强</li>
-<li>新人培训在十个队伍里面大多数985 技术 市场形态 表达能力 痛点挖掘 场景拆解，享受氛围；成功带领小组获得第一名 把握头脑风暴节奏 表达多一份准备和真诚</li>
-<li>实习转正: 关于转正slides制作，重要一点是有拆解场景能力，总结归纳场景特点；我当时slides上有文字比过大的问题后期进行了基本的修复；slides制作能力进步明显，但还需要加强；数据可视化时三维图效果优于二维图；</li>
-</ul>
-<h2 id="技术总结"><a href="#技术总结" class="headerlink" title="技术总结"></a>技术总结</h2><ul>
-<li>Codding: Leetcode算上大四和研一刷题累计350道，数量不是关键，如果能做一道融会贯通一道，感觉可能只需要150道medium以上就已经可以了，理解代码质量的三重境界clean code -&gt; concise code-&gt; elegant code，什么代码是好代码？我理解一个粗浅的标准是:在保证正确性的前提下，让另一个人看完他理解的很清晰（或者理解的尽量清楚）</li>
-<li>基础技术:阅读python书一本，基本熟练python OOP开发还有部分语言特性，整体比较enjoy 写python语言代码；Vim基本上手，提升了edit效率，enjoy纯键盘输入；积累NLP在文本分类上的经验；Linux的一些命令遇到了有所总结；配置环境流程化，将常用工具的配置流程进行了整理；</li>
-<li>阅读TensorFlow源码，熟悉官方API文档和经典模型搭建；SQL比之前用的熟练了一些，但是还需要强化，加强复用性；</li>
-<li>梳理CTR预估任务/图学习/推荐系统的技术演变；</li>
-<li>对于流量的思考:更加关注思考互联网中流量和商业模式的关系，更加关注业务的流量结构，更加关注优化目标（比如机器学习任务中的Loss，排序任务中排序公式的设计以及不同的权重因子对业务的影响）；更加关注思考中心化流量和去中心化流量的关系；</li>
-<li>优化机器学习任务整体分为样本层面和模型层面，两个都很重要要注意平衡；更关注embedding的质量；</li>
-<li>对话公司算法研究员:需要学习的是一种算法工程师没有技巧的匠心，晋升首先是看产出，同事也会注重你做出的工作和业界水平的比较；</li>
-<li>复盘过程中的一些感受，以制作slides为例推广到一般公众演讲，主要要确认以下问题:受众是谁？他们有啥本质目的？他们（教育/专业）水平如何？形式是科普大众还是解释专业细节？偏扯淡还是上干货？更关系细节还是更高度概括的内容？适合引经据典带例子还是干货内容一顿铺？形式是偏公式化？还是多图表化？全英文是否可以？还是可以混杂？哪（几）种图最适合表述关键问题？哪（几）个指标才是衡量业务的关键？</li>
-<li>看论文和写论文是两件事，学术论文写作课告诉我们正确的表述清楚，能看得懂是最重要的写论文锻炼了整理思维的意识更多练习一种表达；面对专家评审要从不同角度解释；</li>
-</ul>
-<hr>
-<h2 id="2019改进点"><a href="#2019改进点" class="headerlink" title="2019改进点"></a>2019改进点</h2><ul>
-<li>冬天锻炼懈怠. 北京冬天气比较冷，经常懒得锻炼，有时候雾霾更不想出去，本质还是惰性；</li>
-<li>饮食消费结构优化. 相比上半年，下半年在吃饭上节省了一些，一方面注意避免浪费，一方面注意聚餐计划性还是要强，另一方面注意点餐时刻意提升蔬菜或粗粮在营养结构中的比重. </li>
-<li>技术提升要更关注工程落地. 年轻人主要存在一个问题是想的多做的还是少，实习期间为了转正通过看了很多推荐系统和计算广告的论文意图扩大视野，其实后来想想不如多去关注实际工作中的技术细节重要的多.  </li>
-<li>消费意识. 今年同时换了手机/键盘，体验极佳，关于消费结构的优化上，发现在某些必要工具上“不舍得买”往往可能是是得不偿失，“一步到位”是一种很聪明的做法，以后注意评估买的商品对自己的影响. 有舍才有得. </li>
-<li>日常工作效率的优化. 关于提升日常工作的效率，见思考总结. </li>
-</ul>
-<hr>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>今年找工作主要将精力放在专业书上，其他行业数据阅读较少，2019考虑阅读关于历史和经济学的书；</p>
+        <p>运行faiss的时候遇到Cannot load libmkl_avx2.so or libmkl_def.so.问题  </p>
 <ul>
-<li>论持久战:始终贯穿用哲学视角解释问题；结构化的问题描述；主席具有极其丰富的历史修养和地理积累，分析局势层次清晰，对于敌我态势真正做到了运筹帷幄，自始至终透露着一种谨慎中带着乐观处理问题的态度；感叹于毛主席强悍的预测能力；</li>
-<li>长尾理论:梳理长尾的关键性质，总结如何利用长尾性质发函，思考电商业务/短视频/信息分发长尾这三类在2018年互联网业务高速发展的主要业务，完美印证了长尾对业务发展的核心作用；</li>
+<li>无需重新安装, 添加命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LD_PRELOAD&#x3D;&#x2F;&lt;option your path&gt;&#x2F;anaconda2&#x2F;lib&#x2F;libmkl_rt.so</span><br></pre></td></tr></table></figure>
+到~/.bashrc中</li>
+<li>问题: 是因为环境配置过程中mkl库与其他库的依赖关系出现混乱导致的, 即mkl动态库对应有多处路径</li>
+<li>LD_PRELOAD是个环境变量, 用于动态库的加载, 动态库加载的优先级最高, 一般情况下, 其加载顺序为<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LD_PRELOAD &gt; LD_LIBRARY_PATH &gt; &#x2F;etc&#x2F;ld.so.cache&gt; &#x2F;lib &gt; &#x2F;usr&#x2F;lib </span><br></pre></td></tr></table></figure>
+因此使用最高级别的直接指定, 由于是anaconda中的python内部报错, 所以指定anaconda/lib</li>
 </ul>
-<hr>
-<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="俄罗斯世界杯法国夺冠"><a href="#俄罗斯世界杯法国夺冠" class="headerlink" title="俄罗斯世界杯法国夺冠"></a>俄罗斯世界杯法国夺冠</h5><p>法国实至名归，整体阵容最强，球员动心忍性（尤其是博格巴和在曼联的表现不是一个画风），战术执行简介而到位:吉鲁纯支点（7场主力都没射正过充分说明战术作用在足球比赛获胜中的至高作用），姆巴佩边路高速启动制造威胁，坎特兢兢业业拦截盯防，乌姆蒂蒂和帕瓦尔两个后卫进攻给力，博格巴不浪不乱带，投入在中长调度和积极回防协防；克罗地亚杀入决赛比较惊艳，魔笛刚奥塔门迪一瞬间领袖气质凸显，全队很拼，双方献上了精彩的决赛；C罗对西班牙帽子戏法表现抢眼；</p>
-<h5 id="足协杯决赛北京国安vs山东鲁能"><a href="#足协杯决赛北京国安vs山东鲁能" class="headerlink" title="足协杯决赛北京国安vs山东鲁能"></a>足协杯决赛北京国安vs山东鲁能</h5><p>京鲁大战第一回合TIFO震撼，施密特布局国安传控进攻套路，但是配合过细太复杂没出来效果，边后卫助攻不上来，如果替补出场韦世豪可能会有奇效，鲁能战术抓反击质量效果不错，后卫防守稳健，边后卫发挥可圈可点；第二回合鲁能下半场开局失势有点梦游，国安求胜欲望更强，张稀哲还是靠头球打入关键进球；</p>
-<hr>
-<h2 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h2><ul>
-<li>上半年集中时间投简历/刷题/找实习锻炼被搁置；</li>
-<li>7月到8月之间偶尔跑步机跑步，每次跑30min；</li>
-<li>9月登庐山；11月登香山；</li>
-<li>10月恢复每周和实验室小伙伴在北邮打羽毛球坚持到年底，每次根据人数不同打1.0~2.0小时；</li>
-<li>桌上足球也是一种锻炼，每次打完都能出汗，考验反应速度和手腕灵活性，支持4个人一起玩挺有乐趣，目前水平太菜还需练习；</li>
-</ul>
-<h2 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h2><ul>
-<li>体重增加10斤；</li>
-<li>病史:6月感冒一次，10月份严重腹泻一次，11月着凉感冒一次，12月着凉感冒一次；6月感冒持续3天，11月感冒持续五天，11月感冒持续10天；拳击体验课后请假休息一天；</li>
-<li>饮食:吃水果频率比去年增加，但总体还是比较少，期间有考虑记录吃水果的日志，但是没有坚持下来；六月到九月份吃了很多炸鸡外卖，T家实习期间下午茶吃的多，零食吃得多；A家实习期间每天吃食堂，营养还算均衡；</li>
-<li>三次因为晚上喝咖啡，茶叶，兰芳园奶茶睡不着，以后坚决杜绝；</li>
-</ul>
-<hr>
-<h2 id="社交与活动"><a href="#社交与活动" class="headerlink" title="社交与活动"></a>社交与活动</h2><ul>
-<li>婚礼参加. 参加李，贾，吴，杨四场婚礼，担任一次伴郎还坐了宾利头车，整体过程中十分感动真心替新人高兴，经常让人眼泪刷刷刷，同时发现结婚也是老友聚会的好机会，考虑减少主动少约人聚会（成本高/难聚齐），多参加婚礼抓住叙旧的机会；中国人对于结婚的意义比我想象中还要更深远，过程中当事人家庭非常累；</li>
-<li>团建. T家实习团建，A家杭州团建，A家庆功团建:多人聚餐喝酒场合前期不能多喝要收住；</li>
-<li>银行从业者聚餐. 组织者分享人生经历，感觉他的成功很重要一点源自于中在关键节点做对了很多关键选择，另外在聚餐场合放得开，很健谈；国企从业人员擅长在很哲学或者很抽象很文科的视角谈论问题，聊天时不聊工程/业务细节（略微高谈阔论）他们更容易接受，切勿全程以工程师的风格聊天对方不太有兴趣/不会觉得你牛逼；</li>
-<li>数据挖掘爱好者聚餐. 见到国内众多比赛Top大佬；Kaggle大佬比我想象中更腼腆，没有太多套路，很谦虚，直观感受没有很犀利比较平易近人；</li>
-</ul>
-<hr>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="桂林"><a href="#桂林" class="headerlink" title="桂林"></a>桂林</h5><p>城市比想象中小，从和司机聊天感觉民风淳朴；象鼻山实际样子很小（当时和小学课本给的感觉反差较大）建筑和山相连比较奇特，植物很多很绿；桂林米粉原本的做法是干拌的吃没汤，干拌相对味重比较喜欢；两江四湖主要将不同的景点进行串联，算是一种商业开发，好多景观单独放在一起不起眼，全部连成一片然后打上各种聚光灯，整体效果上升一个档次. </p>
-<h5 id="阳朔"><a href="#阳朔" class="headerlink" title="阳朔"></a>阳朔</h5><p>商业开发严重，啤酒鱼味道一般价格不便宜，椿记烧鹅味道可以；遇龙河漂流感觉很恬静，没有电动船的那种嘈杂，整个人生都安静下来了，师傅连续划船一个多小时感觉确实辛苦；</p>
-<h5 id="庐山"><a href="#庐山" class="headerlink" title="庐山"></a>庐山</h5><p>分AB两条线；五老峰顶峰俯瞰江西鄱阳湖风景净收眼底，观景体验很棒，爬山不累；毛主席在庐山曾经休息，避暑胜地，沁人心脾的凉爽；芦林湖风景好于如琴湖；三叠泉第一眼看有点意思，后面看其实国内还有很多类似的结构；</p>
-<h5 id="长沙"><a href="#长沙" class="headerlink" title="长沙"></a>长沙</h5><p>火宫殿小吃种类很多，经济实惠；臭豆腐做的比较有特色的主要原因是体积较大，豆腐块扎开很多小口将汤料渗入故味道是全方位的；湘江有种历史感，环顾橘子洲能想象毛主席的情怀；岳麓山名气大，但是整体感觉比较普通；</p>
-<h5 id="成都"><a href="#成都" class="headerlink" title="成都"></a>成都</h5><p>商业化气氛浓，小龙坎火锅主要吃油，吃的是一种厚重感，并没有太辣；降龙爪爪卖鸡爪子的店铺挺有特色；青城山后山风景属于意外惊喜，山泉清凉刺激，心旷神怡，正巧碰上大雾天回程坐索道非常刺激；</p>
-<h5 id="长江三峡"><a href="#长江三峡" class="headerlink" title="长江三峡"></a>长江三峡</h5><p>山水相连，两岸连山，长江给人一种包容感和胸怀感养育了南方风水；小三峡和小小三峡是黄金风景，多花30上甲板拍照很值，拍照视野很棒；三峡人家景区拍照效果很好，水面巨绿；三峡大坝没想象中壮观；游船上卡牌游戏套路深不能玩，船长酒会看起来很有仪式感，船上灯光炫目，营造一种觥筹交错氛围，实质可能是像是把你弄得有点晕然后赚一笔，基本都是变着法骗钱；</p>
-<h5 id="重庆"><a href="#重庆" class="headerlink" title="重庆"></a>重庆</h5><p>当地人地方归属感感强，不屑于说普通话；重庆江湖菜很有特色；城市以江景（长江/嘉陵江/乌江三江一体）为主打特色，洪崖洞小吃巨多，晚上观景需要去洪崖洞对面然后过桥观景位置最佳，城市面积巨大，核心景点住宿感觉不便宜；</p>
-<h5 id="杭州"><a href="#杭州" class="headerlink" title="杭州"></a>杭州</h5><p>别墅多高楼很少，空气质量还是那么舒服；</p>
-<h5 id="香山"><a href="#香山" class="headerlink" title="香山"></a>香山</h5><p>在最合适的季节里面发现松树本身比例很高，并不是漫山遍野都是红叶，是在北京生活的人的好去处；</p>
+<h5 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h5><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qikaihuting/java/article/details/103526376">https://blog.csdn.net/qikaihuting/java/article/details/103526376</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2018/12/31/2018%20Annual%20Summary/" data-id="ckj8lukds0000didl9vfe46jh" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/" data-id="ckjavh100001hg1dlbur86s0a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -977,7 +1127,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -1003,7 +1153,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2099/01/">January 2099</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2099/01/">January 2099</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
     </div>
   </div>
 
@@ -1032,7 +1182,7 @@
           </li>
         
           <li>
-            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+            <a href="/2020/11/08/The%20Essence%20of%20RecSys/">The Essence of RecSys</a>
           </li>
         
       </ul>

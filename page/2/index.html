@@ -67,6 +67,84 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Git Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/Git%20Tutorial/" class="article-date">
+  <time datetime="2020-04-05T14:56:00.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/05/Git%20Tutorial/">Git Tutorial</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你自己的github对应的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+<p>一路回车<br>（通过ls查看～/.ssh下面的所有内容查看）</p>
+<p>将刚刚创建的ssh keys添加到github中</p>
+<ol>
+<li>利用gedit/cat命令，查看id_rsa.pub的内容</li>
+<li>在GitHub中，依次点击Settings -&gt; SSH Keys -&gt; Add SSH Key，将id_rsa.pub文件中的字符串复制进去，注意字符串中没有换行和空格。</li>
+</ol>
+<p>再次检查SSH连接情况(在～/.ssh目录下):<br>输入如下命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>看到如下所示，则表示添加成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名! You’ve successfully authenticated, but GitHub does <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>即利用自己的用户名和email地址配置git</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">&quot;你的github用户名&quot;</span></span><br><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">&quot;你的github邮箱地址&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>ps: 为什么配置好了提交代码到远程分之还是要输入密码? clone的时候选择http</p>
+<h2 id="clone-pull-push"><a href="#clone-pull-push" class="headerlink" title="clone, pull, push"></a>clone, pull, push</h2><ul>
+<li><p>clone: 克隆远程分支到本地</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b my_branch &lt;远程仓库地址&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pull: 将远程代码pull[拉取]到本地 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branch_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push: 将本地代码push[推送]到远程</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add yourfilename</span><br><span class="line">git ci -m <span class="string">&quot;说明修改内容: 解决xx问题/增加xx逻辑/修复xxBug&quot;</span></span><br><span class="line">git push origin branch_name</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="merge-v-s-rebase"><a href="#merge-v-s-rebase" class="headerlink" title="merge v.s. rebase"></a>merge v.s. rebase</h2><ul>
+<li>将分支my_branch合并到master分支<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge my_branch</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/04/05/Git%20Tutorial/" data-id="ckjavh0zk000dg1dl9f5e396k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Faiss" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/04/Faiss/" class="article-date">
@@ -106,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckj8luke3000edidlee5sdwwd" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/Faiss/" data-id="ckjavh0zl000gg1dl7ksce47o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -116,9 +194,9 @@
 
 
   
-    <article id="post-financial" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-The Economics of Money, Banking, and Financial Markets" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/04/financial/" class="article-date">
+    <a href="/2020/04/04/The%20Economics%20of%20Money,%20Banking,%20and%20Financial%20Markets/" class="article-date">
   <time datetime="2020-04-04T12:11:00.000Z" itemprop="datePublished">2020-04-04</time>
 </a>
     
@@ -134,7 +212,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/04/financial/">financial</a>
+      <a class="article-title" href="/2020/04/04/The%20Economics%20of%20Money,%20Banking,%20and%20Financial%20Markets/">The Economics of Money, Banking, and Financial Markets</a>
     </h1>
   
 
@@ -149,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/04/04/financial/" data-id="ckj8lukeg0018didl4i3o89g5" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/04/04/The%20Economics%20of%20Money,%20Banking,%20and%20Financial%20Markets/" data-id="ckjavh0zr000vg1dl0ia05mvv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -277,7 +355,96 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckj8lukej001gdidlf8fdgig7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/" data-id="ckjavh102001mg1dlhx7pbxn5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-David Stern, who turned NBA into powerhouse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/18/David%20Stern,%20who%20turned%20NBA%20into%20powerhouse/" class="article-date">
+  <time datetime="2020-02-18T14:56:00.000Z" itemprop="datePublished">2020-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Reading/">Reading</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/18/David%20Stern,%20who%20turned%20NBA%20into%20powerhouse/">David Stern, who turned NBA into powerhouse</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="NBA，一个世界联盟"><a href="#NBA，一个世界联盟" class="headerlink" title="NBA，一个世界联盟"></a>NBA，一个世界联盟</h2><ul>
+<li>从小学时期到现在（2020），NBA贯穿了我的整个成长过程。今天，NBA是一个强大的商业联盟，是一种文化现象，但在早期确实一个美国非常边缘的联赛。</li>
+<li>大卫斯特恩，已故NBA总裁在30年间做对了几个关键决策。本文思考NBA如何从一个美国边缘联赛，成为一种席卷全球的文化现象。</li>
+</ul>
+<hr>
+<h2 id="大卫·斯特恩留给NBA的遗产"><a href="#大卫·斯特恩留给NBA的遗产" class="headerlink" title="大卫·斯特恩留给NBA的遗产"></a>大卫·斯特恩留给NBA的遗产</h2><ul>
+<li>一句话总结：斯特恩把NBA从“职业篮球比赛”变成了“现代体育秀”。NBA不是单纯的一种体育竞技，而是成了一种强大制星能力、强娱乐性的大众文化。有明星、有恩怨、有表演。</li>
+<li>改变NBA的规则，让观众觉得不虚此行、看的过瘾。</li>
+</ul>
+<hr>
+<h5 id="竞技平衡性的政策"><a href="#竞技平衡性的政策" class="headerlink" title="竞技平衡性的政策"></a>竞技平衡性的政策</h5><p>Why 平衡性？</p>
+<ul>
+<li>NBA每支球队处于美国不同的城市，经济水平方差很大。大城市薪水高，小城市开不出薪水。实力越强的球员大概率就去大城市。所以强队越强，弱队越弱。是一种不够健康的发展态势。</li>
+<li>从观众的角度来看，强队虐弱队，缺乏看点。水平旗鼓相当的对抗，最吸引人。因此问题转化为，如何让整体联盟每只球队实力差距不要太大。</li>
+</ul>
+<h5 id="出台“工资帽”制度。"><a href="#出台“工资帽”制度。" class="headerlink" title="出台“工资帽”制度。"></a>出台“工资帽”制度。</h5><ul>
+<li>每个球队工资总和有个硬性上限，大幅度在整体上实力差距很小。（不是没有差距，是让这种差距在一种可以良性发展的范围内，可以接受的范围内）</li>
+</ul>
+<h5 id="调整选秀政策"><a href="#调整选秀政策" class="headerlink" title="调整选秀政策"></a>调整选秀政策</h5><ul>
+<li>改变早期选秀制度的弊端。成绩越差的球队，下一年会有更好的顺位。因此有的球队在第一年肉眼可见拿不到好成绩的时候，就会选择“来年再战，破罐子破摔”这种策略。因此战绩惨不忍睹，观赏性下降。</li>
+<li>排名垫底的若干只球队，都有概率获得状元签，而不是最差的那一只球队。个人感觉就是引入了一些噪声，使得最垫底的球队，自己的想法实现起来有巨大困难，迫使整体而言还是需要把名次向上提升。</li>
+</ul>
+<h5 id="政策鼓励球员得分"><a href="#政策鼓励球员得分" class="headerlink" title="政策鼓励球员得分"></a>政策鼓励球员得分</h5><ul>
+<li>2004引入No Handcheck政策，防守者对于进攻者的身体接触，不能太大。说白了就是让球员的阻碍作用不能太狠，大大增加了更多上篮得分机会。典型的例子就是哈登这种，对于类似的规则相当收益。大大提升了外线球员爆炸性得分的可能性。</li>
+<li>这种政策的效果就是对于造星的效果提升十分明显。有更多的球员有个人突出的表现。明星效应来的比之前强很多。</li>
+</ul>
+<h5 id="改变NBA的产品形式：从”比赛”到”球星”"><a href="#改变NBA的产品形式：从”比赛”到”球星”" class="headerlink" title="改变NBA的产品形式：从”比赛”到”球星”"></a>改变NBA的产品形式：从”比赛”到”球星”</h5><ul>
+<li><p>相比于打造比赛，斯特恩更专注与把一个个球员打造成有故事的产品。你想起来一些球员，可能不是他的名字，而是外号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">约翰逊、拉里伯德、乔丹、詹姆斯、杜兰特、贾巴尔、加内特、邓肯、罗斯、霍华德...</span><br></pre></td></tr></table></figure>
+<p>对比</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">“魔术师”、“大鸟”、“飞人”、“小皇帝”、“死神”、“天沟”、“狼王”、“石佛”、“风城玫瑰”、“魔兽”...</span><br></pre></td></tr></table></figure>
+<p>下面一行称号显然比上面那行更有吸引力、有故事感。</p>
+</li>
+<li><p>塑造豪门对决和恩怨情仇。例如，拉里伯德 v.s. 魔术师这两个时代巨星。凯尔特人 v.s. 湖人两支历史豪门对决</p>
+</li>
+<li><p>热火三巨头：巅峰老詹、巅峰韦德、龙王波什。三个当之无愧的球队老大放在一支球队，能否无敌？</p>
+</li>
+<li><p>各种“反叛”、“背叛”的文化。每段时间都会塑造一些争议人物。杜兰特投敌是对是错？给我的角度我认为追求总冠军是是没错的，同时对于俄克拉荷马也不欠什么，但是大多数球迷可能认为杜兰特背叛了俄克拉荷马。</p>
+</li>
+<li><p>造星推进手段1：全明星赛。NBA全明星赛是造星思想的最好体现。开场前的主持人依次介绍每个球员。还会请明星来演唱。绝对不仅仅是一场单纯的经济体育。在全明星赛上面基本上球员不怎么加强防守（多数只有比赛最后一节才认真），以各种夸张的扣篮、空接为主，即使是不爱看篮球的，看完都会很过瘾。</p>
+</li>
+</ul>
+<p>拉文罚球线扣篮</p>
+<ul>
+<li>造星推进手段2：“圣诞大战” 。安排最强的几支队伍在圣诞节期间强强对话，几乎是额外增加一次重演季后赛决赛或者东西部半决赛的看点。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/02/18/David%20Stern,%20who%20turned%20NBA%20into%20powerhouse/" data-id="ckjavh0zh0009g1dl5h5ag7kk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckj8luke7000mdidl92mw6i2x" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/18/Linux%20Commands/" data-id="ckjavh0zp000og1dl5i0pf6oy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -369,7 +536,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckj8luke8000pdidl7rzfgb6r" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Recurrent%20Neural%20Network/" data-id="ckjavh0zq000qg1dlgyis66ix" class="article-share-link">Share</a>
       
       
     </footer>
@@ -469,7 +636,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckj8luked0013didlbyw31i5d" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/13/Tensorflow%20API/" data-id="ckjavh0zs000xg1dl3p1q0m7p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -538,7 +705,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckj8luke4000hdidl4la4akiu" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckjavh0zm000hg1dl4yrwchnc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -613,222 +780,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckj8lukeb000wdidl4gu31bu1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-pickle dump OverflowError" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/03/pickle%20dump%20OverflowError/" class="article-date">
-  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/03/pickle%20dump%20OverflowError/">pickle dump OverflowError</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<p>报错如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OverflowError: cannot serialize a bytes object larger than <span class="number">4</span> GiB</span><br><span class="line">解决方法</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pickle.dump(d, open(<span class="string">&quot;file&quot;</span>, <span class="string">&#x27;w&#x27;</span>), protocol=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<p>官方文档</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Protocol version <span class="number">0</span> <span class="keyword">is</span> the original “human-readable” protocol <span class="keyword">and</span> <span class="keyword">is</span> backwards compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">1</span> <span class="keyword">is</span> an old binary format which <span class="keyword">is</span> also compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">2</span> was introduced <span class="keyword">in</span> Python <span class="number">2.3</span>. It provides much more efficient pickling of new-style classes. Refer to PEP <span class="number">307</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">2.</span></span><br><span class="line">Protocol version <span class="number">3</span> was added <span class="keyword">in</span> Python <span class="number">3.0</span>. It has explicit support <span class="keyword">for</span> bytes objects <span class="keyword">and</span> cannot be unpickled by Python <span class="number">2.</span>x. This <span class="keyword">is</span> the default protocol, <span class="keyword">and</span> the recommended protocol when compatibility <span class="keyword">with</span> other Python <span class="number">3</span> versions <span class="keyword">is</span> required.</span><br><span class="line">Protocol version <span class="number">4</span> was added <span class="keyword">in</span> Python <span class="number">3.4</span>. It adds support <span class="keyword">for</span> very large objects, pickling more kinds of objects, <span class="keyword">and</span> some data format optimizations. Refer to PEP <span class="number">3154</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">4.</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckj8lukeh001bdidl5g1u8fqz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Tricks in Data Mining Competitions" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/">Tricks in Data Mining Competitions</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Feature-Engineering-Basic"><a href="#Feature-Engineering-Basic" class="headerlink" title="Feature Engineering Basic"></a>Feature Engineering Basic</h2><h3 id="Discretizer-Bin-continuous-data-into-intervals"><a href="#Discretizer-Bin-continuous-data-into-intervals" class="headerlink" title="Discretizer, Bin continuous data into intervals"></a>Discretizer, Bin continuous data into intervals</h3><ul>
-<li>Uniform – All bins in each feature have identical widths.</li>
-<li>Quantitle – All bins in each feature have the same number of points.</li>
-<li>Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.</li>
-</ul>
-<h3 id="Binazier-Encode-categorical-features"><a href="#Binazier-Encode-categorical-features" class="headerlink" title="Binazier, Encode categorical features"></a>Binazier, Encode categorical features</h3><ul>
-<li>OneHotEncoder, OrdinalEncoder, HashMap, etc.</li>
-</ul>
-<h3 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h3><h5 id="Linear-Scaler"><a href="#Linear-Scaler" class="headerlink" title="Linear Scaler"></a>Linear Scaler</h5><ul>
-<li>Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）</li>
-</ul>
-<h5 id="Non-Linear-Scaler"><a href="#Non-Linear-Scaler" class="headerlink" title="Non-Linear Scaler"></a>Non-Linear Scaler</h5><ul>
-<li><p>Gaussian-like Scaler.<br>  Box-Cox/Yeo-Johnson.<br>  RankGauss.</p>
-</li>
-<li><p>XX-like Scaler<br>  Use icdf of target distribution to transform (cdfX)</p>
-</li>
-<li><p>Non-linear transforms such as Box-Cox may be userful to transform y. Diversity for ensemble, sometimes with better performance.</p>
-</li>
-<li><p>Yeo-Johnson transform.</p>
-</li>
-<li><p>Linear transform. Like standard normalized work better for X.</p>
-</li>
-</ul>
-<hr>
-<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><p>Learn lookup table as category representation</p>
-<h5 id="Category-Embedding-Entity-Embedding"><a href="#Category-Embedding-Entity-Embedding" class="headerlink" title="Category Embedding/ Entity Embedding"></a>Category Embedding/ Entity Embedding</h5><h5 id="Numerical-Embedding"><a href="#Numerical-Embedding" class="headerlink" title="Numerical Embedding"></a>Numerical Embedding</h5><ul>
-<li>Bin numerical data into intervals.</li>
-<li>as category embedding</li>
-<li>add vicinal info</li>
-</ul>
-<hr>
-<h2 id="Key-–-Value-Based"><a href="#Key-–-Value-Based" class="headerlink" title="Key – Value Based"></a>Key – Value Based</h2><ul>
-<li>df[A].groupby(B).aggregate(func) Func can be anything, F(subgroupby(A)) -&gt; x</li>
-<li>Common aggregate func: mean, std, skew, kurt, entropy, min, max, median, frequency, size etc.</li>
-<li>Residues and weights of Least-squares fitting works well in sequential value.</li>
-<li>High order interaction, groupby().groupby()</li>
-</ul>
-<hr>
-<h2 id="Latent-Representation"><a href="#Latent-Representation" class="headerlink" title="Latent Representation"></a>Latent Representation</h2><p>Use decomposition algorithm to extract latent features.  Works better in neural network than GBDT.  Just fit all handcrafted feature with different decomposition algorithm.</p>
-<ul>
-<li>Topic Models (LDA, SVD, NMF etc).</li>
-<li>Manifold Learning (T-SNE)</li>
-</ul>
-<hr>
-<h2 id="Symbolic-Learning"><a href="#Symbolic-Learning" class="headerlink" title="Symbolic Learning"></a>Symbolic Learning</h2><p>Using symbolics ( + - * / cos sin tan ^ log min max neg…) as functions set to represent a relationship.</p>
-<ul>
-<li>Total different interaction feature.</li>
-<li>Automated feature learning.</li>
-<li>Works in many natural scene, such as astronomical, geological, biological tasks.</li>
-</ul>
-<hr>
-<h2 id="Auto-Encoders"><a href="#Auto-Encoders" class="headerlink" title="Auto Encoders"></a>Auto Encoders</h2><ul>
-<li>Learn to construct clean samples from corrupted ones. (denoise)</li>
-<li>Regularization of the latent space to match a prior. (Always multivariate normal distribution)</li>
-</ul>
-<hr>
-<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><ul>
-<li>FeatureA – FeatureB – aggregate. Everything can construct graph.</li>
-<li>Maximize the likelihood of preserving newwork neighborhoods of nodes.</li>
-<li>Unsupervised learning methods: Deepwalk, node2vec.</li>
-<li>Semi or supervised learning: GCN.</li>
-<li>Deepwalk, node2vec work in many tasks, like CTR, Fraud detection</li>
-</ul>
-<hr>
-<h2 id="End2End-model"><a href="#End2End-model" class="headerlink" title="End2End model"></a>End2End model</h2><ul>
-<li>Online  learning models, FTRL, mini-batch fm, etc.</li>
-<li>DeepFM, DeepFFM,xDeepFM etc.</li>
-<li>Attention based interaction model.</li>
-</ul>
-<hr>
-<h2 id="Target-mean-Encoding"><a href="#Target-mean-Encoding" class="headerlink" title="Target mean Encoding"></a>Target mean Encoding</h2><ul>
-<li>Leave-one-out /K-Folds / history slide window schema to avoid overfitting</li>
-<li>Post-prior schema</li>
-</ul>
-<hr>
-<h2 id="Model-based-target-encoding"><a href="#Model-based-target-encoding" class="headerlink" title="Model based target encoding"></a>Model based target encoding</h2><ul>
-<li>Base model to predict target, with k–folds, user prob as features.</li>
-<li>Base model to predict residuals (target - probs)</li>
-<li>Sometimes, user level-N stacking probs works better.</li>
-</ul>
-<hr>
-<h2 id="Training-amp-Optimization-Tricks"><a href="#Training-amp-Optimization-Tricks" class="headerlink" title="Training &amp; Optimization Tricks"></a>Training &amp; Optimization Tricks</h2><h5 id="Common-Tricks"><a href="#Common-Tricks" class="headerlink" title="Common Tricks"></a>Common Tricks</h5><ul>
-<li>Learning rate schedule. SGD lr=0.1, BS=256, lr * bs / 256= 0.1 * 256</li>
-<li>Label smoothing.</li>
-<li>No bias decay.</li>
-<li>Bias initial with prior distribution.</li>
-<li>Focal loss is a good metric for estimating models’capabilities.</li>
-<li>Combine multi loss let the model converge rapidly towards better performance.</li>
-<li>User standart scaler transform First.</li>
-<li>Sometimes userful, but all depends on data.</li>
-</ul>
-<h5 id="NLP-task-traning-Tricks"><a href="#NLP-task-traning-Tricks" class="headerlink" title="NLP task traning Tricks"></a>NLP task traning Tricks</h5><ul>
-<li>Diverse pre-trained embeddings</li>
-<li>more than 90% of a model’s complexity resides the embedding layer.</li>
-<li>Contextual level embedding always helps.</li>
-<li>But now we have BERT.</li>
-<li>Dynamic Padding boosts training speed and model performance.</li>
-<li>Add test oov vocabs to embedding matrix.</li>
-<li>OOV replaced with“something”</li>
-<li>Adamw really works in many NLP tasks.</li>
-<li>Spatial Droupout, shuflle noise in classification task.</li>
-<li>Translation Aumentation. En-Fr, En-Fr-En.</li>
-</ul>
-<h5 id="CV-task-training-Tricks"><a href="#CV-task-training-Tricks" class="headerlink" title="CV task training Tricks"></a>CV task training Tricks</h5><ul>
-<li>ResNet is always a good baseline model to do experiments.</li>
-<li>Warm-up learning rate + cos learnging rate decay.</li>
-<li>Manual Learning rate schedule.</li>
-<li>Batch with different loss accumulate.</li>
-<li>User more shape relevance augmentation.</li>
-<li>CNN tend to learn texture information but not shape info.</li>
-<li>Auto augmentation.</li>
-</ul>
-<h5 id="Pseudo-Learning"><a href="#Pseudo-Learning" class="headerlink" title="Pseudo Learning"></a>Pseudo Learning</h5><ul>
-<li>Filtering hard examples in training dataset use OOF prediction.</li>
-<li>Global variance info leakage.</li>
-<li>Add the most confident test predictions to the training dataset.<br>Test distribution leakage, data extend<br>Simple in Batch Traning Models.<br>User single model to label test dataset.<br>Retrain model with each batch add 10~30% test pseudo labeled data.</li>
-</ul>
-<hr>
-<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
-<li>逻辑性（代码架构清晰、自动化框架、特征工程MECE）</li>
-<li>代码可复用（不重复造轮子）</li>
-<li>基于业务的分析（bad case 分析、Kernels、Discussion、相似比赛）</li>
-<li>反思总结</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckj8lukea000tdidl36884cbl" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckjavh0zt0010g1dlfzet1zwk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -842,7 +794,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -868,7 +820,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2099/01/">January 2099</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2099/01/">January 2099</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
     </div>
   </div>
 
@@ -897,7 +849,7 @@
           </li>
         
           <li>
-            <a href="/2020/11/08/The%20essence%20of%20the%20RecSys/">The essence of the RecSys</a>
+            <a href="/2020/11/08/The%20Essence%20of%20RecSys/">The Essence of RecSys</a>
           </li>
         
       </ul>
