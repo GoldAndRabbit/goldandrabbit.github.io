@@ -105,7 +105,77 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjh37oyj001dg6dlexfkfetl" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjh3ba4b001emadlbmplessu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Word2Vec/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
+<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
+
+<p>One of the most successful ideas of modern statistical NLP!</p>
+<div align="center">
+<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
+</div>
+
+
+<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
+<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
+</div>
+
+<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
+<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
+</div>
+
+<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
+<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
+<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
+<p>即相当于以如下概率保留样本；</p>
+<p>上述函数具有以下性质</p>
+<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
+<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
+<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
+<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
+<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjh3ba480016madl086wh66h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,77 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjh37oyg0013g6dlcwgz8h0o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div align="center">
-<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
-</div>
-
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
-<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
-<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjh37oyh0017g6dl4ybx7tun" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjh3ba490018madlbidodpi4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -400,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjh37oyi0019g6dlak1kchc3" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjh3ba4a001cmadl79j991rg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -440,7 +440,13 @@
 		
         <hr>
 <h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><ul>
-<li>今年给自己的年度关键词是:  入局</li>
+<li>今年给自己的年度关键词是: <center>
+<font color="red" size="6">
+<strong>入局</strong>
+</font>
+</center>
+
+</li>
 </ul>
 <hr>
 <h2 id="工作总结（算法工程师的第一个半年）"><a href="#工作总结（算法工程师的第一个半年）" class="headerlink" title="工作总结（算法工程师的第一个半年）"></a>工作总结（算法工程师的第一个半年）</h2><p>从两条线进行总结, 一条线是以时间线, 梳理每个项目做的点; 另一条是经验线, 总结的是工作方法论上可以提升的点.</p>
@@ -506,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjh37oyr001rg6dl3cxx9ilc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjh3ba4j001smadla8l7bdlh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -563,7 +569,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjh37oyk001fg6dleqrxbs1c" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjh3ba4c001gmadl701t72no" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,7 +620,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjh37oy20006g6dlaag84wjf" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjh3ba3t0005madlago15gg8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -700,7 +706,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjh37oxz0002g6dl7k9fba41" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjh3ba3u0006madlejc18k3j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1062,7 +1068,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckjh37oys001tg6dl0r0nco0y" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/" data-id="ckjh3ba4k001umadl03ib97h7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1113,7 +1119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/" data-id="ckjh37oyi001bg6dld9pwa8id" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/" data-id="ckjh3ba4a001amadl73ou8ttf" class="article-share-link">Share</a>
       
       
     </footer>
