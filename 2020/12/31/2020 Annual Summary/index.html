@@ -14,13 +14,21 @@
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
 <meta property="og:description" content="年度关键词 今年给自己的年度关键词是: 拥抱长期主义   工作内容总结Guide Purchase CVR 通用场景的CVR预估的意义. CVR模型在排序阶段会将全用户平均意义上发生转化可能性最高的物料排序, 而不是对于某个用户来说某个实时性兴趣的一种. CVR平衡机制 CTR是CVR的一种基础保证.在导购或者以内容为主的场景的一道基础保证, 如果缺少CTR或者其他相关性保证机制, 那么高转化无">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9qBzd.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9O5bq.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9O4rn.png">
 <meta property="og:image" content="https://s3.ax1x.com/2020/12/28/r7VLoF.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9qdiD.png">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9bU3j.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9bY4g.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9qceP.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/03/s9q8MR.jpg">
 <meta property="article:published_time" content="2020-12-31T15:11:00.000Z">
-<meta property="article:modified_time" content="2021-01-03T11:22:45.178Z">
+<meta property="article:modified_time" content="2021-01-03T12:01:36.735Z">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.ax1x.com/2020/12/28/r7VLoF.png">
+<meta name="twitter:image" content="https://s3.ax1x.com/2021/01/03/s9qBzd.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
   
@@ -110,11 +118,11 @@
 </ol>
 </li>
 </ul>
-<h5 id="1111-TLJ-Delay-FeedBack-amp-Presale"><a href="#1111-TLJ-Delay-FeedBack-amp-Presale" class="headerlink" title="1111 TLJ Delay FeedBack &amp; Presale"></a>1111 TLJ Delay FeedBack &amp; Presale</h5><ul>
-<li>大促时期是用户兴趣得到充分释放的购物时间区间, 我们需要把整个场景优化目标放眼到整个大促周期, 从”预热期”=&gt;”预售期”=&gt;”爆发期”三个阶段存在一定的相对独立性, 因此建模需要具备时间全局意识, 让每个时期的特点更鲜明的凸显出来, 就是算法核心的目标</li>
-<li>预售: 商品的成交笔单价有很显著的爆发, 尤其在大家电/电子设备/鞋类/高价美妆类目, 这些商品的折扣额度在这个时期内是”全年最低”, 因此推荐结果一定要从充分打满商品品牌和档次, 通过提升客单价的路径来契合用户的种草以久带来的爆发.</li>
-<li>爆发: 爆发期相对来说混合了较多的因素, 包括平台最后时刻释放的临时红包、活动以及很多场外因素(比如晚会临时带来的冲动行消费), 在爆发期具备时间短, 行为密集而丰富的主要特点, 因此这里我的设计原则是基于重定向的思路召回, 重点关注实时性需求的召回, 模型复杂度要求反而可能不需要太高. 在效果实施上有一个注意点在于一定要锁定爆发期的开始时间, 在流量迎来峰值的时候具备稳妥的变更方案, 保证线上稳定的过渡.</li>
-<li>预热: 相对于以上两个时期, 用户剁手心智会极度热化, 因此需要将推荐结果和以上两类行为进行显式的区分, 具体的形式需要结合产品的形式来确定, 以抽奖、做任务的形式来看, 需要结合相应的权益形式或者营销形式制定算法方案. </li>
+<h5 id="1111-TLJ-Delay-FeedBack-amp-Presale"><a href="#1111-TLJ-Delay-FeedBack-amp-Presale" class="headerlink" title="1111 TLJ Delay FeedBack &amp; Presale"></a>1111 TLJ Delay FeedBack &amp; Presale</h5><p>大促时期是用户兴趣得到充分释放的购物时间区间, 我们需要把整个场景优化目标放眼到整个大促周期, 从”预热期”=&gt;”预售期”=&gt;”爆发期”三个阶段存在一定的相对独立性, 因此建模需要具备时间全局意识, 让每个时期的特点更鲜明的凸显出来, 就是算法核心的目标</p>
+<ul>
+<li><strong>预售</strong>: 种草商品的集中体现, 商品的成交笔单价有显著的爆发, 尤其在大家电/电子设备/鞋类/高价美妆类目, 这些商品的折扣额度在这个时期内是”全年最低”, 因此推荐结果一定要从充分打满商品品牌和档次, 通过提升客单价的路径来契合用户的种草以久带来的爆发.</li>
+<li><strong>爆发</strong>: 爆发期相对来说混合了较多的因素, 包括平台最后时刻释放的临时红包、活动以及很多场外因素(比如晚会临时带来的冲动行消费), 在爆发期具备时间短, 行为密集而丰富的主要特点, 因此这里我的设计原则是基于重定向的思路召回, 重点关注实时性需求的召回, 模型复杂度要求反而可能不需要太高. 在效果实施上有一个注意点在于一定要锁定爆发期的开始时间, 在流量迎来峰值的时候具备稳妥的变更方案, 保证线上稳定的过渡.</li>
+<li><strong>预热</strong>: 相对于以上两个时期, 用户剁手心智会极度热化, 因此需要将推荐结果和以上两类行为进行显式的区分, 具体的形式需要结合产品的形式来确定, 以抽奖、做任务的形式来看, 需要结合相应的权益形式或者营销形式制定算法方案. </li>
 </ul>
 <h5 id="User-Growth"><a href="#User-Growth" class="headerlink" title="User Growth"></a>User Growth</h5><ul>
 <li>增长和留存: 在很多场景是同一个目标的不同表达. 用户增长第一验证指标: 第n天留存率和n天留存率, 其中n可以等于1, 7, 14, 30. 其中最重要的是n=30.</li>
@@ -175,22 +183,40 @@
 <h5 id="长期主义"><a href="#长期主义" class="headerlink" title="长期主义"></a>长期主义</h5><p>量化一种时间价值. 2020另一个思考是通过学习货币金融学课程非常详细的理解了利率、复利等金融概念, 这些概念其实在日常生活中也是经常听, 但是并没有把这种概念变成自己做事、长期做事的一种日常化的态度和本能行为动机. 在2021年, 需要将长期主义这种态度融入到日常的工作、理财和做事当中去. 包括但不限于以下几个方面  </p>
 <ol>
 <li>推荐系统技术打通. 推荐系统从小里面说可以实现一个几十行的cf也是, 但是到一个成熟的工业级推荐系统需要非常完善的技术体系和质量保证体系.<br>比如数据生产, 实时特征和实时样本, 多维度评价体系, 复杂模型线上Serving, 实时监控以及效果保证.</li>
-<li>长期跑步. 2020年5月, 跑奥森南远跑了2.3km已经完全跑不动了.9月份开始重启跑步, 10月份42分钟完成南园5km, 12月初36min完成北园5km, 12月底1h34min完成了南北10km(状态不佳实际速度比这个快), 等到2020年12月31日, 我想看看自己能达到怎样的水平.</li>
+<li>长期跑步. 2020年5月, 跑奥森南远跑了2.3km已经完全跑不动了.9月份开始重启跑步, 10月份42分钟完成南园5km, 12月初36min完成北园5km, 12月底1h34min完成了南北10km(状态不佳实际速度比这个快), 等到2020年12月31日, 我想看看自己能达到怎样的水平.<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9qBzd.jpg" width="500" />
+</div>     
+<center> 图 奥森10km完赛 </center></li>
 <li>理财. 目前还是个小白, 暂不赘述.   </li>
-<li>Blog &amp; Github. 作为一个技术人, 对于技术的积累和业务的思考是一直有的，通过Blog和Github将所有的东西归纳在一起, 回过头来看自己还是很有意义. 今年完成了初步的搭建和主要的体系梳理, 2021年需要在重点方向上深入, 养成长期总结和汇总的好习惯.</li>
-</ol>
-<h5 id="另一种获得成功的价值认同方式-时间-gt-距离-gt-效率"><a href="#另一种获得成功的价值认同方式-时间-gt-距离-gt-效率" class="headerlink" title="另一种获得成功的价值认同方式: 时间=&gt;距离&gt;=效率"></a>另一种获得成功的价值认同方式: 时间=&gt;距离&gt;=效率</h5><ol>
-<li>Hiit. 因为疫情影响, 年初一个人在家办公经历了太孤独的一段时间, 商店不开门, 门口超市都不太敢进去. 尝试了下HiiT L3难度的站立挑战, 发现全套动作认真做起来还是真不容易. 但是Hiit对于场地完全没有要求, 燃脂效率也非常高, 是一项值得长期做的运动. 并且发现了一种适合自己的方法, 以L3站立挑战来说, 1组13min保证100%完成效果远远不如重复做2组每组80%的效果好.</li>
-<li>ASICS. 入坑跑步, 有一次跑完之后发现脚疼, 缓了1个多星期才恢复. 于是狠下心来买了价值1390不打折的ASICS kayano 27于是狠下心来买了价值1390不打折的ASICS KAYANO 27. 品牌名来自拉丁语格言“anima sana in corpore sano”的首字母缩写, 意为”健全的精神寓于强健的体魄”, 这种理念随着年龄增长我是越来越认同的.  我是不相信一个男性没有野性、没有粗犷的体魄(至少认同这种体魄的价值)只靠着聪明的大脑能够干出丰功伟绩. 尤其是看了广马施一公首次完赛, 以及日本本土马拉松惊人的水平, 决定向优秀的日本跑者看齐.</li>
+<li>Blog &amp; Github. 作为一个技术人, 对于技术的积累和业务的思考是一直有的，通过Blog和Github将所有的东西归纳在一起, 回过头来看自己还是很有意义. 今年完成了初步的搭建和主要的体系梳理, 2021年需要在重点方向上深入, 养成长期总结和汇总的好习惯.<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9O5bq.png" width="500" />
+</div>
+<center> 图 Blog </center>    
+
+</li>
 </ol>
 <div align="center">
-<img src="https://s3.ax1x.com/2020/12/28/r7VLoF.png" width="350" />
+<img src="https://s3.ax1x.com/2021/01/03/s9O4rn.png" width="500" />
+</div> 
+<center> 图 Github </center>    
+
+<h5 id="另一种获得成功的价值认同方式-时间-gt-距离-gt-效率"><a href="#另一种获得成功的价值认同方式-时间-gt-距离-gt-效率" class="headerlink" title="另一种获得成功的价值认同方式: 时间=&gt;距离&gt;=效率"></a>另一种获得成功的价值认同方式: 时间=&gt;距离&gt;=效率</h5><ol>
+<li>Hiit. 因为疫情影响, 年初一个人在家办公经历了太孤独的一段时间, 商店不开门, 门口超市都不太敢进去. 尝试了下HiiT L3难度的站立挑战, 发现全套动作认真做起来还是真不容易. 但是Hiit对于场地完全没有要求, 燃脂效率也非常高, 是一项值得长期做的运动. 并且发现了一种适合自己的方法, 以L3站立挑战来说, 1组13min保证100%完成效果远远不如重复做2组每组80%的效果好.</li>
+<li>ASICS. 入坑跑步, 有一次跑完之后发现脚疼, 缓了1个多星期才恢复. 于是狠下心来买了价值1390不打折的ASICS kayano 27于是狠下心来买了价值1390不打折的ASICS KAYANO 27. 品牌名来自拉丁语格言”anima sana in corpore sano”的首字母缩写, 意为<strong>健全的精神寓于强健的体魄</strong>, 这种理念随着年龄增长我是越来越认同的.  我是不相信一个男性没有野性、没有粗犷的体魄(至少认同这种体魄的价值)只靠着聪明的大脑能够干出丰功伟绩. 尤其是看了广马施一公首次完赛, 以及日本本土马拉松惊人的水平, 决定向优秀的日本跑者看齐.</li>
+</ol>
+<div align="center">
+<img src="https://s3.ax1x.com/2020/12/28/r7VLoF.png" width="500" />
 </div>
 
-<center> 上图为KAYANO 27 </center>    
+<center> 图 KAYANO 27 </center>    
 
 <h5 id="智者务其实-愚者图虚名"><a href="#智者务其实-愚者图虚名" class="headerlink" title="智者务其实, 愚者图虚名"></a>智者务其实, 愚者图虚名</h5><ul>
-<li>这句话是新三国中司马懿的一段话, 新版三国我最佩服的还是司马懿, 孔明在三国演义中是顶峰存在，但是仍然在关键时候存在过于谨慎的特点, 比如子午谷不敢出兵, 司马懿策略层面略逊于孔明，但是在宏观韬略上面却要胜出孔明一筹.</li>
+<li>这句话是新三国中司马懿的一段话, 新版三国我最佩服的还是司马懿, 孔明在三国演义中是顶峰存在，但是仍然在关键时候存在过于谨慎的特点, 比如子午谷不敢出兵, 司马懿策略层面略逊于孔明，但是在宏观韬略上面却要胜出孔明一筹.<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9qdiD.png" width="700" />
+</div>
+<center> 图 司马懿告诫曹丕 </center>
+
+</li>
 </ul>
 <hr>
 <h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="拜仁8-2巴萨"><a href="#拜仁8-2巴萨" class="headerlink" title="拜仁8-2巴萨"></a>拜仁8-2巴萨</h5><ul>
@@ -198,19 +224,43 @@
 <li><strong>三个投资, 一个成功</strong>. 从拜仁的成功来看, 有一个因素是青年人才快速崛起, 印象比较深的阿方索戴维斯, 格雷茨卡, 格纳布里, 似乎三条线上都有了非常强的人才补强. 反观巴萨和皇马就不尽如人意了, 不过巴萨皇马真的是前几年没有布局吗?我认为绝对不是, 巴萨皇马在15年之后都有非常充分的人才培养, 每个年轻球员至少是在当时是绝对看起来充满潜力的. 但是为什么失败呢?我认为这涉及到了足球的一点本质: 球员还是会归结于一种投资, 这种投资本身是带有失败的概率. 只不过在很多因素作用下这种失败或者说不成功没有被放大凸显出来, 欧冠拜仁巴萨这场将这种失败完全地放大了. 因此足球本职上还是一笔非常难做的生意. </li>
 </ul>
 <hr>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><ul>
-<li>今年没有太多旅游, 一方面是疫情影响, 一方面是有意识地控制自己的储蓄. <h5 id="古北水镇"><a href="#古北水镇" class="headerlink" title="古北水镇"></a>古北水镇</h5></li>
+<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><p>今年没有太多旅游, 一方面是疫情影响, 一方面是有意识地控制自己的储蓄. </p>
+<h5 id="古北水镇"><a href="#古北水镇" class="headerlink" title="古北水镇"></a>古北水镇</h5><ul>
 <li>古北这边游客比较多, 整体的风景在北方已经算令人眼前一亮了, 印象中墙面和墙体都有各种绿色植物, 集体拍照效果也很不错.</li>
 <li>司马台长城. 司马台长城前面一段垂直角度很大, 一口气爬上去费不少力气, 爬到一半中间有点恐惧但也没有回头路. 但爬上去之后感觉, 哦, 也不过如此. </li>
 </ul>
+<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9bU3j.jpg" width="500" />
+</div>
+<center> 图 古北水镇1 </center>
+
+<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9bY4g.jpg" width="500" />
+</div>
+<center> 图 古北水镇2 </center>
+
 <h5 id="小浪底"><a href="#小浪底" class="headerlink" title="小浪底"></a>小浪底</h5><ul>
-<li>黄河边上各种工程百废待兴, 和长江相比, 黄河本身不太容易打造成风景秀丽的景观.<br>除了那种波乱壮阔的风景, 平静地黄河景观看起来是缺少一些亮眼的点.  但是黄河确实是塑造了山西淳朴的民风, 一种纯真善良的人的品格. 这一点深信不疑. </li>
+<li>黄河边上各种工程百废待兴, 和长江相比, 黄河本身不太容易打造成风景秀丽的景观. 除了那种波乱壮阔的风景, 平静地黄河景观看起来是缺少一些亮眼的点.  但是黄河确实是塑造了山西淳朴的民风, 一种纯真善良的人的品格. 这一点深信不疑. <div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9qceP.jpg" width="500" />
+</div>
+<center> 图 运城小浪底水库 </center>
+
+</li>
 </ul>
+<hr>
+<h2 id="请我姥姥吃波士顿龙虾"><a href="#请我姥姥吃波士顿龙虾" class="headerlink" title="请我姥姥吃波士顿龙虾"></a>请我姥姥吃波士顿龙虾</h2><ul>
+<li>实现了之前的一个目标<div align="center">
+<img src="https://s3.ax1x.com/2021/01/03/s9q8MR.jpg" width="500" />
+</div>
+
+</li>
+</ul>
+<center> 图 请姥姥吃波士顿 </center>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/31/2020%20Annual%20Summary/" data-id="ckjh1q51h0005ubdld0uw0l6f" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/12/31/2020%20Annual%20Summary/" data-id="ckjh34k3h001ualdl7xf800zc" class="article-share-link">Share</a>
       
       
     </footer>
