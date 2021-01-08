@@ -67,75 +67,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Graph Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/03/Graph%20Neural%20Network/" class="article-date">
-  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/03/Graph%20Neural%20Network/">Graph Neural Network</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="GNN"><a href="#GNN" class="headerlink" title="GNN"></a>GNN</h2><p>Graph neural network/Graph embedding code.  </p>
-<ul>
-<li>GNN: gcn, graphSAGE</li>
-<li>GE: node2vec</li>
-</ul>
-<h2 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h2><div style="text-align: center;">
-<img alt="" src="https://s3.ax1x.com/2020/11/15/DFYfqe.png" style="display: inline-block;" width="666"/>
-</div>
-
-<p>GCN: learn a function of signals/features on a graph <em>G = (V, E)</em> which takes as input:  </p>
-<ul>
-<li>A feature description <em>x<sub>i</sub></em> for every node i summarized in a <em>N x D</em> feature matrix <em>X</em>. (<em>N</em> : number of nodes, <em>D</em> : number of input features)</li>
-<li>A representative description of the graph structure in matrix form, eg: adjacency matrix <em>A</em>.</li>
-</ul>
-<p>and produces a node-level output <em>Z</em> (an <em>N x F</em> feature matrix, where <em>F</em> is the number of output features per node). Graph-level outputs can be modeled by producing some form of pooling operation.</p>
-<p>Every neural network layer can then be written as a non-linear function, consider the following simple form of a layer-wise propagation rule:  </p>
-<p><img src="http://latex.codecogs.com/png.latex?H%5E%7B(l+1)%7D=f%5Cleft(H%5E%7B(l)%7D,A%5Cright)=%5Csigma%5Cleft(AH%5E%7B(l)%7DW%5E%7B(l)%7D%5Cright)" alt="gnn">  </p>
-<p>with <em>H<sup>(0)</sup>=X</em> and <em>H<sup>(L)</sup>=Z</em> (<em>z</em> for graph-level outputs), <em>L</em> being the number of layers. The specific models then differ only in how <img src="http://latex.codecogs.com/png.latex?f%5Cleft(%5Ccdot,%7B%5Ccdot%7D%5Cright)" alt="f(⋅,⋅)">  is chosen and parameterized.</p>
-<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
-<li><p>Semi-Supervised Classification with Graph Convolutional Networks<br><a target="_blank" rel="noopener" href="https://github.com/tkipf/gcn/">https://github.com/tkipf/gcn/</a> </p>
-</li>
-<li><p>Inductive Representation Learning on Large Graphs<br><a target="_blank" rel="noopener" href="https://github.com/williamleif/graphsage-simple">https://github.com/williamleif/graphsage-simple</a></p>
-</li>
-<li><p>node2vec: Scalable Feature Learning for Networks<br><a target="_blank" rel="noopener" href="https://github.com/aditya-grover/node2vec">https://github.com/aditya-grover/node2vec</a></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/Graph%20Neural%20Network/" data-id="ckjo2crez000gi0dl20z286ea" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-The Illustrated Transformer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/03/The%20Illustrated%20Transformer/" class="article-date">
@@ -143,7 +74,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
   </div>
 
   </div>
@@ -201,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckjo2crfa0018i0dl7y26berk" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckjo31ju70015ygdleb6b3ccr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,135 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjo2crfe001ji0dldgh90ggu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div align="center">
-<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
-</div>
-
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
-<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
-<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjo2crfc001di0dl3i6kdx57" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
-<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
-<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
-<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
-<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
-<p>四个核心能力</p>
-<ul>
-<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
-<li>阅读书籍和很多论文</li>
-<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
-<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
-</ul>
-<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjo2crfc001fi0dlca6nczy4" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjo31juc001hygdl8bdz8ekf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,7 +197,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine Learning</a>
+    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
   </div>
 
   </div>
@@ -544,7 +347,135 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjo2crfd001hi0dld58bh9n2" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjo31ju90019ygdlhzmrc9nr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Word2Vec/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
+<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
+
+<p>One of the most successful ideas of modern statistical NLP!</p>
+<div align="center">
+<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
+</div>
+
+
+<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
+<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
+</div>
+
+<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
+<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
+</div>
+
+<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
+<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
+<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
+<p>即相当于以如下概率保留样本；</p>
+<p>上述函数具有以下性质</p>
+<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
+<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
+<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
+<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
+<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjo31jua001bygdlhz13gptw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
+  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
+<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
+<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
+<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
+<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
+<p>四个核心能力</p>
+<ul>
+<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
+<li>阅读书籍和很多论文</li>
+<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
+<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
+</ul>
+<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjo31jua001dygdlc0nccpq0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -657,7 +588,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjo2crfo0020i0dl8aaqg578" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjo31jum001vygdld0jibh5e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -714,7 +645,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjo2crff001ni0dlb3t93x97" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjo31jue001lygdl12dj7yka" class="article-share-link">Share</a>
       
       
     </footer>
@@ -765,7 +696,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjo2creu0006i0dlay07e51q" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjo31jtt0006ygdl753nclov" class="article-share-link">Share</a>
       
       
     </footer>
@@ -851,7 +782,98 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjo2cres0004i0dleru0bhd7" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjo31jtp0002ygdl0p3w7ruo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Marketing Management" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/03/Marketing%20Management/" class="article-date">
+  <time datetime="2019-11-03T05:03:00.000Z" itemprop="datePublished">2019-11-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Reading/">Reading</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/03/Marketing%20Management/">Marketing Management</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      	<!-- Table of Contents -->
+		
+        <hr>
+<h2 id="What-Is-Marketing"><a href="#What-Is-Marketing" class="headerlink" title="What Is Marketing?"></a>What Is Marketing?</h2><p>Marketing is about <strong>identifying and meeting human and social needs.</strong> One of the shortest good definitions of marketing is:</p>
+<center>
+<font size=6 color='red'>
+<i>
+Meeting needs profitably. 
+</i>
+</font>
+</center>
+
+<p>For example, </p>
+<ul>
+<li><strong>Google</strong> recognized that people needed to more effectively and efficiently access information on the Internet, it created a powerful search engine that organized and prioritized<br>queries. </li>
+<li><strong>IKEA</strong> noticed that people wanted good furnishings at substantially lower prices, it created knockdown furniture. </li>
+</ul>
+<p>These two firms demonstrated marketing savvy and turned a private or social need into a profitable business opportunity.</p>
+<p>The American Marketing Association (美国市场营销协会, AMA) offers the following formal definition: </p>
+<center>
+<font size=4 color='red'>
+<i>
+Marketing is the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for 
+customers, clients, partners, and society at large. 
+</i>
+</font>
+</center>
+
+<p>Coping with these exchange processes calls for a considerable amount of work and skill. Marketing management takes place when at least one party to a potential exchange thinks about the means of achieving desired responses from other parties. Thus, we see marketing management as the art and science of choosing target markets and getting, keeping, and growing customers through creating, delivering, and communicating superior customer value.</p>
+<p>We can distinguish between a social and a managerial definition of marketing. A social definition shows the role marketing plays in society; for example, one marketer has said that marketing’s role is to “deliver a higher standard of living.” Here is a social definition that serves our purpose:Marketing is a societal process by which individuals and groups obtain what they need and want through creating, offering, and freely exchanging products<br>and services of value with others. <strong>Cocreation of value among consumers and with businesses</strong> and the importance of value creation and sharing have become important themes in the development of modern marketing thought.</p>
+<p>Managers sometimes think of marketing as the art of selling products, but many people are surprised<br>when they hear that </p>
+<center>
+<font size=4 color='red'>
+<i>
+Selling is not the most important part of marketing. Selling is only the tip of the marketing iceberg. 
+</i>
+</font>
+</center>
+
+
+<p>Peter Drucker, famed management theorist, put it this way: </p>
+<center>
+<font size=4 color='red'>
+<i>
+There will always, one can assume, be need for some selling. 
+</i>
+</font>
+</center>
+
+<p>But the aim of marketing is to make selling superfluous. The aim of marketing is to know and understand the customer so well that the product or<br>service fits him and sells itself. Ideally, marketing should result in a customer who is ready to buy. All that<br>should be needed then is to make the product or service available.</p>
+<p>When Nintendo (任天堂) designed its Wii game system, when Apple launched its iPad tablet computer, and when Toyota<br>introduced its Prius hybrid automobile, these manufacturers were swamped with orders because they had designed<br>the right product, based on careful marketing homework about consumers, competition, and all the external factors that affect cost and demand.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/11/03/Marketing%20Management/" data-id="ckjo31ju1000pygdlg8at91nm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -876,7 +898,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/About-Us/">About Us</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Recsys-Ads-Tech/">Recsys & Ads Tech</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/About-Us/">About Us</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a></li></ul>
     </div>
   </div>
 
