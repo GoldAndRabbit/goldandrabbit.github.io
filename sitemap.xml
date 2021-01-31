@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://example.com/2020/11/08/The%20Essence%20of%20RecSys/</loc>
+    
+    <lastmod>2021-01-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2021-01-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/16/Bert/</loc>
+    
+    <lastmod>2021-01-31</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/04/05/Git%20Tutorial/</loc>
+    
+    <lastmod>2021-01-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/13/Recurrent%20Neural%20Network/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/09/14/Item-Based%20CF/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/03/The%20Illustrated%20Transformer/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/04/04/Faiss/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/01/11/Word2Vec/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/15/Deep%20CTR%20Model/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/03/Graph%20Neural%20Network/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/20/Shoe%20Dog/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/10/03/Principles%20of%20Economics/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/11/03/Marketing%20Management/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2099/01/01/About%20Us/</loc>
+    
+    <lastmod>2021-01-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/31/2020%20Annual%20Summary/</loc>
+    
+    <lastmod>2021-01-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2018/12/31/2018%20Annual%20Summary/</loc>
+    
+    <lastmod>2021-01-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/12/31/2019%20Annual%20Summary/</loc>
+    
+    <lastmod>2021-01-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/18/David%20Stern,%20who%20turned%20NBA%20into%20powerhouse/</loc>
+    
+    <lastmod>2020-12-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/05/01/mkl%20Cannot%20load%20libmkl_avx2.so%20or%20libmkl_def.so/</loc>
+    
+    <lastmod>2020-12-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/04/04/The%20Economics%20of%20Money,%20Banking,%20and%20Financial%20Markets/</loc>
+    
+    <lastmod>2020-12-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/04/13/Status%20as%20a%20Service/</loc>
+    
+    <lastmod>2020-12-30</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/06/05/Why%20Alibaba%20/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/12/12/ubuntu%20config/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/18/Linux%20Commands/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/03/pickle%20dump%20OverflowError/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/10/01/Interview%20record%20of%20ML%20intern%20in%202019/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/02/13/Tensorflow%20API/</loc>
+    
+    <lastmod>2020-12-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/index.html</loc>
+    
+    <lastmod>2020-09-19</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>http://example.com/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
+  
+  <url>
+    <loc>http://example.com/categories/Always-Review/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/About-Us/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/RecSys-Machine-Learning/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Programming-Data/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Reading/</loc>
+    <lastmod>2021-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>

@@ -1,994 +1,263 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Gold and Rabbit&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="having fun coding">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold and Rabbit's Blog - Always ambitious</title><meta name="keywords" content="Recommending System"><meta name="author" content="Gold and Rabbit"><meta name="copyright" content="Gold and Rabbit"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="having fun coding">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gold and Rabbit&#39;s Blog">
 <meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="Gold and Rabbit&#39;s Blog">
 <meta property="og:description" content="having fun coding">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/null">
 <meta property="article:author" content="Gold and Rabbit">
 <meta property="article:tag" content="Recommending System">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Gold and Rabbit&#39;s Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="http://example.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-01-31 23:22:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<meta name="generator" content="Hexo 5.1.1"></head>
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Gold and Rabbit&#39;s Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-The Illustrated Transformer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/03/The%20Illustrated%20Transformer/" class="article-date">
-  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
-  </div>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="Gold and Rabbit's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Gold and Rabbit's Blog</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Gold and Rabbit's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/02/03/The%20Illustrated%20Transformer/" title="The Illustrated Transformer">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Illustrated Transformer"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/03/The%20Illustrated%20Transformer/" title="The Illustrated Transformer">The Illustrated Transformer</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-03T03:56:00.000Z" title="Created 2020-02-03 11:56:00">2020-02-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RecSys-Machine-Learning/">RecSys &amp; Machine Learning</a></span></div><div class="content">
+概述
+介绍博客链接关于Transformer以及论文《Attention is all you need》以加深对于transformer框架的理解；
+Transformer在时序建模上效果在很多nlp任务上优于RNN，且不同于CNN卷积进行特征提取过程；
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/03/The%20Illustrated%20Transformer/">The Illustrated Transformer</a>
-    </h1>
-  
+Transformer用于机器翻译任务
+Transformer的提出用于机器翻译任务；翻译句子时输入输出是两个句子，中间黑盒包括一个Encoder和一个Decoder，更一般的情况是多个Encoder和多个Decoder进行堆叠；
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>介绍博客链接关于Transformer以及论文《Attention is all you need》以加深对于transformer框架的理解；</li>
-<li>Transformer在时序建模上效果在很多nlp任务上优于RNN，且不同于CNN卷积进行特征提取过程；</li>
-</ul>
-<h2 id="Transformer用于机器翻译任务"><a href="#Transformer用于机器翻译任务" class="headerlink" title="Transformer用于机器翻译任务"></a>Transformer用于机器翻译任务</h2><ul>
-<li><p>Transformer的提出用于机器翻译任务；翻译句子时输入输出是两个句子，中间黑盒包括一个Encoder和一个Decoder，更一般的情况是多个Encoder和多个Decoder进行堆叠；</p>
-</li>
-<li><p>拆解开单个Encoder，其中是一个Self-Attention和一个Feed Forward层；拆解开单个Decoder，其中是一个Self-Attention、一个Enconder-Decoder Attention层和一个Feed Forward层；</p>
-</li>
-</ul>
-<h2 id="Self-Attention-Layer-拆解"><a href="#Self-Attention-Layer-拆解" class="headerlink" title="Self-Attention Layer 拆解"></a>Self-Attention Layer 拆解</h2><ul>
-<li><p>和常见NLP任务一样输入为单词的embedding，分别表示为；经过Self-Attention层后，分别输出为，再分别过各自的FFNN’</p>
-</li>
-<li><p>Attention过程首先对每个单词的embedding构造三个向量分别为Key、Query和Value；这三个向量是通过输入单词embedding分别乘以三个矩阵所得分别表示为，这三个矩阵在训练过程中得到；</p>
-</li>
-</ul>
-<ul>
-<li><p>Self-Attention过程如何实现？分解来看就是理解weight怎么得到，得到weight以后乘上去即可（Transformer里面是乘在value上），即理解如下过程；<br>  输入单词的embedding的query根据key点乘进行打分（维度归一化）</p>
-<p>  =&gt; softmax之后得到一个weight</p>
-<p>  =&gt; 对value乘以weight进行加权求和得到z</p>
-</li>
-</ul>
-<ul>
-<li>Self-Attention的计算过程可以用如下式子表示，其中理解Softmax(x)=weight</li>
-</ul>
-<p>上述过程描述了单个输入单词embedding生成self-attention后的表示的过程，在实际运算时通过矩阵运算来并行实现所有单词的self-attention过程；同时，上述实现了一个head的self-attention的过程，实际上可以设置多个head进行self-attention，再将多个head学习到的表示z进行concatenate，最后将这个宽表示乘以一个weight矩阵；</p>
-<ul>
-<li><p>截止目前Transformer模型并没有捕捉顺序序列的能力，也就是说无论句子中词的顺序怎么打乱Transformer都会得到类似的结果，换句话说此时的Transformer只是一个功能更强大的词袋模型而已。为解决这个问题，Transformer编码词向量时引入了位置编码（Position Embedding）特征。那么如何编码位置信息呢？常见模式有：a. 根据数据学习；b. 自己设计编码规则。</p>
-</li>
-<li><p>另外Transformer在每个Encoder-Block里面，同时采用ResBlock的结构，另外采用了Layer Nomalization的方法进行配合使用；</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/The%20Illustrated%20Transformer/" data-id="ckjuw1zdz0016nbdl9qxw5fij" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+拆解开单个Encoder，其中是一个Self-Attention和一个Feed Forward层；拆解开单个Decoder，其中是一个Self-Attention、一个Enconder-Decoder Attention层和一个Feed Forward层；
 
 
-  
-    <article id="post-pickle dump OverflowError" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/03/pickle%20dump%20OverflowError/" class="article-date">
-  <time datetime="2020-02-03T03:56:00.000Z" itemprop="datePublished">2020-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
+Self-Attention Layer 拆解
+和常见NLP任务一样输入为单词的embedding，分别表示为；经过Self-Attention层后，分别输出为，再分别过各自的FFNN’
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/03/pickle%20dump%20OverflowError/">pickle dump OverflowError</a>
-    </h1>
-  
+Attention过程首先对每个单词的embeddi ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/02/03/pickle%20dump%20OverflowError/" title="pickle dump OverflowError">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pickle dump OverflowError"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/03/pickle%20dump%20OverflowError/" title="pickle dump OverflowError">pickle dump OverflowError</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-03T03:56:00.000Z" title="Created 2020-02-03 11:56:00">2020-02-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Programming-Data/">Programming &amp; Data</a></span></div><div class="content">
+报错如下
+12OverflowError: cannot serialize a bytes object larger than 4 GiB解决方法
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<p>报错如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OverflowError: cannot serialize a bytes object larger than <span class="number">4</span> GiB</span><br><span class="line">解决方法</span><br></pre></td></tr></table></figure>
+1pickle.dump(d, open(&quot;file&quot;, &#x27;w&#x27;), protocol=4)
+官方文档
+12345Protocol version 0 is the original “human-readable” protocol and is backwards compatible with earlier versions of Python.Protocol version 1 is an old binary format which is also compatible with earlier versions of Python.Protocol version 2 was introduced in Python 2.3. It provides much more efficient pickling of new-style classes. Refer to PEP ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" title="Tricks in Data Mining Competitions">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Tricks in Data Mining Competitions"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" title="Tricks in Data Mining Competitions">Tricks in Data Mining Competitions</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-01-11T12:11:00.000Z" title="Created 2020-01-11 20:11:00">2020-01-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RecSys-Machine-Learning/">RecSys &amp; Machine Learning</a></span></div><div class="content">
+Feature Engineering BasicDiscretizer, Bin continuous data into intervals
+Uniform – All bins in each feature have identical widths.
+Quantitle – All bins in each feature have the same number of points.
+Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pickle.dump(d, open(<span class="string">&quot;file&quot;</span>, <span class="string">&#x27;w&#x27;</span>), protocol=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<p>官方文档</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Protocol version <span class="number">0</span> <span class="keyword">is</span> the original “human-readable” protocol <span class="keyword">and</span> <span class="keyword">is</span> backwards compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">1</span> <span class="keyword">is</span> an old binary format which <span class="keyword">is</span> also compatible <span class="keyword">with</span> earlier versions of Python.</span><br><span class="line">Protocol version <span class="number">2</span> was introduced <span class="keyword">in</span> Python <span class="number">2.3</span>. It provides much more efficient pickling of new-style classes. Refer to PEP <span class="number">307</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">2.</span></span><br><span class="line">Protocol version <span class="number">3</span> was added <span class="keyword">in</span> Python <span class="number">3.0</span>. It has explicit support <span class="keyword">for</span> bytes objects <span class="keyword">and</span> cannot be unpickled by Python <span class="number">2.</span>x. This <span class="keyword">is</span> the default protocol, <span class="keyword">and</span> the recommended protocol when compatibility <span class="keyword">with</span> other Python <span class="number">3</span> versions <span class="keyword">is</span> required.</span><br><span class="line">Protocol version <span class="number">4</span> was added <span class="keyword">in</span> Python <span class="number">3.4</span>. It adds support <span class="keyword">for</span> very large objects, pickling more kinds of objects, <span class="keyword">and</span> some data format optimizations. Refer to PEP <span class="number">3154</span> <span class="keyword">for</span> information about improvements brought by protocol <span class="number">4.</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/02/03/pickle%20dump%20OverflowError/" data-id="ckjuw1ze4001knbdl48buawet" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+Binazier, Encode categorical features
+OneHotEncoder, OrdinalEncoder, HashMap, etc.
 
+ScalerLinear Scaler
+Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）
 
-  
-    <article id="post-Tricks in Data Mining Competitions" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
-  </div>
+Non-Linear Scaler
+Gaussian-like Scaler.  Box-Cox ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/01/11/Word2Vec/" title="Word2Vec">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Word2Vec"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/11/Word2Vec/" title="Word2Vec">Word2Vec</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-01-11T12:11:00.000Z" title="Created 2020-01-11 20:11:00">2020-01-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/RecSys-Machine-Learning/">RecSys &amp; Machine Learning</a></span></div><div class="content">
+Core ideaHow to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.
+“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/">Tricks in Data Mining Competitions</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Feature-Engineering-Basic"><a href="#Feature-Engineering-Basic" class="headerlink" title="Feature Engineering Basic"></a>Feature Engineering Basic</h2><h3 id="Discretizer-Bin-continuous-data-into-intervals"><a href="#Discretizer-Bin-continuous-data-into-intervals" class="headerlink" title="Discretizer, Bin continuous data into intervals"></a>Discretizer, Bin continuous data into intervals</h3><ul>
-<li>Uniform – All bins in each feature have identical widths.</li>
-<li>Quantitle – All bins in each feature have the same number of points.</li>
-<li>Kmeans – Values in each bin have the same nearest center of a 1D k-means cluster.</li>
-</ul>
-<h3 id="Binazier-Encode-categorical-features"><a href="#Binazier-Encode-categorical-features" class="headerlink" title="Binazier, Encode categorical features"></a>Binazier, Encode categorical features</h3><ul>
-<li>OneHotEncoder, OrdinalEncoder, HashMap, etc.</li>
-</ul>
-<h3 id="Scaler"><a href="#Scaler" class="headerlink" title="Scaler"></a>Scaler</h3><h5 id="Linear-Scaler"><a href="#Linear-Scaler" class="headerlink" title="Linear Scaler"></a>Linear Scaler</h5><ul>
-<li>Min-Max, Maxabs, Nomalize, Robust（QR，clip with quantile range）</li>
-</ul>
-<h5 id="Non-Linear-Scaler"><a href="#Non-Linear-Scaler" class="headerlink" title="Non-Linear Scaler"></a>Non-Linear Scaler</h5><ul>
-<li><p>Gaussian-like Scaler.<br>  Box-Cox/Yeo-Johnson.<br>  RankGauss.</p>
-</li>
-<li><p>XX-like Scaler<br>  Use icdf of target distribution to transform (cdfX)</p>
-</li>
-<li><p>Non-linear transforms such as Box-Cox may be userful to transform y. Diversity for ensemble, sometimes with better performance.</p>
-</li>
-<li><p>Yeo-Johnson transform.</p>
-</li>
-<li><p>Linear transform. Like standard normalized work better for X.</p>
-</li>
-</ul>
-<hr>
-<h2 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h2><p>Learn lookup table as category representation</p>
-<h5 id="Category-Embedding-Entity-Embedding"><a href="#Category-Embedding-Entity-Embedding" class="headerlink" title="Category Embedding/ Entity Embedding"></a>Category Embedding/ Entity Embedding</h5><h5 id="Numerical-Embedding"><a href="#Numerical-Embedding" class="headerlink" title="Numerical Embedding"></a>Numerical Embedding</h5><ul>
-<li>Bin numerical data into intervals.</li>
-<li>as category embedding</li>
-<li>add vicinal info</li>
-</ul>
-<hr>
-<h2 id="Key-–-Value-Based"><a href="#Key-–-Value-Based" class="headerlink" title="Key – Value Based"></a>Key – Value Based</h2><ul>
-<li>df[A].groupby(B).aggregate(func) Func can be anything, F(subgroupby(A)) -&gt; x</li>
-<li>Common aggregate func: mean, std, skew, kurt, entropy, min, max, median, frequency, size etc.</li>
-<li>Residues and weights of Least-squares fitting works well in sequential value.</li>
-<li>High order interaction, groupby().groupby()</li>
-</ul>
-<hr>
-<h2 id="Latent-Representation"><a href="#Latent-Representation" class="headerlink" title="Latent Representation"></a>Latent Representation</h2><p>Use decomposition algorithm to extract latent features.  Works better in neural network than GBDT.  Just fit all handcrafted feature with different decomposition algorithm.</p>
-<ul>
-<li>Topic Models (LDA, SVD, NMF etc).</li>
-<li>Manifold Learning (T-SNE)</li>
-</ul>
-<hr>
-<h2 id="Symbolic-Learning"><a href="#Symbolic-Learning" class="headerlink" title="Symbolic Learning"></a>Symbolic Learning</h2><p>Using symbolics ( + - * / cos sin tan ^ log min max neg…) as functions set to represent a relationship.</p>
-<ul>
-<li>Total different interaction feature.</li>
-<li>Automated feature learning.</li>
-<li>Works in many natural scene, such as astronomical, geological, biological tasks.</li>
-</ul>
-<hr>
-<h2 id="Auto-Encoders"><a href="#Auto-Encoders" class="headerlink" title="Auto Encoders"></a>Auto Encoders</h2><ul>
-<li>Learn to construct clean samples from corrupted ones. (denoise)</li>
-<li>Regularization of the latent space to match a prior. (Always multivariate normal distribution)</li>
-</ul>
-<hr>
-<h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><ul>
-<li>FeatureA – FeatureB – aggregate. Everything can construct graph.</li>
-<li>Maximize the likelihood of preserving newwork neighborhoods of nodes.</li>
-<li>Unsupervised learning methods: Deepwalk, node2vec.</li>
-<li>Semi or supervised learning: GCN.</li>
-<li>Deepwalk, node2vec work in many tasks, like CTR, Fraud detection</li>
-</ul>
-<hr>
-<h2 id="End2End-model"><a href="#End2End-model" class="headerlink" title="End2End model"></a>End2End model</h2><ul>
-<li>Online  learning models, FTRL, mini-batch fm, etc.</li>
-<li>DeepFM, DeepFFM,xDeepFM etc.</li>
-<li>Attention based interaction model.</li>
-</ul>
-<hr>
-<h2 id="Target-mean-Encoding"><a href="#Target-mean-Encoding" class="headerlink" title="Target mean Encoding"></a>Target mean Encoding</h2><ul>
-<li>Leave-one-out /K-Folds / history slide window schema to avoid overfitting</li>
-<li>Post-prior schema</li>
-</ul>
-<hr>
-<h2 id="Model-based-target-encoding"><a href="#Model-based-target-encoding" class="headerlink" title="Model based target encoding"></a>Model based target encoding</h2><ul>
-<li>Base model to predict target, with k–folds, user prob as features.</li>
-<li>Base model to predict residuals (target - probs)</li>
-<li>Sometimes, user level-N stacking probs works better.</li>
-</ul>
-<hr>
-<h2 id="Training-amp-Optimization-Tricks"><a href="#Training-amp-Optimization-Tricks" class="headerlink" title="Training &amp; Optimization Tricks"></a>Training &amp; Optimization Tricks</h2><h5 id="Common-Tricks"><a href="#Common-Tricks" class="headerlink" title="Common Tricks"></a>Common Tricks</h5><ul>
-<li>Learning rate schedule. SGD lr=0.1, BS=256, lr * bs / 256= 0.1 * 256</li>
-<li>Label smoothing.</li>
-<li>No bias decay.</li>
-<li>Bias initial with prior distribution.</li>
-<li>Focal loss is a good metric for estimating models’capabilities.</li>
-<li>Combine multi loss let the model converge rapidly towards better performance.</li>
-<li>User standart scaler transform First.</li>
-<li>Sometimes userful, but all depends on data.</li>
-</ul>
-<h5 id="NLP-task-traning-Tricks"><a href="#NLP-task-traning-Tricks" class="headerlink" title="NLP task traning Tricks"></a>NLP task traning Tricks</h5><ul>
-<li>Diverse pre-trained embeddings</li>
-<li>more than 90% of a model’s complexity resides the embedding layer.</li>
-<li>Contextual level embedding always helps.</li>
-<li>But now we have BERT.</li>
-<li>Dynamic Padding boosts training speed and model performance.</li>
-<li>Add test oov vocabs to embedding matrix.</li>
-<li>OOV replaced with“something”</li>
-<li>Adamw really works in many NLP tasks.</li>
-<li>Spatial Droupout, shuflle noise in classification task.</li>
-<li>Translation Aumentation. En-Fr, En-Fr-En.</li>
-</ul>
-<h5 id="CV-task-training-Tricks"><a href="#CV-task-training-Tricks" class="headerlink" title="CV task training Tricks"></a>CV task training Tricks</h5><ul>
-<li>ResNet is always a good baseline model to do experiments.</li>
-<li>Warm-up learning rate + cos learnging rate decay.</li>
-<li>Manual Learning rate schedule.</li>
-<li>Batch with different loss accumulate.</li>
-<li>User more shape relevance augmentation.</li>
-<li>CNN tend to learn texture information but not shape info.</li>
-<li>Auto augmentation.</li>
-</ul>
-<h5 id="Pseudo-Learning"><a href="#Pseudo-Learning" class="headerlink" title="Pseudo Learning"></a>Pseudo Learning</h5><ul>
-<li>Filtering hard examples in training dataset use OOF prediction.</li>
-<li>Global variance info leakage.</li>
-<li>Add the most confident test predictions to the training dataset.<br>Test distribution leakage, data extend<br>Simple in Batch Traning Models.<br>User single model to label test dataset.<br>Retrain model with each batch add 10~30% test pseudo labeled data.</li>
-</ul>
-<hr>
-<h2 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h2><ul>
-<li>逻辑性（代码架构清晰、自动化框架、特征工程MECE）</li>
-<li>代码可复用（不重复造轮子）</li>
-<li>基于业务的分析（bad case 分析、Kernels、Discussion、相似比赛）</li>
-<li>反思总结</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/" data-id="ckjuw1ze00018nbdlhivz0ulr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Word2Vec" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Word2Vec/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Word2Vec/">Word2Vec</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Core-idea"><a href="#Core-idea" class="headerlink" title="Core idea"></a>Core idea</h2><p>How to define a word (presentation) meaning ? A word’s meaning is given by the words that frequently appear close-by.</p>
-<center>“You shall know a word by the company it keeps” (J. R. Firth 1957: 11).</center>
-
-<p>One of the most successful ideas of modern statistical NLP!</p>
-<div align="center">
-<img src="https://i.loli.net/2020/09/20/Ca1YdUvotWESinT.jpg"/>
-</div>
-
-
-<h5 id="Training-samples-Construction"><a href="#Training-samples-Construction" class="headerlink" title="Training samples Construction"></a>Training samples Construction</h5><div align="center">
-<img src="https://i.loli.net/2020/09/20/eMyuIgNJtYCKA4T.jpg"/>
-</div>
-
-<h5 id="Skip-Gram-Model"><a href="#Skip-Gram-Model" class="headerlink" title="Skip-Gram Model"></a>Skip-Gram Model</h5><div align="center">
-<img src="https://s1.ax1x.com/2020/09/20/wo7n76.jpg"/>
-</div>
-
-<p>和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；</p>
-<h5 id="Where-is-word-presentation"><a href="#Where-is-word-presentation" class="headerlink" title="Where is word presentation?"></a>Where is word presentation?</h5><h5 id="Subsampling-of-Frequent-Words"><a href="#Subsampling-of-Frequent-Words" class="headerlink" title="Subsampling of Frequent Words"></a>Subsampling of Frequent Words</h5><p>“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；<br>上述高频词在构造训练样本中占据了很大比例；</p>
-<p>Subsampling: 对于每个词训练时以如下概率丢弃，其中为词在语料中出现频率；t为超参数（Mikolov论文设置为10-5）；</p>
-<p>即相当于以如下概率保留样本；</p>
-<p>上述函数具有以下性质</p>
-<p> (100% chance of being kept) when . This means that only words which represent more than 0.26% of the total words will be subsampled.<br> (50% chance of being kept) when .<br> (3.3% chance of being kept) .</p>
-<p>Negative Sampling<br>目标函数将替换为如下函数，核心思想是从某个noise distribution   进行负采样，然后通过logistic regression转化为二分类问题；</p>
-<p>是每次采样中负样本的个数：在较小的数据集上设置为[5, 20]之间；在较大数据集上设置为[2, 5]之间;<br>可采用unigram distribution，公式如下所示，本质上是对负样本根据词频进行加权，即词频更高的词更有可能被选择为负样本；</p>
-<p>Mikolov修改该采样分布为3/4次幂时比原始的unigram distribution效果提升明显；</p>
-<p>negative sampling的效果：显著提升训练速度，同时也提升了词向量质量；<br>为什么以unigram distribution的方式采样会提升词向量的质量？因为语言本身有个规律：句子中越高频的词(例如it, and, …,)这些词对于刻画句子的含义作用越小；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Word2Vec/" data-id="ckjuw1ze1001cnbdl4vhy0u3i" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Yoshua Bengio对ML研究者的建议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" class="article-date">
-  <time datetime="2020-01-11T12:11:00.000Z" itemprop="datePublished">2020-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/">Yoshua Bengio对ML研究者的建议</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Quora原始问题"><a href="#Quora原始问题" class="headerlink" title="Quora原始问题"></a>Quora原始问题</h2><p>Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?</p>
-<p>对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？</p>
-<p>Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by </p>
-<p>(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and </p>
-<p>(b) by learning to tune hyper-parameters and explore variants (in architecture, objective function, etc.), e.g., by participating in competitions or trying to improve on published results once you have been able to reproduce them. Then, find collaborators with whom you can brainstorm about ideas and share the workload involved in exploring and testing new ideas.  Working with an existing group is ideal, of course, or recruit your own students to work on this with you, if you are a faculty.</p>
-<p>四个核心能力</p>
-<ul>
-<li>确保数学和计算机学科扎实训练（包括实践部分，即编程)</li>
-<li>阅读书籍和很多论文</li>
-<li>在阅读论文的基础上（a）自己编写一堆学习算法来发展自己的直觉，例如尝试复制现有的论文，（b）通过学习调参和探索变体（在模型结构，目标函数等），例如通过参与竞赛或尝试改进已发表的结果，一旦你能够重现它们。</li>
-<li>找到小伙伴与他们头脑风暴，分享探索和测试新想法的相关工作。如果是教师，与现有团队合作当然是很理想的，或者招募学生与一起工作。</li>
-</ul>
-<h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://www.quora.com/bookmarked_answers">https://www.quora.com/bookmarked_answers</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" data-id="ckjuw1ze2001enbdlf5i40k9c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019 Annual Summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/31/2019%20Annual%20Summary/" class="article-date">
-  <time datetime="2019-12-31T07:11:00.000Z" itemprop="datePublished">2019-12-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Always-Review/">Always Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/31/2019%20Annual%20Summary/">2019 Annual Summary</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="年度关键词"><a href="#年度关键词" class="headerlink" title="年度关键词"></a>年度关键词</h2><ul>
-<li>今年给自己的年度关键词是: <br/>
-<center>
-<font color="red" size="6">
-<strong>入局</strong>
-</font>
-</center>
-
-</li>
-</ul>
-<hr>
-<h2 id="工作总结（算法工程师的第一个半年）"><a href="#工作总结（算法工程师的第一个半年）" class="headerlink" title="工作总结（算法工程师的第一个半年）"></a>工作总结（算法工程师的第一个半年）</h2><p>从两条线进行总结, 一条线是以时间线, 梳理每个项目做的点; 另一条是经验线, 总结的是工作方法论上可以提升的点.</p>
-<h5 id="落地etao-gul迁移学习项目"><a href="#落地etao-gul迁移学习项目" class="headerlink" title="落地etao gul迁移学习项目"></a>落地etao gul迁移学习项目</h5><p>年初实习项目, 主要把迁移学习模型在gul场景落地, 效果上相比Local模型取得提升.核心点是利用Global信息更好地刻画C端用户全局兴趣; 这个项目本来在2018年年末完成, 相比预期有一定的delay, 主要原因是2018年末对tensorflow的一些API使用还是不够熟悉踩了一些坑, 不过最终还是拿到了比较稳定的收益.项目结束后也同时抛出一个潜在优化点, 能否设计更优雅的结构容纳Global信息, 或者蒸馏已有Global网络萃取出Global兴趣分布, 充分降低模型的复杂度的同事达到类似的精度, 后续因为完成毕业论文的原因没有再继续深究.</p>
-<h5 id="完成硕士毕业论文-amp-答辩"><a href="#完成硕士毕业论文-amp-答辩" class="headerlink" title="完成硕士毕业论文 &amp; 答辩"></a>完成硕士毕业论文 &amp; 答辩</h5><p>将自己硕士期间的很多工作和探索总结在了论文里面, 基本上每一部分内容都把自己想要体现的内容, 包括四个部分（室内定位理论+机器学习方法在Wi-Fi定位任务的应用+数据分布探索+对比实验的设计思想和论证过程）并且尽可能清楚地体现到论文内容当中, 可以说是对自己硕士三年的一个总结.</p>
-<h5 id="落地ToB端推荐项目"><a href="#落地ToB端推荐项目" class="headerlink" title="落地ToB端推荐项目"></a>落地ToB端推荐项目</h5><p>一期二期探索ToB推荐的方法论, 不同于常规的ToC推荐, B端推荐需要刻画的B背后的人群结构信息, 并且需要去从模拟推广者选品视角, 需要引入领域知识作为辅助.需要拆分B下人群结构以及背后的需求.做的过程中有很多地方进行了比较反复的讨论和尝试, 重点在三个问题上上有所停滞,  </p>
-<ol>
-<li>如何定义抽象的media推广意愿  </li>
-<li>如何离线验证模型起到的效果.</li>
-<li>如何保证数据产生的效率.（排序阶段特征提取和模型训练过程和召回结果对接的时产生过性能问题）.工作方法论总结放在下面的部分.</li>
-</ol>
-<h5 id="参加试用期转正答辩"><a href="#参加试用期转正答辩" class="headerlink" title="参加试用期转正答辩"></a>参加试用期转正答辩</h5><ul>
-<li>目前主要存在的问题: 遇到问题处于太过纠结的状态, 需要高效地走到解决问题的途径上, 不要把一个问题的细节梳理的清清楚楚再解决（事实上你也不可能一下就梳理清楚）; 简单来说对我目前的情况而言: 只抓核心要素即可、直白地问问题、聚焦当前的问题; </li>
-<li>转变一种态度: 承认人都是需要帮助的（这是正常不过的、再牛的人也是这样的）, 永远不要承认自己总能独立解决问题这个事实（事实上也不是正确的）, 再多和领导多沟通益处很大（我是有这样做, 但还能做的更好, 这里对我的收益空间非常大）; </li>
-<li>乐观、轻松、尽情展示的状态是魅力的完美体现和高认可度的源泉; 高度谨慎、严谨、犹豫、纠结让人瞬间丧失强能力感; 以后尽量维持一种前一种状态进行讲解, 不要给人以拘谨的状态感觉.</li>
-<li>本次答辩细节有余、抽象大图能力欠缺; 解决业务问题的角度而言: 抽象能力&gt;&gt;细节能力, 更体现一个人的水平; 仍然存在ppt文字太多的问题, 本质上是抽象能力太差导致的; </li>
-<li>答辩的时候不要过多铺开讲技术细节（比如表叔过多重复xx特征、xx训练等细节）, 受众有时候没法马上明白, 他们不是算法研究员, 因此千万不要学术化、不要全盘算法化、业务表述业务化、细节表述通俗化效果好很多; </li>
-<li>答辩过程来看: 整体多视角里面缺少整体GMV这个对我们平台来说最宏观的目标; 另外就是“自购行为过滤”这个表述引起老大的误解, 本质上是说带有目的性的转化这个含义更接近一些; 另外老大鼓励对外技术分享活动中将我们的技术进行分享, 但是要注意脱敏; </li>
-</ul>
-<h5 id="下行ppt商品项目"><a href="#下行ppt商品项目" class="headerlink" title="下行ppt商品项目"></a>下行ppt商品项目</h5><p>ppt项目由于客观因素, 导致接入mt数量较小, 影响面较小.这个项目总结2个点.</p>
-<ol>
-<li>如何构建离线验证集是保证效果的关键环节, 之前的方法论只集中在机器学习模型的效果验证上, 其实明确一点, 任何算法策略决定的效果保证, 都是需要建立相应的验证集和验证指标, 有时候需要建立多个验证集和验证指标.同时需要考虑在日常和大促两个截然不同的时间节点, 大促期间人的潜在需求会得到充分的释放, 可以说类似双11规模的大促期间的成交基本界定了算法效果的上限.同时对于商家来说, 对于同样一件商品, 都会有和日常截然不同的活动加持.</li>
-<li>货品空间和需求空间的释放.由于项目早期是以品牌为核心因素做优化, 因此早期对于品牌限制是略微过分严格, 导致货品对应的需求空间没有得到充分地释放.水大鱼大, 有时候不加限制带来的自然的结果往往更能适应人群需求的分布.</li>
-</ol>
-<h2 id="工作（技术）执行层面方法论总结"><a href="#工作（技术）执行层面方法论总结" class="headerlink" title="工作（技术）执行层面方法论总结"></a>工作（技术）执行层面方法论总结</h2><ul>
-<li>高频代码复用.2019年工作中有一个影响效率低的问题是重复写了相似的代码, 其实围绕不同的主题做的内容, 在核心数据处理逻辑上存在相似性, 比如排序阶段统计特征提取同时也能作为选品策略里面的验证集因子; 再如在不同算法任务上, 用户的静态属性特征和商品的静态属性特征基本上保持非常一致, 因此复用已有代码模块, 例如特征表或者某个离线指标统计表, 并且设计好可复用schema提升工作效率, 力争在2020不再多花时间在重复代码开发上.</li>
-<li>快速迭代.尽快的上线迭代是推进优化的正确节奏; 值得注意的是, 上限节奏太慢基本意味着迭代出了问题, 并且和手头要处理的问题的难度是毫无关联的. 再难的问题都可以被分解成几个关键的部分, 逐一破解然后合并.</li>
-<li>固定化特征工程+稀疏特征处理.特征工程决定模型上限, 在特征层面基本上是分user、item、context三个大类层面（事实上不管特征有多trick总能够关联到着三个大类上面）; 推荐系统或者广告系统任何数据中都存在一定的稀疏的特点, 但是解决稀疏性或者冷启动问题无外乎从两个角度去尝试优化: 空间+时间.比如空间上引入更丰富的信息刻画用户的全局兴趣（比如引入Global &amp; Local信息迁移学习, 再如利用建图的角度汇聚人群需求, 或者将单个商品泛化到类目/品牌/店铺这种side_info的embedding学习, 再或者根据i2i的结果进行特征层面的泛化）, 时间上拉长周期维度去完整刻画用户长期兴趣.</li>
-<li>离线验证方法沉淀.无论是确定性的算法任务（例如CTR预估）, 还是对抽象的算法目标（优化某个选品策略）, 都要无一例外的建立离线验证集.有时候需要从不同角度出发建立多个验证集.培养从数据层面抽象业务目标的能力: 对于比较抽象的优化目标, 必要时需要使用强相关性数据指标进行模拟和逼近, 这种时候需要大胆的进行尝试和验证, 哪怕是从来没有人这么干过的方法; 常规电商算法命题, 离线覆盖率是一种比较保守而有效的做法.例如TopGMV覆盖率/nextDay覆盖率/Top seller覆盖率/市场占有率等.</li>
-<li>人肉case级检查.除离线验证和线上切流两类方法.人肉case检查也是非常重要的一类方法, 主要是从直觉上验证当前的算法效果是不是符合我的感官上的预期, 有没有奇奇怪怪的case, 有没有处理不够优雅的case.人肉case级检查最好是有师兄或者其他同事一起来看.</li>
-<li>留心处处皆学问.感觉最好的学习方式就是把工作和生活中每个环节都以学习的方式多多参与思考、讨论和笔记总结.记下来每个人care的目标, 为了达到目标采取的做法.可以是某个大牛, 也可以是周围的同事.可以是某个产品/运营, 可以是某个文字稿, 甚至可以是某个app上的老铁/主播.</li>
-<li>Face to Face.当面沟通, 与他对话, 问他问题, 掘墓三尺, 问入骨髓.无论是什么学习场合, 当面说清楚还是最好的理解方法, 当然沟通完最好是以笔记的形式整理思维.但是能当面一定不要拐弯抹角.</li>
-</ul>
-<hr>
-<h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p>读书杂多, 单独总结, 不再赘述.<br>《薛兆丰经济学讲义》《香帅的北大金融学课》《经济学原理》《张居正大传》《英格兰足球为什么总是输》《足球经济学》《电商运营方法论》《营销管理》《美国经济的增长与起落》《菊与刀》《富甲美国: 山姆沃尔顿自传》《智能商业》</p>
-<hr>
-<h2 id="足球"><a href="#足球" class="headerlink" title="足球"></a>足球</h2><h5 id="最强不过利物浦"><a href="#最强不过利物浦" class="headerlink" title="最强不过利物浦"></a>最强不过利物浦</h5><p>本赛季欧冠留下最深印象的是克洛普领先的利物浦, 从三个方面来看.1.攻击线上的化学反应（互补性）.萨拉赫-马内-菲尔米诺三人有着非常良好的化学反应, 萨拉赫盘带出色能够把控进攻节奏, 马内跑位精准+强力终结+强力斗志当之无愧大腿, 菲尔米诺在进攻中具有很强的创造性, 再加上奥里吉也意识俱佳, 能在此三人的基础上有效的出奇制胜, 进攻中以上几人有很强的互补性, 具备了欧洲一流的攻击水准.同时两个边后卫跑动能力极强, 为进攻增添很多张力, 是令人羡慕的进攻体系; 2.防线, 范戴克一枝独秀, 对阵热刺上演1防2的局面, 脑子里设想好了西索科是右脚球员, 逼西索科用左脚起脚; 决赛防孙兴慜, 孙速度不弱, 范也是快速贴身为主, 处理相当冷静, 对于箭头人物的进攻特点做足了功课.阿诺德作为年轻小将, 对于压力处理的非常好, 主场对阵巴萨鸡贼的一个假跑突然传中, 必须拍案叫绝, 确实在战略层面碾压了巴萨.3.渣叔克洛普, 最有激情的德国教练, 激情之下是具备极强的表达能力, 能将自己的思想渗透到球员在攻防当中的每一次触球选择, 在13年不敌拜仁, 17不敌皇马之后, 19的欧冠中, 除了决赛都展现了强大的集体作战能力, 坚持疾风暴雨般的团队进攻打法, 但是决赛却一反常态踢得非常稳健保守, 领先之后进攻线上基本上只把萨拉赫安排在前面, 全部队员都集中在体系防守里面.这种级别的赛事, 到了最后战略上的保守带来胜利的概率会非常大.</p>
-<h5 id="孙兴慜闪耀亚洲之光"><a href="#孙兴慜闪耀亚洲之光" class="headerlink" title="孙兴慜闪耀亚洲之光"></a>孙兴慜闪耀亚洲之光</h5><p>本赛季孙完成了大爆发, 正式跻身为英超顶级攻击手, 具有很快速的反击推进能力和终结能力.成功背后, 他父亲可以说是第一功劳, 父亲将培养一名职业运动员当做一个“十年以上的任务”, 其决心和执行力都堪称恐怖（抛开足球放眼所有行业、所有角色, 这种父亲、这种人都堪称罕见）, 同时长期提醒孙, 你所获得的荣誉都是别人对你的认可, 不是你的骄傲的资本.灌输谦虚睿智的态度同时十多年完成一个目标的决心并行, 两种品质的并行造就了可能是未来亚洲最成功的球员; </p>
-<h5 id="国足四十强赛的停滞"><a href="#国足四十强赛的停滞" class="headerlink" title="国足四十强赛的停滞"></a>国足四十强赛的停滞</h5><p>7-0那场大胜我看出来不少问题, 看出了国足攻防两端过于明显的短板, 尤其是进攻缺少配合, 因此在后面买彩票的时候真的是出奇的稳.四十强赛国足是没有人才.遗憾的是进攻中武磊和艾克森没有配合, 中场太缺创造力, 后防线更是人才荒漠, 再加上里皮用人固执不用冯潇霆等也是同样败笔, 固执的用人能够带来冠军, 但是在不利的条件下, 个人感觉还是得放下以前的一些成见面对当下的问题, 冯潇霆之前的比赛确实有个很低级的失误被阿兹蒙, 那个丢球确实该骂、该重罚, 但是有时候今时不同往日, 防线用两个没有经验的小将客观来说真的没法撑起大局（虽然小将联赛表现算不错）, 个人感觉当时还是暂时重启一下老将效果来的更好.</p>
-<h5 id="国安争冠失败"><a href="#国安争冠失败" class="headerlink" title="国安争冠失败"></a>国安争冠失败</h5><p>半程取得最好开局, 一度看到希望, 但是最终输给上港那场太伤, 中途换下施密特始终还是不妥, 直接把进攻体系有所瓦解.国家队四十强比赛影响了李可、池忠国两个核心对决上港没上, 直接导致被上港中场完全压制, 影响太大.有时候机会真的是转瞬消失, 本赛季国安阵容感觉是足够拿冠军的, 感觉缺少核心战术上稳定性对结果还是有太多不利影响.</p>
-<hr>
-<h2 id="锻炼与健康"><a href="#锻炼与健康" class="headerlink" title="锻炼与健康"></a>锻炼与健康</h2><ul>
-<li>下半年6-8月份坚持一段时间跑步, 后来没能坚持下来; 主要原因是项目中间有一段讨论和停滞, 同时心里急着出一些成果, 然后搁置了锻炼的节奏, 仔细回想起来其实推进项目的最好方法就是聚焦核心问题、简化一些处理、放开一些限制, 不要被局部的一些细节所缠绕跳不出来, 按照项目最根本的目标选择比较简单有效的做法去快速迭代, 这样基本上能够比较自然地、有序地进行推进.</li>
-<li>今年打了很长时间桌上足球, 技术有了明显的进步, 开发出来前场防守反击的能力, 进球率非常高且让对手心理非常难受, 后场进攻右手拉射也偶然有进球, 但是力道还是比左手小很多; 最重要的一点是无论进攻还是防守, 认可“控球的”真正价值, 且控球都更加自信了, 横向控球能为进攻提供随机性, 给防守方带来更多的难度, 虽然频繁来回控球有一定的丢球率, 但是会增加进攻中的不确定性, 长久来看对于进攻效果提升大有好处, 有时候必须大胆一些采取更灵活的策略, 哪怕失误, 但是一旦练成这种手法, 进攻的质量会高出一个层次.</li>
-<li>病史: 8月份突然发烧一次, 居然身体都在颤抖, 瞬间从37度干到39度高烧不退, 连输2天液才好, 当时确实是难受吓一跳, 特别感谢女朋友陪我去2个医院看病才治好, 并且做了比较全面的检查没有什么大碍, 医保卡没办下来累计花费1000+RMB, 感觉真的挺多; 12月份风寒感冒, 症状就是鼻塞打喷嚏流鼻涕, 身体没有不适, 不过周末睡了历史最长的两天, 在两天早睡的情况下, 第一天睡到了上午11点, 第二天睡到下午2点也是破了记录, 可能和累计疲劳有关.有几次晚上腹泻, 多数原因是快速的吃了太冰的东西, 不能急促地吃太冰的东西.</li>
-</ul>
-<hr>
-<h2 id="社交与活动"><a href="#社交与活动" class="headerlink" title="社交与活动"></a>社交与活动</h2><ul>
-<li>技术沙龙.参加技术类的同行交流3次, 两次数据挖掘小伙伴聚会, 一次听广告专场分享, 认识了微博的同行, 拓宽很多视野; 有收益的是MSRA高的特征工程分享, 整体上梳理了所有做特征工程的方法, 非常系统, 有些Feature Engineering真的非常Trick, slides不对外开放已经总结成相关文档; 王博和奥古对于Fintech的分享打开了科技金融的应用的思考; KDD两届Top选手蔡/钟对于数据挖掘中不重复造轮子、以及结构化组织代码的做法也对我深受启发; 浪教授对于AutoML的分享对于这项技术的局限性阐述比较清晰具体, 不过其存在的一个潜在意义就是对机器学习本身的过程的认知会深化, 不再孤立的聚焦在业务本身或者某个模型本身, 而是以一种上帝视角理解特征工程-模型学习-部署应用着其中的各个过程我们真正care什么.</li>
-<li>家庭聚会.</li>
-<li>克莱德曼音乐会.</li>
-<li>本科实验室小伙伴聚会.</li>
-</ul>
-<hr>
-<h2 id="旅游"><a href="#旅游" class="headerlink" title="旅游"></a>旅游</h2><h5 id="拉萨"><a href="#拉萨" class="headerlink" title="拉萨"></a>拉萨</h5><p>西藏整体印象是圣洁、无污染、纯净.布达拉宫内有乾坤, 里面有佛教文化中一切元素, 能唤起藏区统治者那种具备强信仰, 却又因为是王室的诸多无奈之情, 宫殿里面巨大的陵墓让人震撼, 感觉还是无论是生是死, 都是在追求内心中的一种平静.藏区民众就像他们的牦牛一样, 性格温顺, 虔诚, 丝毫没有感受到少数冲突分子的暴乱、动荡.高原反应: 所谓高原反应, 好比长期不运动跑了1000米之后, 自然喘气会大口大口喘气, 但是过一会就会恢复, 类似这样一种感觉.在持续向上爬坡或者快速前进的时候会很快有这种感觉.</p>
-<h5 id="林芝"><a href="#林芝" class="headerlink" title="林芝"></a>林芝</h5><p>塞上江南, 海拔比拉萨低不少高反弱很多, 能较好地适应大多数人的需求.景色的美在于结合了远方的雪山和近处的绿水, 绿水和桂林遇龙河有点类似, 但是远方的雪山加持上感觉美的更立体.最美的地方在于南迦巴瓦峰, 中国最美山峰Top1感觉应该是实至名归（区分清楚是“山峰”, 不是“山”）, 海拔不到8000, 号称羞女峰, 那个峰尖长期是云雾缭绕, 基本上不能完全看到全貌, 我这算是足够幸运, 拍到了完整的山尖, 并且拍照时真好是太阳金光一渡, 美好瞬间来的突然去的更快, 也就持续几分钟.到了晚上之后, 南迦巴瓦依然云雾缭绕, 远远望去仔细看了十多分钟, 感觉那个山峰上面绝对是阴森恐怖, 云雾缭绕, 假如晚上爬在上面心里恐惧肯定是一个巨大问题.后来回了北京再看南迦巴瓦的照片, 那种怀念的感觉迟迟散不了, 做梦也梦见过好几次, 但用“美”这种字眼描述不出来那种难忘的感觉, 梦里面的南迦巴瓦, 感觉已经称为一种心结, 这种感觉在目前为止所有去过的地方里面都基本没有.</p>
-<h5 id="纳木措-amp-羊卓雍措"><a href="#纳木措-amp-羊卓雍措" class="headerlink" title="纳木措 &amp; 羊卓雍措"></a>纳木措 &amp; 羊卓雍措</h5><p>这两个是三大圣湖的其中两个, 去的路上都是4-5个小时车程, 来回9-10个小时成本可以说极高, 而且中间有断路仔细想想那根本不是路, 颠簸2个小时都快要起飞了, 中间游览也就2小时, 但整体感觉还是挺值的, 和抱有期待和兴趣有关, 同时这两个湖确实是平静的让人不知道该说什么好, 手上快速的拍下一个个的照片, 但是说实话没几张满意的, 可能是设备不行吧好多感觉相片上完全不出来.两大圣湖美的原因还是距离生活区非常元, 距离人住的地方实在是有距离, 这样也保证了超强的抗污染.印象比较深的是和藏獒合影, 藏獒在人们心目中是非常凶的动物, 我当时因为拍了和2只藏獒的合影心里面秀的一逼, 但仔细想想藏獒的雄伟早就被人的驯化所磨灭, 可以说没有一丝雄气, 动物内在个性还不如一只家养的猫来的傲娇.当地人喊一句蹲下马上蹲下, 从来没有见过一种动物能被驯化的那么没脾气.人类最强的地方就是“驯化”, 有一百种方法让有个性的生灵变成机器般的产物, 这么一想这张看似牛逼的藏獒合影照片, 真的是没多大意思.另外就是抱着小羊拍照片的那个, 拍出来效果很不错, 藏家小女孩拍的很开心, 我非常满意.有个细节当时小女孩子因为多拍了一个动作想多问我收10快钱, 但是她妈妈之前收了我的钱就马上拒绝了, 可见这些藏民还是虽然是赚钱还是很有原则的.</p>
-<h5 id="飞机回家的路上"><a href="#飞机回家的路上" class="headerlink" title="飞机回家的路上"></a>飞机回家的路上</h5><p>旁边坐了一个藏民老爷爷, 皮肤黝黑, 目光顺着窗口望出去, 不知道是不是第一次坐飞机.空姐发餐食和饮料的时候没有说话摆手不要, 一下让我想起了我姥爷在的时候.瞬间眼泪刷刷的实在是难以控制, 我在吃完米饭的时候藏民老爷爷还主动帮我把餐盒递给了空姐.下了飞机在银川候机换乘, 心情久久难以平静, 一个人吃了那个很酸的宁夏酸奶缓了好一会儿.</p>
-<h5 id="同行的人"><a href="#同行的人" class="headerlink" title="同行的人"></a>同行的人</h5><p>认识的人有好几个, 印象深刻的有一个西安的大厨, 三个温州的女生, 一个飞韩国的导游, 一个住在美国小姐姐, 一个也是太原做旅游的女生, 还有几个其他人.来西藏旅游的基本上是两类, 一类是刚辞职有时间出来玩的, 另一类是真有点钱且为了n年前的一个目标过来的（没错我是第二种）, 这部分人有个共性: 真的是有想法、能执行的一批人, 这点毋庸置疑, 认识几个这种人加了微信, 感觉自己心态开阔了许多.来西藏多多少少也是一次克服恐惧的过程, 因为能让人恐惧的东西, 就是具有未知性的东西, 你不知道来了不会不会有高原反应、藏独分子这些, 当你真的来了, 才是真正体会这些rumors是真rumors还是reality.总之, 独自一人去一次西藏, 对自我产生更强烈的认同, 也会想的更清楚自己到底是怎样的一类人: 简单来说就是那种有自己的想法, 有执行, 十分十分注重自我体验的那种人.</p>
-<h5 id="东极岛"><a href="#东极岛" class="headerlink" title="东极岛"></a>东极岛</h5><p>大陆最东的岛屿, 太平洋的光最先照耀到这里.前面这句话是韩寒写的很有感觉, 但是实地去感受相当一般, 垃圾很多, 开发也不完善, 相应的娱乐设施也乏善可陈.梭子蟹卖的很贵, 感觉也不怎么好吃.酒吧老板娘始终不让我们在里面吃饭, 让人极其讨厌; 岛上一碗面基本上是拉面+半个梭子蟹壳, 可以说是高价且毫无亮点.除了和算法团队小伙伴留下比较不错的合影留念, 景点强烈不推荐.旅游业的发展不是一件简单的东西, 提升管理质量本身的意义可能比本来具备的资源更加重要.如果让我做的话, 我可能先从调整这些商家的态度入手, 真正做到客户第一, 再考虑调优盈利结构.</p>
-<h5 id="上海"><a href="#上海" class="headerlink" title="上海"></a>上海</h5><p>真·故地重游, 这次针对性的吃了不少上海的特色美食, 和几个小伙伴在外滩照了照片, 秀的那是十分的开心.我始终感觉外滩美景的大气没有重庆那种三江汇聚来的大气.不过上海确实是现代感非常强, 不是国内任意一个城市可以比拟的.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/31/2019%20Annual%20Summary/" data-id="ckjuw1zee001xnbdl4uf9fa1f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ubuntu config" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/12/ubuntu%20config/" class="article-date">
-  <time datetime="2019-12-12T12:11:00.000Z" itemprop="datePublished">2019-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/ubuntu%20config/">ubuntu config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><h4 id="解决git-status中文乱码问题"><a href="#解决git-status中文乱码问题" class="headerlink" title="解决git status中文乱码问题"></a>解决git status中文乱码问题</h4><p>将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.quotepath false</span><br></pre></td></tr></table></figure>
-
-<h2 id="ohmyzsh配置"><a href="#ohmyzsh配置" class="headerlink" title="ohmyzsh配置"></a>ohmyzsh配置</h2><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>若不能科学上网, 采取 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35104586/article/details/103604964">ohmyzsh</a> 配置方法<br>项目mirror地址: <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh">https://gitee.com/mirrors/oh-my-zsh</a><br>以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)</p>
-<p>通过 curl</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-<p>或 wget</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="配置vim"><a href="#配置vim" class="headerlink" title="配置vim"></a>配置vim</h5><p>参考<a target="_blank" rel="noopener" href="https://maxim-danilov.github.io/make-linux-terminal-great-again/">ohmyzsh增强配置</a></p>
-<h2 id="解决github图片挂问题"><a href="#解决github图片挂问题" class="headerlink" title="解决github图片挂问题"></a>解决github图片挂问题</h2><p>修改hosts, 编辑 </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo subl /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p>增加如下内容</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># GitHub Start </span></span><br><span class="line"><span class="number">140.82</span><span class="number">.113</span><span class="number">.3</span>      github.com</span><br><span class="line"><span class="number">140.82</span><span class="number">.114</span><span class="number">.20</span>     gist.github.com</span><br><span class="line"></span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    assets-cdn.github.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    raw.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    gist.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    cloud.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    camo.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars0.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars1.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars2.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.28</span><span class="number">.133</span>     avatars2.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars3.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars3.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars4.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars4.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars5.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars5.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars6.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars6.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars7.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars7.githubusercontent.com</span><br><span class="line"><span class="number">151.101</span><span class="number">.184</span><span class="number">.133</span>    avatars8.githubusercontent.com</span><br><span class="line"><span class="number">199.232</span><span class="number">.68</span><span class="number">.133</span>     avatars8.githubusercontent.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># GitHub End</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/12/ubuntu%20config/" data-id="ckjuw1ze3001inbdl27ju4g9o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Data Analysis Tutorial:(Part II)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" class="article-date">
-  <time datetime="2019-12-11T14:11:00.000Z" itemprop="datePublished">2019-12-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/">Data Analysis Tutorial:(Part II)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Reusabal-Scripts"><a href="#Reusabal-Scripts" class="headerlink" title="Reusabal Scripts"></a>Reusabal Scripts</h2><ul>
-<li><p>funnel chart</p>
-</li>
-<li><p>Two-axis trend chart</p>
-</li>
-<li><p>heat map </p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" data-id="ckjuw1zdh0006nbdleolv5ubx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Data Analysis Tutorial:(Part I)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" class="article-date">
-  <time datetime="2019-12-11T12:11:00.000Z" itemprop="datePublished">2019-12-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Programming-Data/">Programming & Data</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/">Data Analysis Tutorial:(Part I)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="Why-data-matters"><a href="#Why-data-matters" class="headerlink" title="Why data matters?"></a>Why data matters?</h2><ul>
-<li>显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。</li>
-<li>严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。</li>
-<li>需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据是两个完全不同的过程，二者不互通。</li>
-<li><strong>SQL is all you need</strong>。到2019年SQL仍然是最通用、最标准、最普适的数据处理语言，故本文以SQL为例进行展开。</li>
-</ul>
-<hr>
-<h2 id="Core-Idea"><a href="#Core-Idea" class="headerlink" title="Core Idea"></a>Core Idea</h2><ul>
-<li>结论导向：永远不做没有目的的数据分析，必须<strong>提前想清楚通过数据要验证什么事实</strong>；具体做法，先假设你预期结论成立，心里想象数据画出来图是什么样子，然后统计下来对比画出来的图和前期假设图是否相似，若相似那么很快就能验证一些效果；若不相似，再考虑当前统计层次是否有问题，能否做更细的拆解或者能否精简一下统计层面；</li>
-<li>逻辑自恰：数据是流体，总是呈现起伏不定的规律，我们既要抓住一般规律，同时也要尽可能完美解释细节变化产生原因，即<strong>在给出业务结论时一定要有自洽的逻辑</strong>，对于图中出现的一切现象都要给出非常明确的解释（哪怕解释是片面的、缺乏依据的），为什么上涨，为什么下跌，为什么突然有峰值；</li>
-</ul>
-<h2 id="Check-amp-Recheck"><a href="#Check-amp-Recheck" class="headerlink" title="Check &amp; Recheck"></a>Check &amp; Recheck</h2><center>Scale >= Empty >= Repeatment >= Outlier</center>
-
-<ul>
-<li>Scale: 关注数据规模（量级），不同量级数据切入方式不同（好比菜刀用来切菜/水果刀用于切水果), 海量数据要考虑简化处理<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">COALESCE(expr1, expr2, ...)</span><br><span class="line">CASE value</span><br><span class="line">    WHEN value1 THEN result1</span><br><span class="line">    WHEN value2 THEN result2</span><br><span class="line">    ...</span><br><span class="line">    ELSE result</span><br><span class="line"><span class="keyword">END</span> </span><br><span class="line"><span class="comment">-- 日期处理: datetime类型和字符串的灵活转化; datetime类型时间滚动;</span></span><br><span class="line">ds=TO_CHAR(<span class="keyword">DATEADD</span>(<span class="keyword">TO_DATE</span>(<span class="string">&#x27;$&#123;bizdate&#125;&#x27;</span>, <span class="string">&#x27;yyyymmdd&#x27;</span>), <span class="number">-1</span>, <span class="string">&#x27;dd&#x27;</span>), <span class="string">&#x27;yyyymmdd&#x27;</span>)</span><br><span class="line">SPLIT_PART(<span class="keyword">string</span> <span class="keyword">str</span>, <span class="keyword">string</span> separator, <span class="built_in">bigint</span> <span class="keyword">start</span>[, <span class="built_in">bigint</span> <span class="keyword">end</span>])</span><br><span class="line"><span class="keyword">SUBSTR</span>(<span class="keyword">string</span> <span class="keyword">str</span>, <span class="built_in">bigint</span> start_position[, <span class="built_in">bigint</span> <span class="keyword">length</span>])</span><br><span class="line"><span class="keyword">CONCAT</span>(<span class="keyword">string</span> a, <span class="keyword">string</span> b...)</span><br><span class="line">WM_CONCAT(<span class="keyword">string</span> separator, <span class="keyword">string</span> <span class="keyword">str</span>)</span><br><span class="line"><span class="keyword">INSTR</span>(<span class="keyword">string</span> str1, <span class="keyword">string</span> str2[, <span class="built_in">bigint</span> start_position[, <span class="built_in">bigint</span> nth_appearance]])</span><br><span class="line">ROW_NUMBER() <span class="keyword">OVER</span>(<span class="keyword">partition</span> <span class="keyword">by</span> col1[, col2…] <span class="keyword">order</span> <span class="keyword">by</span> col1 [<span class="keyword">asc</span>|<span class="keyword">desc</span>][, col2[<span class="keyword">asc</span>|<span class="keyword">desc</span>]…])</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="采用增量统计减少暴力扫描"><a href="#采用增量统计减少暴力扫描" class="headerlink" title="采用增量统计减少暴力扫描"></a>采用增量统计减少暴力扫描</h4><p>例如，如下代码统计19年6月到10月的所有场景点击率；</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">SUM</span>(pv)/<span class="keyword">SUM</span>(click) <span class="keyword">AS</span> ctr</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        scene</span><br><span class="line">        , pv</span><br><span class="line">        , click</span><br><span class="line">    <span class="keyword">FROM</span> table_name</span><br><span class="line">    <span class="keyword">WHERE</span> ds&lt;=<span class="number">20191001</span></span><br><span class="line">        <span class="keyword">AND</span> ds&gt;=<span class="number">20191101</span></span><br><span class="line">        <span class="keyword">AND</span> someflag1=<span class="number">1</span></span><br><span class="line">) tmp0</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene</span><br></pre></td></tr></table></figure>
-<p>乍看上述代码执行无明显问题，但是计算资源紧张时子查询取日志量级太大会跑不完，Job大概率被无情kill；<br>优化方法：将子查询写入一个表，天级增量中间表，代码如下所示</p>
-<p>采用CTE模块化统计逻辑</p>
-<p>Common Table Expression, CTE</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 人群特征</span></span><br><span class="line"><span class="keyword">WITH</span> s_basic <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , mele_pay_ratio</span><br><span class="line">        , female_pay_ratio</span><br><span class="line">        , purchase_pay_ratio</span><br><span class="line">        , phd_pay_ratio</span><br><span class="line">        , bachelor_pay_ratio</span><br><span class="line">        , master_pay_ratio</span><br><span class="line">        , f1t17_pay_ratio</span><br><span class="line">        , f18t24_pay_ratio</span><br><span class="line">        , f25t29_pay_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景点击成交uv特征</span></span><br><span class="line">s_clk_pay_uv_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        s_id</span><br><span class="line">        , clk_uv_1d</span><br><span class="line">        , clk_uv_3d</span><br><span class="line">        , pay_uv_1d</span><br><span class="line">        , pay_uv_3d</span><br><span class="line">    <span class="keyword">FROM</span> table_name_b</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">),</span><br><span class="line"><span class="comment">-- 场景人群属性特征</span></span><br><span class="line">s_city_info <span class="keyword">AS</span> (</span><br><span class="line">    <span class="keyword">SELECT</span> </span><br><span class="line">        s_id</span><br><span class="line">        , city_l1_ratio</span><br><span class="line">        , city_l2_ratio</span><br><span class="line">        , city_l3_ratio</span><br><span class="line">        , vip_ratio,</span><br><span class="line">        , normal_ratio</span><br><span class="line">    <span class="keyword">FROM</span> table_name_c</span><br><span class="line">    <span class="keyword">WHERE</span> ds=$&#123;bizdate&#125;</span><br><span class="line">)</span><br><span class="line"><span class="keyword">INSERT</span> OVERWRITE <span class="keyword">TABLE</span> table_name_d <span class="keyword">PARTITION</span> (ds=$&#123;bizdate&#125;)</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    s_basic.*</span><br><span class="line">    , s_clk_pay_uv_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_city_info.<span class="string">`(s_id)?+.+`</span></span><br><span class="line">    , s_avg_price_info.<span class="string">`(s_id|ds)?+.+`</span></span><br><span class="line"><span class="keyword">FROM</span> s_basic</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_clk_pay_uv_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_clk_pay_uv_info.s_id</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> s_city_info</span><br><span class="line"><span class="keyword">ON</span> s_basic.s_id=s_city_info.s_id</span><br></pre></td></tr></table></figure>
+One of the most successful ideas of modern statistical NLP!
 
 
 
 
-<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><p>大数据性能优化在日常产出的必备能力；</p>
-<h5 id="MapReduce原理"><a href="#MapReduce原理" class="headerlink" title="MapReduce原理"></a>MapReduce原理</h5><p>数据处理过程分成2个阶段：Map（映射）阶段和Reduce（规约）阶段。</p>
-<p>Map前，需要将输入数据进行”分片”。</p>
-<ul>
-<li>分片：将输入数据切分为大小相等的数据块，每一块作为单个Map Worker的输入被处理，以便于多个Map Worker同时工作。</li>
-<li>分片完毕后，多个Map Worker同时工作。每个Map Worker在读入各自的数据后，进行计算处理，最终输出给Reduce。</li>
-<li>Map Worker在输出数据时，需要为每一条输出数据指定一个Key。这个Key值决定了这条数据将会被发送给哪一个Reduce Worker。Key值和Reduce Worker是多对一的关系，具有相同Key的数据会被发送给同一个Reduce Worker，单个Reduce Worker有可能会接收到多个Key值的数据。</li>
-<li>进入Reduce之前，MapReduce框架会对数据按照Key值排序，使得具有相同Key的数据彼此相邻。如果用户指定了”合并操作”(Combiner)，框架会调用Combiner，将具有相同Key的数据进行聚合。Combiner的逻辑可以由用户自定义实现。与经典的MapReduce框架协议不同，在ODPS中，Combiner的输入、输出的参数必须与Reduce保持一致。这部分的处理通常也叫做”洗牌”(Shuffle)。</li>
-<li>Reduce阶段。相同的Key的数据会到达同一个Reduce Worker。同一个Reduce Worker会接收来自多个Map Worker的数据。每个Reduce Worker会对Key相同的多个数据进行Reduce操作。最后一个Key的多条数据经过Reduce的作用后，将变成了一个值。</li>
-</ul>
-<h5 id="Join长尾优化"><a href="#Join长尾优化" class="headerlink" title="Join长尾优化"></a>Join长尾优化</h5><p>问题表现：Join任务上SQL运行时间超长，某个woker上的任务进度一直在99%卡着不动；Join时间过长有很多原因，本质上是数据中参与Join的Key存在存在一定的分布特点（分布不均衡或者长尾）；<br>Mapjoin: 将Join操作提前到Map端执行，避免因为分发Key不均匀导致数据倾斜。但是Mapjoin的使用有限制，必须是Join中的从表比较小才可用。所谓从表，即Left Outer Join中的右表，或者Right Outer Join中的左表。Mapjoin的使用方法非常简单，在代码中select后加上 /*+ mapjoin(a) */ 即可，其中b代表小表(或者是子查询)的别名。如：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    <span class="comment">/*+MAPJOIN(b)*/</span></span><br><span class="line">    a.c2</span><br><span class="line">    , b.c3</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c2</span><br><span class="line">    <span class="keyword">FROM</span> t1</span><br><span class="line">) a</span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> (</span><br><span class="line">    <span class="keyword">SELECT</span>  </span><br><span class="line">        c1</span><br><span class="line">        , c3</span><br><span class="line">    <span class="keyword">FROM</span> t2</span><br><span class="line">) b</span><br><span class="line"><span class="keyword">ON</span> a.c1=b.c1;</span><br></pre></td></tr></table></figure>
-<p>调小mapper.split.size<br>作用：设定一个Map的最大数据输入量，通过设置这个变量达到对Map端输入的控制，单位M，默认256M，在[1, Integer.MAX_VALUE]之间调整。set odps.sql.mapper.split.size=256<br>场景：当每个Map Instance处理的数据量比较大，时间比较长，并且没有发生长尾时，可以适当调小这个参数。如果有发生长尾，则结合odps.sql.mapper.merge.limit.size这个参数设置每个Map的输入数量。</p>
-<h5 id="Reduce端长尾优化"><a href="#Reduce端长尾优化" class="headerlink" title="Reduce端长尾优化"></a>Reduce端长尾优化</h5><p>问题表现：Reduce端任务99%进度卡着不动，由Multi COUNT(DISTINCT xx字段) 引起；</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> table_name_a</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene</span><br><span class="line">解决方法：将<span class="keyword">Group</span> <span class="keyword">BY</span>的<span class="keyword">Key</span>分散开（增加一个层次的<span class="keyword">Key</span>），以下代码增加了场景的小时统计，最后再累加统计；</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    scene</span><br><span class="line">    , <span class="keyword">SUM</span>(pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">    , <span class="keyword">SUM</span>(click_id) <span class="keyword">AS</span> click</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line">    <span class="keyword">SELECT</span></span><br><span class="line">        scene</span><br><span class="line">        , hh</span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> pv)       <span class="keyword">AS</span> pv  </span><br><span class="line">        , <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> click_id) <span class="keyword">AS</span> click</span><br><span class="line">    <span class="keyword">FROM</span> table_name_a</span><br><span class="line">    <span class="keyword">GROUP</span> <span class="keyword">BY</span> scene, hh</span><br><span class="line">) tmp0</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> scene;</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" data-id="ckjuw1zdh0005nbdl9zqf7mo3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+Training samples Construction
 
 
-  
-    <article id="post-Marketing Management" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/03/Marketing%20Management/" class="article-date">
-  <time datetime="2019-11-03T05:03:00.000Z" itemprop="datePublished">2019-11-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reading/">Reading</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/03/Marketing%20Management/">Marketing Management</a>
-    </h1>
-  
+Skip-Gram Model
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      	<!-- Table of Contents -->
-		
-        <hr>
-<h2 id="What-Is-Marketing"><a href="#What-Is-Marketing" class="headerlink" title="What Is Marketing?"></a>What Is Marketing?</h2><p>Marketing is about <strong>identifying and meeting human and social needs.</strong> One of the shortest good definitions of marketing is:</p>
-<center>
-<font size=6 color='red'>
-<i>
+
+
+和都是生成的向量，每个词均有2个向量表示；通常将距离中心词较近的Matrix作为词向量；
+Where is word presentation?Subsampling of Frequent Words“in”, “the”, “a”  这类词出现很多但是几乎无法提供信息，但是常和语料中关键词共现；上述高频词在构造训练样本中占据了很大比例；
+Subsamplin ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" title="Yoshua Bengio对ML研究者的建议">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yoshua Bengio对ML研究者的建议"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/11/Yoshua%20Bengio%E5%AF%B9ML%E7%A0%94%E7%A9%B6%E8%80%85%E7%9A%84%E5%BB%BA%E8%AE%AE/" title="Yoshua Bengio对ML研究者的建议">Yoshua Bengio对ML研究者的建议</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-01-11T12:11:00.000Z" title="Created 2020-01-11 20:11:00">2020-01-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Always-Review/">Always Review</a></span></div><div class="content">
+Quora原始问题Originally Answered: Yoshua Bengio: What advise do you have for young researchers entering the field of Machine Learning?
+对话Yoshua Bengio：对年轻机器学习领域的研究者的建议？
+Make sure you have a strong training in math and computer science (including the practical part, i.e., programming). Read books and (lots of) papers but that is not enough: you need to develop your intuitions by 
+(a) programming a bunch of learning algorithms yourself, e.g., trying to reproduce existing papers, and 
+(b) by learning  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/12/31/2019%20Annual%20Summary/" title="2019 Annual Summary">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 Annual Summary"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/31/2019%20Annual%20Summary/" title="2019 Annual Summary">2019 Annual Summary</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2019-12-31T07:11:00.000Z" title="Created 2019-12-31 15:11:00">2019-12-31</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Always-Review/">Always Review</a></span></div><div class="content">
+年度关键词
+今年给自己的年度关键词是: 
+
+
+入局
+
+
+
+
+
+
+工作总结（算法工程师的第一个半年）从两条线进行总结, 一条线是以时间线, 梳理每个项目做的点; 另一条是经验线, 总结的是工作方法论上可以提升的点.
+落地etao gul迁移学习项目年初实习项目, 主要把迁移学习模型在gul场景落地, 效果上相比Local模型取得提升.核心点是利用Global信息更好地刻画C端用户全局兴趣; 这个项目本来在2018年年末完成, 相比预期有一定的delay, 主要原因是2018年末对tensorflow的一些API使用还是不够熟悉踩了一些坑, 不过最终还是拿到了比较稳定的收益.项目结束后也同时抛出一个潜在优化点, 能否设计更优雅的结构容纳Global信息, 或者蒸馏已有Global网络萃取出Global兴趣分布, 充分降低模型的复杂度的同事达到类似的精度, 后续因为完成毕业论文的原因没有再继续深究.
+完成硕士毕业论文 &amp; 答辩将自己硕士期间的很多工作和探索总结在了论文里面, 基本上每一部分内容都把自己想要体现的内容, 包括四个部分（室内定位理论+机器学习方法在Wi-Fi定位任务的应 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/12/12/ubuntu%20config/" title="ubuntu config">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ubuntu config"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/12/ubuntu%20config/" title="ubuntu config">ubuntu config</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2019-12-12T12:11:00.000Z" title="Created 2019-12-12 20:11:00">2019-12-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Programming-Data/">Programming &amp; Data</a></span></div><div class="content">
+git配置解决git status中文乱码问题将git配置文件 core.quotepath项设置为false, quotepath表示引用路径，加上–global表示全局配置, git bash终端输入命令：
+1git config --global core.quotepath false
+
+ohmyzsh配置下载若不能科学上网, 采取 ohmyzsh 配置方法项目mirror地址: https://gitee.com/mirrors/oh-my-zsh以下命令下载修改过的ohmyzsh的install.sh并执行(改变了文件中指向的git仓库从github移到gitee)
+通过 curl
+1sh -c &quot;$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)&quot;
+或 wget
+1sh -c &quot;$(wget -O- https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" title="Data Analysis Tutorial:(Part II)">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Data Analysis Tutorial:(Part II)"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20II)/" title="Data Analysis Tutorial:(Part II)">Data Analysis Tutorial:(Part II)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2019-12-11T14:11:00.000Z" title="Created 2019-12-11 22:11:00">2019-12-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Programming-Data/">Programming &amp; Data</a></span></div><div class="content">
+Reusabal Scripts
+funnel chart
+
+Two-axis trend chart
+
+heat map 
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" title="Data Analysis Tutorial:(Part I)">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Data Analysis Tutorial:(Part I)"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/12/11/Data%20Analysis%20Tutorial:(Part%20I)/" title="Data Analysis Tutorial:(Part I)">Data Analysis Tutorial:(Part I)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2019-12-11T12:11:00.000Z" title="Created 2019-12-11 20:11:00">2019-12-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Programming-Data/">Programming &amp; Data</a></span></div><div class="content">
+Why data matters?
+显著提高工作效率。数据处理是算法工程师日常工作中时间占比最高的部分，故是工作提效最关键部分之一。
+严重影响业务决策。错误的数据分析结论甚至会带来致命影响；有效的数据分析结论带来业务的增益的决策，长期的增益分析对于把握业务方向帮助显著。
+需长期思考锻炼提高。实际的业务数据纷繁复杂、变动频率高、业务强相关，故需要具备一定的广度。例如电商成交数据和足球场上胜负关系数据是两个完全不同的过程，二者不互通。
+SQL is all you need。到2019年SQL仍然是最通用、最标准、最普适的数据处理语言，故本文以SQL为例进行展开。
+
+
+Core Idea
+结论导向：永远不做没有目的的数据分析，必须提前想清楚通过数据要验证什么事实；具体做法，先假设你预期结论成立，心里想象数据画出来图是什么样子，然后统计下来对比画出来的图和前期假设图是否相似，若相似那么很快就能验证一些效果；若不相似，再考虑当前统计层次是否有问题，能否做更细的拆解或者能否精简一下统计层面；
+逻辑自恰：数据是流体，总是呈现起伏不定的规律，我们既要抓住一般规律，同时也要尽可能完美解释细节变化产生 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/11/03/Marketing%20Management/" title="Marketing Management">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Marketing Management"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/11/03/Marketing%20Management/" title="Marketing Management">Marketing Management</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2019-11-03T05:03:00.000Z" title="Created 2019-11-03 13:03:00">2019-11-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Reading/">Reading</a></span></div><div class="content">
+What Is Marketing?Marketing is about identifying and meeting human and social needs. One of the shortest good definitions of marketing is:
+
+
+
 Meeting needs profitably. 
-</i>
-</font>
-</center>
-
-<p>For example, </p>
-<ul>
-<li><strong>Google</strong> recognized that people needed to more effectively and efficiently access information on the Internet, it created a powerful search engine that organized and prioritized<br>queries. </li>
-<li><strong>IKEA</strong> noticed that people wanted good furnishings at substantially lower prices, it created knockdown furniture. </li>
-</ul>
-<p>These two firms demonstrated marketing savvy and turned a private or social need into a profitable business opportunity.</p>
-<p>The American Marketing Association (美国市场营销协会, AMA) offers the following formal definition: </p>
-<center>
-<font size=4 color='red'>
-<i>
-Marketing is the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for 
-customers, clients, partners, and society at large. 
-</i>
-</font>
-</center>
-
-<p>Coping with these exchange processes calls for a considerable amount of work and skill. Marketing management takes place when at least one party to a potential exchange thinks about the means of achieving desired responses from other parties. Thus, we see marketing management as the art and science of choosing target markets and getting, keeping, and growing customers through creating, delivering, and communicating superior customer value.</p>
-<p>We can distinguish between a social and a managerial definition of marketing. A social definition shows the role marketing plays in society; for example, one marketer has said that marketing’s role is to “deliver a higher standard of living.” Here is a social definition that serves our purpose:Marketing is a societal process by which individuals and groups obtain what they need and want through creating, offering, and freely exchanging products<br>and services of value with others. <strong>Cocreation of value among consumers and with businesses</strong> and the importance of value creation and sharing have become important themes in the development of modern marketing thought.</p>
-<p>Managers sometimes think of marketing as the art of selling products, but many people are surprised<br>when they hear that </p>
-<center>
-<font size=4 color='red'>
-<i>
-Selling is not the most important part of marketing. Selling is only the tip of the marketing iceberg. 
-</i>
-</font>
-</center>
-
-
-<p>Peter Drucker, famed management theorist, put it this way: </p>
-<center>
-<font size=4 color='red'>
-<i>
-There will always, one can assume, be need for some selling. 
-</i>
-</font>
-</center>
-
-<p>But the aim of marketing is to make selling superfluous. The aim of marketing is to know and understand the customer so well that the product or<br>service fits him and sells itself. Ideally, marketing should result in a customer who is ready to buy. All that<br>should be needed then is to make the product or service available.</p>
-<p>When Nintendo (任天堂) designed its Wii game system, when Apple launched its iPad tablet computer, and when Toyota<br>introduced its Prius hybrid automobile, these manufacturers were swamped with orders because they had designed<br>the right product, based on careful marketing homework about consumers, competition, and all the external factors that affect cost and demand.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/11/03/Marketing%20Management/" data-id="ckjuw1zds000pnbdl6ryt84vw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/About-Us/">About Us</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Always-Review/">Always Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming-Data/">Programming & Data</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading/">Reading</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RecSys-Machine-Learning/">RecSys & Machine Learning</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2099/01/">January 2099</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2099/01/01/About%20Us/">About Us</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/31/2020%20Annual%20Summary/">2020 Annual Summary</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/20/Shoe%20Dog/">Shoe Dog</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/16/Bert/">Bert</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/08/The%20Essence%20of%20RecSys/">The Essence of RecSys</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 Gold and Rabbit<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+For example, 
 
+Google recognized that people needed to more effectively and efficiently access information on the Internet, it created a powerful search engine that organized and prioritizedqueries. 
+IKEA noticed that people wanted good furnishings at substantially lower prices, it created knockdown furniture. 
 
-
-
-  </div>
-</body>
-</html>
+These two fi ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Gold and Rabbit</div><div class="author-info__description">having fun coding</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">33</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2099/01/01/About%20Us/" title="About Us"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="About Us"/></a><div class="content"><a class="title" href="/2099/01/01/About%20Us/" title="About Us">About Us</a><time datetime="2098-12-31T16:18:00.000Z" title="Created 2099-01-01 00:18:00">2099-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/31/2020%20Annual%20Summary/" title="2020 Annual Summary"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2020 Annual Summary"/></a><div class="content"><a class="title" href="/2020/12/31/2020%20Annual%20Summary/" title="2020 Annual Summary">2020 Annual Summary</a><time datetime="2020-12-31T15:11:00.000Z" title="Created 2020-12-31 23:11:00">2020-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/20/Shoe%20Dog/" title="Shoe Dog"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Shoe Dog"/></a><div class="content"><a class="title" href="/2020/12/20/Shoe%20Dog/" title="Shoe Dog">Shoe Dog</a><time datetime="2020-12-20T10:53:00.000Z" title="Created 2020-12-20 18:53:00">2020-12-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/16/Bert/" title="Bert"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bert"/></a><div class="content"><a class="title" href="/2020/12/16/Bert/" title="Bert">Bert</a><time datetime="2020-12-16T13:56:00.000Z" title="Created 2020-12-16 21:56:00">2020-12-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/08/The%20Essence%20of%20RecSys/" title="The Essence of RecSys"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Essence of RecSys"/></a><div class="content"><a class="title" href="/2020/11/08/The%20Essence%20of%20RecSys/" title="The Essence of RecSys">The Essence of RecSys</a><time datetime="2020-11-08T03:56:00.000Z" title="Created 2020-11-08 11:56:00">2020-11-08</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/About-Us/"><span class="card-category-list-name">About Us</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Always-Review/"><span class="card-category-list-name">Always Review</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Programming-Data/"><span class="card-category-list-name">Programming & Data</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Reading/"><span class="card-category-list-name">Reading</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/RecSys-Machine-Learning/"><span class="card-category-list-name">RecSys & Machine Learning</span><span class="card-category-list-count">10</span></a></li>
+            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span><a class="card-more-btn" href="/archives/" title="More">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2099/01/"><span class="card-archive-list-date">January 2099</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">December 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">November 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">October 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">September 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">August 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">June 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">April 2020</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-01-31T15:22:35.367Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Gold and Rabbit</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
