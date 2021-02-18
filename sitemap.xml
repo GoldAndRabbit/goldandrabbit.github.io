@@ -2,23 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2020/11/08/The%20Essence%20of%20RecSys/</loc>
+    <loc>http://example.com/2020/06/05/Why%20Alibaba%20/</loc>
     
-    <lastmod>2021-01-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/</loc>
-    
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     
   </url>
   
   <url>
     <loc>http://example.com/2020/12/16/Bert/</loc>
     
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/15/Deep%20CTR%20Model/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/11/08/The%20Essence%20of%20RecSys/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/20/Shoe%20Dog/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/10/01/Hexo%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/12/31/2020%20Annual%20Summary/</loc>
+    
+    <lastmod>2021-02-18</lastmod>
     
   </url>
   
@@ -65,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2020/08/15/Deep%20CTR%20Model/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/2020/02/03/Graph%20Neural%20Network/</loc>
     
     <lastmod>2021-01-08</lastmod>
@@ -80,13 +101,6 @@
   
   <url>
     <loc>http://example.com/2020/01/11/Tricks%20in%20Data%20Mining%20Competitions/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/12/20/Shoe%20Dog/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -103,20 +117,6 @@
     <loc>http://example.com/2019/11/03/Marketing%20Management/</loc>
     
     <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2099/01/01/About%20Us/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/12/31/2020%20Annual%20Summary/</loc>
-    
-    <lastmod>2021-01-03</lastmod>
     
   </url>
   
@@ -171,13 +171,6 @@
   
   <url>
     <loc>http://example.com/2020/03/22/%E7%8B%BC%E4%BA%BA%E6%9D%80%E5%A6%82%E4%BD%95%E8%87%B4%E8%83%9C/</loc>
-    
-    <lastmod>2020-12-13</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2020/06/05/Why%20Alibaba%20/</loc>
     
     <lastmod>2020-12-13</lastmod>
     
@@ -242,7 +235,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -252,35 +245,28 @@
   
   <url>
     <loc>http://example.com/categories/Always-Review/</loc>
-    <lastmod>2021-01-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/About-Us/</loc>
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/RecSys-Machine-Learning/</loc>
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Programming-Data/</loc>
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Reading/</loc>
-    <lastmod>2021-01-31</lastmod>
+    <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
