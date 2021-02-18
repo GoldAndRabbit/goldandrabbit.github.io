@@ -71,7 +71,7 @@
     <link href="http://example.com/2020/12/16/Bert/"/>
     <id>http://example.com/2020/12/16/Bert/</id>
     <published>2020-12-16T13:56:00.000Z</published>
-    <updated>2021-02-18T10:47:51.998Z</updated>
+    <updated>2021-02-18T11:12:51.788Z</updated>
     
     <content type="html"><![CDATA[<blockquote><h2 id="Bert"><a href="#Bert" class="headerlink" title="Bert"></a>Bert</h2></blockquote><ul><li>BERT is basically a trained Transformer Encoder stack.  </li><li>Both BERT model sizes have a large number of encoder layers (which the paper calls Transformer Blocks) – twelve for the Base version, and twenty four for the Large version. These also have larger feedforward-networks (768 and 1024 hidden units respectively), and more attention heads (12 and 16 respectively) than the default configuration in the reference implementation of the Transformer in the initial paper (6 encoder layers, 512 hidden units, and 8 attention heads).<div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1tWy4.png"  width="666" /></div></li></ul><hr><div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1tcWT.png"  width="666" /></div><hr><div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1tfOJ.png"  width="666" /></div><hr><div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1tRlF.png"  width="666" /></div><hr><div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1t2SU.png"  width="666" /></div><hr><div align="center"><img  src="https://s3.ax1x.com/2020/12/16/r1tx0A.png"  width="666" /></div><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://jalammar.github.io/illustrated-bert/">https://jalammar.github.io/illustrated-bert/</a></p>]]></content>
     
